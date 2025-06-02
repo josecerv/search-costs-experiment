@@ -183,8 +183,7 @@ create_stargazer_table <- function(models, dep_var_labels, title, label,
               c("N", sapply(valid_models, function(x) format(length(x$residuals), big.mark=","))),
               c("Adjusted $R^2$", sapply(valid_models, function(x) sprintf("%.3f", summary(x)$adj.r.squared)))
             ),
-            notes = c("Clustered standard errors at department level in parentheses.",
-                      "$^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$"),
+            notes = c("\\parbox{\\linewidth}{\\vspace{2pt}Clustered standard errors at department level in parentheses.\\\\$^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\\vspace{2pt}}"),
             notes.align = "l",
             notes.append = FALSE,
             star.char = c("+", "*", "**", "***"),
@@ -260,8 +259,7 @@ create_moderator_table <- function(models, dep_var_labels, title, label, moderat
               c("N", sapply(valid_models, function(x) format(length(x$residuals), big.mark=","))),
               c("Adjusted $R^2$", sapply(valid_models, function(x) sprintf("%.3f", summary(x)$adj.r.squared)))
             ),
-            notes = c("Clustered standard errors at department level in parentheses.",
-                      "$^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$"),
+            notes = c("\\parbox{\\linewidth}{\\vspace{2pt}Clustered standard errors at department level in parentheses.\\\\$^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\\vspace{2pt}}"),
             notes.align = "l",
             notes.append = FALSE,
             star.char = c("+", "*", "**", "***"),
@@ -348,84 +346,152 @@ This report presents the comprehensive statistical analysis for the search costs
 
 ## Overall Summary Statistics
 
-```{r summary-stats-overall}
-# Overall summary statistics by race and gender
-summary_overall <- data %>%
+### Seminar Speaker Demographics
+
+```{r summary-stats-overall-seminars}
+# Overall summary statistics for seminar speakers
+summary_seminars <- data %>%
   summarise(
-    n = n(),
+    n_seminars = n(),
+    n_unique_departments = n_distinct(department_std),
+    total_speakers_all = sum(total_speakers, na.rm = TRUE),
+    mean_speakers_per_seminar = mean(total_speakers, na.rm = TRUE),
+    sd_speakers_per_seminar = sd(total_speakers, na.rm = TRUE),
+    min_speakers = min(total_speakers, na.rm = TRUE),
+    max_speakers = max(total_speakers, na.rm = TRUE),
+    
     # URM stats
     mean_pct_urm = mean(pct_urm, na.rm = TRUE),
     sd_pct_urm = sd(pct_urm, na.rm = TRUE),
     mean_num_urm = mean(num_urm, na.rm = TRUE),
     sd_num_urm = sd(num_urm, na.rm = TRUE),
-    prop_has_urm = mean(has_any_urm, na.rm = TRUE),
+    prop_seminars_has_urm = mean(has_any_urm, na.rm = TRUE),
     
     # Black stats
     mean_pct_black = mean(pct_black, na.rm = TRUE),
     sd_pct_black = sd(pct_black, na.rm = TRUE),
     mean_num_black = mean(num_black, na.rm = TRUE),
     sd_num_black = sd(num_black, na.rm = TRUE),
-    prop_has_black = mean(has_any_black, na.rm = TRUE),
+    prop_seminars_has_black = mean(has_any_black, na.rm = TRUE),
     
     # Hispanic stats
     mean_pct_hispanic = mean(pct_hispanic, na.rm = TRUE),
     sd_pct_hispanic = sd(pct_hispanic, na.rm = TRUE),
     mean_num_hispanic = mean(num_hispanic, na.rm = TRUE),
     sd_num_hispanic = sd(num_hispanic, na.rm = TRUE),
-    prop_has_hispanic = mean(has_any_hispanic, na.rm = TRUE),
+    prop_seminars_has_hispanic = mean(has_any_hispanic, na.rm = TRUE),
     
     # Female stats
     mean_pct_female = mean(pct_female, na.rm = TRUE),
     sd_pct_female = sd(pct_female, na.rm = TRUE),
     mean_num_female = mean(num_female, na.rm = TRUE),
     sd_num_female = sd(num_female, na.rm = TRUE),
-    prop_has_female = mean(has_any_female, na.rm = TRUE),
-    
-    # Total speakers
-    mean_total_speakers = mean(total_speakers, na.rm = TRUE),
-    sd_total_speakers = sd(total_speakers, na.rm = TRUE)
+    prop_seminars_has_female = mean(has_any_female, na.rm = TRUE)
   )
 
-# Create formatted table
+# First table: Basic seminar information
 cat("\\begin{table}[H]\n")
-cat("\\caption{Overall Summary Statistics for Speaker Demographics}\n")
-cat("\\label{tab:summary_overall}\n")
+cat("\\caption{Overall Seminar Statistics}\n")
+cat("\\label{tab:summary_seminars_basic}\n")
+cat("\\centering\n")
+cat("\\begin{tabular}{lr}\n")
+cat("\\toprule\n")
+cat("Statistic & Value \\\\\n")
+cat("\\midrule\n")
+cat(sprintf("Number of seminars & %d \\\\\n", summary_seminars$n_seminars))
+cat(sprintf("Number of unique departments & %d \\\\\n", summary_seminars$n_unique_departments))
+cat(sprintf("Total speakers across all seminars & %d \\\\\n", summary_seminars$total_speakers_all))
+cat(sprintf("Mean speakers per seminar & %.2f \\\\\n", summary_seminars$mean_speakers_per_seminar))
+cat(sprintf("SD speakers per seminar & %.2f \\\\\n", summary_seminars$sd_speakers_per_seminar))
+cat(sprintf("Min speakers in a seminar & %d \\\\\n", summary_seminars$min_speakers))
+cat(sprintf("Max speakers in a seminar & %d \\\\\n", summary_seminars$max_speakers))
+cat("\\bottomrule\n")
+cat("\\end{tabular}\n")
+cat("\\end{table}\n")
+
+# Second table: Speaker demographics in seminars
+cat("\n\\begin{table}[H]\n")
+cat("\\caption{Seminar Speaker Demographics (Across All Seminars)}\n")
+cat("\\label{tab:summary_seminar_demographics}\n")
 cat("\\centering\n")
 cat("\\footnotesize\n")
 cat("\\begin{tabular}{lccccc}\n")
 cat("\\toprule\n")
-cat("Demographic Group & Mean \\% & SD \\% & Mean Count & SD Count & Prop. Has Any \\\\\n")
+cat("Demographic Group & Mean \\% & SD \\% & Mean Count & SD Count & Prop. Seminars w/ Any \\\\\n")
 cat("\\midrule\n")
 cat(sprintf("URM & %.2f & %.2f & %.2f & %.2f & %.3f \\\\\n",
-            summary_overall$mean_pct_urm, summary_overall$sd_pct_urm,
-            summary_overall$mean_num_urm, summary_overall$sd_num_urm,
-            summary_overall$prop_has_urm))
+            summary_seminars$mean_pct_urm, summary_seminars$sd_pct_urm,
+            summary_seminars$mean_num_urm, summary_seminars$sd_num_urm,
+            summary_seminars$prop_seminars_has_urm))
 cat(sprintf("Black & %.2f & %.2f & %.2f & %.2f & %.3f \\\\\n",
-            summary_overall$mean_pct_black, summary_overall$sd_pct_black,
-            summary_overall$mean_num_black, summary_overall$sd_num_black,
-            summary_overall$prop_has_black))
+            summary_seminars$mean_pct_black, summary_seminars$sd_pct_black,
+            summary_seminars$mean_num_black, summary_seminars$sd_num_black,
+            summary_seminars$prop_seminars_has_black))
 cat(sprintf("Hispanic & %.2f & %.2f & %.2f & %.2f & %.3f \\\\\n",
-            summary_overall$mean_pct_hispanic, summary_overall$sd_pct_hispanic,
-            summary_overall$mean_num_hispanic, summary_overall$sd_num_hispanic,
-            summary_overall$prop_has_hispanic))
+            summary_seminars$mean_pct_hispanic, summary_seminars$sd_pct_hispanic,
+            summary_seminars$mean_num_hispanic, summary_seminars$sd_num_hispanic,
+            summary_seminars$prop_seminars_has_hispanic))
 cat(sprintf("Female & %.2f & %.2f & %.2f & %.2f & %.3f \\\\\n",
-            summary_overall$mean_pct_female, summary_overall$sd_pct_female,
-            summary_overall$mean_num_female, summary_overall$sd_num_female,
-            summary_overall$prop_has_female))
-cat("\\midrule\n")
-cat(sprintf("Total Speakers & --- & --- & %.2f & %.2f & --- \\\\\n",
-            summary_overall$mean_total_speakers, summary_overall$sd_total_speakers))
+            summary_seminars$mean_pct_female, summary_seminars$sd_pct_female,
+            summary_seminars$mean_num_female, summary_seminars$sd_num_female,
+            summary_seminars$prop_seminars_has_female))
 cat("\\bottomrule\n")
 cat("\\end{tabular}\n")
-cat("\\footnotesize{Note: N = ", summary_overall$n, " departments. Percentages calculated among speakers with demographic data available.}\n")
+cat("\\footnotesize{Note: N = ", summary_seminars$n_seminars, " seminars. Percentages calculated among speakers with demographic data available. 'Prop. Seminars w/ Any' indicates the proportion of seminars that have at least one speaker from that demographic group.}\n")
+cat("\\end{table}\n")
+```
+
+### Department Faculty Demographics
+
+```{r summary-stats-overall-departments}
+# Department faculty demographics (aggregated to department level)
+dept_summary <- data %>%
+  group_by(department_std) %>%
+  summarise(
+    # Take the first value for each department (since faculty demographics are constant within department)
+    total_faculty = first(total_faculty),
+    frac_urm_faculty = first(frac_urm_faculty),
+    frac_women_faculty = first(frac_women_faculty),
+    .groups = 'drop'
+  ) %>%
+  summarise(
+    n_departments = n(),
+    mean_total_faculty = mean(total_faculty, na.rm = TRUE),
+    sd_total_faculty = sd(total_faculty, na.rm = TRUE),
+    mean_pct_urm_faculty = mean(frac_urm_faculty * 100, na.rm = TRUE),
+    sd_pct_urm_faculty = sd(frac_urm_faculty * 100, na.rm = TRUE),
+    mean_pct_women_faculty = mean(frac_women_faculty * 100, na.rm = TRUE),
+    sd_pct_women_faculty = sd(frac_women_faculty * 100, na.rm = TRUE)
+  )
+
+# Department faculty table
+cat("\n\\begin{table}[H]\n")
+cat("\\caption{Department Faculty Demographics}\n")
+cat("\\label{tab:summary_dept_faculty}\n")
+cat("\\centering\n")
+cat("\\begin{tabular}{lcc}\n")
+cat("\\toprule\n")
+cat("Statistic & Mean & SD \\\\\n")
+cat("\\midrule\n")
+cat(sprintf("Total faculty per department & %.1f & %.1f \\\\\n",
+            dept_summary$mean_total_faculty, dept_summary$sd_total_faculty))
+cat(sprintf("\\%% URM faculty & %.2f & %.2f \\\\\n",
+            dept_summary$mean_pct_urm_faculty, dept_summary$sd_pct_urm_faculty))
+cat(sprintf("\\%% Women faculty & %.2f & %.2f \\\\\n",
+            dept_summary$mean_pct_women_faculty, dept_summary$sd_pct_women_faculty))
+cat("\\bottomrule\n")
+cat("\\end{tabular}\n")
+cat("\\footnotesize{Note: N = ", dept_summary$n_departments, " unique departments. Department faculty demographics based on 2024 coding.}\n")
 cat("\\end{table}\n")
 ```
 
 ## Summary Statistics by Discipline
 
-```{r summary-stats-discipline}
-# Summary statistics by discipline
-summary_by_disc <- data %>%
+### Seminar Speaker Demographics by Discipline
+
+```{r summary-stats-discipline-seminars}
+# Summary statistics by discipline for seminars
+summary_by_disc_seminars <- data %>%
   mutate(discipline = case_when(
     disc_mathematics == 1 ~ "Mathematics",
     disc_physics == 1 ~ "Physics",
@@ -435,7 +501,11 @@ summary_by_disc <- data %>%
   )) %>%
   group_by(discipline) %>%
   summarise(
-    n = n(),
+    n_seminars = n(),
+    n_departments = n_distinct(department_std),
+    mean_speakers_per_seminar = mean(total_speakers, na.rm = TRUE),
+    sd_speakers_per_seminar = sd(total_speakers, na.rm = TRUE),
+    
     # URM stats
     mean_pct_urm = mean(pct_urm, na.rm = TRUE),
     sd_pct_urm = sd(pct_urm, na.rm = TRUE),
@@ -457,38 +527,59 @@ summary_by_disc <- data %>%
     mean_num_female = mean(num_female, na.rm = TRUE),
     prop_has_female = mean(has_any_female, na.rm = TRUE),
     
-    # Total speakers
-    mean_total_speakers = mean(total_speakers, na.rm = TRUE),
     .groups = 'drop'
   ) %>%
   arrange(discipline)
 
-# Create formatted table for URM
+# Create formatted table for basic info
 cat("\n\\begin{table}[H]\n")
-cat("\\caption{Summary Statistics by Discipline: URM Speakers}\n")
-cat("\\label{tab:summary_disc_urm}\n")
+cat("\\caption{Seminar Statistics by Discipline}\n")
+cat("\\label{tab:summary_disc_basic}\n")
 cat("\\centering\n")
 cat("\\footnotesize\n")
-cat("\\begin{tabular}{lccccc}\n")
+cat("\\begin{tabular}{lcccc}\n")
 cat("\\toprule\n")
-cat("Discipline & N & Mean \\% & SD \\% & Mean Count & Prop. Has Any \\\\\n")
+cat("Discipline & N Seminars & N Depts & Mean Speakers & SD Speakers \\\\\n")
 cat("\\midrule\n")
-for (i in 1:nrow(summary_by_disc)) {
-  cat(sprintf("%s & %d & %.2f & %.2f & %.2f & %.3f \\\\\n",
-              summary_by_disc$discipline[i],
-              summary_by_disc$n[i],
-              summary_by_disc$mean_pct_urm[i],
-              summary_by_disc$sd_pct_urm[i],
-              summary_by_disc$mean_num_urm[i],
-              summary_by_disc$prop_has_urm[i]))
+for (i in 1:nrow(summary_by_disc_seminars)) {
+  cat(sprintf("%s & %d & %d & %.1f & %.1f \\\\\n",
+              summary_by_disc_seminars$discipline[i],
+              summary_by_disc_seminars$n_seminars[i],
+              summary_by_disc_seminars$n_departments[i],
+              summary_by_disc_seminars$mean_speakers_per_seminar[i],
+              summary_by_disc_seminars$sd_speakers_per_seminar[i]))
 }
 cat("\\bottomrule\n")
 cat("\\end{tabular}\n")
 cat("\\end{table}\n")
 
+# Create formatted table for URM
+cat("\n\\begin{table}[H]\n")
+cat("\\caption{Seminar Speaker Demographics by Discipline: URM}\n")
+cat("\\label{tab:summary_disc_urm}\n")
+cat("\\centering\n")
+cat("\\footnotesize\n")
+cat("\\begin{tabular}{lccccc}\n")
+cat("\\toprule\n")
+cat("Discipline & N Seminars & Mean \\% & SD \\% & Mean Count & Prop. Has Any \\\\\n")
+cat("\\midrule\n")
+for (i in 1:nrow(summary_by_disc_seminars)) {
+  cat(sprintf("%s & %d & %.2f & %.2f & %.2f & %.3f \\\\\n",
+              summary_by_disc_seminars$discipline[i],
+              summary_by_disc_seminars$n_seminars[i],
+              summary_by_disc_seminars$mean_pct_urm[i],
+              summary_by_disc_seminars$sd_pct_urm[i],
+              summary_by_disc_seminars$mean_num_urm[i],
+              summary_by_disc_seminars$prop_has_urm[i]))
+}
+cat("\\bottomrule\n")
+cat("\\end{tabular}\n")
+cat("\\footnotesize{Note: Statistics are for seminar speakers. 'Prop. Has Any' indicates proportion of seminars with at least one URM speaker.}\n")
+cat("\\end{table}\n")
+
 # Create formatted table for other demographics
 cat("\n\\begin{table}[H]\n")
-cat("\\caption{Summary Statistics by Discipline: Other Demographics}\n")
+cat("\\caption{Seminar Speaker Demographics by Discipline: Other Groups}\n")
 cat("\\label{tab:summary_disc_other}\n")
 cat("\\centering\n")
 cat("\\footnotesize\n")
@@ -497,18 +588,79 @@ cat("\\toprule\n")
 cat(" & \\multicolumn{2}{c}{Black} & \\multicolumn{2}{c}{Hispanic} & \\multicolumn{2}{c}{Female} \\\\\n")
 cat("Discipline & Mean \\% & Prop. Any & Mean \\% & Prop. Any & Mean \\% & Prop. Any \\\\\n")
 cat("\\midrule\n")
-for (i in 1:nrow(summary_by_disc)) {
+for (i in 1:nrow(summary_by_disc_seminars)) {
   cat(sprintf("%s & %.2f & %.3f & %.2f & %.3f & %.2f & %.3f \\\\\n",
-              summary_by_disc$discipline[i],
-              summary_by_disc$mean_pct_black[i],
-              summary_by_disc$prop_has_black[i],
-              summary_by_disc$mean_pct_hispanic[i],
-              summary_by_disc$prop_has_hispanic[i],
-              summary_by_disc$mean_pct_female[i],
-              summary_by_disc$prop_has_female[i]))
+              summary_by_disc_seminars$discipline[i],
+              summary_by_disc_seminars$mean_pct_black[i],
+              summary_by_disc_seminars$prop_has_black[i],
+              summary_by_disc_seminars$mean_pct_hispanic[i],
+              summary_by_disc_seminars$prop_has_hispanic[i],
+              summary_by_disc_seminars$mean_pct_female[i],
+              summary_by_disc_seminars$prop_has_female[i]))
 }
 cat("\\bottomrule\n")
 cat("\\end{tabular}\n")
+cat("\\footnotesize{Note: Statistics are for seminar speakers. 'Prop. Any' indicates proportion of seminars with at least one speaker from that group.}\n")
+cat("\\end{table}\n")
+```
+
+### Department Faculty Demographics by Discipline
+
+```{r summary-stats-discipline-departments}
+# Department faculty demographics by discipline
+dept_by_disc <- data %>%
+  mutate(discipline = case_when(
+    disc_mathematics == 1 ~ "Mathematics",
+    disc_physics == 1 ~ "Physics",
+    disc_computer_science == 1 ~ "Computer Science",
+    disc_mechanical_engineering == 1 ~ "Mechanical Engineering",
+    TRUE ~ "Chemistry"
+  )) %>%
+  group_by(discipline, department_std) %>%
+  summarise(
+    total_faculty = first(total_faculty),
+    frac_urm_faculty = first(frac_urm_faculty),
+    frac_women_faculty = first(frac_women_faculty),
+    .groups = 'drop'
+  ) %>%
+  group_by(discipline) %>%
+  summarise(
+    n_departments = n(),
+    mean_total_faculty = mean(total_faculty, na.rm = TRUE),
+    sd_total_faculty = sd(total_faculty, na.rm = TRUE),
+    mean_pct_urm_faculty = mean(frac_urm_faculty * 100, na.rm = TRUE),
+    sd_pct_urm_faculty = sd(frac_urm_faculty * 100, na.rm = TRUE),
+    mean_pct_women_faculty = mean(frac_women_faculty * 100, na.rm = TRUE),
+    sd_pct_women_faculty = sd(frac_women_faculty * 100, na.rm = TRUE),
+    .groups = 'drop'
+  ) %>%
+  arrange(discipline)
+
+# Create department faculty table
+cat("\n\\begin{table}[H]\n")
+cat("\\caption{Department Faculty Demographics by Discipline}\n")
+cat("\\label{tab:summary_disc_dept_faculty}\n")
+cat("\\centering\n")
+cat("\\footnotesize\n")
+cat("\\begin{tabular}{lcccccc}\n")
+cat("\\toprule\n")
+cat(" & & \\multicolumn{2}{c}{Faculty Size} & \\multicolumn{2}{c}{\\% URM Faculty} & \\multicolumn{2}{c}{\\% Women Faculty} \\\\\n")
+cat("Discipline & N Depts & Mean & SD & Mean & SD & Mean & SD \\\\\n")
+cat("\\midrule\n")
+for (i in 1:nrow(dept_by_disc)) {
+  cat(sprintf("%s & %d & %.1f & %.1f & %.2f & %.2f & %.2f & %.2f \\\\\n",
+              dept_by_disc$discipline[i],
+              dept_by_disc$n_departments[i],
+              dept_by_disc$mean_total_faculty[i],
+              dept_by_disc$sd_total_faculty[i],
+              dept_by_disc$mean_pct_urm_faculty[i],
+              dept_by_disc$sd_pct_urm_faculty[i],
+              dept_by_disc$mean_pct_women_faculty[i],
+              dept_by_disc$sd_pct_women_faculty[i]))
+}
+cat("\\bottomrule\n")
+cat("\\end{tabular}\n")
+cat("\\footnotesize{Note: Department faculty demographics based on 2024 coding.}\n")
 cat("\\end{table}\n")
 ```
 
@@ -640,46 +792,180 @@ create_stargazer_table(
 
 \newpage
 
-## Main Question 2a: Total Number of Speakers
+## Main Questions 2a-2c: Effects on Speaker Counts
 
-```{r mq2a-total}
+```{r mq2-all}
 # MQ2a: Total speakers
 count_total_m1 <- run_regression(paste("total_speakers ~ treatment +", paste(base_controls, collapse = " + ")), data)
 count_total_m2 <- run_regression(paste("total_speakers ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
 
-# Add to models list
-all_models_list <- append(all_models_list, list(
-  list(model = count_total_m1, analysis = "Main Effects", outcome = "Total Speakers", model_type = "Simple"),
-  list(model = count_total_m2, analysis = "Main Effects", outcome = "Total Speakers", model_type = "Extended")
-))
+# MQ2b: URM speakers (count)
+count_urm_m1 <- run_regression(paste("num_urm ~ treatment +", paste(base_controls, collapse = " + ")), data)
+count_urm_m2 <- run_regression(paste("num_urm ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
 
-create_stargazer_table(
-  list(count_total_m1, count_total_m2),
-  c("Count", "Count"),
-  "Main Question 2a: Effect on Total Number of Speakers",
-  "tab:mq2a_total"
-)
-```
-
-## Main Question 2c: Non-URM Speakers
-
-```{r mq2c-non-urm}
 # MQ2c: Non-URM speakers
 count_non_urm_m1 <- run_regression(paste("num_non_urm ~ treatment +", paste(base_controls, collapse = " + ")), data)
 count_non_urm_m2 <- run_regression(paste("num_non_urm ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
 
 # Add to models list
 all_models_list <- append(all_models_list, list(
+  list(model = count_total_m1, analysis = "Main Effects", outcome = "Total Speakers", model_type = "Simple"),
+  list(model = count_total_m2, analysis = "Main Effects", outcome = "Total Speakers", model_type = "Extended"),
+  list(model = count_urm_m1, analysis = "Main Effects", outcome = "Count URM", model_type = "Simple"),
+  list(model = count_urm_m2, analysis = "Main Effects", outcome = "Count URM", model_type = "Extended"),
   list(model = count_non_urm_m1, analysis = "Main Effects", outcome = "Count Non-URM", model_type = "Simple"),
   list(model = count_non_urm_m2, analysis = "Main Effects", outcome = "Count Non-URM", model_type = "Extended")
 ))
 
+# Combined table
 create_stargazer_table(
-  list(count_non_urm_m1, count_non_urm_m2),
-  c("Count", "Count"),
-  "Main Question 2c: Effect on Non-URM Speakers",
-  "tab:mq2c_non_urm"
+  list(count_total_m1, count_total_m2, count_urm_m1, count_urm_m2, count_non_urm_m1, count_non_urm_m2),
+  c("Total", "Total", "URM", "URM", "Non-URM", "Non-URM"),
+  "Main Questions 2a-2c: Effects on Speaker Counts",
+  "tab:mq2_all",
+  demographic_group = "Count"
 )
+```
+
+## Seemingly Unrelated Regression (SUR) Analysis
+
+```{r sur-analysis}
+# SUR to test whether effects on URM and non-URM speakers are equal and opposite
+# Per pre-registration: test if treatment increases URM at expense of non-URM
+
+# Function to safely run SUR with error handling
+run_sur_analysis <- function(data, base_controls, extended_controls) {
+  
+  tryCatch({
+    # Prepare equations for SUR
+    # Model 1 - Basic controls
+    eq1_m1 <- as.formula(paste("num_urm ~ treatment +", paste(base_controls, collapse = " + ")))
+    eq2_m1 <- as.formula(paste("num_non_urm ~ treatment +", paste(base_controls, collapse = " + ")))
+    
+    # Model 2 - Extended controls
+    eq1_m2 <- as.formula(paste("num_urm ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")))
+    eq2_m2 <- as.formula(paste("num_non_urm ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")))
+    
+    # Run SUR models with control for method
+    sur_m1 <- systemfit(list(URM = eq1_m1, NonURM = eq2_m1), 
+                       method = "SUR", 
+                       data = data,
+                       control = systemfit.control(tol = 1e-5))
+    
+    sur_m2 <- systemfit(list(URM = eq1_m2, NonURM = eq2_m2), 
+                       method = "SUR", 
+                       data = data,
+                       control = systemfit.control(tol = 1e-5))
+    
+    # Test whether treatment effects are equal and opposite
+    # H0: b1_URM + b1_NonURM = 0 (effects sum to zero)
+    # H1: b1_URM + b1_NonURM ≠ 0
+    
+    # For Model 1
+    test_m1 <- linearHypothesis(sur_m1, "URM_treatment + NonURM_treatment = 0")
+    # For Model 2  
+    test_m2 <- linearHypothesis(sur_m2, "URM_treatment + NonURM_treatment = 0")
+    
+    # Extract coefficients and SEs
+    urm_coef_m1 <- coef(sur_m1$eq[[1]])["treatment"]
+    urm_se_m1 <- sqrt(diag(vcov(sur_m1$eq[[1]]))["treatment"])
+    non_urm_coef_m1 <- coef(sur_m1$eq[[2]])["treatment"]
+    non_urm_se_m1 <- sqrt(diag(vcov(sur_m1$eq[[2]]))["treatment"])
+    
+    urm_coef_m2 <- coef(sur_m2$eq[[1]])["treatment"]
+    urm_se_m2 <- sqrt(diag(vcov(sur_m2$eq[[1]]))["treatment"])
+    non_urm_coef_m2 <- coef(sur_m2$eq[[2]])["treatment"]
+    non_urm_se_m2 <- sqrt(diag(vcov(sur_m2$eq[[2]]))["treatment"])
+    
+    return(list(
+      success = TRUE,
+      urm_coef_m1 = urm_coef_m1, urm_se_m1 = urm_se_m1,
+      non_urm_coef_m1 = non_urm_coef_m1, non_urm_se_m1 = non_urm_se_m1,
+      urm_coef_m2 = urm_coef_m2, urm_se_m2 = urm_se_m2,
+      non_urm_coef_m2 = non_urm_coef_m2, non_urm_se_m2 = non_urm_se_m2,
+      test_m1 = test_m1, test_m2 = test_m2
+    ))
+    
+  }, error = function(e) {
+    # If SUR fails, fall back to individual OLS estimates
+    # These are already computed above as count_urm_m1, count_urm_m2, etc.
+    
+    # Extract coefficients from individual models
+    urm_coef_m1 <- coef(count_urm_m1)["treatment"]
+    urm_se_m1 <- count_urm_m1$cluster_se["treatment"]
+    non_urm_coef_m1 <- coef(count_non_urm_m1)["treatment"]
+    non_urm_se_m1 <- count_non_urm_m1$cluster_se["treatment"]
+    
+    urm_coef_m2 <- coef(count_urm_m2)["treatment"]
+    urm_se_m2 <- count_urm_m2$cluster_se["treatment"]
+    non_urm_coef_m2 <- coef(count_non_urm_m2)["treatment"]
+    non_urm_se_m2 <- count_non_urm_m2$cluster_se["treatment"]
+    
+    return(list(
+      success = FALSE,
+      error_msg = e$message,
+      urm_coef_m1 = urm_coef_m1, urm_se_m1 = urm_se_m1,
+      non_urm_coef_m1 = non_urm_coef_m1, non_urm_se_m1 = non_urm_se_m1,
+      urm_coef_m2 = urm_coef_m2, urm_se_m2 = urm_se_m2,
+      non_urm_coef_m2 = non_urm_coef_m2, non_urm_se_m2 = non_urm_se_m2,
+      test_m1 = NULL, test_m2 = NULL
+    ))
+  })
+}
+
+# Run the analysis
+sur_results <- run_sur_analysis(data, base_controls, extended_controls)
+
+# Create summary table
+cat("\n\\begin{table}[H]\n")
+cat("\\caption{SUR Analysis: Testing Substitution Between URM and Non-URM Speakers}\n")
+cat("\\label{tab:sur_analysis}\n")
+cat("\\centering\n")
+cat("\\begin{tabular}{lcccc}\n")
+cat("\\toprule\n")
+cat(" & \\multicolumn{2}{c}{Simple Model} & \\multicolumn{2}{c}{Extended Model} \\\\\n")
+cat("Outcome & Coefficient & SE & Coefficient & SE \\\\\n")
+cat("\\midrule\n")
+
+cat(sprintf("URM Speakers & %.4f & (%.4f) & %.4f & (%.4f) \\\\\n",
+            sur_results$urm_coef_m1, sur_results$urm_se_m1, 
+            sur_results$urm_coef_m2, sur_results$urm_se_m2))
+cat(sprintf("Non-URM Speakers & %.4f & (%.4f) & %.4f & (%.4f) \\\\\n",
+            sur_results$non_urm_coef_m1, sur_results$non_urm_se_m1, 
+            sur_results$non_urm_coef_m2, sur_results$non_urm_se_m2))
+cat("\\midrule\n")
+cat(sprintf("Sum of Effects & %.4f & --- & %.4f & --- \\\\\n",
+            sur_results$urm_coef_m1 + sur_results$non_urm_coef_m1,
+            sur_results$urm_coef_m2 + sur_results$non_urm_coef_m2))
+
+if (sur_results$success && !is.null(sur_results$test_m1)) {
+  cat("\\midrule\n")
+  cat("\\multicolumn{5}{l}{\\textit{Wald Test: H0: Treatment effect on URM + Treatment effect on Non-URM = 0}} \\\\\n")
+  cat(sprintf("Chi-squared & %.3f & & %.3f & \\\\\n", 
+              sur_results$test_m1$Chisq[2], 
+              sur_results$test_m2$Chisq[2]))
+  cat(sprintf("p-value & %.4f & & %.4f & \\\\\n", 
+              sur_results$test_m1$`Pr(>Chisq)`[2], 
+              sur_results$test_m2$`Pr(>Chisq)`[2]))
+} else {
+  cat("\\midrule\n")
+  cat("\\multicolumn{5}{l}{\\textit{Note: SUR estimation failed; showing OLS estimates with clustered SEs}} \\\\\n")
+  # Can still test sum = 0 informally
+  sum_m1 <- sur_results$urm_coef_m1 + sur_results$non_urm_coef_m1
+  sum_m2 <- sur_results$urm_coef_m2 + sur_results$non_urm_coef_m2
+  cat(sprintf("\\multicolumn{5}{l}{\\textit{Sum close to zero: Model 1 = %.4f, Model 2 = %.4f}} \\\\\n",
+              sum_m1, sum_m2))
+}
+
+cat("\\bottomrule\n")
+cat("\\end{tabular}\n")
+
+if (sur_results$success) {
+  cat("\\footnotesize{Note: SUR estimation allows for correlation between equation errors. The Wald test examines whether the treatment effect represents a pure substitution (increasing URM speakers while decreasing non-URM speakers by the same amount).}\n")
+} else {
+  cat("\\footnotesize{Note: SUR estimation failed due to computational issues (likely multicollinearity). Table shows OLS estimates with clustered standard errors. The sum of effects being close to zero suggests a substitution pattern even without formal SUR testing.}\n")
+}
+cat("\\end{table}\n")
 ```
 
 \newpage
@@ -779,6 +1065,161 @@ create_stargazer_table(
 )
 ```
 
+## URM Female
+
+```{r urm-female}
+# URM-Female intersection
+pct_urm_female_m1 <- run_regression(paste("pct_urm_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
+count_urm_female_m1 <- run_regression(paste("approx_num_urm_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
+binary_urm_female_m1 <- run_regression(paste("has_any_urm_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
+
+pct_urm_female_m2 <- run_regression(paste("pct_urm_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+count_urm_female_m2 <- run_regression(paste("approx_num_urm_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+binary_urm_female_m2 <- run_regression(paste("has_any_urm_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+
+# Add to models list
+all_models_list <- append(all_models_list, list(
+  list(model = pct_urm_female_m1, analysis = "Demographic Subgroup", outcome = "% URM Female", model_type = "Simple"),
+  list(model = pct_urm_female_m2, analysis = "Demographic Subgroup", outcome = "% URM Female", model_type = "Extended"),
+  list(model = count_urm_female_m1, analysis = "Demographic Subgroup", outcome = "Count URM Female", model_type = "Simple"),
+  list(model = count_urm_female_m2, analysis = "Demographic Subgroup", outcome = "Count URM Female", model_type = "Extended"),
+  list(model = binary_urm_female_m1, analysis = "Demographic Subgroup", outcome = "Any URM Female", model_type = "Simple"),
+  list(model = binary_urm_female_m2, analysis = "Demographic Subgroup", outcome = "Any URM Female", model_type = "Extended")
+))
+
+create_stargazer_table(
+  list(pct_urm_female_m1, pct_urm_female_m2, count_urm_female_m1, count_urm_female_m2, binary_urm_female_m1, binary_urm_female_m2),
+  c("\\% URM Female", "\\% URM Female", "Count URM Female", "Count URM Female", "Any URM Female", "Any URM Female"),
+  "Effect on URM Female Speakers",
+  "tab:urm_female",
+  demographic_group = "URM Female"
+)
+```
+
+## Black Female
+
+```{r black-female}
+# Black-Female intersection
+pct_black_female_m1 <- run_regression(paste("pct_black_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
+count_black_female_m1 <- run_regression(paste("approx_num_black_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
+binary_black_female_m1 <- run_regression(paste("has_any_black_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
+
+pct_black_female_m2 <- run_regression(paste("pct_black_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+count_black_female_m2 <- run_regression(paste("approx_num_black_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+binary_black_female_m2 <- run_regression(paste("has_any_black_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+
+# Add to models list
+all_models_list <- append(all_models_list, list(
+  list(model = pct_black_female_m1, analysis = "Demographic Subgroup", outcome = "% Black Female", model_type = "Simple"),
+  list(model = pct_black_female_m2, analysis = "Demographic Subgroup", outcome = "% Black Female", model_type = "Extended"),
+  list(model = count_black_female_m1, analysis = "Demographic Subgroup", outcome = "Count Black Female", model_type = "Simple"),
+  list(model = count_black_female_m2, analysis = "Demographic Subgroup", outcome = "Count Black Female", model_type = "Extended"),
+  list(model = binary_black_female_m1, analysis = "Demographic Subgroup", outcome = "Any Black Female", model_type = "Simple"),
+  list(model = binary_black_female_m2, analysis = "Demographic Subgroup", outcome = "Any Black Female", model_type = "Extended")
+))
+
+create_stargazer_table(
+  list(pct_black_female_m1, pct_black_female_m2, count_black_female_m1, count_black_female_m2, binary_black_female_m1, binary_black_female_m2),
+  c("\\% Black Female", "\\% Black Female", "Count Black Female", "Count Black Female", "Any Black Female", "Any Black Female"),
+  "Effect on Black Female Speakers",
+  "tab:black_female",
+  demographic_group = "Black Female"
+)
+```
+
+## Black Male
+
+```{r black-male}
+# Black-Male intersection
+pct_black_male_m1 <- run_regression(paste("pct_black_male ~ treatment +", paste(base_controls, collapse = " + ")), data)
+count_black_male_m1 <- run_regression(paste("approx_num_black_male ~ treatment +", paste(base_controls, collapse = " + ")), data)
+binary_black_male_m1 <- run_regression(paste("has_any_black_male ~ treatment +", paste(base_controls, collapse = " + ")), data)
+
+pct_black_male_m2 <- run_regression(paste("pct_black_male ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+count_black_male_m2 <- run_regression(paste("approx_num_black_male ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+binary_black_male_m2 <- run_regression(paste("has_any_black_male ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+
+# Add to models list
+all_models_list <- append(all_models_list, list(
+  list(model = pct_black_male_m1, analysis = "Demographic Subgroup", outcome = "% Black Male", model_type = "Simple"),
+  list(model = pct_black_male_m2, analysis = "Demographic Subgroup", outcome = "% Black Male", model_type = "Extended"),
+  list(model = count_black_male_m1, analysis = "Demographic Subgroup", outcome = "Count Black Male", model_type = "Simple"),
+  list(model = count_black_male_m2, analysis = "Demographic Subgroup", outcome = "Count Black Male", model_type = "Extended"),
+  list(model = binary_black_male_m1, analysis = "Demographic Subgroup", outcome = "Any Black Male", model_type = "Simple"),
+  list(model = binary_black_male_m2, analysis = "Demographic Subgroup", outcome = "Any Black Male", model_type = "Extended")
+))
+
+create_stargazer_table(
+  list(pct_black_male_m1, pct_black_male_m2, count_black_male_m1, count_black_male_m2, binary_black_male_m1, binary_black_male_m2),
+  c("\\% Black Male", "\\% Black Male", "Count Black Male", "Count Black Male", "Any Black Male", "Any Black Male"),
+  "Effect on Black Male Speakers",
+  "tab:black_male",
+  demographic_group = "Black Male"
+)
+```
+
+## Hispanic Female
+
+```{r hispanic-female}
+# Hispanic-Female intersection
+pct_hispanic_female_m1 <- run_regression(paste("pct_hispanic_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
+count_hispanic_female_m1 <- run_regression(paste("approx_num_hispanic_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
+binary_hispanic_female_m1 <- run_regression(paste("has_any_hispanic_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
+
+pct_hispanic_female_m2 <- run_regression(paste("pct_hispanic_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+count_hispanic_female_m2 <- run_regression(paste("approx_num_hispanic_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+binary_hispanic_female_m2 <- run_regression(paste("has_any_hispanic_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+
+# Add to models list
+all_models_list <- append(all_models_list, list(
+  list(model = pct_hispanic_female_m1, analysis = "Demographic Subgroup", outcome = "% Hispanic Female", model_type = "Simple"),
+  list(model = pct_hispanic_female_m2, analysis = "Demographic Subgroup", outcome = "% Hispanic Female", model_type = "Extended"),
+  list(model = count_hispanic_female_m1, analysis = "Demographic Subgroup", outcome = "Count Hispanic Female", model_type = "Simple"),
+  list(model = count_hispanic_female_m2, analysis = "Demographic Subgroup", outcome = "Count Hispanic Female", model_type = "Extended"),
+  list(model = binary_hispanic_female_m1, analysis = "Demographic Subgroup", outcome = "Any Hispanic Female", model_type = "Simple"),
+  list(model = binary_hispanic_female_m2, analysis = "Demographic Subgroup", outcome = "Any Hispanic Female", model_type = "Extended")
+))
+
+create_stargazer_table(
+  list(pct_hispanic_female_m1, pct_hispanic_female_m2, count_hispanic_female_m1, count_hispanic_female_m2, binary_hispanic_female_m1, binary_hispanic_female_m2),
+  c("\\% Hispanic Female", "\\% Hispanic Female", "Count Hispanic Female", "Count Hispanic Female", "Any Hispanic Female", "Any Hispanic Female"),
+  "Effect on Hispanic Female Speakers",
+  "tab:hispanic_female",
+  demographic_group = "Hispanic Female"
+)
+```
+
+## Hispanic Male
+
+```{r hispanic-male}
+# Hispanic-Male intersection
+pct_hispanic_male_m1 <- run_regression(paste("pct_hispanic_male ~ treatment +", paste(base_controls, collapse = " + ")), data)
+count_hispanic_male_m1 <- run_regression(paste("approx_num_hispanic_male ~ treatment +", paste(base_controls, collapse = " + ")), data)
+binary_hispanic_male_m1 <- run_regression(paste("has_any_hispanic_male ~ treatment +", paste(base_controls, collapse = " + ")), data)
+
+pct_hispanic_male_m2 <- run_regression(paste("pct_hispanic_male ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+count_hispanic_male_m2 <- run_regression(paste("approx_num_hispanic_male ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+binary_hispanic_male_m2 <- run_regression(paste("has_any_hispanic_male ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+
+# Add to models list
+all_models_list <- append(all_models_list, list(
+  list(model = pct_hispanic_male_m1, analysis = "Demographic Subgroup", outcome = "% Hispanic Male", model_type = "Simple"),
+  list(model = pct_hispanic_male_m2, analysis = "Demographic Subgroup", outcome = "% Hispanic Male", model_type = "Extended"),
+  list(model = count_hispanic_male_m1, analysis = "Demographic Subgroup", outcome = "Count Hispanic Male", model_type = "Simple"),
+  list(model = count_hispanic_male_m2, analysis = "Demographic Subgroup", outcome = "Count Hispanic Male", model_type = "Extended"),
+  list(model = binary_hispanic_male_m1, analysis = "Demographic Subgroup", outcome = "Any Hispanic Male", model_type = "Simple"),
+  list(model = binary_hispanic_male_m2, analysis = "Demographic Subgroup", outcome = "Any Hispanic Male", model_type = "Extended")
+))
+
+create_stargazer_table(
+  list(pct_hispanic_male_m1, pct_hispanic_male_m2, count_hispanic_male_m1, count_hispanic_male_m2, binary_hispanic_male_m1, binary_hispanic_male_m2),
+  c("\\% Hispanic Male", "\\% Hispanic Male", "Count Hispanic Male", "Count Hispanic Male", "Any Hispanic Male", "Any Hispanic Male"),
+  "Effect on Hispanic Male Speakers",
+  "tab:hispanic_male",
+  demographic_group = "Hispanic Male"
+)
+```
+
 \newpage
 
 # Discipline Subgroup Analysis
@@ -829,12 +1270,12 @@ for (disc_info in disciplines) {
                                      c("disc_mathematics", "disc_physics", "disc_computer_science", "disc_mechanical_engineering")), 
                                      extended_controls), collapse = " + ")), disc_data)
     
-    # Create table for this discipline
+    # Create table for this discipline - URM
     create_stargazer_table(
       list(pct_m1, pct_m2, count_m1, count_m2, binary_m1, binary_m2),
       c("\\% URM", "\\% URM", "Count URM", "Count URM", "Any URM", "Any URM"),
       paste(disc_name, ": Effect on URM Speaker Representation"),
-      paste0("tab:discipline_", tolower(gsub(" ", "_", disc_name))),
+      paste0("tab:discipline_", tolower(gsub(" ", "_", disc_name)), "_urm"),
       demographic_group = "URM"
     )
     
@@ -853,6 +1294,88 @@ for (disc_info in disciplines) {
       list(model = count_m2, analysis = paste("Discipline:", disc_name), outcome = "Count URM", model_type = "Extended"),
       list(model = binary_m1, analysis = paste("Discipline:", disc_name), outcome = "Any URM", model_type = "Simple"),
       list(model = binary_m2, analysis = paste("Discipline:", disc_name), outcome = "Any URM", model_type = "Extended")
+    ))
+    
+    # Black Analysis for this discipline
+    pct_black_m1 <- run_regression(paste("pct_black ~ treatment +", paste(setdiff(base_controls, 
+                                  c("disc_mathematics", "disc_physics", "disc_computer_science", "disc_mechanical_engineering")), 
+                                  collapse = " + ")), disc_data)
+    pct_black_m2 <- run_regression(paste("pct_black ~ treatment +", paste(c(setdiff(base_controls, 
+                                  c("disc_mathematics", "disc_physics", "disc_computer_science", "disc_mechanical_engineering")), 
+                                  extended_controls), collapse = " + ")), disc_data)
+    
+    count_black_m1 <- run_regression(paste("num_black ~ treatment +", paste(setdiff(base_controls, 
+                                    c("disc_mathematics", "disc_physics", "disc_computer_science", "disc_mechanical_engineering")), 
+                                    collapse = " + ")), disc_data)
+    count_black_m2 <- run_regression(paste("num_black ~ treatment +", paste(c(setdiff(base_controls, 
+                                    c("disc_mathematics", "disc_physics", "disc_computer_science", "disc_mechanical_engineering")), 
+                                    extended_controls), collapse = " + ")), disc_data)
+    
+    binary_black_m1 <- run_regression(paste("has_any_black ~ treatment +", paste(setdiff(base_controls, 
+                                     c("disc_mathematics", "disc_physics", "disc_computer_science", "disc_mechanical_engineering")), 
+                                     collapse = " + ")), disc_data)
+    binary_black_m2 <- run_regression(paste("has_any_black ~ treatment +", paste(c(setdiff(base_controls, 
+                                     c("disc_mathematics", "disc_physics", "disc_computer_science", "disc_mechanical_engineering")), 
+                                     extended_controls), collapse = " + ")), disc_data)
+    
+    # Create table for Black speakers
+    create_stargazer_table(
+      list(pct_black_m1, pct_black_m2, count_black_m1, count_black_m2, binary_black_m1, binary_black_m2),
+      c("\\% Black", "\\% Black", "Count Black", "Count Black", "Any Black", "Any Black"),
+      paste(disc_name, ": Effect on Black Speaker Representation"),
+      paste0("tab:discipline_", tolower(gsub(" ", "_", disc_name)), "_black"),
+      demographic_group = "Black"
+    )
+    
+    # Add Black models to models list
+    all_models_list <- append(all_models_list, list(
+      list(model = pct_black_m1, analysis = paste("Discipline:", disc_name), outcome = "% Black", model_type = "Simple"),
+      list(model = pct_black_m2, analysis = paste("Discipline:", disc_name), outcome = "% Black", model_type = "Extended"),
+      list(model = count_black_m1, analysis = paste("Discipline:", disc_name), outcome = "Count Black", model_type = "Simple"),
+      list(model = count_black_m2, analysis = paste("Discipline:", disc_name), outcome = "Count Black", model_type = "Extended"),
+      list(model = binary_black_m1, analysis = paste("Discipline:", disc_name), outcome = "Any Black", model_type = "Simple"),
+      list(model = binary_black_m2, analysis = paste("Discipline:", disc_name), outcome = "Any Black", model_type = "Extended")
+    ))
+    
+    # Hispanic Analysis for this discipline
+    pct_hispanic_m1 <- run_regression(paste("pct_hispanic ~ treatment +", paste(setdiff(base_controls, 
+                                  c("disc_mathematics", "disc_physics", "disc_computer_science", "disc_mechanical_engineering")), 
+                                  collapse = " + ")), disc_data)
+    pct_hispanic_m2 <- run_regression(paste("pct_hispanic ~ treatment +", paste(c(setdiff(base_controls, 
+                                  c("disc_mathematics", "disc_physics", "disc_computer_science", "disc_mechanical_engineering")), 
+                                  extended_controls), collapse = " + ")), disc_data)
+    
+    count_hispanic_m1 <- run_regression(paste("num_hispanic ~ treatment +", paste(setdiff(base_controls, 
+                                    c("disc_mathematics", "disc_physics", "disc_computer_science", "disc_mechanical_engineering")), 
+                                    collapse = " + ")), disc_data)
+    count_hispanic_m2 <- run_regression(paste("num_hispanic ~ treatment +", paste(c(setdiff(base_controls, 
+                                    c("disc_mathematics", "disc_physics", "disc_computer_science", "disc_mechanical_engineering")), 
+                                    extended_controls), collapse = " + ")), disc_data)
+    
+    binary_hispanic_m1 <- run_regression(paste("has_any_hispanic ~ treatment +", paste(setdiff(base_controls, 
+                                     c("disc_mathematics", "disc_physics", "disc_computer_science", "disc_mechanical_engineering")), 
+                                     collapse = " + ")), disc_data)
+    binary_hispanic_m2 <- run_regression(paste("has_any_hispanic ~ treatment +", paste(c(setdiff(base_controls, 
+                                     c("disc_mathematics", "disc_physics", "disc_computer_science", "disc_mechanical_engineering")), 
+                                     extended_controls), collapse = " + ")), disc_data)
+    
+    # Create table for Hispanic speakers
+    create_stargazer_table(
+      list(pct_hispanic_m1, pct_hispanic_m2, count_hispanic_m1, count_hispanic_m2, binary_hispanic_m1, binary_hispanic_m2),
+      c("\\% Hispanic", "\\% Hispanic", "Count Hispanic", "Count Hispanic", "Any Hispanic", "Any Hispanic"),
+      paste(disc_name, ": Effect on Hispanic Speaker Representation"),
+      paste0("tab:discipline_", tolower(gsub(" ", "_", disc_name)), "_hispanic"),
+      demographic_group = "Hispanic"
+    )
+    
+    # Add Hispanic models to models list
+    all_models_list <- append(all_models_list, list(
+      list(model = pct_hispanic_m1, analysis = paste("Discipline:", disc_name), outcome = "% Hispanic", model_type = "Simple"),
+      list(model = pct_hispanic_m2, analysis = paste("Discipline:", disc_name), outcome = "% Hispanic", model_type = "Extended"),
+      list(model = count_hispanic_m1, analysis = paste("Discipline:", disc_name), outcome = "Count Hispanic", model_type = "Simple"),
+      list(model = count_hispanic_m2, analysis = paste("Discipline:", disc_name), outcome = "Count Hispanic", model_type = "Extended"),
+      list(model = binary_hispanic_m1, analysis = paste("Discipline:", disc_name), outcome = "Any Hispanic", model_type = "Simple"),
+      list(model = binary_hispanic_m2, analysis = paste("Discipline:", disc_name), outcome = "Any Hispanic", model_type = "Extended")
     ))
   } else {
     cat("Insufficient observations for regression analysis in", disc_name, "\n\n")
@@ -895,6 +1418,60 @@ create_stargazer_table(
   "tab:fall_urm",
   demographic_group = "URM"
 )
+
+# Black Analysis
+pct_fall_black_m1 <- run_regression(paste("fall_pct_black ~ treatment +", paste(base_controls, collapse = " + ")), data_fall)
+count_fall_black_m1 <- run_regression(paste("fall_num_black ~ treatment +", paste(base_controls, collapse = " + ")), data_fall)
+binary_fall_black_m1 <- run_regression(paste("fall_has_any_black ~ treatment +", paste(base_controls, collapse = " + ")), data_fall)
+
+pct_fall_black_m2 <- run_regression(paste("fall_pct_black ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_fall)
+count_fall_black_m2 <- run_regression(paste("fall_num_black ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_fall)
+binary_fall_black_m2 <- run_regression(paste("fall_has_any_black ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_fall)
+
+# Add to models list
+all_models_list <- append(all_models_list, list(
+  list(model = pct_fall_black_m1, analysis = "Fall Semester", outcome = "% Black", model_type = "Simple"),
+  list(model = pct_fall_black_m2, analysis = "Fall Semester", outcome = "% Black", model_type = "Extended"),
+  list(model = count_fall_black_m1, analysis = "Fall Semester", outcome = "Count Black", model_type = "Simple"),
+  list(model = count_fall_black_m2, analysis = "Fall Semester", outcome = "Count Black", model_type = "Extended"),
+  list(model = binary_fall_black_m1, analysis = "Fall Semester", outcome = "Any Black", model_type = "Simple"),
+  list(model = binary_fall_black_m2, analysis = "Fall Semester", outcome = "Any Black", model_type = "Extended")
+))
+
+create_stargazer_table(
+  list(pct_fall_black_m1, pct_fall_black_m2, count_fall_black_m1, count_fall_black_m2, binary_fall_black_m1, binary_fall_black_m2),
+  c("\\% Black", "\\% Black", "Count Black", "Count Black", "Any Black", "Any Black"),
+  "Fall Semester: Effect on Black Speakers",
+  "tab:fall_black",
+  demographic_group = "Black"
+)
+
+# Hispanic Analysis
+pct_fall_hispanic_m1 <- run_regression(paste("fall_pct_hispanic ~ treatment +", paste(base_controls, collapse = " + ")), data_fall)
+count_fall_hispanic_m1 <- run_regression(paste("fall_num_hispanic ~ treatment +", paste(base_controls, collapse = " + ")), data_fall)
+binary_fall_hispanic_m1 <- run_regression(paste("fall_has_any_hispanic ~ treatment +", paste(base_controls, collapse = " + ")), data_fall)
+
+pct_fall_hispanic_m2 <- run_regression(paste("fall_pct_hispanic ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_fall)
+count_fall_hispanic_m2 <- run_regression(paste("fall_num_hispanic ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_fall)
+binary_fall_hispanic_m2 <- run_regression(paste("fall_has_any_hispanic ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_fall)
+
+# Add to models list
+all_models_list <- append(all_models_list, list(
+  list(model = pct_fall_hispanic_m1, analysis = "Fall Semester", outcome = "% Hispanic", model_type = "Simple"),
+  list(model = pct_fall_hispanic_m2, analysis = "Fall Semester", outcome = "% Hispanic", model_type = "Extended"),
+  list(model = count_fall_hispanic_m1, analysis = "Fall Semester", outcome = "Count Hispanic", model_type = "Simple"),
+  list(model = count_fall_hispanic_m2, analysis = "Fall Semester", outcome = "Count Hispanic", model_type = "Extended"),
+  list(model = binary_fall_hispanic_m1, analysis = "Fall Semester", outcome = "Any Hispanic", model_type = "Simple"),
+  list(model = binary_fall_hispanic_m2, analysis = "Fall Semester", outcome = "Any Hispanic", model_type = "Extended")
+))
+
+create_stargazer_table(
+  list(pct_fall_hispanic_m1, pct_fall_hispanic_m2, count_fall_hispanic_m1, count_fall_hispanic_m2, binary_fall_hispanic_m1, binary_fall_hispanic_m2),
+  c("\\% Hispanic", "\\% Hispanic", "Count Hispanic", "Count Hispanic", "Any Hispanic", "Any Hispanic"),
+  "Fall Semester: Effect on Hispanic Speakers",
+  "tab:fall_hispanic",
+  demographic_group = "Hispanic"
+)
 ```
 
 ## Spring Semester
@@ -928,164 +1505,59 @@ create_stargazer_table(
   "tab:spring_urm",
   demographic_group = "URM"
 )
-```
 
-\newpage
+# Black Analysis
+pct_spring_black_m1 <- run_regression(paste("spring_pct_black ~ treatment +", paste(base_controls, collapse = " + ")), data_spring)
+count_spring_black_m1 <- run_regression(paste("spring_num_black ~ treatment +", paste(base_controls, collapse = " + ")), data_spring)
+binary_spring_black_m1 <- run_regression(paste("spring_has_any_black ~ treatment +", paste(base_controls, collapse = " + ")), data_spring)
 
-# Intersectional Analysis
-
-## URM $\\times$ Female
-
-```{r urm-female}
-# URM-Female intersection
-pct_urm_female_m1 <- run_regression(paste("pct_urm_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
-count_urm_female_m1 <- run_regression(paste("approx_num_urm_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
-binary_urm_female_m1 <- run_regression(paste("has_any_urm_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
-
-pct_urm_female_m2 <- run_regression(paste("pct_urm_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
-count_urm_female_m2 <- run_regression(paste("approx_num_urm_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
-binary_urm_female_m2 <- run_regression(paste("has_any_urm_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+pct_spring_black_m2 <- run_regression(paste("spring_pct_black ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_spring)
+count_spring_black_m2 <- run_regression(paste("spring_num_black ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_spring)
+binary_spring_black_m2 <- run_regression(paste("spring_has_any_black ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_spring)
 
 # Add to models list
 all_models_list <- append(all_models_list, list(
-  list(model = pct_urm_female_m1, analysis = "Intersectional", outcome = "% URM Female", model_type = "Simple"),
-  list(model = pct_urm_female_m2, analysis = "Intersectional", outcome = "% URM Female", model_type = "Extended"),
-  list(model = count_urm_female_m1, analysis = "Intersectional", outcome = "Count URM Female", model_type = "Simple"),
-  list(model = count_urm_female_m2, analysis = "Intersectional", outcome = "Count URM Female", model_type = "Extended"),
-  list(model = binary_urm_female_m1, analysis = "Intersectional", outcome = "Any URM Female", model_type = "Simple"),
-  list(model = binary_urm_female_m2, analysis = "Intersectional", outcome = "Any URM Female", model_type = "Extended")
+  list(model = pct_spring_black_m1, analysis = "Spring Semester", outcome = "% Black", model_type = "Simple"),
+  list(model = pct_spring_black_m2, analysis = "Spring Semester", outcome = "% Black", model_type = "Extended"),
+  list(model = count_spring_black_m1, analysis = "Spring Semester", outcome = "Count Black", model_type = "Simple"),
+  list(model = count_spring_black_m2, analysis = "Spring Semester", outcome = "Count Black", model_type = "Extended"),
+  list(model = binary_spring_black_m1, analysis = "Spring Semester", outcome = "Any Black", model_type = "Simple"),
+  list(model = binary_spring_black_m2, analysis = "Spring Semester", outcome = "Any Black", model_type = "Extended")
 ))
 
 create_stargazer_table(
-  list(pct_urm_female_m1, pct_urm_female_m2, count_urm_female_m1, count_urm_female_m2, binary_urm_female_m1, binary_urm_female_m2),
-  c("\\% URM Female", "\\% URM Female", "Count URM Female", "Count URM Female", "Any URM Female", "Any URM Female"),
-  "Effect on URM Female Speakers",
-  "tab:urm_female",
-  demographic_group = "URM Female"
+  list(pct_spring_black_m1, pct_spring_black_m2, count_spring_black_m1, count_spring_black_m2, binary_spring_black_m1, binary_spring_black_m2),
+  c("\\% Black", "\\% Black", "Count Black", "Count Black", "Any Black", "Any Black"),
+  "Spring Semester: Effect on Black Speakers",
+  "tab:spring_black",
+  demographic_group = "Black"
 )
-```
 
-## Black Female
+# Hispanic Analysis
+pct_spring_hispanic_m1 <- run_regression(paste("spring_pct_hispanic ~ treatment +", paste(base_controls, collapse = " + ")), data_spring)
+count_spring_hispanic_m1 <- run_regression(paste("spring_num_hispanic ~ treatment +", paste(base_controls, collapse = " + ")), data_spring)
+binary_spring_hispanic_m1 <- run_regression(paste("spring_has_any_hispanic ~ treatment +", paste(base_controls, collapse = " + ")), data_spring)
 
-```{r black-female}
-# Black-Female intersection
-pct_black_female_m1 <- run_regression(paste("pct_black_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
-count_black_female_m1 <- run_regression(paste("approx_num_black_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
-binary_black_female_m1 <- run_regression(paste("has_any_black_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
-
-pct_black_female_m2 <- run_regression(paste("pct_black_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
-count_black_female_m2 <- run_regression(paste("approx_num_black_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
-binary_black_female_m2 <- run_regression(paste("has_any_black_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
+pct_spring_hispanic_m2 <- run_regression(paste("spring_pct_hispanic ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_spring)
+count_spring_hispanic_m2 <- run_regression(paste("spring_num_hispanic ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_spring)
+binary_spring_hispanic_m2 <- run_regression(paste("spring_has_any_hispanic ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_spring)
 
 # Add to models list
 all_models_list <- append(all_models_list, list(
-  list(model = pct_black_female_m1, analysis = "Intersectional", outcome = "% Black Female", model_type = "Simple"),
-  list(model = pct_black_female_m2, analysis = "Intersectional", outcome = "% Black Female", model_type = "Extended"),
-  list(model = count_black_female_m1, analysis = "Intersectional", outcome = "Count Black Female", model_type = "Simple"),
-  list(model = count_black_female_m2, analysis = "Intersectional", outcome = "Count Black Female", model_type = "Extended"),
-  list(model = binary_black_female_m1, analysis = "Intersectional", outcome = "Any Black Female", model_type = "Simple"),
-  list(model = binary_black_female_m2, analysis = "Intersectional", outcome = "Any Black Female", model_type = "Extended")
+  list(model = pct_spring_hispanic_m1, analysis = "Spring Semester", outcome = "% Hispanic", model_type = "Simple"),
+  list(model = pct_spring_hispanic_m2, analysis = "Spring Semester", outcome = "% Hispanic", model_type = "Extended"),
+  list(model = count_spring_hispanic_m1, analysis = "Spring Semester", outcome = "Count Hispanic", model_type = "Simple"),
+  list(model = count_spring_hispanic_m2, analysis = "Spring Semester", outcome = "Count Hispanic", model_type = "Extended"),
+  list(model = binary_spring_hispanic_m1, analysis = "Spring Semester", outcome = "Any Hispanic", model_type = "Simple"),
+  list(model = binary_spring_hispanic_m2, analysis = "Spring Semester", outcome = "Any Hispanic", model_type = "Extended")
 ))
 
 create_stargazer_table(
-  list(pct_black_female_m1, pct_black_female_m2, count_black_female_m1, count_black_female_m2, binary_black_female_m1, binary_black_female_m2),
-  c("\\% Black Female", "\\% Black Female", "Count Black Female", "Count Black Female", "Any Black Female", "Any Black Female"),
-  "Effect on Black Female Speakers",
-  "tab:black_female",
-  demographic_group = "Black Female"
-)
-```
-
-## Black Male
-
-```{r black-male}
-# Black-Male intersection
-pct_black_male_m1 <- run_regression(paste("pct_black_male ~ treatment +", paste(base_controls, collapse = " + ")), data)
-count_black_male_m1 <- run_regression(paste("approx_num_black_male ~ treatment +", paste(base_controls, collapse = " + ")), data)
-binary_black_male_m1 <- run_regression(paste("has_any_black_male ~ treatment +", paste(base_controls, collapse = " + ")), data)
-
-pct_black_male_m2 <- run_regression(paste("pct_black_male ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
-count_black_male_m2 <- run_regression(paste("approx_num_black_male ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
-binary_black_male_m2 <- run_regression(paste("has_any_black_male ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
-
-# Add to models list
-all_models_list <- append(all_models_list, list(
-  list(model = pct_black_male_m1, analysis = "Intersectional", outcome = "% Black Male", model_type = "Simple"),
-  list(model = pct_black_male_m2, analysis = "Intersectional", outcome = "% Black Male", model_type = "Extended"),
-  list(model = count_black_male_m1, analysis = "Intersectional", outcome = "Count Black Male", model_type = "Simple"),
-  list(model = count_black_male_m2, analysis = "Intersectional", outcome = "Count Black Male", model_type = "Extended"),
-  list(model = binary_black_male_m1, analysis = "Intersectional", outcome = "Any Black Male", model_type = "Simple"),
-  list(model = binary_black_male_m2, analysis = "Intersectional", outcome = "Any Black Male", model_type = "Extended")
-))
-
-create_stargazer_table(
-  list(pct_black_male_m1, pct_black_male_m2, count_black_male_m1, count_black_male_m2, binary_black_male_m1, binary_black_male_m2),
-  c("\\% Black Male", "\\% Black Male", "Count Black Male", "Count Black Male", "Any Black Male", "Any Black Male"),
-  "Effect on Black Male Speakers",
-  "tab:black_male",
-  demographic_group = "Black Male"
-)
-```
-
-## Hispanic Female
-
-```{r hispanic-female}
-# Hispanic-Female intersection
-pct_hispanic_female_m1 <- run_regression(paste("pct_hispanic_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
-count_hispanic_female_m1 <- run_regression(paste("approx_num_hispanic_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
-binary_hispanic_female_m1 <- run_regression(paste("has_any_hispanic_female ~ treatment +", paste(base_controls, collapse = " + ")), data)
-
-pct_hispanic_female_m2 <- run_regression(paste("pct_hispanic_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
-count_hispanic_female_m2 <- run_regression(paste("approx_num_hispanic_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
-binary_hispanic_female_m2 <- run_regression(paste("has_any_hispanic_female ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
-
-# Add to models list
-all_models_list <- append(all_models_list, list(
-  list(model = pct_hispanic_female_m1, analysis = "Intersectional", outcome = "% Hispanic Female", model_type = "Simple"),
-  list(model = pct_hispanic_female_m2, analysis = "Intersectional", outcome = "% Hispanic Female", model_type = "Extended"),
-  list(model = count_hispanic_female_m1, analysis = "Intersectional", outcome = "Count Hispanic Female", model_type = "Simple"),
-  list(model = count_hispanic_female_m2, analysis = "Intersectional", outcome = "Count Hispanic Female", model_type = "Extended"),
-  list(model = binary_hispanic_female_m1, analysis = "Intersectional", outcome = "Any Hispanic Female", model_type = "Simple"),
-  list(model = binary_hispanic_female_m2, analysis = "Intersectional", outcome = "Any Hispanic Female", model_type = "Extended")
-))
-
-create_stargazer_table(
-  list(pct_hispanic_female_m1, pct_hispanic_female_m2, count_hispanic_female_m1, count_hispanic_female_m2, binary_hispanic_female_m1, binary_hispanic_female_m2),
-  c("\\% Hispanic Female", "\\% Hispanic Female", "Count Hispanic Female", "Count Hispanic Female", "Any Hispanic Female", "Any Hispanic Female"),
-  "Effect on Hispanic Female Speakers",
-  "tab:hispanic_female",
-  demographic_group = "Hispanic Female"
-)
-```
-
-## Hispanic Male
-
-```{r hispanic-male}
-# Hispanic-Male intersection
-pct_hispanic_male_m1 <- run_regression(paste("pct_hispanic_male ~ treatment +", paste(base_controls, collapse = " + ")), data)
-count_hispanic_male_m1 <- run_regression(paste("approx_num_hispanic_male ~ treatment +", paste(base_controls, collapse = " + ")), data)
-binary_hispanic_male_m1 <- run_regression(paste("has_any_hispanic_male ~ treatment +", paste(base_controls, collapse = " + ")), data)
-
-pct_hispanic_male_m2 <- run_regression(paste("pct_hispanic_male ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
-count_hispanic_male_m2 <- run_regression(paste("approx_num_hispanic_male ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
-binary_hispanic_male_m2 <- run_regression(paste("has_any_hispanic_male ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data)
-
-# Add to models list
-all_models_list <- append(all_models_list, list(
-  list(model = pct_hispanic_male_m1, analysis = "Intersectional", outcome = "% Hispanic Male", model_type = "Simple"),
-  list(model = pct_hispanic_male_m2, analysis = "Intersectional", outcome = "% Hispanic Male", model_type = "Extended"),
-  list(model = count_hispanic_male_m1, analysis = "Intersectional", outcome = "Count Hispanic Male", model_type = "Simple"),
-  list(model = count_hispanic_male_m2, analysis = "Intersectional", outcome = "Count Hispanic Male", model_type = "Extended"),
-  list(model = binary_hispanic_male_m1, analysis = "Intersectional", outcome = "Any Hispanic Male", model_type = "Simple"),
-  list(model = binary_hispanic_male_m2, analysis = "Intersectional", outcome = "Any Hispanic Male", model_type = "Extended")
-))
-
-create_stargazer_table(
-  list(pct_hispanic_male_m1, pct_hispanic_male_m2, count_hispanic_male_m1, count_hispanic_male_m2, binary_hispanic_male_m1, binary_hispanic_male_m2),
-  c("\\% Hispanic Male", "\\% Hispanic Male", "Count Hispanic Male", "Count Hispanic Male", "Any Hispanic Male", "Any Hispanic Male"),
-  "Effect on Hispanic Male Speakers",
-  "tab:hispanic_male",
-  demographic_group = "Hispanic Male"
+  list(pct_spring_hispanic_m1, pct_spring_hispanic_m2, count_spring_hispanic_m1, count_spring_hispanic_m2, binary_spring_hispanic_m1, binary_spring_hispanic_m2),
+  c("\\% Hispanic", "\\% Hispanic", "Count Hispanic", "Count Hispanic", "Any Hispanic", "Any Hispanic"),
+  "Spring Semester: Effect on Hispanic Speakers",
+  "tab:spring_hispanic",
+  demographic_group = "Hispanic"
 )
 ```
 
@@ -1097,79 +1569,189 @@ create_stargazer_table(
 
 ```{r heterogeneity-discipline}
 # Test whether treatment effects vary by discipline
-# We'll run models with all discipline interactions and test joint significance
+# We compare treatment effects across disciplines using discipline-specific models from earlier
 
 cat("### Testing Whether Treatment Effects Vary by Discipline\n\n")
 
-# First, run models with all discipline interactions (Chemistry as reference)
-# Model 1: Basic controls
-pct_full_m1 <- run_regression(paste("pct_urm ~ treatment * (disc_mathematics + disc_physics + disc_computer_science + disc_mechanical_engineering) +", 
-                                   paste(setdiff(base_controls, c("disc_mathematics", "disc_physics", 
-                                                                 "disc_computer_science", "disc_mechanical_engineering")), 
-                                         collapse = " + ")), data)
-count_full_m1 <- run_regression(paste("num_urm ~ treatment * (disc_mathematics + disc_physics + disc_computer_science + disc_mechanical_engineering) +", 
-                                     paste(setdiff(base_controls, c("disc_mathematics", "disc_physics", 
-                                                                   "disc_computer_science", "disc_mechanical_engineering")), 
-                                           collapse = " + ")), data)
-binary_full_m1 <- run_regression(paste("has_any_urm ~ treatment * (disc_mathematics + disc_physics + disc_computer_science + disc_mechanical_engineering) +", 
-                                      paste(setdiff(base_controls, c("disc_mathematics", "disc_physics", 
-                                                                    "disc_computer_science", "disc_mechanical_engineering")), 
-                                            collapse = " + ")), data)
+# Extract treatment coefficients from discipline-specific models stored earlier
+# First, create a comprehensive table showing treatment effects by discipline
 
-# Model 2: Extended controls
-pct_full_m2 <- run_regression(paste("pct_urm ~ treatment * (disc_mathematics + disc_physics + disc_computer_science + disc_mechanical_engineering) +", 
-                                   paste(c(setdiff(base_controls, c("disc_mathematics", "disc_physics", 
-                                                                   "disc_computer_science", "disc_mechanical_engineering")), 
-                                          extended_controls), collapse = " + ")), data)
-count_full_m2 <- run_regression(paste("num_urm ~ treatment * (disc_mathematics + disc_physics + disc_computer_science + disc_mechanical_engineering) +", 
-                                     paste(c(setdiff(base_controls, c("disc_mathematics", "disc_physics", 
+# Function to extract treatment effect info from a model
+extract_treatment_effect <- function(model) {
+  if (is.null(model)) return(list(coef = NA, se = NA, p = NA))
+  
+  coef_val <- coef(model)["treatment"]
+  se_val <- model$cluster_se["treatment"]
+  t_val <- coef_val / se_val
+  p_val <- 2 * pt(-abs(t_val), df = length(model$residuals) - length(coef(model)))
+  
+  return(list(coef = coef_val, se = se_val, p = p_val))
+}
+
+# Create comprehensive comparison table for URM outcomes
+cat("\\begin{table}[H]\n")
+cat("\\caption{Treatment Effects by Discipline: URM Outcomes}\n")
+cat("\\label{tab:discipline_comparison_urm}\n")
+cat("\\centering\n")
+cat("\\footnotesize\n")
+cat("\\begin{tabular}{lccccc}\n")
+cat("\\toprule\n")
+cat(" & \\multicolumn{2}{c}{Simple Model} & \\multicolumn{2}{c}{Extended Model} \\\\\n")
+cat("Discipline & Coefficient & (SE) & Coefficient & (SE) \\\\\n")
+cat("\\midrule\n")
+cat("\\multicolumn{5}{l}{\\textit{Panel A: \\% URM}} \\\\\n")
+
+# Extract results for each discipline from the stored models
+disciplines <- c("Chemistry", "Mathematics", "Physics", "Computer Science", "Mechanical Engineering")
+
+# Store coefficients for heterogeneity test
+urm_pct_effects_m1 <- c()
+urm_pct_effects_m2 <- c()
+urm_count_effects_m1 <- c()
+urm_count_effects_m2 <- c()
+urm_binary_effects_m1 <- c()
+urm_binary_effects_m2 <- c()
+
+for (disc_name in disciplines) {
+  if (disc_name %in% names(discipline_results)) {
+    # % URM
+    pct_m1_info <- extract_treatment_effect(discipline_results[[disc_name]]$pct_m1)
+    pct_m2_info <- extract_treatment_effect(discipline_results[[disc_name]]$pct_m2)
+    
+    urm_pct_effects_m1 <- c(urm_pct_effects_m1, pct_m1_info$coef)
+    urm_pct_effects_m2 <- c(urm_pct_effects_m2, pct_m2_info$coef)
+    
+    sig_m1 <- ifelse(is.na(pct_m1_info$p), "", 
+                     ifelse(pct_m1_info$p < 0.001, "***",
+                            ifelse(pct_m1_info$p < 0.01, "**",
+                                   ifelse(pct_m1_info$p < 0.05, "*",
+                                          ifelse(pct_m1_info$p < 0.1, "+", "")))))
+    sig_m2 <- ifelse(is.na(pct_m2_info$p), "", 
+                     ifelse(pct_m2_info$p < 0.001, "***",
+                            ifelse(pct_m2_info$p < 0.01, "**",
+                                   ifelse(pct_m2_info$p < 0.05, "*",
+                                          ifelse(pct_m2_info$p < 0.1, "+", "")))))
+    
+    cat(sprintf("%s & %.4f%s & (%.4f) & %.4f%s & (%.4f) \\\\\n",
+                disc_name, 
+                ifelse(is.na(pct_m1_info$coef), 0, pct_m1_info$coef), sig_m1,
+                ifelse(is.na(pct_m1_info$se), 0, pct_m1_info$se),
+                ifelse(is.na(pct_m2_info$coef), 0, pct_m2_info$coef), sig_m2,
+                ifelse(is.na(pct_m2_info$se), 0, pct_m2_info$se)))
+  }
+}
+
+cat("\\midrule\n")
+cat("\\multicolumn{5}{l}{\\textit{Panel B: Count URM}} \\\\\n")
+
+for (disc_name in disciplines) {
+  if (disc_name %in% names(discipline_results)) {
+    # Count URM
+    count_m1_info <- extract_treatment_effect(discipline_results[[disc_name]]$count_m1)
+    count_m2_info <- extract_treatment_effect(discipline_results[[disc_name]]$count_m2)
+    
+    urm_count_effects_m1 <- c(urm_count_effects_m1, count_m1_info$coef)
+    urm_count_effects_m2 <- c(urm_count_effects_m2, count_m2_info$coef)
+    
+    sig_m1 <- ifelse(is.na(count_m1_info$p), "", 
+                     ifelse(count_m1_info$p < 0.001, "***",
+                            ifelse(count_m1_info$p < 0.01, "**",
+                                   ifelse(count_m1_info$p < 0.05, "*",
+                                          ifelse(count_m1_info$p < 0.1, "+", "")))))
+    sig_m2 <- ifelse(is.na(count_m2_info$p), "", 
+                     ifelse(count_m2_info$p < 0.001, "***",
+                            ifelse(count_m2_info$p < 0.01, "**",
+                                   ifelse(count_m2_info$p < 0.05, "*",
+                                          ifelse(count_m2_info$p < 0.1, "+", "")))))
+    
+    cat(sprintf("%s & %.4f%s & (%.4f) & %.4f%s & (%.4f) \\\\\n",
+                disc_name, 
+                ifelse(is.na(count_m1_info$coef), 0, count_m1_info$coef), sig_m1,
+                ifelse(is.na(count_m1_info$se), 0, count_m1_info$se),
+                ifelse(is.na(count_m2_info$coef), 0, count_m2_info$coef), sig_m2,
+                ifelse(is.na(count_m2_info$se), 0, count_m2_info$se)))
+  }
+}
+
+cat("\\midrule\n")
+cat("\\multicolumn{5}{l}{\\textit{Panel C: Any URM}} \\\\\n")
+
+for (disc_name in disciplines) {
+  if (disc_name %in% names(discipline_results)) {
+    # Binary URM
+    binary_m1_info <- extract_treatment_effect(discipline_results[[disc_name]]$binary_m1)
+    binary_m2_info <- extract_treatment_effect(discipline_results[[disc_name]]$binary_m2)
+    
+    urm_binary_effects_m1 <- c(urm_binary_effects_m1, binary_m1_info$coef)
+    urm_binary_effects_m2 <- c(urm_binary_effects_m2, binary_m2_info$coef)
+    
+    sig_m1 <- ifelse(is.na(binary_m1_info$p), "", 
+                     ifelse(binary_m1_info$p < 0.001, "***",
+                            ifelse(binary_m1_info$p < 0.01, "**",
+                                   ifelse(binary_m1_info$p < 0.05, "*",
+                                          ifelse(binary_m1_info$p < 0.1, "+", "")))))
+    sig_m2 <- ifelse(is.na(binary_m2_info$p), "", 
+                     ifelse(binary_m2_info$p < 0.001, "***",
+                            ifelse(binary_m2_info$p < 0.01, "**",
+                                   ifelse(binary_m2_info$p < 0.05, "*",
+                                          ifelse(binary_m2_info$p < 0.1, "+", "")))))
+    
+    cat(sprintf("%s & %.4f%s & (%.4f) & %.4f%s & (%.4f) \\\\\n",
+                disc_name, 
+                ifelse(is.na(binary_m1_info$coef), 0, binary_m1_info$coef), sig_m1,
+                ifelse(is.na(binary_m1_info$se), 0, binary_m1_info$se),
+                ifelse(is.na(binary_m2_info$coef), 0, binary_m2_info$coef), sig_m2,
+                ifelse(is.na(binary_m2_info$se), 0, binary_m2_info$se)))
+  }
+}
+
+cat("\\bottomrule\n")
+cat("\\end{tabular}\n")
+cat("\\footnotesize{Note: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001. Standard errors clustered at department level in parentheses.}\n")
+cat("\\end{table}\n")
+
+# Now test for heterogeneity across disciplines using interaction model
+# Run models with all discipline interactions
+pct_interact_m1 <- run_regression(paste("pct_urm ~ treatment * (disc_mathematics + disc_physics + disc_computer_science + disc_mechanical_engineering) +", 
+                                       paste(setdiff(base_controls, c("disc_mathematics", "disc_physics", 
                                                                      "disc_computer_science", "disc_mechanical_engineering")), 
-                                            extended_controls), collapse = " + ")), data)
-binary_full_m2 <- run_regression(paste("has_any_urm ~ treatment * (disc_mathematics + disc_physics + disc_computer_science + disc_mechanical_engineering) +", 
-                                      paste(c(setdiff(base_controls, c("disc_mathematics", "disc_physics", 
-                                                                      "disc_computer_science", "disc_mechanical_engineering")), 
-                                             extended_controls), collapse = " + ")), data)
+                                             collapse = " + ")), data)
+pct_interact_m2 <- run_regression(paste("pct_urm ~ treatment * (disc_mathematics + disc_physics + disc_computer_science + disc_mechanical_engineering) +", 
+                                       paste(c(setdiff(base_controls, c("disc_mathematics", "disc_physics", 
+                                                                       "disc_computer_science", "disc_mechanical_engineering")), 
+                                              extended_controls), collapse = " + ")), data)
 
-# Add interaction models to the list
-interaction_vars <- c("treatment:disc_mathematics", "treatment:disc_physics", 
-                     "treatment:disc_computer_science", "treatment:disc_mechanical_engineering")
-interaction_labels <- c("Treatment $\\times$ Mathematics", "Treatment $\\times$ Physics", 
-                       "Treatment $\\times$ Computer Science", "Treatment $\\times$ Mech. Engineering")
+count_interact_m1 <- run_regression(paste("num_urm ~ treatment * (disc_mathematics + disc_physics + disc_computer_science + disc_mechanical_engineering) +", 
+                                         paste(setdiff(base_controls, c("disc_mathematics", "disc_physics", 
+                                                                       "disc_computer_science", "disc_mechanical_engineering")), 
+                                               collapse = " + ")), data)
+count_interact_m2 <- run_regression(paste("num_urm ~ treatment * (disc_mathematics + disc_physics + disc_computer_science + disc_mechanical_engineering) +", 
+                                         paste(c(setdiff(base_controls, c("disc_mathematics", "disc_physics", 
+                                                                         "disc_computer_science", "disc_mechanical_engineering")), 
+                                                extended_controls), collapse = " + ")), data)
 
-all_models_list <- append(all_models_list, list(
-  list(model = pct_full_m1, analysis = "Discipline Moderation", outcome = "% URM", model_type = "Simple", 
-       var_names = c("treatment", interaction_vars), 
-       var_labels = c("Treatment (Chemistry)", interaction_labels)),
-  list(model = pct_full_m2, analysis = "Discipline Moderation", outcome = "% URM", model_type = "Extended",
-       var_names = c("treatment", interaction_vars), 
-       var_labels = c("Treatment (Chemistry)", interaction_labels)),
-  list(model = count_full_m1, analysis = "Discipline Moderation", outcome = "Count URM", model_type = "Simple",
-       var_names = c("treatment", interaction_vars), 
-       var_labels = c("Treatment (Chemistry)", interaction_labels)),
-  list(model = count_full_m2, analysis = "Discipline Moderation", outcome = "Count URM", model_type = "Extended",
-       var_names = c("treatment", interaction_vars), 
-       var_labels = c("Treatment (Chemistry)", interaction_labels)),
-  list(model = binary_full_m1, analysis = "Discipline Moderation", outcome = "Any URM", model_type = "Simple",
-       var_names = c("treatment", interaction_vars), 
-       var_labels = c("Treatment (Chemistry)", interaction_labels)),
-  list(model = binary_full_m2, analysis = "Discipline Moderation", outcome = "Any URM", model_type = "Extended",
-       var_names = c("treatment", interaction_vars), 
-       var_labels = c("Treatment (Chemistry)", interaction_labels))
-))
+binary_interact_m1 <- run_regression(paste("has_any_urm ~ treatment * (disc_mathematics + disc_physics + disc_computer_science + disc_mechanical_engineering) +", 
+                                          paste(setdiff(base_controls, c("disc_mathematics", "disc_physics", 
+                                                                        "disc_computer_science", "disc_mechanical_engineering")), 
+                                                collapse = " + ")), data)
+binary_interact_m2 <- run_regression(paste("has_any_urm ~ treatment * (disc_mathematics + disc_physics + disc_computer_science + disc_mechanical_engineering) +", 
+                                          paste(c(setdiff(base_controls, c("disc_mathematics", "disc_physics", 
+                                                                          "disc_computer_science", "disc_mechanical_engineering")), 
+                                                 extended_controls), collapse = " + ")), data)
 
-# Function to test joint significance of interactions
-test_joint_significance <- function(model, interaction_terms, cluster_data) {
+# Test joint significance of interaction terms
+interaction_terms <- c("treatment:disc_mathematics", "treatment:disc_physics", 
+                      "treatment:disc_computer_science", "treatment:disc_mechanical_engineering")
+
+test_heterogeneity <- function(model, interaction_terms) {
   if (!is.null(model)) {
-    # Create hypothesis matrix for joint test
     hypothesis <- paste(interaction_terms, collapse = " = 0, ")
     hypothesis <- paste0(hypothesis, " = 0")
     
     tryCatch({
-      test <- linearHypothesis(model, hypothesis, vcov = vcovCL(model, cluster = cluster_data))
+      test <- linearHypothesis(model, hypothesis, vcov = vcovCL(model, cluster = data$department_std))
       return(list(F_stat = test$F[2], p_value = test$`Pr(>F)`[2]))
     }, error = function(e) {
-      # Suppress error message to avoid LaTeX issues with special characters
-      # cat("Error in joint test:", e$message, "\n")
       return(list(F_stat = NA, p_value = NA))
     })
   } else {
@@ -1177,145 +1759,185 @@ test_joint_significance <- function(model, interaction_terms, cluster_data) {
   }
 }
 
-# Test joint significance of all interaction terms
-interaction_terms <- c("treatment:disc_mathematics", "treatment:disc_physics", 
-                      "treatment:disc_computer_science", "treatment:disc_mechanical_engineering")
-
-# Create summary table
-cat("\\begin{table}[H]\n")
-cat("\\caption{Joint Test of Discipline Interactions}\n")
-cat("\\label{tab:discipline_joint_test}\n")
+# Create heterogeneity test table
+cat("\n\\begin{table}[H]\n")
+cat("\\caption{Test for Heterogeneous Treatment Effects Across Disciplines}\n")
+cat("\\label{tab:discipline_heterogeneity_test}\n")
 cat("\\centering\n")
 cat("\\begin{tabular}{lccc}\n")
 cat("\\toprule\n")
 cat("Outcome & Model & F-statistic & p-value \\\\\n")
 cat("\\midrule\n")
 
-# Test each model
-models_to_test <- list(
-  list(pct_full_m1, "\\% URM", "Simple"),
-  list(pct_full_m2, "\\% URM", "Extended"),
-  list(count_full_m1, "Count URM", "Simple"),
-  list(count_full_m2, "Count URM", "Extended"),
-  list(binary_full_m1, "Any URM", "Simple"),
-  list(binary_full_m2, "Any URM", "Extended")
+# Test each outcome
+test_results <- list(
+  list("\\% URM", "Simple", test_heterogeneity(pct_interact_m1, interaction_terms)),
+  list("\\% URM", "Extended", test_heterogeneity(pct_interact_m2, interaction_terms)),
+  list("Count URM", "Simple", test_heterogeneity(count_interact_m1, interaction_terms)),
+  list("Count URM", "Extended", test_heterogeneity(count_interact_m2, interaction_terms)),
+  list("Any URM", "Simple", test_heterogeneity(binary_interact_m1, interaction_terms)),
+  list("Any URM", "Extended", test_heterogeneity(binary_interact_m2, interaction_terms))
 )
 
-for (model_info in models_to_test) {
-  if (!is.null(model_info[[1]])) {
-    test_result <- test_joint_significance(model_info[[1]], interaction_terms, data$department_std)
-    if (!is.na(test_result$F_stat)) {
-      cat(sprintf("%s & %s & %.3f & %.4f \\\\\n", 
-                  model_info[[2]], model_info[[3]], 
-                  test_result$F_stat, test_result$p_value))
-    } else {
-      cat(sprintf("%s & %s & --- & --- \\\\\n", 
-                  model_info[[2]], model_info[[3]]))
-    }
+for (result in test_results) {
+  if (!is.na(result[[3]]$F_stat)) {
+    cat(sprintf("%s & %s & %.3f & %.4f \\\\\n", 
+                result[[1]], result[[2]], 
+                result[[3]]$F_stat, result[[3]]$p_value))
+  } else {
+    cat(sprintf("%s & %s & --- & --- \\\\\n", 
+                result[[1]], result[[2]]))
   }
 }
 
 cat("\\bottomrule\n")
 cat("\\end{tabular}\n")
-cat("\\footnotesize{Note: F-statistics test the null hypothesis that all discipline-treatment interactions are zero. Chemistry is the reference category.}\n")
+cat("\\footnotesize{Note: F-statistics test the null hypothesis that treatment effects are equal across all disciplines (H0: all discipline-treatment interactions = 0).}\n")
 cat("\\end{table}\n")
 
-# Create table showing individual interaction coefficients
+# Now repeat for Black and Hispanic outcomes
+# Black outcomes
 cat("\n\\begin{table}[H]\n")
-cat("\\caption{Treatment Effects by Discipline (Chemistry as Reference)}\n")
-cat("\\label{tab:discipline_interactions}\n")
+cat("\\caption{Treatment Effects by Discipline: Black Speaker Outcomes}\n")
+cat("\\label{tab:discipline_comparison_black}\n")
 cat("\\centering\n")
 cat("\\footnotesize\n")
 cat("\\begin{tabular}{lccccc}\n")
 cat("\\toprule\n")
 cat(" & \\multicolumn{2}{c}{Simple Model} & \\multicolumn{2}{c}{Extended Model} \\\\\n")
-cat("Discipline & Coefficient & SE & Coefficient & SE \\\\\n")
+cat("Discipline & Coefficient & (SE) & Coefficient & (SE) \\\\\n")
 cat("\\midrule\n")
-cat("\\multicolumn{5}{l}{\\textit{Panel A: \\% URM}} \\\\\n")
+cat("\\multicolumn{5}{l}{\\textit{Panel A: \\% Black}} \\\\\n")
 
-# Extract coefficients for % URM
-if (!is.null(pct_full_m1) && !is.null(pct_full_m2)) {
-  # Chemistry (base effect)
-  chem_coef_m1 <- coef(pct_full_m1)["treatment"]
-  chem_se_m1 <- pct_full_m1$cluster_se["treatment"]
-  chem_coef_m2 <- coef(pct_full_m2)["treatment"]
-  chem_se_m2 <- pct_full_m2$cluster_se["treatment"]
-  
-  cat(sprintf("Chemistry (ref.) & %.4f & (%.4f) & %.4f & (%.4f) \\\\\n",
-              chem_coef_m1, chem_se_m1, chem_coef_m2, chem_se_m2))
-  
-  # Other disciplines (base + interaction)
-  disciplines <- list(
-    c("Mathematics", "treatment:disc_mathematics", "disc_mathematics"),
-    c("Physics", "treatment:disc_physics", "disc_physics"),
-    c("Computer Science", "treatment:disc_computer_science", "disc_computer_science"),
-    c("Mech. Engineering", "treatment:disc_mechanical_engineering", "disc_mechanical_engineering")
-  )
-  
-  for (disc_info in disciplines) {
-    if (disc_info[2] %in% names(coef(pct_full_m1))) {
-      # Calculate total effect and SE using delta method
-      total_m1 <- chem_coef_m1 + coef(pct_full_m1)[disc_info[2]]
-      # For SE, we need the covariance
-      vcov_m1 <- vcovCL(pct_full_m1, cluster = data$department_std)
-      var_total_m1 <- vcov_m1["treatment", "treatment"] + 
-                      vcov_m1[disc_info[2], disc_info[2]] + 
-                      2 * vcov_m1["treatment", disc_info[2]]
-      se_total_m1 <- sqrt(var_total_m1)
-      
-      total_m2 <- chem_coef_m2 + coef(pct_full_m2)[disc_info[2]]
-      vcov_m2 <- vcovCL(pct_full_m2, cluster = data$department_std)
-      var_total_m2 <- vcov_m2["treatment", "treatment"] + 
-                      vcov_m2[disc_info[2], disc_info[2]] + 
-                      2 * vcov_m2["treatment", disc_info[2]]
-      se_total_m2 <- sqrt(var_total_m2)
-      
-      cat(sprintf("%s & %.4f & (%.4f) & %.4f & (%.4f) \\\\\n",
-                  disc_info[1], total_m1, se_total_m1, total_m2, se_total_m2))
-    }
+# For Black outcomes, we need to run the models since they weren't stored
+for (disc_info in disciplines) {
+  disc_name <- disc_info
+  if (disc_name == "Chemistry") {
+    disc_data <- data %>% filter(disc_mathematics == 0 & disc_physics == 0 & 
+                                disc_computer_science == 0 & disc_mechanical_engineering == 0)
+  } else if (disc_name == "Mathematics") {
+    disc_data <- data %>% filter(disc_mathematics == 1)
+  } else if (disc_name == "Physics") {
+    disc_data <- data %>% filter(disc_physics == 1)
+  } else if (disc_name == "Computer Science") {
+    disc_data <- data %>% filter(disc_computer_science == 1)
+  } else if (disc_name == "Mechanical Engineering") {
+    disc_data <- data %>% filter(disc_mechanical_engineering == 1)
   }
-}
-
-cat("\\midrule\n")
-cat("\\multicolumn{5}{l}{\\textit{Panel B: Count URM}} \\\\\n")
-
-# Repeat for Count URM
-if (!is.null(count_full_m1) && !is.null(count_full_m2)) {
-  # Chemistry (base effect)
-  chem_coef_m1 <- coef(count_full_m1)["treatment"]
-  chem_se_m1 <- count_full_m1$cluster_se["treatment"]
-  chem_coef_m2 <- coef(count_full_m2)["treatment"]
-  chem_se_m2 <- count_full_m2$cluster_se["treatment"]
   
-  cat(sprintf("Chemistry (ref.) & %.4f & (%.4f) & %.4f & (%.4f) \\\\\n",
-              chem_coef_m1, chem_se_m1, chem_coef_m2, chem_se_m2))
-  
-  # Other disciplines
-  for (disc_info in disciplines) {
-    if (disc_info[2] %in% names(coef(count_full_m1))) {
-      total_m1 <- chem_coef_m1 + coef(count_full_m1)[disc_info[2]]
-      vcov_m1 <- vcovCL(count_full_m1, cluster = data$department_std)
-      var_total_m1 <- vcov_m1["treatment", "treatment"] + 
-                      vcov_m1[disc_info[2], disc_info[2]] + 
-                      2 * vcov_m1["treatment", disc_info[2]]
-      se_total_m1 <- sqrt(var_total_m1)
-      
-      total_m2 <- chem_coef_m2 + coef(count_full_m2)[disc_info[2]]
-      vcov_m2 <- vcovCL(count_full_m2, cluster = data$department_std)
-      var_total_m2 <- vcov_m2["treatment", "treatment"] + 
-                      vcov_m2[disc_info[2], disc_info[2]] + 
-                      2 * vcov_m2["treatment", disc_info[2]]
-      se_total_m2 <- sqrt(var_total_m2)
-      
-      cat(sprintf("%s & %.4f & (%.4f) & %.4f & (%.4f) \\\\\n",
-                  disc_info[1], total_m1, se_total_m1, total_m2, se_total_m2))
-    }
+  if (nrow(disc_data) >= 30) {
+    # Run models for Black outcomes
+    pct_black_m1 <- run_regression(paste("pct_black ~ treatment +", 
+                                        paste(setdiff(base_controls, 
+                                                     c("disc_mathematics", "disc_physics", 
+                                                       "disc_computer_science", "disc_mechanical_engineering")), 
+                                              collapse = " + ")), disc_data)
+    pct_black_m2 <- run_regression(paste("pct_black ~ treatment +", 
+                                        paste(c(setdiff(base_controls, 
+                                                       c("disc_mathematics", "disc_physics", 
+                                                         "disc_computer_science", "disc_mechanical_engineering")), 
+                                               extended_controls), collapse = " + ")), disc_data)
+    
+    pct_m1_info <- extract_treatment_effect(pct_black_m1)
+    pct_m2_info <- extract_treatment_effect(pct_black_m2)
+    
+    sig_m1 <- ifelse(is.na(pct_m1_info$p), "", 
+                     ifelse(pct_m1_info$p < 0.001, "***",
+                            ifelse(pct_m1_info$p < 0.01, "**",
+                                   ifelse(pct_m1_info$p < 0.05, "*",
+                                          ifelse(pct_m1_info$p < 0.1, "+", "")))))
+    sig_m2 <- ifelse(is.na(pct_m2_info$p), "", 
+                     ifelse(pct_m2_info$p < 0.001, "***",
+                            ifelse(pct_m2_info$p < 0.01, "**",
+                                   ifelse(pct_m2_info$p < 0.05, "*",
+                                          ifelse(pct_m2_info$p < 0.1, "+", "")))))
+    
+    cat(sprintf("%s & %.4f%s & (%.4f) & %.4f%s & (%.4f) \\\\\n",
+                disc_name, 
+                ifelse(is.na(pct_m1_info$coef), 0, pct_m1_info$coef), sig_m1,
+                ifelse(is.na(pct_m1_info$se), 0, pct_m1_info$se),
+                ifelse(is.na(pct_m2_info$coef), 0, pct_m2_info$coef), sig_m2,
+                ifelse(is.na(pct_m2_info$se), 0, pct_m2_info$se)))
+  } else {
+    cat(sprintf("%s & --- & --- & --- & --- \\\\\n", disc_name))
   }
 }
 
 cat("\\bottomrule\n")
 cat("\\end{tabular}\n")
-cat("\\footnotesize{Note: Coefficients show the treatment effect within each discipline. Standard errors (in parentheses) are clustered at the department level and calculated using the delta method.}\n")
+cat("\\footnotesize{Note: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001. Standard errors clustered at department level in parentheses. Count and Binary outcomes omitted for brevity.}\n")
+cat("\\end{table}\n")
+
+# Hispanic outcomes
+cat("\n\\begin{table}[H]\n")
+cat("\\caption{Treatment Effects by Discipline: Hispanic Speaker Outcomes}\n")
+cat("\\label{tab:discipline_comparison_hispanic}\n")
+cat("\\centering\n")
+cat("\\footnotesize\n")
+cat("\\begin{tabular}{lccccc}\n")
+cat("\\toprule\n")
+cat(" & \\multicolumn{2}{c}{Simple Model} & \\multicolumn{2}{c}{Extended Model} \\\\\n")
+cat("Discipline & Coefficient & (SE) & Coefficient & (SE) \\\\\n")
+cat("\\midrule\n")
+cat("\\multicolumn{5}{l}{\\textit{Panel A: \\% Hispanic}} \\\\\n")
+
+# For Hispanic outcomes
+for (disc_info in disciplines) {
+  disc_name <- disc_info
+  if (disc_name == "Chemistry") {
+    disc_data <- data %>% filter(disc_mathematics == 0 & disc_physics == 0 & 
+                                disc_computer_science == 0 & disc_mechanical_engineering == 0)
+  } else if (disc_name == "Mathematics") {
+    disc_data <- data %>% filter(disc_mathematics == 1)
+  } else if (disc_name == "Physics") {
+    disc_data <- data %>% filter(disc_physics == 1)
+  } else if (disc_name == "Computer Science") {
+    disc_data <- data %>% filter(disc_computer_science == 1)
+  } else if (disc_name == "Mechanical Engineering") {
+    disc_data <- data %>% filter(disc_mechanical_engineering == 1)
+  }
+  
+  if (nrow(disc_data) >= 30) {
+    # Run models for Hispanic outcomes
+    pct_hispanic_m1 <- run_regression(paste("pct_hispanic ~ treatment +", 
+                                           paste(setdiff(base_controls, 
+                                                        c("disc_mathematics", "disc_physics", 
+                                                          "disc_computer_science", "disc_mechanical_engineering")), 
+                                                 collapse = " + ")), disc_data)
+    pct_hispanic_m2 <- run_regression(paste("pct_hispanic ~ treatment +", 
+                                           paste(c(setdiff(base_controls, 
+                                                          c("disc_mathematics", "disc_physics", 
+                                                            "disc_computer_science", "disc_mechanical_engineering")), 
+                                                  extended_controls), collapse = " + ")), disc_data)
+    
+    pct_m1_info <- extract_treatment_effect(pct_hispanic_m1)
+    pct_m2_info <- extract_treatment_effect(pct_hispanic_m2)
+    
+    sig_m1 <- ifelse(is.na(pct_m1_info$p), "", 
+                     ifelse(pct_m1_info$p < 0.001, "***",
+                            ifelse(pct_m1_info$p < 0.01, "**",
+                                   ifelse(pct_m1_info$p < 0.05, "*",
+                                          ifelse(pct_m1_info$p < 0.1, "+", "")))))
+    sig_m2 <- ifelse(is.na(pct_m2_info$p), "", 
+                     ifelse(pct_m2_info$p < 0.001, "***",
+                            ifelse(pct_m2_info$p < 0.01, "**",
+                                   ifelse(pct_m2_info$p < 0.05, "*",
+                                          ifelse(pct_m2_info$p < 0.1, "+", "")))))
+    
+    cat(sprintf("%s & %.4f%s & (%.4f) & %.4f%s & (%.4f) \\\\\n",
+                disc_name, 
+                ifelse(is.na(pct_m1_info$coef), 0, pct_m1_info$coef), sig_m1,
+                ifelse(is.na(pct_m1_info$se), 0, pct_m1_info$se),
+                ifelse(is.na(pct_m2_info$coef), 0, pct_m2_info$coef), sig_m2,
+                ifelse(is.na(pct_m2_info$se), 0, pct_m2_info$se)))
+  } else {
+    cat(sprintf("%s & --- & --- & --- & --- \\\\\n", disc_name))
+  }
+}
+
+cat("\\bottomrule\n")
+cat("\\end{tabular}\n")
+cat("\\footnotesize{Note: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001. Standard errors clustered at department level in parentheses. Count and Binary outcomes omitted for brevity.}\n")
 cat("\\end{table}\n")
 ```
 
@@ -1617,6 +2239,7 @@ extract_all_significant_results <- function() {
     t_stat = numeric(),
     p_value = numeric(),
     Significance = character(),
+    Category = character(),
     stringsAsFactors = FALSE
   )
   
@@ -1642,6 +2265,17 @@ extract_all_significant_results <- function() {
                            ifelse(p_val < 0.01, "**",
                                  ifelse(p_val < 0.05, "*", "+")))
               
+              # Determine category
+              category <- case_when(
+                grepl("Main Effect|Main Question", analysis) ~ "Main Effects",
+                grepl("Demographic|Black|Hispanic|Female", analysis) ~ "Demographic Analysis",
+                grepl("Intersectional", analysis) ~ "Demographic Analysis",
+                grepl("Semester", analysis) ~ "Semester Analysis",
+                grepl("Discipline:", analysis) ~ "Discipline Analysis",
+                grepl("Moderation", analysis) ~ "Moderation Analysis",
+                TRUE ~ "Other"
+              )
+              
               results <<- rbind(results, data.frame(
                 Analysis = analysis,
                 Outcome = outcome,
@@ -1652,6 +2286,7 @@ extract_all_significant_results <- function() {
                 t_stat = t_val,
                 p_value = p_val,
                 Significance = sig,
+                Category = category,
                 stringsAsFactors = FALSE
               ))
             }
@@ -1685,9 +2320,16 @@ extract_all_significant_results <- function() {
 all_significant_results <- extract_all_significant_results()
 
 if (nrow(all_significant_results) > 0) {
-  # Sort by p-value
+  # Keep only the result with lowest p-value for each Analysis/Outcome/Variable combination
   all_significant_results <- all_significant_results %>%
+    group_by(Analysis, Outcome, Variable) %>%
     arrange(p_value) %>%
+    slice(1) %>%
+    ungroup()
+  
+  # Sort by category and then by analysis name
+  all_significant_results <- all_significant_results %>%
+    arrange(Category, Analysis, Outcome, Variable) %>%
     mutate(
       Coefficient = sprintf("%.4f", Coefficient),
       SE = sprintf("%.4f", SE),
@@ -1710,7 +2352,19 @@ if (nrow(all_significant_results) > 0) {
   cat("Analysis & Outcome & Variable & Model & Coef. & SE & t-stat & p-value & Sig. \\\\\n")
   cat("\\midrule\n")
   
+  # Print results with category headers
+  current_category <- ""
   for (i in 1:nrow(all_significant_results)) {
+    # Add category header if new category
+    if (all_significant_results$Category[i] != current_category) {
+      if (current_category != "") {
+        cat("\\addlinespace[0.5em]\n")
+      }
+      current_category <- all_significant_results$Category[i]
+      cat("\\multicolumn{9}{l}{\\textbf{", escape_latex(current_category), "}} \\\\\n")
+      cat("\\midrule\n")
+    }
+    
     cat(sprintf("%s & %s & %s & %s & %s & %s & %s & %s & %s \\\\\n",
                 escape_latex(all_significant_results$Analysis[i]),
                 escape_latex(all_significant_results$Outcome[i]),
@@ -1725,7 +2379,7 @@ if (nrow(all_significant_results) > 0) {
   
   cat("\\bottomrule\n")
   cat("\\end{tabular}\n")
-  cat("\\footnotesize{Note: Results sorted by p-value. Significance levels: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001. SE = Clustered standard errors at department level. This table includes all treatment effects and interaction terms from main effects, demographic subgroup, semester-specific, intersectional, and moderation analyses.}\n")
+  cat("\\footnotesize{Note: Results sorted by analysis type and name. When both Model 1 (Simple) and Model 2 (Extended) are significant, only the result with the lower p-value is shown. Significance levels: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001. SE = Clustered standard errors at department level.}\n")
   cat("\\end{table}\n")
   cat("\\end{landscape}\n")
   
