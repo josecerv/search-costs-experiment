@@ -1,6 +1,5 @@
 ---
-title: "Search Costs Field Experiment: Pre-Registration Analysis"
-author: "Statistical Analysis Report"
+title: "Search Costs Field Experiment"
 date: "`r Sys.Date()`"
 output:
   pdf_document:
@@ -209,7 +208,7 @@ create_regression_table <- function(models, title, label, demographic_group = NU
               header = FALSE,
               model.numbers = FALSE,
               column.labels = NULL,
-              column.sep.width = "0pt",
+              column.sep.width = "5pt",
               float = FALSE,
               no.space = TRUE,
               digits = 3,
@@ -217,10 +216,13 @@ create_regression_table <- function(models, title, label, demographic_group = NU
   )
   
   # Clean up spacing issues in stargazer output
-  # 1. Remove vertical space commands like \\[-1.8ex]
-  stargazer_output <- gsub("\\\\\\[-+]?[0-9\\.]+ex\\]", "]", stargazer_output, perl = TRUE)
+  # 1. Remove lines that are just \hline \\[-1.8ex] or similar
+  stargazer_output <- stargazer_output[!grepl("^\\\\hline\\s*\\\\\\\\\\[-?[0-9\\.]+ex\\]\\s*$", stargazer_output)]
   
-  # 2. Remove rows that are only ampersands and spaces
+  # 2. Remove standalone vertical space commands
+  stargazer_output <- stargazer_output[!grepl("^\\s*\\\\\\\\\\[-?[0-9\\.]+ex\\]\\s*$", stargazer_output)]
+  
+  # 3. Remove rows that are only ampersands and spaces
   stargazer_output <- stargazer_output[!grepl("^\\s*(&\\s*)+\\\\\\\\\\s*$", stargazer_output)]
   
   tabular_line_idx <- grep("\\\\begin\\{tabular\\}", stargazer_output)
@@ -231,13 +233,13 @@ create_regression_table <- function(models, title, label, demographic_group = NU
     if (is_moderator) {
       custom_header <- c(
         "\\toprule",
-        " & \\multicolumn{2}{c}{\\\\% URM} & \\multicolumn{2}{c}{Count URM} & \\multicolumn{2}{c}{Any URM} \\\\",
+        " & \\multicolumn{2}{c}{\\% URM} & \\multicolumn{2}{c}{Count URM} & \\multicolumn{2}{c}{Any URM} \\\\",
         " & (1) & (2) & (3) & (4) & (5) & (6) \\\\"
       )
     } else if (!is.null(demographic_group)) {
       custom_header <- c(
         "\\toprule",
-        paste0(" & \\multicolumn{2}{c}{\\\\% ", demographic_group, "} & \\multicolumn{2}{c}{Count ", 
+        paste0(" & \\multicolumn{2}{c}{\\% ", demographic_group, "} & \\multicolumn{2}{c}{Count ", 
                demographic_group, "} & \\multicolumn{2}{c}{Any ", demographic_group, "} \\\\"),
         " & (1) & (2) & (3) & (4) & (5) & (6) \\\\"
       )
@@ -256,12 +258,18 @@ create_regression_table <- function(models, title, label, demographic_group = NU
     )
   }
   
-  # Fix tabular column specification for 6-column tables
-  if (n_models == 6 && length(tabular_line_idx) > 0) {
-    # Replace the \begin{tabular} line with better column specification
-    tabular_line <- stargazer_output[tabular_line_idx]
-    # Use fixed width columns for better alignment
-    new_tabular <- "\\begin{tabular}{@{\\extracolsep{2pt}}l*{6}{c}}"
+  # Fix tabular column specification - keep it simple to avoid spacing issues
+  if (length(tabular_line_idx) > 0) {
+    # Extract existing tabular line to see the pattern
+    existing_line <- stargazer_output[tabular_line_idx]
+    # Replace the entire column specification, ensuring we only have the columns we need
+    if (n_models == 6) {
+      # For 6 models: 1 left column + 6 center columns = 7 total
+      new_tabular <- "\\begin{tabular}{lcccccc}"
+    } else {
+      # For other cases, use appropriate number of columns
+      new_tabular <- paste0("\\begin{tabular}{l", paste(rep("c", n_models), collapse = ""), "}")
+    }
     stargazer_output[tabular_line_idx] <- new_tabular
   }
   
@@ -277,10 +285,9 @@ create_regression_table <- function(models, title, label, demographic_group = NU
     paste0("\\caption{", title, "}"),
     paste0("\\label{", label, "}"),
     "\\centering",
-    "\\scriptsize", # CHANGED from \footnotesize
-    "\\begin{adjustbox}{max width=\\textwidth}", 
+    "\\footnotesize",
+    "\\setlength{\\tabcolsep}{4pt}",  # Reduce space between columns
     output_with_custom_header, 
-    "\\end{adjustbox}", 
     "\\end{table}"
   )
   
@@ -620,7 +627,7 @@ cat("\\end{table}\n")
 
 ### Department Faculty Demographics by Discipline
 
-```{r summary-stats-discipline-departments}
+```{r summary-stats-discipline-departments, results='asis'}
 # Department faculty demographics by discipline
 dept_by_disc <- data %>%
   mutate(discipline = case_when(
@@ -658,7 +665,7 @@ cat("\\centering\n")
 cat("\\footnotesize\n")
 cat("\\begin{tabular}{lccccccc}\n")
 cat("\\toprule\n")
-cat(" & & \\multicolumn{2}{c}{Faculty Size} & \\multicolumn{2}{c}{\\\\% URM Faculty} & \\multicolumn{2}{c}{\\\\% Women Faculty} \\\\\n")
+cat(" & & \\multicolumn{2}{c}{Faculty Size} & \\multicolumn{2}{c}{\\% URM Faculty} & \\multicolumn{2}{c}{\\% Women Faculty} \\\\\n")
 cat("Discipline & N Depts & Mean & SD & Mean & SD & Mean & SD \\\\\n")
 cat("\\midrule\n")
 for (i in 1:nrow(dept_by_disc)) {
@@ -1272,12 +1279,12 @@ for (disc_info in disciplines) {
     
     # Add to models list for significant results extraction
     all_models_list <- append(all_models_list, list(
-      list(model = pct_m1, analysis = paste("Discipline:", disc_name), outcome = "% URM", model_type = "Simple"),
-      list(model = pct_m2, analysis = paste("Discipline:", disc_name), outcome = "% URM", model_type = "Extended"),
-      list(model = count_m1, analysis = paste("Discipline:", disc_name), outcome = "Count URM", model_type = "Simple"),
-      list(model = count_m2, analysis = paste("Discipline:", disc_name), outcome = "Count URM", model_type = "Extended"),
-      list(model = binary_m1, analysis = paste("Discipline:", disc_name), outcome = "Any URM", model_type = "Simple"),
-      list(model = binary_m2, analysis = paste("Discipline:", disc_name), outcome = "Any URM", model_type = "Extended")
+      list(model = pct_m1, analysis = disc_name, outcome = "% URM", model_type = "Simple"),
+      list(model = pct_m2, analysis = disc_name, outcome = "% URM", model_type = "Extended"),
+      list(model = count_m1, analysis = disc_name, outcome = "Count URM", model_type = "Simple"),
+      list(model = count_m2, analysis = disc_name, outcome = "Count URM", model_type = "Extended"),
+      list(model = binary_m1, analysis = disc_name, outcome = "Any URM", model_type = "Simple"),
+      list(model = binary_m2, analysis = disc_name, outcome = "Any URM", model_type = "Extended")
     ))
     
     # Black Analysis for this discipline
@@ -1313,12 +1320,12 @@ for (disc_info in disciplines) {
     
     # Add Black models to models list
     all_models_list <- append(all_models_list, list(
-      list(model = pct_black_m1, analysis = paste("Discipline:", disc_name), outcome = "% Black", model_type = "Simple"),
-      list(model = pct_black_m2, analysis = paste("Discipline:", disc_name), outcome = "% Black", model_type = "Extended"),
-      list(model = count_black_m1, analysis = paste("Discipline:", disc_name), outcome = "Count Black", model_type = "Simple"),
-      list(model = count_black_m2, analysis = paste("Discipline:", disc_name), outcome = "Count Black", model_type = "Extended"),
-      list(model = binary_black_m1, analysis = paste("Discipline:", disc_name), outcome = "Any Black", model_type = "Simple"),
-      list(model = binary_black_m2, analysis = paste("Discipline:", disc_name), outcome = "Any Black", model_type = "Extended")
+      list(model = pct_black_m1, analysis = disc_name, outcome = "% Black", model_type = "Simple"),
+      list(model = pct_black_m2, analysis = disc_name, outcome = "% Black", model_type = "Extended"),
+      list(model = count_black_m1, analysis = disc_name, outcome = "Count Black", model_type = "Simple"),
+      list(model = count_black_m2, analysis = disc_name, outcome = "Count Black", model_type = "Extended"),
+      list(model = binary_black_m1, analysis = disc_name, outcome = "Any Black", model_type = "Simple"),
+      list(model = binary_black_m2, analysis = disc_name, outcome = "Any Black", model_type = "Extended")
     ))
     
     # Hispanic Analysis for this discipline
@@ -1354,12 +1361,12 @@ for (disc_info in disciplines) {
     
     # Add Hispanic models to models list
     all_models_list <- append(all_models_list, list(
-      list(model = pct_hispanic_m1, analysis = paste("Discipline:", disc_name), outcome = "% Hispanic", model_type = "Simple"),
-      list(model = pct_hispanic_m2, analysis = paste("Discipline:", disc_name), outcome = "% Hispanic", model_type = "Extended"),
-      list(model = count_hispanic_m1, analysis = paste("Discipline:", disc_name), outcome = "Count Hispanic", model_type = "Simple"),
-      list(model = count_hispanic_m2, analysis = paste("Discipline:", disc_name), outcome = "Count Hispanic", model_type = "Extended"),
-      list(model = binary_hispanic_m1, analysis = paste("Discipline:", disc_name), outcome = "Any Hispanic", model_type = "Simple"),
-      list(model = binary_hispanic_m2, analysis = paste("Discipline:", disc_name), outcome = "Any Hispanic", model_type = "Extended")
+      list(model = pct_hispanic_m1, analysis = disc_name, outcome = "% Hispanic", model_type = "Simple"),
+      list(model = pct_hispanic_m2, analysis = disc_name, outcome = "% Hispanic", model_type = "Extended"),
+      list(model = count_hispanic_m1, analysis = disc_name, outcome = "Count Hispanic", model_type = "Simple"),
+      list(model = count_hispanic_m2, analysis = disc_name, outcome = "Count Hispanic", model_type = "Extended"),
+      list(model = binary_hispanic_m1, analysis = disc_name, outcome = "Any Hispanic", model_type = "Simple"),
+      list(model = binary_hispanic_m2, analysis = disc_name, outcome = "Any Hispanic", model_type = "Extended")
     ))
   } else {
     cat("Insufficient observations for regression analysis in", disc_name, "\n\n")
@@ -1398,7 +1405,7 @@ all_models_list <- append(all_models_list, list(
 create_stargazer_table(
   list(pct_fall_urm_m1, pct_fall_urm_m2, count_fall_urm_m1, count_fall_urm_m2, binary_fall_urm_m1, binary_fall_urm_m2),
   c("\\\\% URM", "\\\\% URM", "Count URM", "Count URM", "Any URM", "Any URM"),
-  "Fall Semester: Effect on URM Speakers",
+  "Fall: Effect on URM Speakers",
   "tab:fall_urm",
   demographic_group = "URM"
 )
@@ -1425,7 +1432,7 @@ all_models_list <- append(all_models_list, list(
 create_stargazer_table(
   list(pct_fall_black_m1, pct_fall_black_m2, count_fall_black_m1, count_fall_black_m2, binary_fall_black_m1, binary_fall_black_m2),
   c("\\\\% Black", "\\\\% Black", "Count Black", "Count Black", "Any Black", "Any Black"),
-  "Fall Semester: Effect on Black Speakers",
+  "Fall: Effect on Black Speakers",
   "tab:fall_black",
   demographic_group = "Black"
 )
@@ -1452,7 +1459,7 @@ all_models_list <- append(all_models_list, list(
 create_stargazer_table(
   list(pct_fall_hispanic_m1, pct_fall_hispanic_m2, count_fall_hispanic_m1, count_fall_hispanic_m2, binary_fall_hispanic_m1, binary_fall_hispanic_m2),
   c("\\\\% Hispanic", "\\\\% Hispanic", "Count Hispanic", "Count Hispanic", "Any Hispanic", "Any Hispanic"),
-  "Fall Semester: Effect on Hispanic Speakers",
+  "Fall: Effect on Hispanic Speakers",
   "tab:fall_hispanic",
   demographic_group = "Hispanic"
 )
@@ -1485,7 +1492,7 @@ all_models_list <- append(all_models_list, list(
 create_stargazer_table(
   list(pct_spring_urm_m1, pct_spring_urm_m2, count_spring_urm_m1, count_spring_urm_m2, binary_spring_urm_m1, binary_spring_urm_m2),
   c("\\\\% URM", "\\\\% URM", "Count URM", "Count URM", "Any URM", "Any URM"),
-  "Spring Semester: Effect on URM Speakers",
+  "Spring: Effect on URM Speakers",
   "tab:spring_urm",
   demographic_group = "URM"
 )
@@ -1512,7 +1519,7 @@ all_models_list <- append(all_models_list, list(
 create_stargazer_table(
   list(pct_spring_black_m1, pct_spring_black_m2, count_spring_black_m1, count_spring_black_m2, binary_spring_black_m1, binary_spring_black_m2),
   c("\\\\% Black", "\\\\% Black", "Count Black", "Count Black", "Any Black", "Any Black"),
-  "Spring Semester: Effect on Black Speakers",
+  "Spring: Effect on Black Speakers",
   "tab:spring_black",
   demographic_group = "Black"
 )
@@ -1539,7 +1546,7 @@ all_models_list <- append(all_models_list, list(
 create_stargazer_table(
   list(pct_spring_hispanic_m1, pct_spring_hispanic_m2, count_spring_hispanic_m1, count_spring_hispanic_m2, binary_spring_hispanic_m1, binary_spring_hispanic_m2),
   c("\\\\% Hispanic", "\\\\% Hispanic", "Count Hispanic", "Count Hispanic", "Any Hispanic", "Any Hispanic"),
-  "Spring Semester: Effect on Hispanic Speakers",
+  "Spring: Effect on Hispanic Speakers",
   "tab:spring_hispanic",
   demographic_group = "Hispanic"
 )
@@ -1575,22 +1582,22 @@ binary_mod_m2 <- run_regression(paste("has_any_urm ~ treatment * moderator +",
 
 # Add to models list
 all_models_list <- append(all_models_list, list(
-  list(model = pct_mod_m1, analysis = "Ranking Moderation", outcome = "% URM", model_type = "Simple",
+  list(model = pct_mod_m1, analysis = "Department Rank", outcome = "% URM", model_type = "Simple",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Dept Ranking (centered)", "Treatment $\\times$ Dept Ranking", "Constant")),
-  list(model = pct_mod_m2, analysis = "Ranking Moderation", outcome = "% URM", model_type = "Extended",
+  list(model = pct_mod_m2, analysis = "Department Rank", outcome = "% URM", model_type = "Extended",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Dept Ranking (centered)", "Treatment $\\times$ Dept Ranking", "Constant")),
-  list(model = count_mod_m1, analysis = "Ranking Moderation", outcome = "Count URM", model_type = "Simple",
+  list(model = count_mod_m1, analysis = "Department Rank", outcome = "Count URM", model_type = "Simple",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Dept Ranking (centered)", "Treatment $\\times$ Dept Ranking", "Constant")),
-  list(model = count_mod_m2, analysis = "Ranking Moderation", outcome = "Count URM", model_type = "Extended",
+  list(model = count_mod_m2, analysis = "Department Rank", outcome = "Count URM", model_type = "Extended",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Dept Ranking (centered)", "Treatment $\\times$ Dept Ranking", "Constant")),
-  list(model = binary_mod_m1, analysis = "Ranking Moderation", outcome = "Any URM", model_type = "Simple",
+  list(model = binary_mod_m1, analysis = "Department Rank", outcome = "Any URM", model_type = "Simple",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Dept Ranking (centered)", "Treatment $\\times$ Dept Ranking", "Constant")),
-  list(model = binary_mod_m2, analysis = "Ranking Moderation", outcome = "Any URM", model_type = "Extended",
+  list(model = binary_mod_m2, analysis = "Department Rank", outcome = "Any URM", model_type = "Extended",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Dept Ranking (centered)", "Treatment $\\times$ Dept Ranking", "Constant"))
 ))
@@ -1598,7 +1605,7 @@ all_models_list <- append(all_models_list, list(
 create_moderator_table(
   list(pct_mod_m1, pct_mod_m2, count_mod_m1, count_mod_m2, binary_mod_m1, binary_mod_m2),
   c("\\\\% URM", "\\\\% URM", "Count URM", "Count URM", "Any URM", "Any URM"),
-  "Moderation by Department Ranking",
+  "Effect by Department Rank",
   "tab:mod_ranking",
   "Dept Ranking (centered)"
 )
@@ -1632,22 +1639,22 @@ binary_mod_m2 <- run_regression(paste("has_any_urm ~ treatment * moderator +",
 
 # Add to models list
 all_models_list <- append(all_models_list, list(
-  list(model = pct_mod_m1, analysis = "Faculty Size Moderation", outcome = "% URM", model_type = "Simple",
+  list(model = pct_mod_m1, analysis = "Faculty Size", outcome = "% URM", model_type = "Simple",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Total Faculty (centered)", "Treatment $\\times$ Faculty Size", "Constant")),
-  list(model = pct_mod_m2, analysis = "Faculty Size Moderation", outcome = "% URM", model_type = "Extended",
+  list(model = pct_mod_m2, analysis = "Faculty Size", outcome = "% URM", model_type = "Extended",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Total Faculty (centered)", "Treatment $\\times$ Faculty Size", "Constant")),
-  list(model = count_mod_m1, analysis = "Faculty Size Moderation", outcome = "Count URM", model_type = "Simple",
+  list(model = count_mod_m1, analysis = "Faculty Size", outcome = "Count URM", model_type = "Simple",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Total Faculty (centered)", "Treatment $\\times$ Faculty Size", "Constant")),
-  list(model = count_mod_m2, analysis = "Faculty Size Moderation", outcome = "Count URM", model_type = "Extended",
+  list(model = count_mod_m2, analysis = "Faculty Size", outcome = "Count URM", model_type = "Extended",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Total Faculty (centered)", "Treatment $\\times$ Faculty Size", "Constant")),
-  list(model = binary_mod_m1, analysis = "Faculty Size Moderation", outcome = "Any URM", model_type = "Simple",
+  list(model = binary_mod_m1, analysis = "Faculty Size", outcome = "Any URM", model_type = "Simple",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Total Faculty (centered)", "Treatment $\\times$ Faculty Size", "Constant")),
-  list(model = binary_mod_m2, analysis = "Faculty Size Moderation", outcome = "Any URM", model_type = "Extended",
+  list(model = binary_mod_m2, analysis = "Faculty Size", outcome = "Any URM", model_type = "Extended",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Total Faculty (centered)", "Treatment $\\times$ Faculty Size", "Constant"))
 ))
@@ -1655,7 +1662,7 @@ all_models_list <- append(all_models_list, list(
 create_moderator_table(
   list(pct_mod_m1, pct_mod_m2, count_mod_m1, count_mod_m2, binary_mod_m1, binary_mod_m2),
   c("\\\\% URM", "\\\\% URM", "Count URM", "Count URM", "Any URM", "Any URM"),
-  "Moderation by Department Faculty Size",
+  "Effect by Faculty Size",
   "tab:mod_faculty_size",
   "Total Faculty (centered)"
 )
@@ -1689,22 +1696,22 @@ binary_mod_m2 <- run_regression(paste("has_any_urm ~ treatment * moderator +",
 
 # Add to models list
 all_models_list <- append(all_models_list, list(
-  list(model = pct_mod_m1, analysis = "Peer URM Moderation", outcome = "% URM", model_type = "Simple",
+  list(model = pct_mod_m1, analysis = "Peer URM Faculty", outcome = "% URM", model_type = "Simple",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Peer URM Faculty (centered)", "Treatment $\\times$ Peer URM Faculty", "Constant")),
-  list(model = pct_mod_m2, analysis = "Peer URM Moderation", outcome = "% URM", model_type = "Extended",
+  list(model = pct_mod_m2, analysis = "Peer URM Faculty", outcome = "% URM", model_type = "Extended",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Peer URM Faculty (centered)", "Treatment $\\times$ Peer URM Faculty", "Constant")),
-  list(model = count_mod_m1, analysis = "Peer URM Moderation", outcome = "Count URM", model_type = "Simple",
+  list(model = count_mod_m1, analysis = "Peer URM Faculty", outcome = "Count URM", model_type = "Simple",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Peer URM Faculty (centered)", "Treatment $\\times$ Peer URM Faculty", "Constant")),
-  list(model = count_mod_m2, analysis = "Peer URM Moderation", outcome = "Count URM", model_type = "Extended",
+  list(model = count_mod_m2, analysis = "Peer URM Faculty", outcome = "Count URM", model_type = "Extended",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Peer URM Faculty (centered)", "Treatment $\\times$ Peer URM Faculty", "Constant")),
-  list(model = binary_mod_m1, analysis = "Peer URM Moderation", outcome = "Any URM", model_type = "Simple",
+  list(model = binary_mod_m1, analysis = "Peer URM Faculty", outcome = "Any URM", model_type = "Simple",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Peer URM Faculty (centered)", "Treatment $\\times$ Peer URM Faculty", "Constant")),
-  list(model = binary_mod_m2, analysis = "Peer URM Moderation", outcome = "Any URM", model_type = "Extended",
+  list(model = binary_mod_m2, analysis = "Peer URM Faculty", outcome = "Any URM", model_type = "Extended",
        var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
        var_labels = c("Treatment", "Peer URM Faculty (centered)", "Treatment $\\times$ Peer URM Faculty", "Constant"))
 ))
@@ -1712,7 +1719,7 @@ all_models_list <- append(all_models_list, list(
 create_moderator_table(
   list(pct_mod_m1, pct_mod_m2, count_mod_m1, count_mod_m2, binary_mod_m1, binary_mod_m2),
   c("\\\\% URM", "\\\\% URM", "Count URM", "Count URM", "Any URM", "Any URM"),
-  "Moderation by URM Faculty in Peer Departments",
+  "Effect by Peer URM Faculty",
   "tab:mod_peer_urm",
   "Peer URM Faculty (centered)"
 )
@@ -1840,12 +1847,12 @@ if (nrow(all_significant_results) > 0) {
       if (grepl("Main Effect|Main Question", all_significant_results$Analysis[i])) {
         all_significant_results$Category[i] <- "Main Effects"
       } else if (grepl("Demographic|Black|Hispanic|Female|Intersectional", all_significant_results$Analysis[i])) {
-        all_significant_results$Category[i] <- "Demographic Analysis"
+        all_significant_results$Category[i] <- "Identity Analysis"
       } else if (grepl("Semester", all_significant_results$Analysis[i])) {
         all_significant_results$Category[i] <- "Semester Analysis"
-      } else if (grepl("Discipline:", all_significant_results$Analysis[i])) {
+      } else if (grepl("Chemistry|Mathematics|Physics|Computer Science|Mechanical Engineering", all_significant_results$Analysis[i])) {
         all_significant_results$Category[i] <- "Discipline Analysis"
-      } else if (grepl("Moderation", all_significant_results$Analysis[i])) {
+      } else if (grepl("Department Rank|Faculty Size|Peer URM", all_significant_results$Analysis[i])) {
         all_significant_results$Category[i] <- "Moderation Analysis"
       } else {
         all_significant_results$Category[i] <- "Other"
@@ -1886,7 +1893,7 @@ if (nrow(all_significant_results) > 0) {
         cat("\\addlinespace[0.5em]\n") 
       }
       current_category <- all_significant_results$Category[i]
-      cat("\\multicolumn{9}{l}{\\textbf{", escape_latex(current_category), "}} \\\\\n")
+      cat(sprintf("\\multicolumn{9}{l}{\\textbf{%s}} \\\\\n", escape_latex(current_category)))
       cat("\\midrule\n")
     }
     
