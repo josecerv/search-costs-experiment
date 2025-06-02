@@ -1,0 +1,11 @@
+condition,department,link,campaign
+control,Physics,https://upenn.co1.qualtrics.com/jfe/form/SV_8jePppdXhNM9Ulo,PC
+treatment,Physics,https://upenn.co1.qualtrics.com/jfe/form/SV_cO6FTfuAZLMvZRQ,PT
+control,Mechanical Engineering,https://upenn.co1.qualtrics.com/jfe/form/SV_eXKiNxD0EZdiQRw,MC
+treatment,Mechanical Engineering,https://upenn.co1.qualtrics.com/jfe/form/SV_efjipNLwqTeo6zk,MT
+control,Mathematics,https://upenn.co1.qualtrics.com/jfe/form/SV_8Jj8WIZJrhd5y8C,AC
+treatment,Mathematics,https://upenn.co1.qualtrics.com/jfe/form/SV_cO1KgPwFvS35UB8,AT
+control,Computer Science,https://upenn.co1.qualtrics.com/jfe/form/SV_72LvDjIUQLpQlsW,SC
+treatment,Computer Science,https://upenn.co1.qualtrics.com/jfe/form/SV_cO2cH592NPXb8t8,ST
+control,Chemistry,https://upenn.co1.qualtrics.com/jfe/form/SV_4JEt5BKaoDmtnXE,HC
+treatment,Chemistry,https://upenn.co1.qualtrics.com/jfe/form/SV_556wNdOiCPMcDkO,HT

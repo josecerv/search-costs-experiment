@@ -1,0 +1,120 @@
+Data collection
+No, no data have been collected for this study yet.
+
+Hypothesis
+Main Question #1:  Does providing academic seminars organizers with access to a database of URM faculty members in peer departments increase the percentage of URM speakers in the recipients’ seminar series?
+
+Main Question #2a:  Does providing academic seminars organizers with access to a database of URM faculty members in peer departments change the total number of speakers in the recipients’ seminar series (and if so, by how much)?
+
+Main Question #2b:  Does providing academic seminars organizers with access to a database of URM faculty members in peer departments change the number of URM speakers in the recipients’ seminar series (and if so, by how much)?
+
+Main Question #2c:  Does providing academic seminars organizers with access to a database of URM faculty members in peer departments change the number of non-URM speakers in the recipients’ seminar series (and if so, by how much)?
+
+Dependent variable
+Primary DV:
+% of presenters in an intervention recipient’s research seminar series for the ‘24-25 academic year who are underrepresented racial minorities (defined as Black, Hispanic, or Native American)
+
+Conditions
+We will randomly assign all seminars in each academic department to one of two conditions: a control condition or a treatment condition. We will stratify department randomization based on the number of seminars in the department (and the strata will be defined as follows: 1 seminar, 2-3 seminars, 4-5 seminars, 6-7 seminars, 8-11 seminars, 12-17 seminars, 18-28 seminars).
+
+The unit of observation in our study will be the individual academic seminar (e.g., the UC Santa Barbara Theoretical Physics Seminar).  The treatment and control messages will be sent to one or more representatives of the relevant department seminar.
+
+Analyses        Updated
+To test our Main Question #1, we will run two ordinary least squares regressions (OLS) with clustered standard errors at the department level to predict the % of URM speakers in each academic seminar for the ‘24-25 Academic Year. Our primary predictor variable will be an indicator for assignment to the treatment condition.
+
+We will include the following control variables in our first regression model:
+- Indicators for bins of the number of distinct academic seminars held by the target department (matching strata in our random assignment algorithm; specifically, we will have an indicator for 1 seminar, an indicator for 2-3 seminars, an indicator for 4-5 seminars, an indicator for 6-7 seminars, an indicator for 8-11 seminars, an indicator for 12-17 seminars, and an indicator for 18-28 seminars omitted)
+- Indicators for the target department’s discipline: math, physics, computer science, or mechanical engineering, (chemistry omitted).
+- Indicator for batch # corresponding to when the email went out.
+
+Our second regression model will add the following additional control variables: 
+- Total number of faculty in the department according to research assistant coders in 2024
+- Fraction of faculty in the department classified as URMs by our coders in 2024 (Black, Hispanic or Native American)
+- Fraction of faculty in the department classified as women by our coders in 2024
+- 2024 US News and World Report Department Ranking (where schools with missing department ranking are replaced with the overall ranking of the University)
+- Indicator for missing 2024 US News and World Report Department Ranking
+- Total number of URM faculty in peer departments eligible for inclusion in our database
+- Total number of peer departments eligible for inclusion in our database
+- Number of recipients of our email in the target department
+
+To test our Main Question #2a, we will run the same two ordinary least squares regressions (OLS) with clustered standard errors at the department level described above, but this time to predict the total number of speakers in each academic seminar for the ‘24-25 Academic Year. Our primary predictor variable will be an indicator for assignment to the treatment condition.
+
+See Main Question #1 for the full list of predictors that we will run to test Main Question #2a. 
+
+To test our Main Question #2b, we will run the same two ordinary least squares regressions (OLS) with clustered standard errors at the department level described above, but this time to predict the total number of speakers in each academic seminar for the ‘24-25 Academic Year. Our primary predictor variable will be an indicator for assignment to the treatment condition.
+
+See Main Question #1 for the full list of predictors that we will run to test Main Question #2b.
+
+To test our Main Question #2c, we will run the same two ordinary least squares regressions (OLS) with clustered standard errors at the department level described above, but this time to predict the total number of speakers in each academic seminar for the ‘24-25 Academic Year. Our primary predictor variable will be an indicator for assignment to the treatment condition.
+
+See Main Question #1 for the full list of predictors that we will run to test Main Question #2c.
+
+To test whether the effects of our treatment condition on URM speakers and non-URM speakers are opposite and equal or different in magnitude, we will estimate the models used to answer MQ #2b and MQ #2c as Seemingly Unrelated Regressions (SUR) and conduct a Wald test to verify whether the magnitudes of the treatment effect estimates are significantly different from each other. The models will be as follows:
+
+Equation 1. Total # of URM speakers ~ b1*treatment +B*controls + e
+Equation 2. Total # of non-URM speakers ~ b1*treatment + B*controls + e
+
+We will then do a cross equation Wald test to compare relative magnitudes of b1 from equation 1 and b1 from equation 2 using systemfit() in R.
+
+Outliers and Exclusions
+We plan to analyze the outcomes for every seminar in our dataset except when we cannot measure the outcome because the seminar information is not publicly unavailable.
+
+We will exclude any seminars that were canceled or discontinued for the ‘24-25 AY.  However, we will run a robustness test including discontinued seminars as 0’s for our outcomes of interest.
+
+Sample Size
+Our sample size will be 1888 seminars pulled from all R1 universities in each of the following five disciplines: Physics, Math, Computer Science, Chemistry, and Mechanical Engineering.
+
+Other
+We will re-run our primary analyses but with the following different DV: a binary variable indicating whether any URM speakers were included in the seminar.
+
+We will re-run our main analyses separately for individual disciplines:
+- Math
+- Physics
+- Computer Science
+- Mechanical Engineering
+- Chemistry
+
+We will re-run our main analyses focusing not on URM speakers but instead on: 
+- Black speakers
+- Hispanic speakers
+- Female speakers
+- URM female speakers
+- Black female speakers
+- Black male speakers
+- Hispanic female speakers
+- Hispanic male speakers
+- Assistant professor URM speakers
+
+We will re-run our primary analysis looking at the effects not in the whole year’s academic seminar for the ‘24-25 Academic Year but instead for: 
+- The 2024 Fall Semester’s academic seminar
+- The 2025 Spring Semester’s academic seminar
+
+Exploratory analysis:
+
+We will run additional analyses to examine the effects of our intervention on seminar organizers’ engagement with our database, including (1) the number of clicks and (2) the number of times they access the database.
+
+We plan to explore several exploratory moderators of our primary predictor variable in each analysis.  These moderators include: 
+- Discipline
+- The % of URM faculty in the target department 
+- The # of URM faculty in the target department 
+- The % of email recipients in the target department who are female
+- The % of email recipients in the target department who are URMs
+- The % of email recipients in the target department who are assistant professors
+- 2024 US News and World Report Department Ranking (where schools with missing department ranking are replaced with the overall ranking of the University)
+- Total number of faculty in the department according to our coders in 2024
+- Fraction of faculty in the department classified as URMs by our coders in 2024 (Black, Hispanic, or Native American)
+- Fraction of faculty in the department classified as women by our coders in 2024
+- Total number of URM faculty in peer departments eligible for inclusion in our database
+- Total number of peer departments eligible for inclusion in our database
+- The number of distinct academic seminars held by the department in question as classified by our coders in 2024
+- The number of recipients of our email in the target department
+- The department’s discipline (testing interactions with indicators for math, physics, computer science, mechanical engineering, and chemistry)
+
+Name
+search-costs field experiment
+
+Type of Project
+Experiment
+
+Other
+No response

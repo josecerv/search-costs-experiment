@@ -1,0 +1,1171 @@
+[
+  {
+    "university": "Arizona State University",
+    "physics": "https://physics.asu.edu/",
+    "chemistry": "https://chemistry.asu.edu/",
+    "mathematics": "https://math.asu.edu/",
+    "computerScience": "https://cidse.engineering.asu.edu/",
+    "mechanicalEngineering": "https://semte.engineering.asu.edu/"
+  },
+  {
+    "university": "Auburn University",
+    "physics": "https://www.auburn.edu/cosam/departments/physics/",
+    "chemistry": "https://www.auburn.edu/cosam/departments/chemistry/",
+    "mathematics": "https://www.auburn.edu/cosam/departments/math/",
+    "computerScience": "https://www.eng.auburn.edu/csse/",
+    "mechanicalEngineering": "https://www.eng.auburn.edu/mech/"
+  },
+  {
+    "university": "Baylor University",
+"physics": "https://www.baylor.edu/physics/",
+"chemistry": "https://www.baylor.edu/chemistry/",
+"mathematics": "https://www.baylor.edu/math/",
+"computerScience": "https://www.ecs.baylor.edu/index.php?id=961233",
+"mechanicalEngineering": "https://www.ecs.baylor.edu/index.php?id=961236"
+},
+{
+"university": "Binghamton University",
+"physics": "https://www.binghamton.edu/physics/",
+"chemistry": "https://www.binghamton.edu/chemistry/",
+"mathematics": "https://www.math.binghamton.edu/",
+"computerScience": "https://www.cs.binghamton.edu/",
+"mechanicalEngineering": "https://www.binghamton.edu/mechanical-engineering/"
+},
+{
+"university": "Boston College",
+"physics": "https://www.bc.edu/bc-web/schools/mcas/departments/physics.html",
+"chemistry": "https://www.bc.edu/bc-web/schools/mcas/departments/chemistry.html",
+"mathematics": "https://www.bc.edu/bc-web/schools/mcas/departments/math.html",
+"computerScience": "https://www.bc.edu/bc-web/schools/mcas/departments/computer-science.html",
+"mechanicalEngineering": null
+},
+{
+"university": "Boston University",
+"physics": "https://www.bu.edu/physics/",
+"chemistry": "https://www.bu.edu/chemistry/",
+"mathematics": "https://www.bu.edu/math/",
+"computerScience": "https://www.bu.edu/cs/",
+"mechanicalEngineering": "https://www.bu.edu/eng/departments/me/"
+},
+{
+"university": "Brandeis University",
+"physics": "https://www.brandeis.edu/physics/",
+"chemistry": "https://www.brandeis.edu/chemistry/",
+"mathematics": "https://www.brandeis.edu/mathematics/",
+"computerScience": "https://www.brandeis.edu/computer-science/",
+"mechanicalEngineering": null
+},
+{
+"university": "Brown University",
+"physics": "https://www.brown.edu/academics/physics/",
+"chemistry": "https://www.brown.edu/academics/chemistry/",
+"mathematics": "https://www.brown.edu/academics/math/",
+"computerScience": "https://cs.brown.edu/",
+"mechanicalEngineering": "https://www.brown.edu/academics/engineering/mechanical-engineering"
+},
+{
+"university": "California Institute of Technology",
+"physics": "https://www.pma.caltech.edu/",
+"chemistry": "https://www.cce.caltech.edu/",
+"mathematics": "https://www.math.caltech.edu/",
+"computerScience": "https://www.cs.caltech.edu/",
+"mechanicalEngineering": "https://www.mce.caltech.edu/"
+},
+{
+"university": "Carnegie Mellon University",
+"physics": "https://www.cmu.edu/physics/",
+"chemistry": "https://www.cmu.edu/chemistry/",
+"mathematics": "https://www.math.cmu.edu/",
+"computerScience": "https://www.cs.cmu.edu/",
+"mechanicalEngineering": "https://www.meche.engineering.cmu.edu/"
+},
+{
+"university": "Case Western Reserve University",
+"physics": "https://physics.case.edu/",
+"chemistry": "https://chemistry.case.edu/",
+"mathematics": "https://mathstats.case.edu/",
+"computerScience": "https://engineering.case.edu/eecs/",
+"mechanicalEngineering": "https://engineering.case.edu/emae/"
+},
+{
+"university": "Clemson University",
+"physics": "https://www.clemson.edu/science/departments/physics-astro/",
+"chemistry": "https://www.clemson.edu/science/departments/chemistry/",
+"mathematics": "https://www.clemson.edu/science/departments/mathematical-sciences/",
+"computerScience": "https://www.clemson.edu/cecas/departments/computing/",
+"mechanicalEngineering": "https://www.clemson.edu/cecas/departments/me/"
+},
+{
+"university": "Colorado School of Mines",
+"physics": "https://physics.mines.edu/",
+"chemistry": "https://chemistry.mines.edu/",
+"mathematics": "https://math.mines.edu/",
+"computerScience": "https://cs.mines.edu/",
+"mechanicalEngineering": "https://mechanical.mines.edu/"
+},
+{
+"university": "Colorado State University",
+"physics": "https://www.physics.colostate.edu/",
+"chemistry": "https://www.chem.colostate.edu/",
+"mathematics": "https://www.math.colostate.edu/",
+"computerScience": "https://compsci.colostate.edu/",
+"mechanicalEngineering": "https://www.engr.colostate.edu/me/"
+},
+{
+"university": "Columbia University",
+"physics": "https://physics.columbia.edu/",
+"chemistry": "https://chem.columbia.edu/",
+"mathematics": "https://math.columbia.edu/",
+"computerScience": "https://www.cs.columbia.edu/",
+"mechanicalEngineering": "https://me.columbia.edu/"
+},
+{
+"university": "Cornell University",
+"physics": "https://physics.cornell.edu/",
+"chemistry": "https://chemistry.cornell.edu/",
+"mathematics": "https://math.cornell.edu/",
+"computerScience": "https://www.cs.cornell.edu/",
+"mechanicalEngineering": "https://www.mae.cornell.edu/"
+},
+{
+"university": "Dartmouth College",
+"physics": "https://physics.dartmouth.edu/",
+"chemistry": "https://chemistry.dartmouth.edu/",
+"mathematics": "https://math.dartmouth.edu/",
+"computerScience": "https://web.cs.dartmouth.edu/",
+"mechanicalEngineering": "https://engineering.dartmouth.edu/academics/undergraduate/majors/mechanical-engineering"
+},
+{
+"university": "Drexel University",
+"physics": "https://drexel.edu/coas/academics/departments-centers/physics/",
+"chemistry": "https://drexel.edu/coas/academics/departments-centers/chemistry/",
+"mathematics": "https://drexel.edu/coas/academics/departments-centers/mathematics/",
+"computerScience": "https://drexel.edu/cci/academics/departments/computer-science/",
+"mechanicalEngineering": "https://drexel.edu/engineering/academics/departments/mechanical-engineering-mechanics/"
+},
+{
+"university": "Duke University",
+"physics": "https://phy.duke.edu/",
+"chemistry": "https://chem.duke.edu/",
+"mathematics": "https://math.duke.edu/",
+"computerScience": "https://www.cs.duke.edu/",
+"mechanicalEngineering": "https://mems.duke.edu/"
+},
+{
+"university": "Emory University",
+"physics": "https://www.physics.emory.edu/",
+"chemistry": "https://www.chemistry.emory.edu/",
+"mathematics": "https://www.math.emory.edu/",
+"computerScience": "https://www.cs.emory.edu/",
+"mechanicalEngineering": null
+},
+{
+"university": "Florida International University",
+"physics": "https://physics.fiu.edu/",
+"chemistry": "https://chemistry.fiu.edu/",
+"mathematics": "https://math.fiu.edu/",
+"computerScience": "https://www.cis.fiu.edu/",
+"mechanicalEngineering": "https://me.fiu.edu/"
+},
+{
+"university": "Florida State University",
+"physics": "https://www.physics.fsu.edu/",
+"chemistry": "https://www.chem.fsu.edu/",
+"mathematics": "https://www.math.fsu.edu/",
+"computerScience": "https://www.cs.fsu.edu/",
+"mechanicalEngineering": "https://www.eng.famu.fsu.edu/me"
+},
+{
+"university": "George Mason University",
+"physics": "https://physics.gmu.edu/",
+"chemistry": "https://chemistry.gmu.edu/",
+"mathematics": "https://math.gmu.edu/",
+"computerScience": "https://cs.gmu.edu/",
+"mechanicalEngineering": "https://mechanical.gmu.edu/"
+},
+{
+"university": "George Washington University",
+"physics": "https://physics.columbian.gwu.edu/",
+"chemistry": "https://chemistry.columbian.gwu.edu/",
+"mathematics": "https://math.columbian.gwu.edu/",
+"computerScience": "https://www.cs.seas.gwu.edu/",
+"mechanicalEngineering": "https://www.mae.seas.gwu.edu/"
+},
+{
+"university": "Georgetown University",
+"physics": "https://physics.georgetown.edu/",
+"chemistry": "https://chemistry.georgetown.edu/",
+"mathematics": "https://math.georgetown.edu/",
+"computerScience": "https://cs.georgetown.edu/",
+"mechanicalEngineering": null
+},
+{
+"university": "Georgia Institute of Technology",
+"physics": "https://www.physics.gatech.edu/",
+"chemistry": "https://chemistry.gatech.edu/",
+"mathematics": "https://math.gatech.edu/",
+"computerScience": "https://www.cc.gatech.edu/",
+"mechanicalEngineering": "https://www.me.gatech.edu/"
+},
+{
+"university": "Georgia State University",
+"physics": "https://phy-astr.gsu.edu/",
+"chemistry": "https://chemistry.gsu.edu/",
+"mathematics": "https://www.mathstat.gsu.edu/",
+"computerScience": "https://www.cs.gsu.edu/",
+"mechanicalEngineering": null
+},
+{
+"university": "Graduate Center, CUNY",
+"physics": "https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Physics",
+"chemistry": "https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Chemistry",
+"mathematics": "https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Mathematics",
+"computerScience": "https://www.gc.cuny.edu/Page-Elements/Academics-Research-Centers-Initiatives/Doctoral-Programs/Computer-Science",
+"mechanicalEngineering": null
+},
+{
+"university": "Harvard University",
+"physics": "https://www.physics.harvard.edu/",
+"chemistry": "https://chemistry.harvard.edu/",
+"mathematics": "https://www.math.harvard.edu/",
+"computerScience": "https://www.seas.harvard.edu/computer-science",
+"mechanicalEngineering": "https://www.seas.harvard.edu/mechanical-engineering"
+},
+{
+"university": "Indiana University Bloomington",
+"physics": "https://physics.indiana.edu/",
+"chemistry": "https://www.chem.indiana.edu/",
+"mathematics": "https://math.indiana.edu/",
+"computerScience": "https://www.cs.indiana.edu/",
+"mechanicalEngineering": "https://engineering.indiana.edu/programs/mechanical-engineering/index.html"
+},
+{
+"university": "Iowa State University",
+"physics": "https://www.physics.iastate.edu/",
+"chemistry": "https://www.chem.iastate.edu/",
+"mathematics": "https://www.math.iastate.edu/",
+"computerScience": "https://www.cs.iastate.edu/",
+"mechanicalEngineering": "https://www.me.iastate.edu/"
+},
+{
+"university": "Johns Hopkins University",
+"physics": "https://physics-astronomy.jhu.edu/",
+"chemistry": "https://chemistry.jhu.edu/",
+"mathematics": "https://mathematics.jhu.edu/",
+"computerScience": "https://www.cs.jhu.edu/",
+"mechanicalEngineering": "https://engineering.jhu.edu/mechanical/"
+},
+{
+"university": "Kansas State University",
+"physics": "https://www.phys.ksu.edu/",
+"chemistry": "https://www.ksu.edu/chem/",
+"mathematics": "https://www.math.ksu.edu/",
+"computerScience": "https://www.cs.ksu.edu/",
+"mechanicalEngineering": "https://www.mne.ksu.edu/"
+},
+{
+"university": "Kent State University",
+"physics": "https://www.kent.edu/physics",
+"chemistry": "https://www.kent.edu/chemistry",
+"mathematics": "https://www.kent.edu/math",
+"computerScience": "https://www.kent.edu/cs",
+"mechanicalEngineering": "https://www.kent.edu/mechanical-aerospace-engineering"
+},
+{
+"university": "Louisiana State University",
+"physics": "https://www.lsu.edu/physics/",
+"chemistry": "https://www.lsu.edu/science/chemistry/",
+"mathematics": "https://www.math.lsu.edu/",
+"computerScience": "https://www.csc.lsu.edu/",
+"mechanicalEngineering": "https://www.lsu.edu/eng/mie/"
+},
+{
+"university": "Massachusetts Institute of Technology",
+"physics": "https://web.mit.edu/physics/",
+"chemistry": "https://chemistry.mit.edu/",
+"mathematics": "https://math.mit.edu/",
+"computerScience": "https://www.eecs.mit.edu/",
+"mechanicalEngineering": "https://meche.mit.edu/"
+},
+{
+"university": "Michigan State University",
+"physics": "https://www.pa.msu.edu/",
+"chemistry": "https://www.chemistry.msu.edu/",
+"mathematics": "https://math.msu.edu/",
+"computerScience": "https://www.cse.msu.edu/",
+"mechanicalEngineering": "https://www.egr.msu.edu/me/"
+},
+{
+"university": "Mississippi State University",
+"physics": "https://www.physics.msstate.edu/",
+"chemistry": "https://www.chemistry.msstate.edu/",
+"mathematics": "https://www.math.msstate.edu/",
+"computerScience": "https://www.cse.msstate.edu/",
+"mechanicalEngineering": "https://www.me.msstate.edu/"
+},
+{
+"university": "Montana State University",
+"physics": "https://www.montana.edu/physics/",
+"chemistry": "https://www.montana.edu/chemistry/",
+"mathematics": "https://www.montana.edu/math/",
+"computerScience": "https://www.cs.montana.edu/",
+"mechanicalEngineering": "https://www.montana.edu/mie/"
+},
+{
+"university": "New Jersey Institute of Technology",
+"physics": "https://physics.njit.edu/",
+"chemistry": "https://chemistry.njit.edu/",
+"mathematics": "https://math.njit.edu/",
+"computerScience": "https://cs.njit.edu/",
+"mechanicalEngineering": "https://mie.njit.edu/"
+},
+{
+"university": "New York University",
+"physics": "https://physics.as.nyu.edu/",
+"chemistry": "https://chemistry.as.nyu.edu/",
+"mathematics": "https://math.nyu.edu/",
+"computerScience": "https://cs.nyu.edu/",
+"mechanicalEngineering": "https://engineering.nyu.edu/academics/departments/mechanical-and-aerospace-engineering"
+},
+{
+"university": "North Carolina State University",
+"physics": "https://www.physics.ncsu.edu/",
+"chemistry": "https://www.chem.ncsu.edu/",
+"mathematics": "https://math.sciences.ncsu.edu/",
+"computerScience": "https://www.csc.ncsu.edu/",
+"mechanicalEngineering": "https://www.mae.ncsu.edu/"
+},
+{
+"university": "North Dakota State University",
+"physics": "https://www.ndsu.edu/physics/",
+"chemistry": "https://www.ndsu.edu/chemistry/",
+"mathematics": "https://www.ndsu.edu/math/",
+"computerScience": "https://www.ndsu.edu/cs/",
+"mechanicalEngineering": "https://www.ndsu.edu/me/"
+},
+{
+"university": "Northeastern University",
+"physics": "https://cos.northeastern.edu/physics/",
+"chemistry": "https://cos.northeastern.edu/chemistry-chemical-biology/",
+"mathematics": "https://cos.northeastern.edu/mathematics/",
+"computerScience": "https://www.khoury.northeastern.edu/",
+"mechanicalEngineering": "https://mie.northeastern.edu/"
+},
+{
+"university": "Northwestern University",
+"physics": "https://www.physics.northwestern.edu/",
+"chemistry": "https://www.chemistry.northwestern.edu/",
+"mathematics": "https://www.math.northwestern.edu/",
+"computerScience": "https://www.mccormick.northwestern.edu/computer-science/",
+"mechanicalEngineering": "https://www.mccormick.northwestern.edu/mechanical/"
+},
+{
+"university": "Ohio State University",
+"physics": "https://www.physics.osu.edu/",
+"chemistry": "https://chemistry.osu.edu/",
+"mathematics": "https://math.osu.edu/",
+"computerScience": "https://www.cse.ohio-state.edu/",
+"mechanicalEngineering": "https://mae.osu.edu/"
+},
+{
+"university": "Ohio University",
+"physics": "https://www.ohio.edu/cas/physastro",
+"chemistry": "https://www.ohio.edu/cas/chemistry",
+"mathematics": "https://www.ohio.edu/cas/math",
+"computerScience": "https://www.ohio.edu/engineering/eecs",
+"mechanicalEngineering": "https://www.ohio.edu/engineering/mechanical"
+},
+{
+"university": "Oklahoma State University–Stillwater",
+"physics": "https://physics.okstate.edu/",
+"chemistry": "https://chem.okstate.edu/",
+"mathematics": "https://math.okstate.edu/",
+"computerScience": "https://cs.okstate.edu/",
+"mechanicalEngineering": "https://mae.okstate.edu/"
+},
+{
+"university": "Old Dominion University",
+"physics": "https://www.odu.edu/physics",
+"chemistry": "https://www.odu.edu/chemistry",
+"mathematics": "https://www.odu.edu/math",
+"computerScience": "https://www.odu.edu/compsci",
+"mechanicalEngineering": "https://www.odu.edu/mae"
+},
+{
+"university": "Oregon State University",
+"physics": "https://physics.oregonstate.edu/",
+"chemistry": "https://chemistry.oregonstate.edu/",
+"mathematics": "https://math.oregonstate.edu/",
+"computerScience": "https://eecs.oregonstate.edu/",
+"mechanicalEngineering": "https://mime.oregonstate.edu/"
+},
+{
+"university": "Pennsylvania State University",
+"physics": "https://www.phys.psu.edu/",
+"chemistry": "https://science.psu.edu/chem",
+"mathematics": "https://science.psu.edu/math",
+"computerScience": "https://science.psu.edu/cmpsc",
+"mechanicalEngineering": "https://www.me.psu.edu/"
+},
+{
+"university": "Princeton University",
+"physics": "https://physics.princeton.edu/",
+"chemistry": "https://chemistry.princeton.edu/",
+"mathematics": "https://www.math.princeton.edu/",
+"computerScience": "https://www.cs.princeton.edu/",
+"mechanicalEngineering": "https://mae.princeton.edu/"
+},
+{
+"university": "Purdue University",
+"physics": "https://www.physics.purdue.edu/",
+"chemistry": "https://www.chem.purdue.edu/",
+"mathematics": "https://www.math.purdue.edu/",
+"computerScience": "https://www.cs.purdue.edu/",
+"mechanicalEngineering": "https://engineering.purdue.edu/ME"
+},
+{
+"university": "Rensselaer Polytechnic Institute",
+"physics": "https://science.rpi.edu/physics",
+"chemistry": "https://science.rpi.edu/chemistry",
+"mathematics": "https://science.rpi.edu/mathematical-sciences",
+"computerScience": "https://science.rpi.edu/computer-science",
+"mechanicalEngineering": "https://mane.rpi.edu/"
+},
+{
+"university": "Rice University",
+"physics": "https://physics.rice.edu/",
+"chemistry": "https://chemistry.rice.edu/",
+"mathematics": "https://math.rice.edu/",
+"computerScience": "https://www.cs.rice.edu/",
+"mechanicalEngineering": "https://mech.rice.edu/"
+},
+{
+"university": "Rutgers University–New Brunswick",
+"physics": "https://physics.rutgers.edu/",
+"chemistry": "https://chem.rutgers.edu/",
+"mathematics": "https://www.math.rutgers.edu/",
+"computerScience": "https://www.cs.rutgers.edu/",
+"mechanicalEngineering": "https://mae.rutgers.edu/"
+},
+{
+"university": "Stanford University",
+"physics": "https://physics.stanford.edu/",
+"chemistry": "https://chemistry.stanford.edu/",
+"mathematics": "https://mathematics.stanford.edu/",
+"computerScience": "https://cs.stanford.edu/",
+"mechanicalEngineering": "https://me.stanford.edu/"
+},
+{
+"university": "Stony Brook University",
+"physics": "https://www.stonybrook.edu/physics/",
+"chemistry": "https://www.stonybrook.edu/chemistry/",
+"mathematics": "https://www.math.stonybrook.edu/",
+"computerScience": "https://www.cs.stonybrook.edu/",
+"mechanicalEngineering": "https://me.stonybrook.edu/"
+},
+{
+"university": "Syracuse University",
+"physics": "https://thecollege.syr.edu/physics/",
+"chemistry": "https://thecollege.syr.edu/chemistry/",
+"mathematics": "https://thecollege.syr.edu/mathematics/",
+"computerScience": "https://eng-cs.syr.edu/",
+"mechanicalEngineering": "https://eng-cs.syr.edu/mechanical-aerospace-engineering/"
+},
+{
+"university": "Temple University",
+"physics": "https://phys.cst.temple.edu/",
+"chemistry": "https://chem.cst.temple.edu/",
+"mathematics": "https://math.cst.temple.edu/",
+"computerScience": "https://www.temple.edu/academics/degree-programs/computer-science-major-st-csci-bs",
+"mechanicalEngineering": "https://engineering.temple.edu/departments/mechanical-engineering"
+},
+{
+"university": "Texas A&M University",
+"physics": "https://physics.tamu.edu/",
+"chemistry": "https://www.chem.tamu.edu/",
+"mathematics": "https://www.math.tamu.edu/",
+"computerScience": "https://engineering.tamu.edu/cse/",
+"mechanicalEngineering": "https://engineering.tamu.edu/mechanical/index.html"
+},
+{
+"university": "Texas Tech University",
+"physics": "https://www.depts.ttu.edu/phas/",
+"chemistry": "https://www.depts.ttu.edu/chemistry/",
+"mathematics": "https://www.math.ttu.edu/",
+"computerScience": "https://www.depts.ttu.edu/cs/",
+"mechanicalEngineering": "https://www.depts.ttu.edu/me/"
+},
+{
+"university": "Tufts University",
+"physics": "https://physics.tufts.edu/",
+"chemistry": "https://chem.tufts.edu/",
+"mathematics": "https://math.tufts.edu/",
+"computerScience": "https://engineering.tufts.edu/cs",
+"mechanicalEngineering": "https://engineering.tufts.edu/me"
+},
+{
+"university": "Tulane University",
+"physics": "https://physics.tulane.edu/",
+"chemistry": "https://chem.tulane.edu/",
+"mathematics": "https://sse.tulane.edu/math",
+"computerScience": "https://sse.tulane.edu/cs",
+"mechanicalEngineering": "https://sse.tulane.edu/me"
+},
+{
+"university": "University at Albany, SUNY",
+"physics": "https://www.albany.edu/physics",
+"chemistry": "https://www.albany.edu/chemistry",
+"mathematics": "https://www.albany.edu/math",
+"computerScience": "https://www.albany.edu/computer-science",
+"mechanicalEngineering": null
+},
+{
+"university": "University at Buffalo",
+"physics": "https://arts-sciences.buffalo.edu/physics.html",
+"chemistry": "https://arts-sciences.buffalo.edu/chemistry.html",
+"mathematics": "https://arts-sciences.buffalo.edu/mathematics.html",
+"computerScience": "https://engineering.buffalo.edu/computer-science-engineering.html",
+"mechanicalEngineering": "https://engineering.buffalo.edu/mechanical-aerospace-engineering.html"
+},
+{
+"university": "University of Alabama",
+"physics": "https://physics.ua.edu/",
+"chemistry": "https://chemistry.ua.edu/",
+"mathematics": "https://math.ua.edu/",
+"computerScience": "https://cs.ua.edu/",
+"mechanicalEngineering": "https://me.eng.ua.edu/"
+},
+{
+"university": "University of Alabama at Birmingham",
+"physics": "https://www.uab.edu/cas/physics/",
+"chemistry": "https://www.uab.edu/cas/chemistry/",
+"mathematics": "https://www.uab.edu/cas/mathematics/",
+"computerScience": "https://www.uab.edu/cas/computerscience/",
+"mechanicalEngineering": "https://www.uab.edu/engineering/me/"
+},
+{
+"university": "University of Alabama in Huntsville",
+"physics": "https://www.uah.edu/science/departments/physics",
+"chemistry": "https://www.uah.edu/science/departments/chemistry",
+"mathematics": "https://www.uah.edu/science/departments/math",
+"computerScience": "https://www.uah.edu/science/departments/computer-science",
+"mechanicalEngineering": "https://www.uah.edu/eng/departments/mae"
+},
+{
+"university": "University of Arizona",
+"physics": "https://www.physics.arizona.edu/",
+"chemistry": "https://www.chem.arizona.edu/",
+"mathematics": "https://math.arizona.edu/",
+"computerScience": "https://www.cs.arizona.edu/",
+"mechanicalEngineering": "https://ame.engineering.arizona.edu/"
+},
+{
+"university": "University of Arkansas",
+"physics": "https://fulbright.uark.edu/departments/physics/",
+"chemistry": "https://fulbright.uark.edu/departments/chemistry/",
+"mathematics": "https://fulbright.uark.edu/departments/math/",
+"computerScience": "https://computer-science-and-computer-engineering.uark.edu/",
+"mechanicalEngineering": "https://mechanical-engineering.uark.edu/"
+},
+{
+"university": "University of California, Berkeley",
+"physics": "https://physics.berkeley.edu/",
+"chemistry": "https://chemistry.berkeley.edu/",
+"mathematics": "https://math.berkeley.edu/",
+"computerScience": "https://eecs.berkeley.edu/",
+"mechanicalEngineering": "https://me.berkeley.edu/"
+},
+{
+"university": "University of California, Davis",
+"physics": "https://physics.ucdavis.edu/",
+"chemistry": "https://chemistry.ucdavis.edu/",
+"mathematics": "https://www.math.ucdavis.edu/",
+"computerScience": "https://cs.ucdavis.edu/",
+"mechanicalEngineering": "https://mae.ucdavis.edu/"
+},
+{
+"university": "University of California, Irvine",
+"physics": "https://www.physics.uci.edu/",
+"chemistry": "https://www.chem.uci.edu/",
+"mathematics": "https://www.math.uci.edu/",
+"computerScience": "https://www.cs.uci.edu/",
+"mechanicalEngineering": "https://mae.uci.edu/"
+},
+{
+"university": "University of California, Los Angeles",
+"physics": "https://www.pa.ucla.edu/",
+"chemistry": "https://www.chemistry.ucla.edu/",
+"mathematics": "https://www.math.ucla.edu/",
+"computerScience": "https://www.cs.ucla.edu/",
+"mechanicalEngineering": "https://www.mae.ucla.edu/"
+},
+{
+"university": "University of California, Riverside",
+"physics": "https://physics.ucr.edu/",
+"chemistry": "https://chem.ucr.edu/",
+"mathematics": "https://mathweb.ucr.edu/",
+"computerScience": "https://www1.cs.ucr.edu/",
+"mechanicalEngineering": "https://www.me.ucr.edu/"
+},
+{
+"university": "University of California, San Diego",
+"physics": "https://physics.ucsd.edu/",
+"chemistry": "https://chemistry.ucsd.edu/",
+"mathematics": "https://www.math.ucsd.edu/",
+"computerScience": "https://cse.ucsd.edu/",
+"mechanicalEngineering": "https://mae.ucsd.edu/"
+},
+{
+"university": "University of California, Santa Barbara",
+"physics": "https://www.physics.ucsb.edu/",
+"chemistry": "https://www.chem.ucsb.edu/",
+"mathematics": "https://www.math.ucsb.edu/",
+"computerScience": "https://cs.ucsb.edu/",
+"mechanicalEngineering": "https://me.ucsb.edu/"
+},
+{
+"university": "University of California, Santa Cruz",
+"physics": "https://www.physics.ucsc.edu/",
+"chemistry": "https://www.chemistry.ucsc.edu/",
+"mathematics": "https://www.math.ucsc.edu/",
+"computerScience": "https://www.soe.ucsc.edu/departments/computer-science-and-engineering",
+"mechanicalEngineering": null
+},
+{
+"university": "University of Central Florida",
+"physics": "https://sciences.ucf.edu/physics/",
+"chemistry": "https://sciences.ucf.edu/chemistry/",
+"mathematics": "https://sciences.ucf.edu/math/",
+"computerScience": "https://www.cs.ucf.edu/",
+"mechanicalEngineering": "https://mae.ucf.edu/"
+},
+{
+"university": "University of Chicago",
+"physics": "https://physics.uchicago.edu/",
+"chemistry": "https://chemistry.uchicago.edu/",
+"mathematics": "https://math.uchicago.edu/",
+"computerScience": "https://www.cs.uchicago.edu/",
+"mechanicalEngineering": null
+},
+{
+"university": "University of Cincinnati",
+"physics": "https://www.artsci.uc.edu/departments/physics.html",
+"chemistry": "https://www.artsci.uc.edu/departments/chemistry.html",
+"mathematics": "https://www.artsci.uc.edu/departments/math.html",
+"computerScience": "https://ceas.uc.edu/academics/departments/computer-science.html",
+"mechanicalEngineering": "https://ceas.uc.edu/academics/departments/mechanical-materials-engineering.html"
+},
+{
+"university": "University of Colorado Boulder",
+"physics": "https://www.colorado.edu/physics/",
+"chemistry": "https://www.colorado.edu/chemistry/",
+"mathematics": "https://www.colorado.edu/math/",
+"computerScience": "https://www.colorado.edu/cs/",
+"mechanicalEngineering": "https://www.colorado.edu/mechanical/"
+},
+{
+"university": "University of Colorado Denver",
+"physics": "https://clas.ucdenver.edu/physics/",
+"chemistry": "https://clas.ucdenver.edu/chemistry/",
+"mathematics": "https://clas.ucdenver.edu/mathematical-and-statistical-sciences/",
+"computerScience": "https://engineering.ucdenver.edu/academics/departments/computer-science-and-engineering",
+"mechanicalEngineering": "https://engineering.ucdenver.edu/academics/departments/mechanical-engineering"
+},
+{
+"university": "University of Connecticut",
+"physics": "https://physics.uconn.edu/",
+"chemistry": "https://chemistry.uconn.edu/",
+"mathematics": "https://math.uconn.edu/",
+"computerScience": "https://www.cse.uconn.edu/",
+"mechanicalEngineering": "https://me.engr.uconn.edu/"
+},
+{
+"university": "University of Delaware",
+"physics": "https://www.physics.udel.edu/",
+"chemistry": "https://www.chem.udel.edu/",
+"mathematics": "https://www.math.udel.edu/",
+"computerScience": "https://www.cis.udel.edu/",
+"mechanicalEngineering": "https://me.udel.edu/"
+},
+{
+"university": "University of Denver",
+"physics": "https://science.du.edu/departments/physics-astronomy",
+"chemistry": "https://science.du.edu/departments/chemistry-biochemistry",
+"mathematics": "https://science.du.edu/departments/mathematics",
+"computerScience": "https://ritchieschool.du.edu/departments/computer-science/",
+"mechanicalEngineering": "https://ritchieschool.du.edu/departments/mechanical-materials-engineering/"
+},
+{
+"university": "University of Florida",
+"physics": "https://www.phys.ufl.edu/",
+"chemistry": "https://www.chem.ufl.edu/",
+"mathematics": "https://math.ufl.edu/",
+"computerScience": "https://www.cise.ufl.edu/",
+"mechanicalEngineering": "https://mae.ufl.edu/"
+},
+{
+"university": "University of Georgia",
+"physics": "https://www.physast.uga.edu/",
+"chemistry": "https://www.chem.uga.edu/",
+"mathematics": "https://math.uga.edu/",
+"computerScience": "https://cs.uga.edu/",
+"mechanicalEngineering": "https://www.engr.uga.edu/mechanical-engineering"
+},
+{
+"university": "University of Hawaii at Manoa",
+"physics": "https://www.phys.hawaii.edu/",
+"chemistry": "https://manoa.hawaii.edu/chem/",
+"mathematics": "https://math.hawaii.edu/",
+"computerScience": "https://www.ics.hawaii.edu/",
+"mechanicalEngineering": "https://me.hawaii.edu/"
+},
+{
+"university": "University of Houston",
+"physics": "https://uh.edu/nsm/physics/",
+"chemistry": "https://uh.edu/nsm/chemistry/",
+"mathematics": "https://uh.edu/nsm/math/",
+"computerScience": "https://www.uh.edu/nsm/computer-science/",
+"mechanicalEngineering": "https://www.me.uh.edu/"
+},
+{
+"university": "University of Illinois Chicago",
+"physics": "https://phys.uic.edu/",
+"chemistry": "https://chem.uic.edu/",
+"mathematics": "https://math.uic.edu/",
+"computerScience": "https://cs.uic.edu/",
+"mechanicalEngineering": "https://me.uic.edu/"
+},
+{
+"university": "University of Illinois Urbana-Champaign",
+"physics": "https://physics.illinois.edu/",
+"chemistry": "https://chemistry.illinois.edu/",
+"mathematics": "https://math.illinois.edu/",
+"computerScience": "https://cs.illinois.edu/",
+"mechanicalEngineering": "https://mechse.illinois.edu/"
+},
+{
+"university": "University of Iowa",
+"physics": "https://physics.uiowa.edu/",
+"chemistry": "https://chem.uiowa.edu/",
+"mathematics": "https://math.uiowa.edu/",
+"computerScience": "https://cs.uiowa.edu/",
+"mechanicalEngineering": "https://me.engineering.uiowa.edu/"
+},
+{
+"university": "University of Kansas",
+"physics": "https://physics.ku.edu/",
+"chemistry": "https://chem.ku.edu/",
+"mathematics": "https://math.ku.edu/",
+"computerScience": "https://eecs.ku.edu/",
+"mechanicalEngineering": "https://me.engr.ku.edu/"
+},
+{
+"university": "University of Kentucky",
+"physics": "https://pa.as.uky.edu/",
+"chemistry": "https://chem.as.uky.edu/",
+"mathematics": "https://math.as.uky.edu/",
+"computerScience": "https://www.engr.uky.edu/research-faculty/departments/computer-science",
+"mechanicalEngineering": "https://www.engr.uky.edu/mechanical"
+},
+{
+"university": "University of Louisiana at Lafayette",
+"physics": "https://physics.louisiana.edu/",
+"chemistry": "https://chemistry.louisiana.edu/",
+"mathematics": "https://math.louisiana.edu/",
+"computerScience": "https://cse.louisiana.edu/",
+"mechanicalEngineering": "https://mche.louisiana.edu/"
+},
+{
+"university": "University of Louisville",
+"physics": "https://louisville.edu/physics",
+"chemistry": "https://louisville.edu/chemistry",
+"mathematics": "https://louisville.edu/math",
+"computerScience": "https://louisville.edu/speed/computer",
+"mechanicalEngineering": "https://louisville.edu/speed/mechanical"
+},
+{
+"university": "University of Maine",
+"physics": "https://physics.umaine.edu/",
+"chemistry": "https://umaine.edu/chemistry/",
+"mathematics": "https://math.umaine.edu/",
+"computerScience": "https://umaine.edu/scis/",
+"mechanicalEngineering": "https://umaine.edu/mecheng/"
+},
+{
+"university": "University of Maryland, Baltimore County",
+"physics": "https://physics.umbc.edu/",
+"chemistry": "https://chemistry.umbc.edu/",
+"mathematics": "https://mathweb.umbc.edu/",
+"computerScience": "https://www.csee.umbc.edu/",
+"mechanicalEngineering": "https://me.umbc.edu/"
+},
+{
+"university": "University of Maryland, College Park",
+"physics": "https://umdphysics.umd.edu/",
+"chemistry": "https://chem.umd.edu/",
+"mathematics": "https://www-math.umd.edu/",
+"computerScience": "https://www.cs.umd.edu/",
+"mechanicalEngineering": "https://enme.umd.edu/"
+},
+{
+"university": "University of Massachusetts Amherst",
+"physics": "https://www.physics.umass.edu/",
+"chemistry": "https://www.chem.umass.edu/",
+"mathematics": "https://www.math.umass.edu/",
+"computerScience": "https://www.cics.umass.edu/",
+"mechanicalEngineering": "https://mie.umass.edu/"
+},
+{
+"university": "University of Memphis",
+"physics": "https://www.memphis.edu/physics/",
+"chemistry": "https://www.memphis.edu/chem/",
+"mathematics": "https://www.memphis.edu/msci/",
+"computerScience": "https://www.memphis.edu/cs/",
+"mechanicalEngineering": "https://www.memphis.edu/me/"
+},
+{
+"university": "University of Miami",
+"physics": "https://physics.as.miami.edu/",
+"chemistry": "https://chemistry.as.miami.edu/",
+"mathematics": "https://math.miami.edu/",
+"computerScience": "https://www.coe.miami.edu/computer-science/",
+"mechanicalEngineering": "https://www.coe.miami.edu/mechanical-aerospace-engineering/"
+},
+{
+"university": "University of Michigan",
+"physics": "https://lsa.umich.edu/physics",
+"chemistry": "https://lsa.umich.edu/chem",
+"mathematics": "https://lsa.umich.edu/math",
+"computerScience": "https://cse.engin.umich.edu/",
+"mechanicalEngineering": "https://me.engin.umich.edu/"
+},
+{
+"university": "University of Minnesota",
+"physics": "https://www.physics.umn.edu/",
+"chemistry": "https://chem.umn.edu/",
+"mathematics": "https://math.umn.edu/",
+"computerScience": "https://www.cs.umn.edu/",
+"mechanicalEngineering": "https://www.me.umn.edu/"
+},
+{
+"university": "University of Mississippi",
+"physics": "https://physics.olemiss.edu/",
+"chemistry": "https://chemistry.olemiss.edu/",
+"mathematics": "https://math.olemiss.edu/",
+"computerScience": "https://www.cs.olemiss.edu/",
+"mechanicalEngineering": "https://engineering.olemiss.edu/mechanical/"
+},
+{
+"university": "University of Missouri",
+"physics": "https://physics.missouri.edu/",
+"chemistry": "https://chemistry.missouri.edu/",
+"mathematics": "https://math.missouri.edu/",
+"computerScience": "https://engineering.missouri.edu/academics/eecs/",
+"mechanicalEngineering": "https://engineering.missouri.edu/academics/mae/"
+},
+{
+"university": "University of Montana",
+"physics": "https://hs.umt.edu/physics/",
+"chemistry": "https://hs.umt.edu/chemistry/",
+"mathematics": "https://hs.umt.edu/math/",
+"computerScience": "https://www.cs.umt.edu/",
+"mechanicalEngineering": null
+},
+{
+"university": "University of Nebraska–Lincoln",
+"physics": "https://www.unl.edu/physics/",
+"chemistry": "https://chem.unl.edu/",
+"mathematics": "https://www.math.unl.edu/",
+"computerScience": "https://cse.unl.edu/",
+"mechanicalEngineering": "https://engineering.unl.edu/mme/"
+},
+{
+"university": "University of Nevada, Las Vegas",
+"physics": "https://www.unlv.edu/physics",
+"chemistry": "https://www.unlv.edu/chemistry",
+"mathematics": "https://www.unlv.edu/math",
+"computerScience": "https://www.unlv.edu/cs",
+"mechanicalEngineering": "https://www.unlv.edu/me"
+},
+{
+"university": "University of Nevada, Reno",
+"physics": "https://www.unr.edu/physics",
+"chemistry": "https://www.unr.edu/chemistry",
+"mathematics": "https://www.unr.edu/math",
+"computerScience": "https://www.unr.edu/cse",
+"mechanicalEngineering": "https://www.unr.edu/mechanical-engineering"
+},
+{
+"university": "University of New Hampshire",
+"physics": "https://ceps.unh.edu/physics",
+"chemistry": "https://ceps.unh.edu/chemistry",
+"mathematics": "https://ceps.unh.edu/mathematics-statistics",
+"computerScience": "https://ceps.unh.edu/computer-science",
+"mechanicalEngineering": "https://ceps.unh.edu/mechanical-engineering"
+},
+{
+"university": "University of New Mexico",
+"physics": "https://physics.unm.edu/",
+"chemistry": "https://chemistry.unm.edu/",
+"mathematics": "https://math.unm.edu/",
+"computerScience": "https://cs.unm.edu/",
+"mechanicalEngineering": "https://me.unm.edu/"
+},
+{
+"university": "University of North Carolina at Chapel Hill",
+"physics": "https://physics.unc.edu/",
+"chemistry": "https://chem.unc.edu/",
+"mathematics": "https://math.unc.edu/",
+"computerScience": "https://cs.unc.edu/",
+"mechanicalEngineering": "https://www.med.unc.edu/"
+},
+{
+"university": "University of North Texas",
+"physics": "https://physics.unt.edu/",
+"chemistry": "https://chemistry.unt.edu/",
+"mathematics": "https://math.unt.edu/",
+"computerScience": "https://computerscience.engineering.unt.edu/",
+"mechanicalEngineering": "https://mechanical.engineering.unt.edu/"
+},
+{
+"university": "University of Notre Dame",
+"physics": "https://physics.nd.edu/",
+"chemistry": "https://chemistry.nd.edu/",
+"mathematics": "https://math.nd.edu/",
+"computerScience": "https://cse.nd.edu/",
+"mechanicalEngineering": "https://ame.nd.edu/"
+},
+{
+"university": "University of Oklahoma",
+"physics": "https://www.ou.edu/cas/physics",
+"chemistry": "https://www.ou.edu/cas/chemistry",
+"mathematics": "https://www.ou.edu/cas/mathematics",
+"computerScience": "https://www.ou.edu/coe/cs",
+"mechanicalEngineering": "https://www.ou.edu/coe/ame"
+},
+{
+"university": "University of Oregon",
+"physics": "https://physics.uoregon.edu/",
+"chemistry": "https://chemistry.uoregon.edu/",
+"mathematics": "https://math.uoregon.edu/",
+"computerScience": "https://cs.uoregon.edu/",
+"mechanicalEngineering": null
+},
+{
+"university": "University of Pennsylvania",
+"physics": "https://www.physics.upenn.edu/",
+"chemistry": "https://www.chem.upenn.edu/",
+"mathematics": "https://www.math.upenn.edu/",
+"computerScience": "https://www.cis.upenn.edu/",
+"mechanicalEngineering": "https://www.me.upenn.edu/"
+},
+{
+"university": "University of Pittsburgh",
+"physics": "https://www.physicsandastronomy.pitt.edu/",
+"chemistry": "https://www.chem.pitt.edu/",
+"mathematics": "https://www.mathematics.pitt.edu/",
+"computerScience": "https://www.cs.pitt.edu/",
+"mechanicalEngineering": "https://www.engineering.pitt.edu/Departments/Mechanical-_and-Materials-Engineering/"
+},
+{
+"university": "University of Rochester",
+"physics": "https://www.sas.rochester.edu/pas/",
+"chemistry": "https://www.sas.rochester.edu/chm/",
+"mathematics": "https://www.sas.rochester.edu/mth/",
+"computerScience": "https://www.cs.rochester.edu/",
+"mechanicalEngineering": "https://www.hajim.rochester.edu/me/"
+},
+{
+"university": "University of South Carolina",
+"physics": "https://www.physics.sc.edu/",
+"chemistry": "https://www.chem.sc.edu/",
+"mathematics": "https://www.math.sc.edu/",
+"computerScience": "https://www.cse.sc.edu/",
+"mechanicalEngineering": "https://www.me.sc.edu/"
+},
+{
+"university": "University of South Florida",
+"physics": "https://www.usf.edu/arts-sciences/departments/physics/",
+"chemistry": "https://www.usf.edu/arts-sciences/departments/chemistry/",
+"mathematics": "https://www.usf.edu/arts-sciences/departments/mathematics/",
+"computerScience": "https://www.usf.edu/engineering/cse/",
+"mechanicalEngineering": "https://www.usf.edu/engineering/me/"
+},
+{
+"university": "University of Southern California",
+"physics": "https://dornsife.usc.edu/physics",
+"chemistry": "https://dornsife.usc.edu/chem",
+"mathematics": "https://dornsife.usc.edu/math",
+"computerScience": "https://www.cs.usc.edu/",
+"mechanicalEngineering": "https://viterbischool.usc.edu/departments/ame/"
+},
+{
+"university": "University of Southern Mississippi",
+"physics": "https://www.usm.edu/physics-astronomy/",
+"chemistry": "https://www.usm.edu/chemistry-biochemistry/",
+"mathematics": "https://www.usm.edu/mathematics/",
+"computerScience": "https://www.usm.edu/computing-sciences-computer-engineering/",
+"mechanicalEngineering": null
+},
+{
+"university": "University of Tennessee",
+"physics": "https://www.phys.utk.edu/",
+"chemistry": "https://chem.utk.edu/",
+"mathematics": "https://www.math.utk.edu/",
+"computerScience": "https://www.eecs.utk.edu/",
+"mechanicalEngineering": "https://www.mabe.utk.edu/"
+},
+{
+"university": "University of Texas at Arlington",
+"physics": "https://www.uta.edu/physics/",
+"chemistry": "https://www.uta.edu/chemistry/",
+"mathematics": "https://www.uta.edu/math/",
+"computerScience": "https://cse.uta.edu/",
+"mechanicalEngineering": "https://www.uta.edu/mae/"
+},
+{
+"university": "University of Texas at Austin",
+"physics": "https://ph.utexas.edu/",
+"chemistry": "https://cm.utexas.edu/",
+"mathematics": "https://www.ma.utexas.edu/",
+"computerScience": "https://www.cs.utexas.edu/",
+"mechanicalEngineering": "https://www.me.utexas.edu/"
+},
+{
+"university": "University of Texas at Dallas",
+"physics": "https://physics.utdallas.edu/",
+"chemistry": "https://chemistry.utdallas.edu/",
+"mathematics": "https://www.utdallas.edu/math/",
+"computerScience": "https://cs.utdallas.edu/",
+"mechanicalEngineering": "https://me.utdallas.edu/"
+},
+{
+"university": "University of Texas at El Paso",
+"physics": "https://www.utep.edu/science/physics/",
+"chemistry": "https://www.utep.edu/science/chemistry/",
+"mathematics": "https://www.utep.edu/science/math/",
+"computerScience": "https://www.utep.edu/cs/",
+"mechanicalEngineering": "https://www.utep.edu/engineering/mechanical/"
+},
+{
+"university": "University of Texas at San Antonio",
+"physics": "https://www.utsa.edu/physics/",
+"chemistry": "https://www.utsa.edu/chemistry/",
+"mathematics": "https://www.utsa.edu/math/",
+"computerScience": "https://www.utsa.edu/cs/",
+"mechanicalEngineering": "https://engineering.utsa.edu/mechanical/"
+},
+{
+"university": "University of Utah",
+"physics": "https://www.physics.utah.edu/",
+"chemistry": "https://www.chem.utah.edu/",
+"mathematics": "https://www.math.utah.edu/",
+"computerScience": "https://www.cs.utah.edu/",
+"mechanicalEngineering": "https://www.mech.utah.edu/"
+},
+{
+"university": "University of Virginia",
+"physics": "https://physics.as.virginia.edu/",
+"chemistry": "https://chemistry.as.virginia.edu/",
+"mathematics": "https://math.virginia.edu/",
+"computerScience": "https://engineering.virginia.edu/departments/computer-science",
+"mechanicalEngineering": "https://engineering.virginia.edu/departments/mechanical-and-aerospace-engineering"
+},
+{
+"university": "University of Washington",
+"physics": "https://phys.washington.edu/",
+"chemistry": "https://chem.washington.edu/",
+"mathematics": "https://math.washington.edu/",
+"computerScience": "https://www.cs.washington.edu/",
+"mechanicalEngineering": "https://www.me.washington.edu/"
+},
+{
+"university": "University of Wisconsin–Madison",
+"physics": "https://www.physics.wisc.edu/",
+"chemistry": "https://www.chem.wisc.edu/",
+"mathematics": "https://www.math.wisc.edu/",
+"computerScience": "https://www.cs.wisc.edu/",
+"mechanicalEngineering": "https://www.engr.wisc.edu/department/mechanical-engineering/"
+},
+{
+"university": "University of Wisconsin–Milwaukee",
+"physics": "https://uwm.edu/physics/",
+"chemistry": "https://uwm.edu/chemistry/",
+"mathematics": "https://uwm.edu/math/",
+"computerScience": "https://uwm.edu/engineering/academics-2/departments/computer-science/",
+"mechanicalEngineering": "https://uwm.edu/engineering/academics-2/departments/mechanical-engineering/"
+},
+{
+"university": "Utah State University",
+"physics": "https://www.usu.edu/physics/",
+"chemistry": "https://chem.usu.edu/",
+"mathematics": "https://math.usu.edu/",
+"computerScience": "https://cs.usu.edu/",
+"mechanicalEngineering": "https://mae.usu.edu/"
+},
+{
+"university": "Vanderbilt University",
+"physics": "https://as.vanderbilt.edu/physics/",
+"chemistry": "https://as.vanderbilt.edu/chemistry/",
+"mathematics": "https://as.vanderbilt.edu/math/",
+"computerScience": "https://engineering.vanderbilt.edu/eecs/",
+"mechanicalEngineering": "https://engineering.vanderbilt.edu/me/"
+},
+{
+"university": "Virginia Commonwealth University",
+"physics": "https://physics.vcu.edu/",
+"chemistry": "https://chemistry.vcu.edu/",
+"mathematics": "https://math.vcu.edu/",
+"computerScience": "https://egr.vcu.edu/departments/computer/",
+"mechanicalEngineering": "https://egr.vcu.edu/departments/mechanical/"
+},
+{
+"university": "Virginia Tech",
+"physics": "https://www.phys.vt.edu/",
+"chemistry": "https://www.chem.vt.edu/",
+"mathematics": "https://www.math.vt.edu/",
+"computerScience": "https://cs.vt.edu/",
+"mechanicalEngineering": "https://www.me.vt.edu/"
+},
+{
+"university": "Washington State University",
+"physics": "https://physics.wsu.edu/",
+"chemistry": "https://chemistry.wsu.edu/",
+"mathematics": "https://math.wsu.edu/",
+"computerScience": "https://school.eecs.wsu.edu/",
+"mechanicalEngineering": "https://mme.wsu.edu/"
+},
+{
+"university": "Washington University in St. Louis",
+"physics": "https://physics.wustl.edu/",
+"chemistry": "https://chemistry.wustl.edu/",
+"mathematics": "https://math.wustl.edu/",
+"computerScience": "https://cse.wustl.edu/",
+"mechanicalEngineering": "https://mems.wustl.edu/"
+},
+{
+"university": "Wayne State University",
+"physics": "https://clas.wayne.edu/physics/",
+"chemistry": "https://clas.wayne.edu/chemistry",
+"mathematics": "https://clas.wayne.edu/math/",
+"computerScience": "https://engineering.wayne.edu/cs/",
+"mechanicalEngineering": "https://engineering.wayne.edu/me/"
+},
+{
+"university": "West Virginia University",
+"physics": "https://physics.wvu.edu/",
+"chemistry": "https://chemistry.wvu.edu/",
+"mathematics": "https://math.wvu.edu/",
+"computerScience": "https://lcsee.statler.wvu.edu/",
+"mechanicalEngineering": "https://mae.statler.wvu.edu/"
+},
+{
+"university": "Yale University",
+"physics": "https://physics.yale.edu/",
+"chemistry": "https://chem.yale.edu/",
+"mathematics": "https://math.yale.edu/",
+"computerScience": "https://cpsc.yale.edu/",
+"mechanicalEngineering": "https://seas.yale.edu/departments/mechanical-engineering-and-materials-science"
+}
+]
+

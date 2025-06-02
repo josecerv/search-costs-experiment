@@ -1,0 +1,18 @@
+# Intermediate LaTeX files
+*.tex
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# R/RStudio files
+.Rhistory
+.RData
+.Rproj.user/
+
+# Backup files
+*.bak
+*~

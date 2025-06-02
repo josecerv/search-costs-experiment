@@ -1,0 +1,8 @@
+# Face analysis requirements with compatible versions
+# TensorFlow 2.15 is the last stable version that works well with DeepFace
+tensorflow==2.15.0
+keras==2.15.0
+deepface==0.0.91
+opencv-python==4.8.1.78
+mtcnn==0.1.1
+retina-face==0.0.13

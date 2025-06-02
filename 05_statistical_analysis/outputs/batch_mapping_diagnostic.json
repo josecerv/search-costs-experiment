@@ -1,0 +1,43 @@
+{
+  "summary": {
+    "total_seminars": 1881,
+    "seminars_with_batch": 1881,
+    "coverage_rate": 100.0
+  },
+  "match_quality": {
+    "exact": 1841,
+    "fuzzy": 16,
+    "department": 24
+  },
+  "batch_distribution": {
+    "1.0": 136,
+    "2.0": 93,
+    "3.0": 204,
+    "4.0": 195,
+    "5.0": 221,
+    "6.0": 213,
+    "7.0": 212,
+    "8.0": 182,
+    "9.0": 196,
+    "10.0": 229
+  },
+  "condition_distribution": {
+    "control": 949,
+    "treatment": 932
+  },
+  "match_type_distribution": {
+    "exact": 1841,
+    "department": 24,
+    "fuzzy": 16
+  },
+  "average_match_score": 0.9920271140966721,
+  "email_statistics": {
+    "total_emails_sent": 1599,
+    "emails_by_contact_type": {
+      "faculty": 581,
+      "department_chair": 567,
+      "seminar_contact": 451
+    },
+    "unique_seminars_in_batches": 1951
+  }
+}
