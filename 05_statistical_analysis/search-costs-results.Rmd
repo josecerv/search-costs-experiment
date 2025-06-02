@@ -21,7 +21,9 @@ header-includes:
   - \usepackage{caption}
   - \captionsetup[table]{position=below,skip=10pt}
   - \usepackage{dcolumn}
-  - \usepackage{adjustbox} # ADDED for table scaling
+  - \usepackage{adjustbox}
+  - \usepackage{tabularx}
+  - \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 ---
 
 ```{r setup, include=FALSE}
@@ -37,6 +39,9 @@ library(systemfit)
 library(knitr)
 library(kableExtra)
 library(car)  # For linearHypothesis
+
+# Note: We'll use manual table generation instead of modelsummary
+# to have full control over column spacing
 
 # Set stargazer options
 options(width = 200)
@@ -148,150 +153,163 @@ create_regression_table <- function(models, title, label, demographic_group = NU
   # Filter out NULL models
   valid_models <- models[!sapply(models, is.null)]
   if (length(valid_models) == 0) {
-    # cat("\n\nInsufficient data for this analysis: ", title, "\n\n") # More specific message
     return(invisible(NULL))
   }
   
-  # Determine variables to keep and labels
-  if (is_moderator) {
-    keep_vars <- c("treatment", "moderator", "treatment:moderator", "Constant")
-    covariate_labels <- c("Treatment", moderator_name, 
-                         paste("Treatment $\\times$", moderator_name), "Constant")
-  } else {
-    keep_vars <- c("treatment", "Constant")
-    covariate_labels <- c("Treatment", "Constant")
-  }
-  
-  # Extract clustered SEs
-  se_list <- lapply(valid_models, function(x) {
-    coef_names_in_model <- names(coef(x))
-    se_names_for_stargazer <- coef_names_in_model
-    se_names_for_stargazer[se_names_for_stargazer == "(Intercept)"] <- "Constant"
-
-    current_model_keep_vars <- keep_vars[keep_vars %in% se_names_for_stargazer]
-    
-    final_ses <- numeric(length(current_model_keep_vars))
-    names(final_ses) <- current_model_keep_vars
-    
-    for(kv in current_model_keep_vars) {
-        original_name <- kv
-        if (kv == "Constant") original_name <- "(Intercept)"
-        
-        if (original_name %in% names(x$cluster_se)) {
-            final_ses[kv] <- x$cluster_se[original_name]
-        } else {
-            final_ses[kv] <- NA 
-        }
-    }
-    return(final_ses)
-  })
-  
-  stargazer_output <- capture.output(
-    stargazer(valid_models,
-              type = "latex",
-              dep.var.labels.include = FALSE,
-              dep.var.caption = "",
-              covariate.labels = covariate_labels,
-              keep = keep_vars, 
-              se = se_list,
-              omit.stat = c("f", "ser", "rsq", "adj.rsq", "n"),
-              add.lines = list(
-                c("Controls", rep(c("Simple", "Extended"), length(valid_models)/2)),
-                c("N", sapply(valid_models, function(x) format(length(x$residuals), big.mark=","))),
-                c("Adjusted $R^2$", sapply(valid_models, function(x) sprintf("%.3f", summary(x)$adj.r.squared)))
-              ),
-              notes = c("\\parbox{\\linewidth}{\\vspace{2pt}Clustered standard errors at department level in parentheses.\\\\$^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\\vspace{2pt}}"),
-              notes.align = "l",
-              notes.append = FALSE,
-              star.char = c("+", "*", "**", "***"),
-              star.cutoffs = c(0.1, 0.05, 0.01, 0.001),
-              header = FALSE,
-              model.numbers = FALSE,
-              column.labels = NULL,
-              column.sep.width = "5pt",
-              float = FALSE,
-              no.space = TRUE,
-              digits = 3,
-              digits.extra = 0)
-  )
-  
-  # Clean up spacing issues in stargazer output
-  # 1. Remove lines that are just \hline \\[-1.8ex] or similar
-  stargazer_output <- stargazer_output[!grepl("^\\\\hline\\s*\\\\\\\\\\[-?[0-9\\.]+ex\\]\\s*$", stargazer_output)]
-  
-  # 2. Remove standalone vertical space commands
-  stargazer_output <- stargazer_output[!grepl("^\\s*\\\\\\\\\\[-?[0-9\\.]+ex\\]\\s*$", stargazer_output)]
-  
-  # 3. Remove rows that are only ampersands and spaces
-  stargazer_output <- stargazer_output[!grepl("^\\s*(&\\s*)+\\\\\\\\\\s*$", stargazer_output)]
-  
-  tabular_line_idx <- grep("\\\\begin\\{tabular\\}", stargazer_output)
-  if (length(tabular_line_idx) == 0) return(cat(stargazer_output, sep = "\n"))
-  
   n_models <- length(valid_models)
-  if (n_models == 6) {
-    if (is_moderator) {
-      custom_header <- c(
-        "\\toprule",
-        " & \\multicolumn{2}{c}{\\% URM} & \\multicolumn{2}{c}{Count URM} & \\multicolumn{2}{c}{Any URM} \\\\",
-        " & (1) & (2) & (3) & (4) & (5) & (6) \\\\"
-      )
-    } else if (!is.null(demographic_group)) {
-      custom_header <- c(
-        "\\toprule",
-        paste0(" & \\multicolumn{2}{c}{\\% ", demographic_group, "} & \\multicolumn{2}{c}{Count ", 
-               demographic_group, "} & \\multicolumn{2}{c}{Any ", demographic_group, "} \\\\"),
-        " & (1) & (2) & (3) & (4) & (5) & (6) \\\\"
-      )
-    } else {
-      custom_header <- c(
-        "\\toprule",
-        " & \\multicolumn{2}{c}{Models 1-2} & \\multicolumn{2}{c}{Models 3-4} & \\multicolumn{2}{c}{Models 5-6} \\\\",
-        " & (1) & (2) & (3) & (4) & (5) & (6) \\\\"
-      )
+  
+  # Name the models for modelsummary
+  names(valid_models) <- paste0("(", 1:n_models, ")")
+  
+  # Determine which coefficients to show
+  if (is_moderator) {
+    # For moderation tables, we need to find the moderator and interaction names
+    mod_name <- NULL
+    int_name <- NULL
+    for (m in valid_models) {
+      coef_names <- names(coef(m))
+      potential_mod <- setdiff(coef_names, c("treatment", "(Intercept)"))
+      potential_mod <- potential_mod[!grepl(":", potential_mod)]
+      if (length(potential_mod) > 0) {
+        mod_name <- potential_mod[1]
+        int_candidates <- coef_names[grepl(":", coef_names)]
+        if (length(int_candidates) > 0) {
+          int_name <- int_candidates[1]
+          break
+        }
+      }
     }
-  } else { 
-    model_numbers_header <- paste0("(", 1:n_models, ")", collapse = " & ")
-    custom_header <- c(
-      "\\toprule",
-      paste0(" & ", model_numbers_header, " \\\\")
-    )
+    
+    # Create coefficient map for moderation
+    coef_map <- c("treatment" = "Treatment",
+                  "(Intercept)" = "Constant")
+    if (!is.null(mod_name)) {
+      coef_map[mod_name] <- moderator_name
+    }
+    if (!is.null(int_name)) {
+      coef_map[int_name] <- paste0("Treatment $\\times$ ", moderator_name)
+    }
+  } else {
+    # For regular tables, just show treatment and intercept
+    coef_map <- c("treatment" = "Treatment",
+                  "(Intercept)" = "Constant")
   }
   
-  # Fix tabular column specification - keep it simple to avoid spacing issues
-  if (length(tabular_line_idx) > 0) {
-    # Extract existing tabular line to see the pattern
-    existing_line <- stargazer_output[tabular_line_idx]
-    # Replace the entire column specification, ensuring we only have the columns we need
+  # Always use manual approach for consistent spacing
+  if (TRUE) {
+    # Manual table generation (same as before but for all model counts)
+    
+    # Extract coefficients and standard errors
+    extract_coef_se <- function(models, var_name) {
+      coefs <- sapply(models, function(m) {
+        if (var_name %in% names(coef(m))) {
+          sprintf("%.3f", coef(m)[var_name])
+        } else "—"
+      })
+      
+      ses <- sapply(models, function(m) {
+        if (var_name %in% names(m$cluster_se)) {
+          sprintf("(%.3f)", m$cluster_se[var_name])
+        } else ""
+      })
+      
+      p_vals <- sapply(models, function(m) {
+        if (var_name %in% names(coef(m)) && var_name %in% names(m$cluster_se)) {
+          t_stat <- coef(m)[var_name] / m$cluster_se[var_name]
+          2 * pt(-abs(t_stat), df = length(m$residuals) - length(coef(m)))
+        } else NA
+      })
+      
+      stars <- sapply(p_vals, function(p) {
+        if (is.na(p)) return("")
+        if (p < 0.001) return("***")
+        if (p < 0.01) return("**")
+        if (p < 0.05) return("*")
+        if (p < 0.1) return("+")
+        return("")
+      })
+      
+      coef_stars <- ifelse(coefs == "—", "—", paste0(coefs, "$^{", stars, "}$"))
+      
+      list(coef_stars = coef_stars, ses = ses)
+    }
+    
+    # Build the table manually
+    cat("\\begin{table}[H]\n")
+    cat(paste0("\\caption{", title, "}\n"))
+    cat(paste0("\\label{", label, "}\n"))
+    cat("\\centering\n")
+    cat("\\scriptsize\n")
+    
+    # Try tabularx for better spacing control
     if (n_models == 6) {
-      # For 6 models: 1 left column + 6 center columns = 7 total
-      new_tabular <- "\\begin{tabular}{lcccccc}"
+      # Use tabularx with fixed total width
+      cat("\\begin{tabularx}{\\textwidth}{l*{6}{>{\\centering\\arraybackslash}X}}\n")
     } else {
-      # For other cases, use appropriate number of columns
-      new_tabular <- paste0("\\begin{tabular}{l", paste(rep("c", n_models), collapse = ""), "}")
+      cat(paste0("\\begin{tabular}{l", paste(rep("c", n_models), collapse = ""), "}\n"))
     }
-    stargazer_output[tabular_line_idx] <- new_tabular
+    
+    cat("\\toprule\n")
+    
+    # Headers for different table types - try without multicolumn to diagnose
+    if (n_models == 6) {
+      if (is_moderator) {
+        # Place headers above individual columns without multicolumn
+        cat(" & \\% URM & \\% URM & Count URM & Count URM & Any URM & Any URM \\\\\n")
+      } else if (!is.null(demographic_group)) {
+        cat(paste0(" & \\% ", demographic_group, " & \\% ", demographic_group, 
+                   " & Count ", demographic_group, " & Count ", demographic_group,
+                   " & Any ", demographic_group, " & Any ", demographic_group, " \\\\\n"))
+      } else {
+        cat(" & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\\\\n")
+      }
+    }
+    
+    # Model numbers
+    cat(" & ", paste(paste0("(", 1:n_models, ")"), collapse = " & "), " \\\\\n")
+    cat("\\midrule\n")
+    
+    # Add coefficient rows based on coef_map
+    for (var_name in names(coef_map)) {
+      var_data <- extract_coef_se(valid_models, var_name)
+      cat(coef_map[var_name], " & ", paste(var_data$coef_stars, collapse = " & "), " \\\\\n")
+      if (any(var_data$ses != "")) {
+        cat(" & ", paste(var_data$ses, collapse = " & "), " \\\\\n")
+      }
+    }
+    
+    # Statistics
+    cat("\\midrule\n")
+    
+    # Controls row
+    if (n_models %% 2 == 0) {
+      controls_text <- paste(rep(c("Simple", "Extended"), n_models/2), collapse = " & ")
+    } else {
+      controls_text <- paste(rep("Yes", n_models), collapse = " & ")
+    }
+    cat("Controls & ", controls_text, " \\\\\n")
+    
+    # N and R²
+    n_obs <- sapply(valid_models, function(m) format(length(m$residuals), big.mark=","))
+    adj_r2 <- sapply(valid_models, function(m) sprintf("%.3f", summary(m)$adj.r.squared))
+    
+    cat("N & ", paste(n_obs, collapse = " & "), " \\\\\n")
+    cat("Adjusted $R^2$ & ", paste(adj_r2, collapse = " & "), " \\\\\n")
+    
+    cat("\\bottomrule\n")
+    cat(paste0("\\multicolumn{", n_models + 1, "}{l}{\\parbox{\\linewidth}{\\footnotesize \\vspace{2pt}Clustered standard errors at department level in parentheses.}}\\\\\n"))
+    cat(paste0("\\multicolumn{", n_models + 1, "}{l}{\\parbox{\\linewidth}{\\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\\vspace{2pt}}}\\\\\n"))
+    
+    # Close the appropriate table environment
+    if (n_models == 6) {
+      cat("\\end{tabularx}\n")
+    } else {
+      cat("\\end{tabular}\n")
+    }
+    cat("\\end{table}\n")
+    
+    return(invisible(NULL))
   }
-  
-  output_with_custom_header <- c(
-    stargazer_output[1:tabular_line_idx], 
-    custom_header,
-    "\\midrule",
-    stargazer_output[(tabular_line_idx+2):length(stargazer_output)]
-  )
-  
-  final_output <- c(
-    "\\begin{table}[H]",
-    paste0("\\caption{", title, "}"),
-    paste0("\\label{", label, "}"),
-    "\\centering",
-    "\\footnotesize",
-    "\\setlength{\\tabcolsep}{4pt}",  # Reduce space between columns
-    output_with_custom_header, 
-    "\\end{table}"
-  )
-  
-  cat(final_output, sep = "\n")
 }
 
 # Wrapper functions for compatibility
@@ -437,7 +455,7 @@ cat("\\centering\n")
 cat("\\footnotesize\n")
 cat("\\begin{tabular}{lccccc}\n")
 cat("\\toprule\n")
-cat("Demographic Group & Mean \\\\% & SD \\\\% & Mean Count & SD Count & Pct. Any \\\\\n")
+cat("Demographic Group & Mean \\% & SD \\% & Mean Count & SD Count & Pct. Any \\\\\n")
 cat("\\midrule\n")
 cat(sprintf("URM & %.2f & %.2f & %.2f & %.2f & %.1f \\\\\n",
             summary_seminars$mean_pct_urm, summary_seminars$sd_pct_urm,
@@ -495,9 +513,9 @@ cat("Statistic & Mean & SD \\\\\n")
 cat("\\midrule\n")
 cat(sprintf("Total faculty per department & %.1f & %.1f \\\\\n",
             dept_summary$mean_total_faculty, dept_summary$sd_total_faculty))
-cat(sprintf("\\\\%% URM faculty & %.2f & %.2f \\\\\n",
+cat(sprintf("\\%% URM faculty & %.2f & %.2f \\\\\n",
             dept_summary$mean_pct_urm_faculty, dept_summary$sd_pct_urm_faculty))
-cat(sprintf("\\\\%% Women faculty & %.2f & %.2f \\\\\n",
+cat(sprintf("\\%% Women faculty & %.2f & %.2f \\\\\n",
             dept_summary$mean_pct_women_faculty, dept_summary$sd_pct_women_faculty))
 cat("\\bottomrule\n")
 cat("\\end{tabular}\n")
@@ -581,7 +599,7 @@ cat("\\centering\n")
 cat("\\footnotesize\n")
 cat("\\begin{tabular}{lccccc}\n")
 cat("\\toprule\n")
-cat("Discipline & N Seminars & Mean \\\\% & SD \\\\% & Mean Count & Pct. Has Any \\\\\n")
+cat("Discipline & N Seminars & Mean \\% & SD \\% & Mean Count & Pct. Has Any \\\\\n")
 cat("\\midrule\n")
 for (i in 1:nrow(summary_by_disc_seminars)) {
   cat(sprintf("%s & %d & %.2f & %.2f & %.2f & %.1f \\\\\n",
@@ -606,7 +624,7 @@ cat("\\footnotesize\n")
 cat("\\begin{tabular}{lcccccc}\n")
 cat("\\toprule\n")
 cat(" & \\multicolumn{2}{c}{Black} & \\multicolumn{2}{c}{Hispanic} & \\multicolumn{2}{c}{Female} \\\\\n")
-cat("Discipline & Mean \\\\% & Pct. Any & Mean \\\\% & Pct. Any & Mean \\\\% & Pct. Any \\\\\n")
+cat("Discipline & Mean \\% & Pct. Any & Mean \\% & Pct. Any & Mean \\% & Pct. Any \\\\\n")
 cat("\\midrule\n")
 for (i in 1:nrow(summary_by_disc_seminars)) {
   cat(sprintf("%s & %.2f & %.1f & %.2f & %.1f & %.2f & %.1f \\\\\n",
@@ -737,7 +755,7 @@ cat("\\footnotesize\n")
 cat("\\begin{tabular}{lccccccc}\n")
 cat("\\toprule\n")
 cat(" & \\multicolumn{3}{c}{URM} & \\multicolumn{2}{c}{Black} & \\multicolumn{2}{c}{Hispanic} \\\\\n")
-cat("Semester (N) & Mean \\\\% & Mean Count & Pct. Any & Mean \\\\% & Pct. Any & Mean \\\\% & Pct. Any \\\\\n")
+cat("Semester (N) & Mean \\% & Mean Count & Pct. Any & Mean \\% & Pct. Any & Mean \\% & Pct. Any \\\\\n")
 cat("\\midrule\n")
 cat(sprintf("Fall (%d) & %.2f & %.2f & %.1f & %.2f & %.1f & %.2f & %.1f \\\\\n",
             fall_summary$n,
@@ -759,7 +777,7 @@ cat(sprintf("Spring (%d) & %.2f & %.2f & %.1f & %.2f & %.1f & %.2f & %.1f \\\\\n
             spring_summary$pct_has_hispanic))
 cat("\\midrule\n")
 cat(" & \\multicolumn{3}{c}{Female} & \\multicolumn{2}{c}{Total Speakers} & & \\\\\n")
-cat("Semester & Mean \\\\% & Mean Count & Pct. Any & Mean & SD & & \\\\\n")
+cat("Semester & Mean \\% & Mean Count & Pct. Any & Mean & SD & & \\\\\n")
 cat("\\midrule\n")
 cat(sprintf("Fall & %.2f & %.2f & %.1f & %.2f & %.2f & & \\\\\n", # Added SD
             fall_summary$mean_pct_female,
@@ -1783,11 +1801,11 @@ extract_all_significant_results <- function() {
                 
                 category <- case_when(
                   grepl("Main Effect|Main Question", analysis) ~ "Main Effects",
-                  grepl("Demographic|Black|Hispanic|Female", analysis) ~ "Demographic Analysis",
-                  grepl("Intersectional", analysis) ~ "Demographic Analysis", 
+                  grepl("Demographic|Black|Hispanic|Female", analysis) ~ "Identity Analysis",
+                  grepl("Intersectional", analysis) ~ "Identity Analysis", 
                   grepl("Semester", analysis) ~ "Semester Analysis",
-                  grepl("Discipline:", analysis) ~ "Discipline Analysis",
-                  grepl("Moderation", analysis) ~ "Moderation Analysis",
+                  grepl("Chemistry|Mathematics|Physics|Computer Science|Mechanical Engineering", analysis) ~ "Discipline Analysis",
+                  grepl("Moderation|Department Rank|Faculty Size|Peer URM", analysis) ~ "Moderation Analysis",
                   TRUE ~ "Other"
                 )
                 
@@ -1852,7 +1870,7 @@ if (nrow(all_significant_results) > 0) {
         all_significant_results$Category[i] <- "Semester Analysis"
       } else if (grepl("Chemistry|Mathematics|Physics|Computer Science|Mechanical Engineering", all_significant_results$Analysis[i])) {
         all_significant_results$Category[i] <- "Discipline Analysis"
-      } else if (grepl("Department Rank|Faculty Size|Peer URM", all_significant_results$Analysis[i])) {
+      } else if (grepl("Moderation|Department Rank|Faculty Size|Peer URM", all_significant_results$Analysis[i])) {
         all_significant_results$Category[i] <- "Moderation Analysis"
       } else {
         all_significant_results$Category[i] <- "Other"
@@ -1872,16 +1890,14 @@ if (nrow(all_significant_results) > 0) {
   cat("\n\n\\clearpage\n")
   cat("\\section{Summary of All Significant Results}\n\n")
   
-  cat("\\begin{landscape}\n")
   cat("\\begin{table}[H]\n")
   cat("\\caption{All Significant Results (p < 0.1) from All Analyses (Excluding Constant Term)}\n") # Caption updated
   cat("\\label{tab:all_significant_results}\n")
   cat("\\centering\n")
   cat("{\\scriptsize % Start group for scriptsize and tabcolsep\n") 
-  cat("\\setlength{\\tabcolsep}{3pt} % Reduce column separation\n") 
-  # MODIFICATION: Changed max width to \textwidth for landscape table
-  cat("\\begin{adjustbox}{max width=\\textwidth}\n") 
-  cat("\\begin{tabular}{p{3.5cm} p{2.5cm} p{2.5cm} l r r r r l}\n") 
+  cat("\\setlength{\\tabcolsep}{2pt} % Reduce column separation further\n") 
+  # MODIFICATION: Remove adjustbox for landscape table to avoid spacing issues
+  cat("\\begin{tabular}{p{3.2cm} p{2.3cm} p{2.3cm} l r r r r l}\n") 
   cat("\\toprule\n")
   cat("Analysis & Outcome & Variable & Model & Coef. & SE & t-stat & p-value & Sig. \\\\\n")
   cat("\\midrule\n")
@@ -1911,52 +1927,8 @@ if (nrow(all_significant_results) > 0) {
   
   cat("\\bottomrule\n")
   cat("\\end{tabular}\n")
-  cat("\\end{adjustbox}\n") 
   cat("} % End group for scriptsize and tabcolsep\n") 
-  cat("\\parbox{\\linewidth}{\\footnotesize Note: Results sorted by analysis type and name. When both Model 1 (Simple) and Model 2 (Extended) are significant, only the result with the lower p-value is shown. Significance levels: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001. SE = Clustered standard errors at department level. Constant terms are excluded from this summary.}\n") # Note updated
-  cat("\\end{table}\n")
-  cat("\\end{landscape}\n")
-  
-  cat("\n\\begin{table}[H]\n")
-  cat("\\caption{Summary of Significant Results by Analysis Type (Excluding Constant Term)}\n") # Caption updated
-  cat("\\label{tab:significant_summary}\n")
-  cat("\\centering\n")
-  cat("\\begin{tabular}{lcc}\n")
-  cat("\\toprule\n")
-  cat("Analysis Type & Total Significant & Significant at 5\\% \\\\\n")
-  cat("\\midrule\n")
-  
-  summary_by_analysis <- all_significant_results %>% # This data frame already excludes Constants
-    group_by(Analysis) %>% 
-    summarise(
-      total = n(),
-      sig_05 = sum(p_value < 0.05),
-      .groups = 'drop'
-    ) %>%
-    mutate(Category = case_when(
-                grepl("Main Effect|Main Question", Analysis) ~ "A_Main Effects", 
-                grepl("Demographic|Black|Hispanic|Female|Intersectional", Analysis) ~ "B_Demographic Analysis",
-                grepl("Semester", Analysis) ~ "D_Semester Analysis",
-                grepl("Discipline:", Analysis) ~ "C_Discipline Analysis",
-                grepl("Moderation", Analysis) ~ "E_Moderation Analysis",
-                TRUE ~ "F_Other"
-              )) %>%
-    arrange(Category, Analysis) %>%
-    select(-Category) 
-  
-  for (i in 1:nrow(summary_by_analysis)) {
-    cat(sprintf("%s & %d & %d \\\\\n",
-                escape_latex(summary_by_analysis$Analysis[i]),
-                summary_by_analysis$total[i],
-                summary_by_analysis$sig_05[i]))
-  }
-  
-  cat("\\midrule\n")
-  cat(sprintf("Total & %d & %d \\\\\n", 
-              sum(summary_by_analysis$total),
-              sum(summary_by_analysis$sig_05)))
-  cat("\\bottomrule\n")
-  cat("\\end{tabular}\n")
+  cat("\\parbox{\\linewidth}{\\footnotesize Note: Significance levels: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001. SE = Clustered standard errors at department level. Constant terms are excluded from this summary.}\n") # Note updated
   cat("\\end{table}\n")
   
 } else {
