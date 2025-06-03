@@ -1,6 +1,6 @@
 ---
 title: "Search Costs Field Experiment"
-date: "2025-06-02"
+date: "2025-06-03"
 output:
   pdf_document:
     toc: true
@@ -1158,5 +1158,5 @@ Fall Semester & Count URM & Treatment & Simple & 0.0978 & 0.0467 & 2.093 & 0.036
 \bottomrule
 \end{tabular}
 } % End group for scriptsize and tabcolsep
-\parbox{\linewidth}{\footnotesize Note: Results sorted by analysis type and name. When both Model 1 (Simple) and Model 2 (Extended) are significant, only the result with the lower p-value is shown. Significance levels: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001. SE = Clustered standard errors at department level. Constant terms are excluded from this summary.}
+\parbox{\linewidth}{\footnotesize Note: Significance levels: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001. SE = Clustered standard errors at department level. Constant terms are excluded from this summary.}
 \end{table}
