@@ -2,7 +2,8 @@
 """
 University standardization to extract parent institutions
 Normalizes to superordinate university, removing departments/labs/centers
-Uses LLM to handle complex affiliations and medical schools
+Uses GPT-4o as PRIMARY method for ALL universities to ensure comprehensive and accurate standardization
+Falls back to pattern matching only if OpenAI API key is not available
 """
 
 import pandas as pd
@@ -461,7 +462,7 @@ class UniversityStandardizer:
         return None
     
     async def standardize_universities_batch(self, universities: List[str]) -> Dict[str, str]:
-        """Standardize a batch of university names efficiently"""
+        """Standardize a batch of university names efficiently using LLM as primary method"""
         results = {}
         need_llm = []
         
@@ -473,40 +474,45 @@ class UniversityStandardizer:
                 results[uni] = uni  # Return original if can't clean
                 continue
             
-            # Check cache first
+            # Check cache first (includes previous LLM results)
             if cleaned in self.cache:
                 results[uni] = self.cache[cleaned]
                 continue
             
-            # Check if it's in our known mappings (high confidence)
-            if cleaned.lower() in self.known_mappings:
-                standardized = self.known_mappings[cleaned.lower()]
-                results[uni] = standardized
-                self.cache[cleaned] = standardized
-                continue
-            
-            # Try pattern extraction before LLM
-            extracted = self._extract_parent_university(cleaned)
-            if extracted and extracted != cleaned:
-                results[uni] = extracted
-                self.cache[cleaned] = extracted
-                continue
-            
-            # Everything else goes to LLM for accurate extraction
+            # ALL universities go through LLM for comprehensive standardization
             need_llm.append((uni, cleaned))
         
-        # Second pass: Use LLM for remaining
+        # Use LLM for all universities not in cache
         if need_llm and self.client:
-            logger.info(f"Using LLM for {len(need_llm)} universities...")
+            logger.info(f"Using LLM for comprehensive standardization of {len(need_llm)} universities...")
             
-            # Process in batches of 50 for efficiency
-            for i in range(0, len(need_llm), 50):
-                batch = need_llm[i:i+50]
+            # Process in batches of 30 for better accuracy with GPT-4o
+            for i in range(0, len(need_llm), 30):
+                batch = need_llm[i:i+30]
                 batch_results = await self._standardize_batch_llm(batch)
                 
                 for (original, cleaned), standardized in zip(batch, batch_results):
                     results[original] = standardized
                     self.cache[cleaned] = standardized
+        elif need_llm and not self.client:
+            # Fallback to pattern matching if no API key
+            logger.warning("No OpenAI API key - falling back to pattern matching")
+            for uni, cleaned in need_llm:
+                # Try pattern extraction as fallback
+                extracted = self._extract_parent_university(cleaned)
+                if extracted and extracted != cleaned:
+                    results[uni] = extracted
+                    self.cache[cleaned] = extracted
+                else:
+                    # Check known mappings
+                    if cleaned.lower() in self.known_mappings:
+                        standardized = self.known_mappings[cleaned.lower()]
+                        results[uni] = standardized
+                        self.cache[cleaned] = standardized
+                    else:
+                        # Return cleaned version
+                        results[uni] = cleaned
+                        self.cache[cleaned] = cleaned
         
         # Save cache after processing
         self._save_cache()
@@ -559,7 +565,7 @@ Return ONLY a JSON array with the PARENT UNIVERSITIES in the same order."""
 
         try:
             response = await self.client.chat.completions.create(
-                model="gpt-4o-mini",
+                model="gpt-4o",
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0,
                 response_format={"type": "json_object"}
