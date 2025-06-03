@@ -148,6 +148,12 @@ class UniversityStandardizer:
             'asu': 'Arizona State University',
             'arizona state': 'Arizona State University',
             'arizona state u': 'Arizona State University',
+            'arizona state university': 'Arizona State University',
+            'arizona state university - school of life sciences': 'Arizona State University',
+            'arizona state university, polytechnic': 'Arizona State University',
+            'arizona state university polytechnic': 'Arizona State University',
+            'asu polytechnic': 'Arizona State University',
+            'asu - school of life sciences': 'Arizona State University',
             
             'osu': 'Ohio State University',
             'ohio state': 'Ohio State University',
@@ -169,6 +175,41 @@ class UniversityStandardizer:
             'cambridge': 'University of Cambridge',
             'cambridge u': 'University of Cambridge',
             'cambridge university': 'University of Cambridge',
+            
+            # Georgia Tech variations
+            'georgia tech': 'Georgia Institute of Technology',
+            'georgia institute of technology': 'Georgia Institute of Technology',
+            'gt': 'Georgia Institute of Technology',
+            'gatech': 'Georgia Institute of Technology',
+            'georgia institute of technology georgia tech': 'Georgia Institute of Technology',
+            'georgia institute of technology slmath': 'Georgia Institute of Technology',
+            
+            # Case Western variations
+            'case western': 'Case Western Reserve University',
+            'case western reserve': 'Case Western Reserve University',
+            'case western reserve university': 'Case Western Reserve University',
+            'cwru': 'Case Western Reserve University',
+            'case': 'Case Western Reserve University',
+            'case western reserve university, department of biology': 'Case Western Reserve University',
+            
+            # Academia Sinica variations
+            'academia sinica': 'Academia Sinica',
+            'academia sinica taiwan': 'Academia Sinica',
+            'academia sinica, taiwan': 'Academia Sinica',
+            'academia sinica university of utah': 'Academia Sinica',
+            
+            # Santa Fe Institute variations
+            'santa fe institute': 'Santa Fe Institute',
+            'sante fe institute': 'Santa Fe Institute',
+            'sfi': 'Santa Fe Institute',
+            
+            # French universities with accents
+            'aix-marseille universite': 'Aix-Marseille University',
+            'aix-marseille université': 'Aix-Marseille University',
+            'aix-marseille university': 'Aix-Marseille University',
+            'aix marseille universite': 'Aix-Marseille University',
+            'aix marseille université': 'Aix-Marseille University',
+            'aix marseille university': 'Aix-Marseille University',
             
             'eth': 'ETH Zurich',
             'eth zurich': 'ETH Zurich',
@@ -230,12 +271,29 @@ class UniversityStandardizer:
         
         name = str(name).strip()
         
+        # Fix common encoding issues FIRST
+        encoding_fixes = {
+            'Ã©': 'é',
+            'Ã¨': 'è',
+            'Ã ': 'à',
+            'Ã¢': 'â',
+            'Ã´': 'ô',
+            'Ã§': 'ç',
+            'Ã±': 'ñ',
+            'Ã¼': 'ü',
+            'Ã¶': 'ö',
+            'Ã¤': 'ä',
+            'Ã': 'í',
+        }
+        for bad, good in encoding_fixes.items():
+            name = name.replace(bad, good)
+        
         # Remove common noise
         name = re.sub(r'\d{1,2}/\d{1,2}/\d{2,4}', '', name)  # dates
         name = re.sub(r'\d{4}-\d{2}-\d{2}', '', name)  # ISO dates
         name = re.sub(r'\s+', ' ', name)  # multiple spaces
-        # Keep alphanumeric, spaces, commas, dots, hyphens, AND ampersands
-        name = re.sub(r'[^\w\s,.&-]', '', name)
+        # Keep alphanumeric, spaces, commas, dots, hyphens, ampersands, and accented characters
+        name = re.sub(r'[^\w\s,.&\-àâäéèêëíìîïóòôöúùûüñçÀÂÄÉÈÊËÍÌÎÏÓÒÔÖÚÙÛÜÑÇ]', '', name)
         name = name.strip()
         
         # Skip if empty or just numbers
@@ -257,6 +315,12 @@ class UniversityStandardizer:
             # First check for "X Lab Group, University Name" pattern (like "Zhao Lab Group, University of California, Riverside")
             (r'^[^,]+\s+(?:lab|laboratory)\s+(?:group|team)?,\s*(.+)$', r'\1'),
             
+            # Extract university from "University Name - School of X" (CRITICAL FOR ASU)
+            (r'^(.+?)\s*[-–]\s*school\s+of\s+.+$', r'\1'),
+            
+            # Extract university from "University Name, Campus/Polytechnic/Downtown/etc" (CRITICAL FOR ASU)
+            (r'^(.+?)\s*,\s*(?:polytechnic|downtown|west|tempe|online|north|south|east|west|campus).*$', r'\1'),
+            
             # Extract university from "University Name, Department of X" (must be more specific)
             (r'^(.+?)\s*,\s*department\s+of\s+.+$', r'\1'),
             
@@ -267,7 +331,7 @@ class UniversityStandardizer:
             (r'^(.+?),\s*(?:department|dept|lab|laboratory|center|centre|institute|school|college|division|program|group|ipac).+$', r'\1'),
             
             # Handle "School/College of X" patterns
-            (r'^(.+?)\s+(?:school|college)\s+of\s+(?:medicine|medical sciences?|engineering|business|law|education|nursing|public health),?\s*(.*)$', None),  # Special handling
+            (r'^(.+?)\s+(?:school|college)\s+of\s+(?:medicine|medical sciences?|engineering|business|law|education|nursing|public health|life sciences?),?\s*(.*)$', None),  # Special handling
             
             # Remove trailing lab/center/institute info
             (r'^(.+?)\s*[-–]\s*(?:department|dept|lab|laboratory|center|centre|institute|ipac|division).*$', r'\1'),
@@ -281,6 +345,9 @@ class UniversityStandardizer:
             
             # Special case for "X at Y" where Y is the university
             (r'^[^,]+\s+at\s+(.+)$', r'\1'),
+            
+            # Handle multiple universities separated by spaces (e.g., "Academia Sinica University of Utah")
+            (r'^(academia sinica|santa fe institute|fermilab|cern|brookhaven)\s+.+$', r'\1'),
         ]
         
         for pattern, replacement in extraction_patterns:
@@ -418,6 +485,13 @@ class UniversityStandardizer:
                 self.cache[cleaned] = standardized
                 continue
             
+            # Try pattern extraction before LLM
+            extracted = self._extract_parent_university(cleaned)
+            if extracted and extracted != cleaned:
+                results[uni] = extracted
+                self.cache[cleaned] = extracted
+                continue
+            
             # Everything else goes to LLM for accurate extraction
             need_llm.append((uni, cleaned))
         
@@ -448,15 +522,24 @@ class UniversityStandardizer:
 CRITICAL RULES:
 1. Extract the main university, NOT departments/labs/centers/schools
 2. Use full official names (e.g., "MIT" → "Massachusetts Institute of Technology")
-3. Remove ALL department/lab/center/program info
-4. ONLY preserve satellite campuses if they're separate institutions
-5. If it's truly a company/non-academic org with NO university affiliation, prefix with "ORG: "
-6. If invalid/unclear, return "INVALID"
+3. Remove ALL department/lab/center/program/school info
+4. Campus variations within the same city should be grouped together (e.g., ASU Polytechnic → Arizona State University)
+5. ONLY preserve satellite campuses if they're in DIFFERENT CITIES (e.g., NYU Shanghai)
+6. If it's truly a company/non-academic org with NO university affiliation, prefix with "ORG: "
+7. If invalid/unclear, return "INVALID"
+8. If multiple universities listed, take the FIRST one
+9. Fix any encoding issues (e.g., Ã© → é)
 
 EXAMPLES:
 - "Yale School of Medicine" → "Yale University"
 - "MIT Department of Physics" → "Massachusetts Institute of Technology"
 - "Texas A&M University, Department of Mathematics" → "Texas A&M University"
+- "Arizona State University - School of Life Sciences" → "Arizona State University"
+- "Arizona State University, Polytechnic" → "Arizona State University"
+- "ASU Polytechnic" → "Arizona State University"
+- "Georgia Institute of Technology Georgia Tech" → "Georgia Institute of Technology"
+- "Case Western Reserve University, Department of Biology" → "Case Western Reserve University"
+- "Academia Sinica University of Utah" → "Academia Sinica"
 - "Zhao Lab Group, University of California, Riverside" → "University of California, Riverside"
 - "California Institute of Technology, IPAC" → "California Institute of Technology"
 - "Albert Einstein College of Medicine" → "Yeshiva University"
@@ -465,6 +548,7 @@ EXAMPLES:
 - "Lehigh Industrial and Systems Engineering" → "Lehigh University"
 - "Columbia University, Department of Computer Science" → "Columbia University"
 - "NYU Shanghai" → "New York University Shanghai"
+- "Aix-Marseille UniversitÃ©" → "Aix-Marseille University"
 - "Google Research" → "ORG: Google"
 - "IBM Research" → "ORG: IBM"
 
