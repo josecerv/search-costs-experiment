@@ -215,32 +215,26 @@ class AnalysisDatasetCreator:
         """Create speaker-level dataset with all demographics"""
         print("\n=== CREATING SPEAKER-LEVEL DATA ===")
         
-        # First, filter to seminars with at least one speaker
-        seminars_with_speakers = []
+        # Use speaker_appearances_analysis.csv which already has demographics matched by speaker_id
+        print("Using speaker_appearances_analysis.csv which already has demographics...")
         
-        for idx, seminar in self.master_df.iterrows():
-            has_speaker = False
-            for i in range(1, 204):
-                if pd.notna(seminar.get(f'First Name_{i}')):
-                    has_speaker = True
-                    break
-            if has_speaker:
-                seminars_with_speakers.append(idx)
-        
-        print(f"Filtering to seminars with speakers: {len(seminars_with_speakers)} / {len(self.master_df)}")
-        self.master_df_filtered = self.master_df.iloc[seminars_with_speakers].copy()
+        # Group appearances by seminar to calculate seminar-level statistics
+        seminar_groups = self.appearances_df.groupby('seminar_id')
         
         # Process each seminar and create seminar-level statistics
         seminar_stats = []
         
-        print(f"Processing {len(self.master_df_filtered)} seminars...")
+        print(f"Processing {len(seminar_groups)} seminars...")
         
-        for sem_idx, (_, seminar) in enumerate(self.master_df_filtered.iterrows()):
+        for sem_idx, (seminar_id, appearances) in enumerate(seminar_groups):
             if sem_idx % 100 == 0:
-                print(f"  Processed {sem_idx}/{len(self.master_df_filtered)} seminars...")
+                print(f"  Processed {sem_idx}/{len(seminar_groups)} seminars...")
+            
+            # Get seminar info from the first appearance
+            seminar_info = appearances.iloc[0]
             
             # Initialize counters
-            total_speakers = 0
+            total_speakers = len(appearances)
             speakers_with_demographics = 0
             is_urm = 0
             is_black = 0
@@ -272,23 +266,13 @@ class AnalysisDatasetCreator:
             spring_start = pd.Timestamp('2025-01-01')
             spring_end = pd.Timestamp('2025-06-30')
             
-            # Process each speaker slot
-            for i in range(1, 204):
-                first_name = seminar.get(f'First Name_{i}')
-                last_name = seminar.get(f'Last Name_{i}')
-                speaker_date = seminar.get(f'date_{i}')
-                
-                # Skip if no name
-                if pd.isna(first_name) and pd.isna(last_name):
-                    continue
-                    
-                total_speakers += 1
-                
+            # Process each speaker appearance
+            for _, speaker in appearances.iterrows():
                 # Parse date for semester classification
                 semester = None
-                if pd.notna(speaker_date):
+                if pd.notna(speaker['date']):
                     try:
-                        date = pd.to_datetime(speaker_date)
+                        date = pd.to_datetime(speaker['date'])
                         if fall_start <= date <= fall_end:
                             semester = 'Fall'
                             fall_total += 1
@@ -298,23 +282,12 @@ class AnalysisDatasetCreator:
                     except:
                         pass
                 
-                # Normalize names for matching
-                first_norm = str(first_name).lower().strip() if pd.notna(first_name) else ''
-                last_norm = str(last_name).lower().strip() if pd.notna(last_name) else ''
-                
-                # Match with demographics
-                demo_match = self.demographics_df[
-                    (self.demographics_df['first_name'].str.lower() == first_norm) &
-                    (self.demographics_df['last_name'].str.lower() == last_norm) &
-                    (self.demographics_df['discipline_norm'] == seminar['discipline'].lower())
-                ]
-                
-                if len(demo_match) > 0:
+                # Check if speaker has demographics (already matched by speaker_id)
+                if speaker.get('has_demographics', False) or pd.notna(speaker.get('combined_race')):
                     speakers_with_demographics += 1
-                    speaker_demo = demo_match.iloc[0]
                     
-                    # Check race
-                    race = str(speaker_demo.get('combined_race', '')).lower()
+                    # Check race (using the demographics already in speaker_appearances)
+                    race = str(speaker.get('combined_race', '')).lower()
                     if race in ['black', 'latino', 'native american']:
                         is_urm += 1
                     if race == 'black':
@@ -329,7 +302,7 @@ class AnalysisDatasetCreator:
                         is_asian += 1
                     
                     # Check gender
-                    gender = str(speaker_demo.get('combined_gender', '')).lower()
+                    gender = str(speaker.get('combined_gender', '')).lower()
                     if gender == 'woman':
                         is_female += 1
                     elif gender == 'man':
@@ -380,11 +353,11 @@ class AnalysisDatasetCreator:
             
             # Store seminar statistics
             seminar_stats.append({
-                'seminar_id': seminar['seminar_id'],
-                'university': seminar['university'],
-                'discipline': seminar['discipline'],
-                'department': seminar['department'],
-                'condition': seminar['condition'],
+                'seminar_id': seminar_id,
+                'university': seminar_info['university'],
+                'discipline': seminar_info['discipline'],
+                'department': f"{seminar_info['university']}-{seminar_info['discipline']}",
+                'condition': seminar_info['condition'],
                 
                 # Full year counts
                 'total_speakers': total_speakers,
