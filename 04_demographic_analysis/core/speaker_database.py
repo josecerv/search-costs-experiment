@@ -389,6 +389,11 @@ class SpeakerDatabase:
         """
         print(f"Processing {len(appearances_df)} speaker appearances...")
         
+        # CRITICAL: Reset all appearance counts to 0 before processing
+        # This ensures we recalculate from scratch rather than incrementing
+        print("  Resetting appearance counts...")
+        self.speakers_db['appearance_count'] = 0
+        
         # Prepare results
         results = []
         new_speakers = 0
