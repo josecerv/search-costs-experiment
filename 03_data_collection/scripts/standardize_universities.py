@@ -285,16 +285,25 @@ class UniversityStandardizer:
             'Ã¶': 'ö',
             'Ã¤': 'ä',
             'Ã': 'í',
+            'â': "'",  # Fix smart quotes
+            'í': 'a',  # Common encoding issue
+            'î': 'i',
         }
         for bad, good in encoding_fixes.items():
             name = name.replace(bad, good)
+        
+        # Normalize Unicode characters to ASCII equivalents for consistency
+        # This handles macrons, accents, etc.
+        import unicodedata
+        name = unicodedata.normalize('NFKD', name)
+        name = ''.join([c for c in name if not unicodedata.combining(c)])
         
         # Remove common noise
         name = re.sub(r'\d{1,2}/\d{1,2}/\d{2,4}', '', name)  # dates
         name = re.sub(r'\d{4}-\d{2}-\d{2}', '', name)  # ISO dates
         name = re.sub(r'\s+', ' ', name)  # multiple spaces
-        # Keep alphanumeric, spaces, commas, dots, hyphens, ampersands, and accented characters
-        name = re.sub(r'[^\w\s,.&\-àâäéèêëíìîïóòôöúùûüñçÀÂÄÉÈÊËÍÌÎÏÓÒÔÖÚÙÛÜÑÇ]', '', name)
+        # Keep alphanumeric, spaces, commas, dots, hyphens, ampersands
+        name = re.sub(r'[^\w\s,.&\-]', '', name)
         name = name.strip()
         
         # Skip if empty or just numbers
@@ -545,6 +554,11 @@ EXAMPLES:
 - "ASU Polytechnic" → "Arizona State University"
 - "Georgia Institute of Technology Georgia Tech" → "Georgia Institute of Technology"
 - "Case Western Reserve University, Department of Biology" → "Case Western Reserve University"
+- "University of Hawaii" → "University of Hawaii at Manoa"
+- "University of Hawaii at Manoa" → "University of Hawaii at Manoa"
+- "University of Hawaii at Mānoa" → "University of Hawaii at Manoa"
+- "UH Manoa" → "University of Hawaii at Manoa"
+- "U. Hawaii" → "University of Hawaii at Manoa"
 - "Academia Sinica University of Utah" → "Academia Sinica"
 - "Zhao Lab Group, University of California, Riverside" → "University of California, Riverside"
 - "California Institute of Technology, IPAC" → "California Institute of Technology"
