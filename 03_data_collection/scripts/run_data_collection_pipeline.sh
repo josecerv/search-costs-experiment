@@ -10,6 +10,7 @@ set -e  # Exit on any error
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 RED='\033[0;31m'
+YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
 echo -e "${BLUE}======================================${NC}"
@@ -46,6 +47,7 @@ fi
 
 # Step 2: Run the main data processing pipeline
 echo -e "\n${BLUE}Step 2: Processing and standardizing data...${NC}"
+echo -e "${YELLOW}Note: Speaker enrichment is now enabled by default. Use --skip-enrichment to disable.${NC}"
 poetry run python create_final_dataset.py
 
 if [ $? -eq 0 ]; then

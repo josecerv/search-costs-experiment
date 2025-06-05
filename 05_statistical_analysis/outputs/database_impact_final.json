@@ -1,5 +1,5 @@
 {
-  "analysis_date": "2025-06-05 12:36:01.298489",
+  "analysis_date": "2025-06-05 18:30:17.773420",
   "methodology": "Percentage of all seminar speakers who were from the tailored database",
   "overall": {
     "seminars_analyzed": 1656,
@@ -11,53 +11,53 @@
   "key_results": [
     {
       "metric": "All speakers",
-      "treatment_mean": 0.1312918229671598,
-      "treatment_std": 0.9203567076323742,
-      "control_mean": 0.16457817331708613,
-      "control_std": 1.9472314631716396,
-      "difference_pp": -0.03328635034992633,
-      "relative_pct": -20.225252036182745,
-      "p_value": 0.6587302621081179
+      "treatment_mean": 0.25140932921650766,
+      "treatment_std": 1.4441205291959482,
+      "control_mean": 0.29518902722997675,
+      "control_std": 2.202775887910099,
+      "difference_pp": -0.04377969801346909,
+      "relative_pct": -14.831072287575605,
+      "p_value": 0.6339743479665774
     },
     {
       "metric": "URM speakers",
-      "treatment_mean": 0.1312918229671598,
-      "treatment_std": 0.9203567076323742,
-      "control_mean": 0.16457817331708613,
-      "control_std": 1.9472314631716396,
-      "difference_pp": -0.03328635034992633,
-      "relative_pct": -20.225252036182745,
-      "p_value": 0.6587302621081179
+      "treatment_mean": 0.2260633914168091,
+      "treatment_std": 1.3802811678181024,
+      "control_mean": 0.2130073384001849,
+      "control_std": 2.0395972611767226,
+      "difference_pp": 0.013056053016624186,
+      "relative_pct": 6.129391181864021,
+      "p_value": 0.8792555217364393
     },
     {
       "metric": "Black speakers",
-      "treatment_mean": 0.07568715942796474,
-      "treatment_std": 0.7242171680932573,
-      "control_mean": 0.03404474114533286,
-      "control_std": 0.5713983124552674,
-      "difference_pp": 0.04164241828263188,
-      "relative_pct": 122.31674226825653,
-      "p_value": 0.19317117387238114
+      "treatment_mean": 0.14745120374334128,
+      "treatment_std": 1.1372146590005088,
+      "control_mean": 0.06566628371052934,
+      "control_std": 0.7278772349641044,
+      "difference_pp": 0.08178492003281194,
+      "relative_pct": 124.54628983320713,
+      "p_value": 0.08027910979258013
     },
     {
       "metric": "Hispanic speakers",
-      "treatment_mean": 0.05560466353919508,
-      "treatment_std": 0.5753203214689292,
-      "control_mean": 0.13053343217175328,
-      "control_std": 1.8638972139734968,
-      "difference_pp": -0.07492876863255821,
-      "relative_pct": -57.40197540655212,
-      "p_value": 0.2733243886423515
+      "treatment_mean": 0.07861218767346781,
+      "treatment_std": 0.6993051949457952,
+      "control_mean": 0.14734105468965558,
+      "control_std": 1.9091423558628444,
+      "difference_pp": -0.06872886701618777,
+      "relative_pct": -46.64610767240085,
+      "p_value": 0.3347116437798999
     },
     {
       "metric": "Female speakers",
-      "treatment_mean": 0.0,
-      "treatment_std": 0.0,
-      "control_mean": 0.0,
-      "control_std": 0.0,
-      "difference_pp": 0.0,
-      "relative_pct": NaN,
-      "p_value": NaN
+      "treatment_mean": 0.0549915419114605,
+      "treatment_std": 0.6374065933685087,
+      "control_mean": 0.021750396411029892,
+      "control_std": 0.3260365175641862,
+      "difference_pp": 0.03324114550043061,
+      "relative_pct": 152.83006742614413,
+      "p_value": 0.17918799615657074
     }
   ],
   "interpretation": "Treatment shows what % of speakers came from the URM database shown to that department"

@@ -14,6 +14,7 @@ from datetime import datetime
 import logging
 from dotenv import load_dotenv
 import os
+import argparse
 
 # Load environment variables
 env_path = Path(__file__).parent.parent.parent / '.env'
@@ -31,6 +32,7 @@ from core.normalization import generate_speaker_id
 sys.path.append(str(Path(__file__).parent))
 from standardize_academic_ranks import RankStandardizer
 from standardize_universities import UniversityStandardizer
+from enrich_seminar_speakers import SeminarSpeakerEnricher
 
 logging.basicConfig(
     level=logging.INFO,
@@ -195,7 +197,7 @@ def generate_summary_statistics(df):
     return stats
 
 
-async def main():
+async def main(skip_enrichment: bool = False, enrich_sample: int = None):
     """Main pipeline function"""
     
     print("\n" + "="*60)
@@ -207,6 +209,11 @@ async def main():
     if not os.getenv('OPENAI_API_KEY'):
         logger.error("OPENAI_API_KEY not set. Please set it in your .env file")
         return 1
+    
+    # Check for Perplexity API key if enrichment is not skipped
+    if not skip_enrichment and not os.getenv('PERPLEXITY_API_KEY'):
+        logger.warning("PERPLEXITY_API_KEY not set. Skipping speaker enrichment.")
+        skip_enrichment = True
     
     # Step 1: Run the unified data processor
     logger.info("Step 1: Running unified data processor (merge + clean)")
@@ -240,12 +247,22 @@ async def main():
     if initial_speakers != final_speakers:
         logger.info(f"Removed {initial_speakers - final_speakers} additional problematic names after standardization")
     
-    # Step 4: Save final dataset
+    # Step 4: Enrich speaker data with affiliations and PhD years (default behavior)
+    if not skip_enrichment:
+        logger.info("\nStep 4: Enriching speaker data with affiliations and PhD years")
+        logger.info("Using cached data for previously seen speakers...")
+        enricher = SeminarSpeakerEnricher()
+        df_final = await enricher.enrich_seminar_data(df_final, sample_size=enrich_sample)
+        logger.info("Speaker enrichment completed")
+    else:
+        logger.info("\nStep 4: Skipping speaker enrichment (--skip-enrichment flag used)")
+    
+    # Step 5: Save final dataset
     output_file = config.PROCESSED_DATA_DIR / 'master-data-final.csv'
     df_final.to_csv(output_file, index=False, encoding='utf-8-sig')
     logger.info(f"\n✅ Final dataset saved to: {output_file}")
     
-    # Step 5: Generate summary statistics
+    # Step 6: Generate summary statistics
     stats = generate_summary_statistics(df_final)
     
     # Save summary
@@ -262,4 +279,12 @@ async def main():
 
 
 if __name__ == "__main__":
-    sys.exit(asyncio.run(main()))
+    parser = argparse.ArgumentParser(description='Create final dataset for Search Costs RCT')
+    parser.add_argument('--skip-enrichment', action='store_true', 
+                        help='Skip speaker enrichment (enrichment is enabled by default)')
+    parser.add_argument('--enrich-sample', type=int, 
+                        help='Number of unique speakers to enrich (for testing)')
+    
+    args = parser.parse_args()
+    
+    sys.exit(asyncio.run(main(skip_enrichment=args.skip_enrichment, enrich_sample=args.enrich_sample)))

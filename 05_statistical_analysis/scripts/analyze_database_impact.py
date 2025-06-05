@@ -156,14 +156,17 @@ class SimpleDatabaseAnalyzer:
                         
                         speakers_from_db += 1
                         
-                        # Check demographics
-                        if db_info['database_race'] in ['Black', 'Hispanic']:
+                        # Check demographics from SPEAKER data, not database
+                        speaker_race = speaker.get('combined_race', '')
+                        speaker_gender = speaker.get('combined_gender', '')
+                        
+                        if speaker_race in ['black', 'latino', 'hispanic']:
                             urm_from_db += 1
-                        if db_info['database_race'] == 'Black':
+                        if speaker_race == 'black':
                             black_from_db += 1
-                        if db_info['database_race'] == 'Hispanic':
+                        if speaker_race in ['latino', 'hispanic']:
                             hispanic_from_db += 1
-                        if db_info['database_gender'] == 'Female':
+                        if speaker_gender == 'woman':
                             female_from_db += 1
             
             # Calculate percentages

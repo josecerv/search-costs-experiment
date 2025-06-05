@@ -1,0 +1,54 @@
+
+================================================================================
+COMPREHENSIVE LLM MATCHING RESULTS SUMMARY
+================================================================================
+Matching Strategy: Top 35% of speakers in each discipline
+Average candidates checked per faculty: 905.1
+Average top candidate score: 72.6
+
+Unique database faculty matched: 115/550 (20.9%)
+Total match records: 140
+Unique speakers matched: 137
+
+
+By Discipline:
+  Chemistry: 31/108 (28.7%)
+    - Avg candidates checked: 767.8
+    - Avg top score: 77.0
+  Computer Science: 6/94 (6.4%)
+    - Avg candidates checked: 555.5
+    - Avg top score: 65.8
+  Mathematics: 38/105 (36.2%)
+    - Avg candidates checked: 1756.4
+    - Avg top score: 80.2
+  Mechanical Engineering: 10/131 (7.6%)
+    - Avg candidates checked: 327.5
+    - Avg top score: 63.6
+  Physics: 30/112 (26.8%)
+    - Avg candidates checked: 1128.3
+    - Avg top score: 76.5
+
+
+By Race:
+  Hispanic: 64/280 (22.9%)
+  Black: 51/268 (19.0%)
+  Native American: 0/2 (0.0%)
+
+
+By Confidence:
+  high: 118 (84.3%)
+  medium: 21 (15.0%)
+  low: 1 (0.7%)
+
+
+Non-Match Score Analysis:
+  Mean top score for non-matches: 65.2
+  Median: 64.0
+  Max: 90.0
+  (Low scores suggest these are true non-matches)
+
+
+COMPARISON WITH ORIGINAL (TOP 20) MATCHING:
+Original matches: 132
+Comprehensive matches: 115
+Additional matches found: -17 (-12.9%)
