@@ -1,0 +1,2121 @@
+university,discipline,condition,demographic,total_peer_speakers,total_demo_speakers,matched_speakers_count,pct_demo_from_database,any_speaker_from_database,num_peer_universities,num_demo_in_database
+Arizona State University,Chemistry,control,female,16,1,0,0.0,0,40,0
+Arizona State University,Chemistry,control,URM,16,1,0,0.0,0,40,41
+Arizona State University,Chemistry,control,Black,16,0,0,0.0,0,40,18
+Arizona State University,Chemistry,control,Hispanic,16,0,0,0.0,0,40,23
+Arizona State University,Mathematics,control,female,6,1,0,0.0,0,40,0
+Arizona State University,Mathematics,control,URM,6,0,0,0.0,0,40,32
+Arizona State University,Mathematics,control,Black,6,0,0,0.0,0,40,11
+Arizona State University,Mathematics,control,Hispanic,6,0,0,0.0,0,40,21
+Arizona State University,Mechanical Engineering,treatment,female,13,2,0,0.0,0,40,0
+Arizona State University,Mechanical Engineering,treatment,URM,13,3,0,0.0,0,40,37
+Arizona State University,Mechanical Engineering,treatment,Black,13,1,0,0.0,0,40,20
+Arizona State University,Mechanical Engineering,treatment,Hispanic,13,0,0,0.0,0,40,17
+Arizona State University,Physics,treatment,female,20,3,0,0.0,0,40,0
+Arizona State University,Physics,treatment,URM,20,0,0,0.0,0,40,34
+Arizona State University,Physics,treatment,Black,20,0,0,0.0,0,40,11
+Arizona State University,Physics,treatment,Hispanic,20,0,0,0.0,0,40,23
+Auburn University,Chemistry,treatment,female,2,0,0,0.0,0,40,0
+Auburn University,Chemistry,treatment,URM,2,0,0,0.0,0,40,24
+Auburn University,Chemistry,treatment,Black,2,0,0,0.0,0,40,12
+Auburn University,Chemistry,treatment,Hispanic,2,0,0,0.0,0,40,12
+Auburn University,Computer Science,control,female,1,0,0,0.0,0,40,0
+Auburn University,Computer Science,control,URM,1,0,0,0.0,0,40,17
+Auburn University,Computer Science,control,Black,1,0,0,0.0,0,40,11
+Auburn University,Computer Science,control,Hispanic,1,0,0,0.0,0,40,6
+Auburn University,Mathematics,control,female,3,1,0,0.0,0,40,0
+Auburn University,Mathematics,control,URM,3,1,0,0.0,0,40,20
+Auburn University,Mathematics,control,Black,3,1,0,0.0,0,40,5
+Auburn University,Mathematics,control,Hispanic,3,0,0,0.0,0,40,15
+Auburn University,Mechanical Engineering,control,female,1,1,0,0.0,0,40,0
+Auburn University,Mechanical Engineering,control,URM,1,0,0,0.0,0,40,24
+Auburn University,Mechanical Engineering,control,Black,1,0,0,0.0,0,40,13
+Auburn University,Mechanical Engineering,control,Hispanic,1,0,0,0.0,0,40,11
+Baylor University,Chemistry,control,female,2,0,0,0.0,0,40,0
+Baylor University,Chemistry,control,URM,2,0,0,0.0,0,40,25
+Baylor University,Chemistry,control,Black,2,0,0,0.0,0,40,14
+Baylor University,Chemistry,control,Hispanic,2,0,0,0.0,0,40,11
+Baylor University,Mathematics,control,female,9,1,0,0.0,0,40,0
+Baylor University,Mathematics,control,URM,9,1,0,0.0,0,40,28
+Baylor University,Mathematics,control,Black,9,0,0,0.0,0,40,7
+Baylor University,Mathematics,control,Hispanic,9,0,0,0.0,0,40,21
+Binghamton University,Computer Science,control,female,0,0,0,0.0,0,40,0
+Binghamton University,Computer Science,control,URM,0,0,0,0.0,0,40,17
+Binghamton University,Computer Science,control,Black,0,0,0,0.0,0,40,13
+Binghamton University,Computer Science,control,Hispanic,0,0,0,0.0,0,40,4
+Binghamton University,Mathematics,control,female,1,0,0,0.0,0,40,0
+Binghamton University,Mathematics,control,URM,1,1,0,0.0,0,40,24
+Binghamton University,Mathematics,control,Black,1,0,0,0.0,0,40,13
+Binghamton University,Mathematics,control,Hispanic,1,0,0,0.0,0,40,11
+Binghamton University,Mechanical Engineering,control,female,0,0,0,0.0,0,40,0
+Binghamton University,Mechanical Engineering,control,URM,0,0,0,0.0,0,40,27
+Binghamton University,Mechanical Engineering,control,Black,0,0,0,0.0,0,40,17
+Binghamton University,Mechanical Engineering,control,Hispanic,0,0,0,0.0,0,40,10
+Boston College,Mathematics,control,female,2,0,0,0.0,0,40,0
+Boston College,Mathematics,control,URM,2,0,0,0.0,0,40,36
+Boston College,Mathematics,control,Black,2,0,0,0.0,0,40,12
+Boston College,Mathematics,control,Hispanic,2,0,0,0.0,0,40,24
+Boston College,Physics,treatment,female,4,1,0,0.0,0,40,0
+Boston College,Physics,treatment,URM,4,2,0,0.0,0,40,32
+Boston College,Physics,treatment,Black,4,1,0,0.0,0,40,13
+Boston College,Physics,treatment,Hispanic,4,0,0,0.0,0,40,19
+Boston University,Chemistry,treatment,female,12,2,0,0.0,0,40,0
+Boston University,Chemistry,treatment,URM,12,0,0,0.0,0,40,38
+Boston University,Chemistry,treatment,Black,12,0,0,0.0,0,40,17
+Boston University,Chemistry,treatment,Hispanic,12,0,0,0.0,0,40,21
+Boston University,Computer Science,treatment,female,6,1,0,0.0,0,40,0
+Boston University,Computer Science,treatment,URM,6,0,0,0.0,0,40,39
+Boston University,Computer Science,treatment,Black,6,0,0,0.0,0,40,24
+Boston University,Computer Science,treatment,Hispanic,6,0,0,0.0,0,40,15
+Boston University,Mathematics,treatment,female,14,6,0,0.0,0,40,0
+Boston University,Mathematics,treatment,URM,14,2,0,0.0,0,40,28
+Boston University,Mathematics,treatment,Black,14,1,0,0.0,0,40,11
+Boston University,Mathematics,treatment,Hispanic,14,0,0,0.0,0,40,17
+Boston University,Mechanical Engineering,control,female,2,1,0,0.0,0,40,0
+Boston University,Mechanical Engineering,control,URM,2,1,0,0.0,0,40,51
+Boston University,Mechanical Engineering,control,Black,2,1,0,0.0,0,40,31
+Boston University,Mechanical Engineering,control,Hispanic,2,0,0,0.0,0,40,20
+Boston University,Physics,control,female,9,2,0,0.0,0,40,0
+Boston University,Physics,control,URM,9,0,0,0.0,0,40,46
+Boston University,Physics,control,Black,9,0,0,0.0,0,40,12
+Boston University,Physics,control,Hispanic,9,0,0,0.0,0,40,34
+Brandeis University,Computer Science,control,female,1,0,0,0.0,0,40,0
+Brandeis University,Computer Science,control,URM,1,0,0,0.0,0,40,31
+Brandeis University,Computer Science,control,Black,1,0,0,0.0,0,40,12
+Brandeis University,Computer Science,control,Hispanic,1,0,0,0.0,0,40,19
+Brandeis University,Mathematics,treatment,female,11,4,0,0.0,0,40,0
+Brandeis University,Mathematics,treatment,URM,11,0,0,0.0,0,40,38
+Brandeis University,Mathematics,treatment,Black,11,0,0,0.0,0,40,12
+Brandeis University,Mathematics,treatment,Hispanic,11,0,0,0.0,0,40,26
+Brandeis University,Physics,treatment,female,1,1,0,0.0,0,40,0
+Brandeis University,Physics,treatment,URM,1,0,0,0.0,0,40,33
+Brandeis University,Physics,treatment,Black,1,0,0,0.0,0,40,10
+Brandeis University,Physics,treatment,Hispanic,1,0,0,0.0,0,40,23
+Brown University,Chemistry,control,female,13,4,0,0.0,0,40,0
+Brown University,Chemistry,control,URM,13,1,0,0.0,0,40,31
+Brown University,Chemistry,control,Black,13,1,0,0.0,0,40,14
+Brown University,Chemistry,control,Hispanic,13,0,0,0.0,0,40,17
+Brown University,Computer Science,control,female,4,0,0,0.0,0,40,0
+Brown University,Computer Science,control,URM,4,0,0,0.0,0,40,34
+Brown University,Computer Science,control,Black,4,0,0,0.0,0,40,20
+Brown University,Computer Science,control,Hispanic,4,0,0,0.0,0,40,14
+Brown University,Mathematics,control,female,41,4,0,0.0,0,40,0
+Brown University,Mathematics,control,URM,41,2,0,0.0,0,40,27
+Brown University,Mathematics,control,Black,41,1,0,0.0,0,40,12
+Brown University,Mathematics,control,Hispanic,41,0,0,0.0,0,40,15
+Brown University,Mechanical Engineering,treatment,female,3,0,0,0.0,0,40,0
+Brown University,Mechanical Engineering,treatment,URM,3,0,0,0.0,0,40,59
+Brown University,Mechanical Engineering,treatment,Black,3,0,0,0.0,0,40,39
+Brown University,Mechanical Engineering,treatment,Hispanic,3,0,0,0.0,0,40,20
+Brown University,Physics,treatment,female,8,2,0,0.0,0,40,0
+Brown University,Physics,treatment,URM,8,0,0,0.0,0,40,41
+Brown University,Physics,treatment,Black,8,0,0,0.0,0,40,10
+Brown University,Physics,treatment,Hispanic,8,0,0,0.0,0,40,31
+California Institute of Technology,Chemistry,control,female,19,6,0,0.0,0,40,0
+California Institute of Technology,Chemistry,control,URM,19,0,0,0.0,0,40,32
+California Institute of Technology,Chemistry,control,Black,19,0,0,0.0,0,40,16
+California Institute of Technology,Chemistry,control,Hispanic,19,0,0,0.0,0,40,16
+California Institute of Technology,Computer Science,control,female,4,0,0,0.0,0,40,0
+California Institute of Technology,Computer Science,control,URM,4,0,0,0.0,0,40,37
+California Institute of Technology,Computer Science,control,Black,4,0,0,0.0,0,40,26
+California Institute of Technology,Computer Science,control,Hispanic,4,0,0,0.0,0,40,11
+California Institute of Technology,Mathematics,control,female,36,5,0,0.0,0,40,0
+California Institute of Technology,Mathematics,control,URM,36,1,0,0.0,0,40,36
+California Institute of Technology,Mathematics,control,Black,36,0,0,0.0,0,40,15
+California Institute of Technology,Mathematics,control,Hispanic,36,0,0,0.0,0,40,21
+California Institute of Technology,Mechanical Engineering,treatment,female,5,0,0,0.0,0,40,0
+California Institute of Technology,Mechanical Engineering,treatment,URM,5,1,0,0.0,0,40,58
+California Institute of Technology,Mechanical Engineering,treatment,Black,5,1,0,0.0,0,40,40
+California Institute of Technology,Mechanical Engineering,treatment,Hispanic,5,0,0,0.0,0,40,18
+California Institute of Technology,Physics,control,female,20,2,0,0.0,0,40,0
+California Institute of Technology,Physics,control,URM,20,1,0,0.0,0,40,50
+California Institute of Technology,Physics,control,Black,20,1,0,0.0,0,40,17
+California Institute of Technology,Physics,control,Hispanic,20,0,0,0.0,0,40,33
+Carnegie Mellon University,Chemistry,control,female,2,0,0,0.0,0,40,0
+Carnegie Mellon University,Chemistry,control,URM,2,0,0,0.0,0,40,30
+Carnegie Mellon University,Chemistry,control,Black,2,0,0,0.0,0,40,15
+Carnegie Mellon University,Chemistry,control,Hispanic,2,0,0,0.0,0,40,15
+Carnegie Mellon University,Computer Science,control,female,15,3,0,0.0,0,40,0
+Carnegie Mellon University,Computer Science,control,URM,15,1,0,0.0,0,40,32
+Carnegie Mellon University,Computer Science,control,Black,15,0,0,0.0,0,40,21
+Carnegie Mellon University,Computer Science,control,Hispanic,15,0,0,0.0,0,40,11
+Carnegie Mellon University,Mathematics,treatment,female,18,2,0,0.0,0,40,0
+Carnegie Mellon University,Mathematics,treatment,URM,18,2,0,0.0,0,40,31
+Carnegie Mellon University,Mathematics,treatment,Black,18,0,0,0.0,0,40,14
+Carnegie Mellon University,Mathematics,treatment,Hispanic,18,0,0,0.0,0,40,17
+Carnegie Mellon University,Mechanical Engineering,control,female,1,0,0,0.0,0,40,0
+Carnegie Mellon University,Mechanical Engineering,control,URM,1,0,0,0.0,0,40,56
+Carnegie Mellon University,Mechanical Engineering,control,Black,1,0,0,0.0,0,40,37
+Carnegie Mellon University,Mechanical Engineering,control,Hispanic,1,0,0,0.0,0,40,19
+Case Western Reserve University,Chemistry,control,female,2,1,0,0.0,0,40,0
+Case Western Reserve University,Chemistry,control,URM,2,2,0,0.0,0,40,38
+Case Western Reserve University,Chemistry,control,Black,2,0,0,0.0,0,40,17
+Case Western Reserve University,Chemistry,control,Hispanic,2,0,0,0.0,0,40,21
+Case Western Reserve University,Mathematics,treatment,female,1,0,0,0.0,0,40,0
+Case Western Reserve University,Mathematics,treatment,URM,1,1,0,0.0,0,40,25
+Case Western Reserve University,Mathematics,treatment,Black,1,0,0,0.0,0,40,8
+Case Western Reserve University,Mathematics,treatment,Hispanic,1,0,0,0.0,0,40,17
+Case Western Reserve University,Physics,control,female,8,1,0,0.0,0,40,0
+Case Western Reserve University,Physics,control,URM,8,1,0,0.0,0,40,34
+Case Western Reserve University,Physics,control,Black,8,0,0,0.0,0,40,9
+Case Western Reserve University,Physics,control,Hispanic,8,0,0,0.0,0,40,25
+Clemson University,Chemistry,control,female,2,0,0,0.0,0,40,0
+Clemson University,Chemistry,control,URM,2,0,0,0.0,0,40,34
+Clemson University,Chemistry,control,Black,2,0,0,0.0,0,40,15
+Clemson University,Chemistry,control,Hispanic,2,0,0,0.0,0,40,19
+Clemson University,Mathematics,treatment,female,1,1,0,0.0,0,40,0
+Clemson University,Mathematics,treatment,URM,1,0,0,0.0,0,40,35
+Clemson University,Mathematics,treatment,Black,1,0,0,0.0,0,40,10
+Clemson University,Mathematics,treatment,Hispanic,1,0,0,0.0,0,40,25
+Clemson University,Physics,control,female,0,0,0,0.0,0,40,0
+Clemson University,Physics,control,URM,0,0,0,0.0,0,40,34
+Clemson University,Physics,control,Black,0,0,0,0.0,0,40,11
+Clemson University,Physics,control,Hispanic,0,0,0,0.0,0,40,23
+Colorado School of Mines,Chemistry,control,female,5,1,0,0.0,0,40,0
+Colorado School of Mines,Chemistry,control,URM,5,0,0,0.0,0,40,29
+Colorado School of Mines,Chemistry,control,Black,5,0,0,0.0,0,40,13
+Colorado School of Mines,Chemistry,control,Hispanic,5,0,0,0.0,0,40,16
+Colorado School of Mines,Computer Science,control,female,1,0,0,0.0,0,40,0
+Colorado School of Mines,Computer Science,control,URM,1,0,0,0.0,0,40,20
+Colorado School of Mines,Computer Science,control,Black,1,0,0,0.0,0,40,8
+Colorado School of Mines,Computer Science,control,Hispanic,1,0,0,0.0,0,40,12
+Colorado School of Mines,Mathematics,control,female,3,1,0,0.0,0,40,0
+Colorado School of Mines,Mathematics,control,URM,3,0,0,0.0,0,40,35
+Colorado School of Mines,Mathematics,control,Black,3,0,0,0.0,0,40,11
+Colorado School of Mines,Mathematics,control,Hispanic,3,0,0,0.0,0,40,24
+Colorado School of Mines,Mechanical Engineering,control,female,0,0,0,0.0,0,40,0
+Colorado School of Mines,Mechanical Engineering,control,URM,0,0,0,0.0,0,40,20
+Colorado School of Mines,Mechanical Engineering,control,Black,0,0,0,0.0,0,40,12
+Colorado School of Mines,Mechanical Engineering,control,Hispanic,0,0,0,0.0,0,40,8
+Colorado School of Mines,Physics,control,female,4,1,0,0.0,0,40,0
+Colorado School of Mines,Physics,control,URM,4,0,0,0.0,0,40,25
+Colorado School of Mines,Physics,control,Black,4,0,0,0.0,0,40,10
+Colorado School of Mines,Physics,control,Hispanic,4,0,0,0.0,0,40,15
+Colorado State University,Chemistry,treatment,female,1,0,0,0.0,0,40,0
+Colorado State University,Chemistry,treatment,URM,1,0,0,0.0,0,40,29
+Colorado State University,Chemistry,treatment,Black,1,0,0,0.0,0,40,14
+Colorado State University,Chemistry,treatment,Hispanic,1,0,0,0.0,0,40,15
+Colorado State University,Computer Science,control,female,2,2,0,0.0,0,40,0
+Colorado State University,Computer Science,control,URM,2,0,0,0.0,0,40,18
+Colorado State University,Computer Science,control,Black,2,0,0,0.0,0,40,6
+Colorado State University,Computer Science,control,Hispanic,2,0,0,0.0,0,40,12
+Colorado State University,Mathematics,treatment,female,10,0,0,0.0,0,40,0
+Colorado State University,Mathematics,treatment,URM,10,2,1,50.0,1,40,34
+Colorado State University,Mathematics,treatment,Black,10,2,0,0.0,0,40,10
+Colorado State University,Mathematics,treatment,Hispanic,10,0,0,0.0,0,40,24
+Colorado State University,Physics,control,female,2,0,0,0.0,0,40,0
+Colorado State University,Physics,control,URM,2,0,0,0.0,0,40,24
+Colorado State University,Physics,control,Black,2,0,0,0.0,0,40,10
+Colorado State University,Physics,control,Hispanic,2,0,0,0.0,0,40,14
+Columbia University,Chemistry,treatment,female,13,4,0,0.0,0,40,0
+Columbia University,Chemistry,treatment,URM,13,1,0,0.0,0,40,32
+Columbia University,Chemistry,treatment,Black,13,1,0,0.0,0,40,16
+Columbia University,Chemistry,treatment,Hispanic,13,0,0,0.0,0,40,16
+Columbia University,Mathematics,treatment,female,100,14,0,0.0,0,40,0
+Columbia University,Mathematics,treatment,URM,100,12,0,0.0,0,40,34
+Columbia University,Mathematics,treatment,Black,100,5,0,0.0,0,40,14
+Columbia University,Mathematics,treatment,Hispanic,100,0,0,0.0,0,40,20
+Columbia University,Mechanical Engineering,treatment,female,4,2,0,0.0,0,40,0
+Columbia University,Mechanical Engineering,treatment,URM,4,0,0,0.0,0,40,60
+Columbia University,Mechanical Engineering,treatment,Black,4,0,0,0.0,0,40,41
+Columbia University,Mechanical Engineering,treatment,Hispanic,4,0,0,0.0,0,40,19
+Columbia University,Physics,treatment,female,38,3,1,33.33333333333333,1,40,0
+Columbia University,Physics,treatment,URM,38,2,0,0.0,0,40,48
+Columbia University,Physics,treatment,Black,38,0,0,0.0,0,40,17
+Columbia University,Physics,treatment,Hispanic,38,0,0,0.0,0,40,31
+Cornell University,Chemistry,control,female,39,10,0,0.0,0,40,0
+Cornell University,Chemistry,control,URM,39,1,0,0.0,0,40,32
+Cornell University,Chemistry,control,Black,39,0,0,0.0,0,40,16
+Cornell University,Chemistry,control,Hispanic,39,0,0,0.0,0,40,16
+Cornell University,Computer Science,control,female,48,10,0,0.0,0,40,0
+Cornell University,Computer Science,control,URM,48,3,1,33.33333333333333,1,40,36
+Cornell University,Computer Science,control,Black,48,0,0,0.0,0,40,25
+Cornell University,Computer Science,control,Hispanic,48,0,0,0.0,0,40,11
+Cornell University,Mathematics,control,female,41,4,0,0.0,0,40,0
+Cornell University,Mathematics,control,URM,41,5,0,0.0,0,40,35
+Cornell University,Mathematics,control,Black,41,1,0,0.0,0,40,15
+Cornell University,Mathematics,control,Hispanic,41,0,0,0.0,0,40,20
+Cornell University,Mechanical Engineering,control,female,4,0,0,0.0,0,40,0
+Cornell University,Mechanical Engineering,control,URM,4,0,0,0.0,0,40,60
+Cornell University,Mechanical Engineering,control,Black,4,0,0,0.0,0,40,41
+Cornell University,Mechanical Engineering,control,Hispanic,4,0,0,0.0,0,40,19
+Cornell University,Physics,control,female,22,2,0,0.0,0,40,0
+Cornell University,Physics,control,URM,22,0,0,0.0,0,40,51
+Cornell University,Physics,control,Black,22,0,0,0.0,0,40,17
+Cornell University,Physics,control,Hispanic,22,0,0,0.0,0,40,34
+Dartmouth College,Chemistry,treatment,female,3,2,0,0.0,0,40,0
+Dartmouth College,Chemistry,treatment,URM,3,0,0,0.0,0,40,40
+Dartmouth College,Chemistry,treatment,Black,3,0,0,0.0,0,40,18
+Dartmouth College,Chemistry,treatment,Hispanic,3,0,0,0.0,0,40,22
+Dartmouth College,Mathematics,treatment,female,13,2,0,0.0,0,40,0
+Dartmouth College,Mathematics,treatment,URM,13,0,0,0.0,0,40,28
+Dartmouth College,Mathematics,treatment,Black,13,0,0,0.0,0,40,12
+Dartmouth College,Mathematics,treatment,Hispanic,13,0,0,0.0,0,40,16
+Dartmouth College,Physics,control,female,4,1,0,0.0,0,40,0
+Dartmouth College,Physics,control,URM,4,0,0,0.0,0,40,33
+Dartmouth College,Physics,control,Black,4,0,0,0.0,0,40,8
+Dartmouth College,Physics,control,Hispanic,4,0,0,0.0,0,40,25
+Drexel University,Mathematics,control,female,2,0,0,0.0,0,40,0
+Drexel University,Mathematics,control,URM,2,0,0,0.0,0,40,29
+Drexel University,Mathematics,control,Black,2,0,0,0.0,0,40,8
+Drexel University,Mathematics,control,Hispanic,2,0,0,0.0,0,40,21
+Duke University,Chemistry,control,female,9,2,0,0.0,0,40,0
+Duke University,Chemistry,control,URM,9,2,1,50.0,1,40,31
+Duke University,Chemistry,control,Black,9,1,0,0.0,0,40,15
+Duke University,Chemistry,control,Hispanic,9,0,0,0.0,0,40,16
+Duke University,Computer Science,treatment,female,0,0,0,0.0,0,40,0
+Duke University,Computer Science,treatment,URM,0,0,0,0.0,0,40,33
+Duke University,Computer Science,treatment,Black,0,0,0,0.0,0,40,21
+Duke University,Computer Science,treatment,Hispanic,0,0,0,0.0,0,40,12
+Duke University,Mathematics,control,female,13,1,0,0.0,0,40,0
+Duke University,Mathematics,control,URM,13,1,0,0.0,0,40,34
+Duke University,Mathematics,control,Black,13,0,0,0.0,0,40,15
+Duke University,Mathematics,control,Hispanic,13,0,0,0.0,0,40,19
+Duke University,Mechanical Engineering,control,female,8,2,0,0.0,0,40,0
+Duke University,Mechanical Engineering,control,URM,8,0,0,0.0,0,40,59
+Duke University,Mechanical Engineering,control,Black,8,0,0,0.0,0,40,38
+Duke University,Mechanical Engineering,control,Hispanic,8,0,0,0.0,0,40,21
+Emory University,Chemistry,control,female,12,2,0,0.0,0,40,0
+Emory University,Chemistry,control,URM,12,3,1,33.33333333333333,1,40,38
+Emory University,Chemistry,control,Black,12,0,0,0.0,0,40,18
+Emory University,Chemistry,control,Hispanic,12,0,0,0.0,0,40,20
+Emory University,Mathematics,treatment,female,3,0,0,0.0,0,40,0
+Emory University,Mathematics,treatment,URM,3,1,0,0.0,0,40,29
+Emory University,Mathematics,treatment,Black,3,0,0,0.0,0,40,11
+Emory University,Mathematics,treatment,Hispanic,3,0,0,0.0,0,40,18
+Emory University,Physics,control,female,1,1,0,0.0,0,40,0
+Emory University,Physics,control,URM,1,0,0,0.0,0,40,31
+Emory University,Physics,control,Black,1,0,0,0.0,0,40,8
+Emory University,Physics,control,Hispanic,1,0,0,0.0,0,40,23
+Florida International University,Chemistry,treatment,female,2,0,0,0.0,0,40,0
+Florida International University,Chemistry,treatment,URM,2,2,0,0.0,0,40,24
+Florida International University,Chemistry,treatment,Black,2,0,0,0.0,0,40,13
+Florida International University,Chemistry,treatment,Hispanic,2,0,0,0.0,0,40,11
+Florida International University,Mathematics,treatment,female,1,1,0,0.0,0,40,0
+Florida International University,Mathematics,treatment,URM,1,1,0,0.0,0,40,24
+Florida International University,Mathematics,treatment,Black,1,1,0,0.0,0,40,11
+Florida International University,Mathematics,treatment,Hispanic,1,0,0,0.0,0,40,13
+Florida International University,Physics,treatment,female,1,0,0,0.0,0,40,0
+Florida International University,Physics,treatment,URM,1,0,0,0.0,0,40,21
+Florida International University,Physics,treatment,Black,1,0,0,0.0,0,40,8
+Florida International University,Physics,treatment,Hispanic,1,0,0,0.0,0,40,13
+Florida State University,Chemistry,control,female,12,1,0,0.0,0,40,0
+Florida State University,Chemistry,control,URM,12,0,0,0.0,0,40,36
+Florida State University,Chemistry,control,Black,12,0,0,0.0,0,40,16
+Florida State University,Chemistry,control,Hispanic,12,0,0,0.0,0,40,20
+Florida State University,Computer Science,treatment,female,1,0,0,0.0,0,40,0
+Florida State University,Computer Science,treatment,URM,1,0,0,0.0,0,40,38
+Florida State University,Computer Science,treatment,Black,1,0,0,0.0,0,40,20
+Florida State University,Computer Science,treatment,Hispanic,1,0,0,0.0,0,40,18
+Florida State University,Mathematics,treatment,female,11,0,0,0.0,0,40,0
+Florida State University,Mathematics,treatment,URM,11,0,0,0.0,0,40,32
+Florida State University,Mathematics,treatment,Black,11,0,0,0.0,0,40,10
+Florida State University,Mathematics,treatment,Hispanic,11,0,0,0.0,0,40,22
+Florida State University,Mechanical Engineering,treatment,female,2,0,0,0.0,0,40,0
+Florida State University,Mechanical Engineering,treatment,URM,2,0,0,0.0,0,40,34
+Florida State University,Mechanical Engineering,treatment,Black,2,0,0,0.0,0,40,17
+Florida State University,Mechanical Engineering,treatment,Hispanic,2,0,0,0.0,0,40,17
+Florida State University,Physics,control,female,5,2,0,0.0,0,40,0
+Florida State University,Physics,control,URM,5,1,1,100.0,1,40,37
+Florida State University,Physics,control,Black,5,0,0,0.0,0,40,10
+Florida State University,Physics,control,Hispanic,5,0,0,0.0,0,40,27
+George Mason University,Chemistry,treatment,female,1,1,0,0.0,0,40,0
+George Mason University,Chemistry,treatment,URM,1,0,0,0.0,0,40,26
+George Mason University,Chemistry,treatment,Black,1,0,0,0.0,0,40,13
+George Mason University,Chemistry,treatment,Hispanic,1,0,0,0.0,0,40,13
+George Mason University,Computer Science,control,female,0,0,0,0.0,0,40,0
+George Mason University,Computer Science,control,URM,0,0,0,0.0,0,40,19
+George Mason University,Computer Science,control,Black,0,0,0,0.0,0,40,15
+George Mason University,Computer Science,control,Hispanic,0,0,0,0.0,0,40,4
+George Mason University,Mathematics,control,female,3,0,0,0.0,0,40,0
+George Mason University,Mathematics,control,URM,3,1,0,0.0,0,40,16
+George Mason University,Mathematics,control,Black,3,1,0,0.0,0,40,6
+George Mason University,Mathematics,control,Hispanic,3,0,0,0.0,0,40,10
+George Mason University,Mechanical Engineering,treatment,female,0,0,0,0.0,0,40,0
+George Mason University,Mechanical Engineering,treatment,URM,0,0,0,0.0,0,40,20
+George Mason University,Mechanical Engineering,treatment,Black,0,0,0,0.0,0,40,12
+George Mason University,Mechanical Engineering,treatment,Hispanic,0,0,0,0.0,0,40,8
+George Mason University,Physics,control,female,3,1,0,0.0,0,40,0
+George Mason University,Physics,control,URM,3,0,0,0.0,0,40,17
+George Mason University,Physics,control,Black,3,0,0,0.0,0,40,6
+George Mason University,Physics,control,Hispanic,3,0,0,0.0,0,40,11
+George Washington University,Chemistry,treatment,female,1,0,0,0.0,0,40,0
+George Washington University,Chemistry,treatment,URM,1,0,0,0.0,0,40,24
+George Washington University,Chemistry,treatment,Black,1,0,0,0.0,0,40,13
+George Washington University,Chemistry,treatment,Hispanic,1,0,0,0.0,0,40,11
+George Washington University,Mathematics,control,female,0,0,0,0.0,0,40,0
+George Washington University,Mathematics,control,URM,0,0,0,0.0,0,40,19
+George Washington University,Mathematics,control,Black,0,0,0,0.0,0,40,7
+George Washington University,Mathematics,control,Hispanic,0,0,0,0.0,0,40,12
+Georgetown University,Chemistry,control,female,1,0,0,0.0,0,40,0
+Georgetown University,Chemistry,control,URM,1,0,0,0.0,0,40,29
+Georgetown University,Chemistry,control,Black,1,0,0,0.0,0,40,14
+Georgetown University,Chemistry,control,Hispanic,1,0,0,0.0,0,40,15
+Georgetown University,Mathematics,control,female,5,1,0,0.0,0,40,0
+Georgetown University,Mathematics,control,URM,5,0,0,0.0,0,40,34
+Georgetown University,Mathematics,control,Black,5,0,0,0.0,0,40,9
+Georgetown University,Mathematics,control,Hispanic,5,0,0,0.0,0,40,25
+Georgetown University,Physics,control,female,1,1,0,0.0,0,40,0
+Georgetown University,Physics,control,URM,1,0,0,0.0,0,40,20
+Georgetown University,Physics,control,Black,1,0,0,0.0,0,40,9
+Georgetown University,Physics,control,Hispanic,1,0,0,0.0,0,40,11
+Georgia Institute of Technology,Chemistry,treatment,female,6,0,0,0.0,0,40,0
+Georgia Institute of Technology,Chemistry,treatment,URM,6,0,0,0.0,0,40,30
+Georgia Institute of Technology,Chemistry,treatment,Black,6,0,0,0.0,0,40,14
+Georgia Institute of Technology,Chemistry,treatment,Hispanic,6,0,0,0.0,0,40,16
+Georgia Institute of Technology,Computer Science,treatment,female,10,2,0,0.0,0,40,0
+Georgia Institute of Technology,Computer Science,treatment,URM,10,0,0,0.0,0,40,37
+Georgia Institute of Technology,Computer Science,treatment,Black,10,0,0,0.0,0,40,26
+Georgia Institute of Technology,Computer Science,treatment,Hispanic,10,0,0,0.0,0,40,11
+Georgia Institute of Technology,Mechanical Engineering,control,female,2,0,0,0.0,0,40,0
+Georgia Institute of Technology,Mechanical Engineering,control,URM,2,0,0,0.0,0,40,57
+Georgia Institute of Technology,Mechanical Engineering,control,Black,2,0,0,0.0,0,40,37
+Georgia Institute of Technology,Mechanical Engineering,control,Hispanic,2,0,0,0.0,0,40,20
+Georgia Institute of Technology,Physics,treatment,female,22,2,0,0.0,0,40,0
+Georgia Institute of Technology,Physics,treatment,URM,22,2,0,0.0,0,40,49
+Georgia Institute of Technology,Physics,treatment,Black,22,0,0,0.0,0,40,17
+Georgia Institute of Technology,Physics,treatment,Hispanic,22,0,0,0.0,0,40,32
+Georgia State University,Chemistry,control,female,5,1,0,0.0,0,40,0
+Georgia State University,Chemistry,control,URM,5,1,0,0.0,0,40,27
+Georgia State University,Chemistry,control,Black,5,1,0,0.0,0,40,14
+Georgia State University,Chemistry,control,Hispanic,5,0,0,0.0,0,40,13
+Georgia State University,Physics,control,female,2,0,0,0.0,0,40,0
+Georgia State University,Physics,control,URM,2,0,0,0.0,0,40,15
+Georgia State University,Physics,control,Black,2,0,0,0.0,0,40,5
+Georgia State University,Physics,control,Hispanic,2,0,0,0.0,0,40,10
+"Graduate Center, CUNY",Mathematics,treatment,female,21,5,0,0.0,0,40,0
+"Graduate Center, CUNY",Mathematics,treatment,URM,21,1,0,0.0,0,40,29
+"Graduate Center, CUNY",Mathematics,treatment,Black,21,1,0,0.0,0,40,12
+"Graduate Center, CUNY",Mathematics,treatment,Hispanic,21,0,0,0.0,0,40,17
+"Graduate Center, CUNY",Mechanical Engineering,treatment,female,0,0,0,0.0,0,40,0
+"Graduate Center, CUNY",Mechanical Engineering,treatment,URM,0,0,0,0.0,0,40,35
+"Graduate Center, CUNY",Mechanical Engineering,treatment,Black,0,0,0,0.0,0,40,20
+"Graduate Center, CUNY",Mechanical Engineering,treatment,Hispanic,0,0,0,0.0,0,40,15
+Harvard University,Chemistry,treatment,female,11,5,0,0.0,0,40,0
+Harvard University,Chemistry,treatment,URM,11,1,0,0.0,0,40,32
+Harvard University,Chemistry,treatment,Black,11,1,0,0.0,0,40,16
+Harvard University,Chemistry,treatment,Hispanic,11,0,0,0.0,0,40,16
+Harvard University,Computer Science,treatment,female,22,7,0,0.0,0,40,0
+Harvard University,Computer Science,treatment,URM,22,1,0,0.0,0,40,35
+Harvard University,Computer Science,treatment,Black,22,0,0,0.0,0,40,25
+Harvard University,Computer Science,treatment,Hispanic,22,0,0,0.0,0,40,10
+Harvard University,Mechanical Engineering,control,female,4,1,0,0.0,0,40,0
+Harvard University,Mechanical Engineering,control,URM,4,0,0,0.0,0,40,61
+Harvard University,Mechanical Engineering,control,Black,4,0,0,0.0,0,40,41
+Harvard University,Mechanical Engineering,control,Hispanic,4,0,0,0.0,0,40,20
+Harvard University,Physics,treatment,female,40,8,0,0.0,0,40,0
+Harvard University,Physics,treatment,URM,40,3,0,0.0,0,40,49
+Harvard University,Physics,treatment,Black,40,0,0,0.0,0,40,17
+Harvard University,Physics,treatment,Hispanic,40,0,0,0.0,0,40,32
+Indiana University Bloomington,Chemistry,control,female,6,0,0,0.0,0,40,0
+Indiana University Bloomington,Chemistry,control,URM,6,0,0,0.0,0,40,37
+Indiana University Bloomington,Chemistry,control,Black,6,0,0,0.0,0,40,17
+Indiana University Bloomington,Chemistry,control,Hispanic,6,0,0,0.0,0,40,20
+Indiana University Bloomington,Mathematics,treatment,female,13,1,0,0.0,0,40,0
+Indiana University Bloomington,Mathematics,treatment,URM,13,1,0,0.0,0,40,29
+Indiana University Bloomington,Mathematics,treatment,Black,13,0,0,0.0,0,40,9
+Indiana University Bloomington,Mathematics,treatment,Hispanic,13,0,0,0.0,0,40,20
+Indiana University Bloomington,Physics,control,female,2,0,0,0.0,0,40,0
+Indiana University Bloomington,Physics,control,URM,2,1,0,0.0,0,40,34
+Indiana University Bloomington,Physics,control,Black,2,0,0,0.0,0,40,9
+Indiana University Bloomington,Physics,control,Hispanic,2,0,0,0.0,0,40,25
+Iowa State University,Chemistry,control,female,13,4,0,0.0,0,40,0
+Iowa State University,Chemistry,control,URM,13,0,0,0.0,0,40,37
+Iowa State University,Chemistry,control,Black,13,0,0,0.0,0,40,17
+Iowa State University,Chemistry,control,Hispanic,13,0,0,0.0,0,40,20
+Iowa State University,Computer Science,control,female,1,0,0,0.0,0,40,0
+Iowa State University,Computer Science,control,URM,1,0,0,0.0,0,40,39
+Iowa State University,Computer Science,control,Black,1,0,0,0.0,0,40,18
+Iowa State University,Computer Science,control,Hispanic,1,0,0,0.0,0,40,21
+Iowa State University,Mathematics,control,female,8,2,0,0.0,0,40,0
+Iowa State University,Mathematics,control,URM,8,0,0,0.0,0,40,32
+Iowa State University,Mathematics,control,Black,8,0,0,0.0,0,40,12
+Iowa State University,Mathematics,control,Hispanic,8,0,0,0.0,0,40,20
+Iowa State University,Mechanical Engineering,control,female,0,0,0,0.0,0,40,0
+Iowa State University,Mechanical Engineering,control,URM,0,0,0,0.0,0,40,32
+Iowa State University,Mechanical Engineering,control,Black,0,0,0,0.0,0,40,18
+Iowa State University,Mechanical Engineering,control,Hispanic,0,0,0,0.0,0,40,14
+Iowa State University,Physics,treatment,female,6,1,0,0.0,0,40,0
+Iowa State University,Physics,treatment,URM,6,0,0,0.0,0,40,30
+Iowa State University,Physics,treatment,Black,6,0,0,0.0,0,40,8
+Iowa State University,Physics,treatment,Hispanic,6,0,0,0.0,0,40,22
+Johns Hopkins University,Chemistry,control,female,7,4,0,0.0,0,40,0
+Johns Hopkins University,Chemistry,control,URM,7,0,0,0.0,0,40,32
+Johns Hopkins University,Chemistry,control,Black,7,0,0,0.0,0,40,16
+Johns Hopkins University,Chemistry,control,Hispanic,7,0,0,0.0,0,40,16
+Johns Hopkins University,Computer Science,control,female,29,7,0,0.0,0,40,0
+Johns Hopkins University,Computer Science,control,URM,29,0,0,0.0,0,40,37
+Johns Hopkins University,Computer Science,control,Black,29,0,0,0.0,0,40,26
+Johns Hopkins University,Computer Science,control,Hispanic,29,0,0,0.0,0,40,11
+Johns Hopkins University,Mathematics,control,female,44,1,0,0.0,0,40,0
+Johns Hopkins University,Mathematics,control,URM,44,2,0,0.0,0,40,35
+Johns Hopkins University,Mathematics,control,Black,44,0,0,0.0,0,40,14
+Johns Hopkins University,Mathematics,control,Hispanic,44,0,0,0.0,0,40,21
+Johns Hopkins University,Mechanical Engineering,control,female,6,1,0,0.0,0,40,0
+Johns Hopkins University,Mechanical Engineering,control,URM,6,0,0,0.0,0,40,60
+Johns Hopkins University,Mechanical Engineering,control,Black,6,0,0,0.0,0,40,40
+Johns Hopkins University,Mechanical Engineering,control,Hispanic,6,0,0,0.0,0,40,20
+Johns Hopkins University,Physics,control,female,33,6,0,0.0,0,40,0
+Johns Hopkins University,Physics,control,URM,33,2,1,50.0,1,40,48
+Johns Hopkins University,Physics,control,Black,33,0,0,0.0,0,40,15
+Johns Hopkins University,Physics,control,Hispanic,33,0,0,0.0,0,40,33
+Kansas State University,Chemistry,treatment,female,4,3,0,0.0,0,40,0
+Kansas State University,Chemistry,treatment,URM,4,1,0,0.0,0,40,25
+Kansas State University,Chemistry,treatment,Black,4,1,0,0.0,0,40,12
+Kansas State University,Chemistry,treatment,Hispanic,4,0,0,0.0,0,40,13
+Kansas State University,Mathematics,treatment,female,3,1,0,0.0,0,40,0
+Kansas State University,Mathematics,treatment,URM,3,0,0,0.0,0,40,29
+Kansas State University,Mathematics,treatment,Black,3,0,0,0.0,0,40,8
+Kansas State University,Mathematics,treatment,Hispanic,3,0,0,0.0,0,40,21
+Kansas State University,Physics,treatment,female,4,1,0,0.0,0,40,0
+Kansas State University,Physics,treatment,URM,4,0,0,0.0,0,40,18
+Kansas State University,Physics,treatment,Black,4,0,0,0.0,0,40,8
+Kansas State University,Physics,treatment,Hispanic,4,0,0,0.0,0,40,10
+Kent State University,Chemistry,treatment,female,0,0,0,0.0,0,40,0
+Kent State University,Chemistry,treatment,URM,0,0,0,0.0,0,40,28
+Kent State University,Chemistry,treatment,Black,0,0,0,0.0,0,40,14
+Kent State University,Chemistry,treatment,Hispanic,0,0,0,0.0,0,40,14
+Kent State University,Mathematics,control,female,0,0,0,0.0,0,40,0
+Kent State University,Mathematics,control,URM,0,0,0,0.0,0,40,24
+Kent State University,Mathematics,control,Black,0,0,0,0.0,0,40,13
+Kent State University,Mathematics,control,Hispanic,0,0,0,0.0,0,40,11
+Kent State University,Physics,control,female,3,0,0,0.0,0,40,0
+Kent State University,Physics,control,URM,3,1,0,0.0,0,40,21
+Kent State University,Physics,control,Black,3,0,0,0.0,0,40,8
+Kent State University,Physics,control,Hispanic,3,0,0,0.0,0,40,13
+Louisiana State University,Chemistry,treatment,female,3,0,0,0.0,0,40,0
+Louisiana State University,Chemistry,treatment,URM,3,0,0,0.0,0,40,35
+Louisiana State University,Chemistry,treatment,Black,3,0,0,0.0,0,40,16
+Louisiana State University,Chemistry,treatment,Hispanic,3,0,0,0.0,0,40,19
+Louisiana State University,Computer Science,control,female,1,0,0,0.0,0,40,0
+Louisiana State University,Computer Science,control,URM,1,0,0,0.0,0,40,26
+Louisiana State University,Computer Science,control,Black,1,0,0,0.0,0,40,12
+Louisiana State University,Computer Science,control,Hispanic,1,0,0,0.0,0,40,14
+Louisiana State University,Mathematics,treatment,female,8,2,0,0.0,0,40,0
+Louisiana State University,Mathematics,treatment,URM,8,0,0,0.0,0,40,35
+Louisiana State University,Mathematics,treatment,Black,8,0,0,0.0,0,40,11
+Louisiana State University,Mathematics,treatment,Hispanic,8,0,0,0.0,0,40,24
+Louisiana State University,Physics,control,female,1,0,0,0.0,0,40,0
+Louisiana State University,Physics,control,URM,1,1,0,0.0,0,40,30
+Louisiana State University,Physics,control,Black,1,0,0,0.0,0,40,13
+Louisiana State University,Physics,control,Hispanic,1,0,0,0.0,0,40,17
+Massachusetts Institute of Technology,Chemistry,treatment,female,16,4,0,0.0,0,40,0
+Massachusetts Institute of Technology,Chemistry,treatment,URM,16,1,0,0.0,0,40,30
+Massachusetts Institute of Technology,Chemistry,treatment,Black,16,1,0,0.0,0,40,14
+Massachusetts Institute of Technology,Chemistry,treatment,Hispanic,16,0,0,0.0,0,40,16
+Massachusetts Institute of Technology,Computer Science,control,female,24,2,0,0.0,0,40,0
+Massachusetts Institute of Technology,Computer Science,control,URM,24,0,0,0.0,0,40,36
+Massachusetts Institute of Technology,Computer Science,control,Black,24,0,0,0.0,0,40,25
+Massachusetts Institute of Technology,Computer Science,control,Hispanic,24,0,0,0.0,0,40,11
+Massachusetts Institute of Technology,Mathematics,control,female,81,10,0,0.0,0,40,0
+Massachusetts Institute of Technology,Mathematics,control,URM,81,2,0,0.0,0,40,34
+Massachusetts Institute of Technology,Mathematics,control,Black,81,2,0,0.0,0,40,15
+Massachusetts Institute of Technology,Mathematics,control,Hispanic,81,0,0,0.0,0,40,19
+Massachusetts Institute of Technology,Mechanical Engineering,treatment,female,1,1,0,0.0,0,40,0
+Massachusetts Institute of Technology,Mechanical Engineering,treatment,URM,1,0,0,0.0,0,40,60
+Massachusetts Institute of Technology,Mechanical Engineering,treatment,Black,1,0,0,0.0,0,40,40
+Massachusetts Institute of Technology,Mechanical Engineering,treatment,Hispanic,1,0,0,0.0,0,40,20
+Massachusetts Institute of Technology,Physics,treatment,female,45,8,0,0.0,0,40,0
+Massachusetts Institute of Technology,Physics,treatment,URM,45,3,1,33.33333333333333,1,40,49
+Massachusetts Institute of Technology,Physics,treatment,Black,45,1,0,0.0,0,40,17
+Massachusetts Institute of Technology,Physics,treatment,Hispanic,45,0,0,0.0,0,40,32
+Michigan State University,Chemistry,treatment,female,0,0,0,0.0,0,40,0
+Michigan State University,Chemistry,treatment,URM,0,0,0,0.0,0,40,30
+Michigan State University,Chemistry,treatment,Black,0,0,0,0.0,0,40,12
+Michigan State University,Chemistry,treatment,Hispanic,0,0,0,0.0,0,40,18
+Michigan State University,Computer Science,control,female,8,0,0,0.0,0,40,0
+Michigan State University,Computer Science,control,URM,8,0,0,0.0,0,40,37
+Michigan State University,Computer Science,control,Black,8,0,0,0.0,0,40,22
+Michigan State University,Computer Science,control,Hispanic,8,0,0,0.0,0,40,15
+Michigan State University,Mathematics,control,female,55,9,0,0.0,0,40,0
+Michigan State University,Mathematics,control,URM,55,4,0,0.0,0,40,29
+Michigan State University,Mathematics,control,Black,55,0,0,0.0,0,40,11
+Michigan State University,Mathematics,control,Hispanic,55,0,0,0.0,0,40,18
+Michigan State University,Physics,control,female,9,1,0,0.0,0,40,0
+Michigan State University,Physics,control,URM,9,2,0,0.0,0,40,38
+Michigan State University,Physics,control,Black,9,0,0,0.0,0,40,9
+Michigan State University,Physics,control,Hispanic,9,0,0,0.0,0,40,29
+Mississippi State University,Chemistry,treatment,female,2,0,0,0.0,0,40,0
+Mississippi State University,Chemistry,treatment,URM,2,0,0,0.0,0,40,25
+Mississippi State University,Chemistry,treatment,Black,2,0,0,0.0,0,40,12
+Mississippi State University,Chemistry,treatment,Hispanic,2,0,0,0.0,0,40,13
+Mississippi State University,Computer Science,control,female,0,0,0,0.0,0,40,0
+Mississippi State University,Computer Science,control,URM,0,0,0,0.0,0,40,15
+Mississippi State University,Computer Science,control,Black,0,0,0,0.0,0,40,10
+Mississippi State University,Computer Science,control,Hispanic,0,0,0,0.0,0,40,5
+Mississippi State University,Mathematics,treatment,female,0,0,0,0.0,0,40,0
+Mississippi State University,Mathematics,treatment,URM,0,0,0,0.0,0,40,26
+Mississippi State University,Mathematics,treatment,Black,0,0,0,0.0,0,40,13
+Mississippi State University,Mathematics,treatment,Hispanic,0,0,0,0.0,0,40,13
+Mississippi State University,Physics,treatment,female,1,0,0,0.0,0,40,0
+Mississippi State University,Physics,treatment,URM,1,0,0,0.0,0,40,21
+Mississippi State University,Physics,treatment,Black,1,0,0,0.0,0,40,8
+Mississippi State University,Physics,treatment,Hispanic,1,0,0,0.0,0,40,13
+Montana State University,Chemistry,treatment,female,1,0,0,0.0,0,40,0
+Montana State University,Chemistry,treatment,URM,1,0,0,0.0,0,40,24
+Montana State University,Chemistry,treatment,Black,1,0,0,0.0,0,40,13
+Montana State University,Chemistry,treatment,Hispanic,1,0,0,0.0,0,40,11
+Montana State University,Computer Science,control,female,0,0,0,0.0,0,40,0
+Montana State University,Computer Science,control,URM,0,0,0,0.0,0,40,20
+Montana State University,Computer Science,control,Black,0,0,0,0.0,0,40,15
+Montana State University,Computer Science,control,Hispanic,0,0,0,0.0,0,40,5
+Montana State University,Mathematics,treatment,female,0,0,0,0.0,0,40,0
+Montana State University,Mathematics,treatment,URM,0,0,0,0.0,0,40,19
+Montana State University,Mathematics,treatment,Black,0,0,0,0.0,0,40,7
+Montana State University,Mathematics,treatment,Hispanic,0,0,0,0.0,0,40,12
+Montana State University,Physics,control,female,1,0,0,0.0,0,40,0
+Montana State University,Physics,control,URM,1,0,0,0.0,0,40,17
+Montana State University,Physics,control,Black,1,0,0,0.0,0,40,6
+Montana State University,Physics,control,Hispanic,1,0,0,0.0,0,40,11
+New Jersey Institute of Technology,Computer Science,control,female,1,0,0,0.0,0,40,0
+New Jersey Institute of Technology,Computer Science,control,URM,1,0,0,0.0,0,40,16
+New Jersey Institute of Technology,Computer Science,control,Black,1,0,0,0.0,0,40,13
+New Jersey Institute of Technology,Computer Science,control,Hispanic,1,0,0,0.0,0,40,3
+New Jersey Institute of Technology,Mathematics,treatment,female,0,0,0,0.0,0,40,0
+New Jersey Institute of Technology,Mathematics,treatment,URM,0,0,0,0.0,0,40,23
+New Jersey Institute of Technology,Mathematics,treatment,Black,0,0,0,0.0,0,40,10
+New Jersey Institute of Technology,Mathematics,treatment,Hispanic,0,0,0,0.0,0,40,13
+New Jersey Institute of Technology,Physics,treatment,female,1,1,0,0.0,0,40,0
+New Jersey Institute of Technology,Physics,treatment,URM,1,0,0,0.0,0,40,13
+New Jersey Institute of Technology,Physics,treatment,Black,1,0,0,0.0,0,40,4
+New Jersey Institute of Technology,Physics,treatment,Hispanic,1,0,0,0.0,0,40,9
+New York University,Chemistry,control,female,8,2,0,0.0,0,40,0
+New York University,Chemistry,control,URM,8,0,0,0.0,0,40,27
+New York University,Chemistry,control,Black,8,0,0,0.0,0,40,13
+New York University,Chemistry,control,Hispanic,8,0,0,0.0,0,40,14
+New York University,Computer Science,treatment,female,15,2,0,0.0,0,40,0
+New York University,Computer Science,treatment,URM,15,1,0,0.0,0,40,33
+New York University,Computer Science,treatment,Black,15,0,0,0.0,0,40,20
+New York University,Computer Science,treatment,Hispanic,15,0,0,0.0,0,40,13
+New York University,Mathematics,control,female,27,2,0,0.0,0,40,0
+New York University,Mathematics,control,URM,27,1,0,0.0,0,40,32
+New York University,Mathematics,control,Black,27,1,0,0.0,0,40,13
+New York University,Mathematics,control,Hispanic,27,0,0,0.0,0,40,19
+New York University,Physics,treatment,female,29,4,0,0.0,0,40,0
+New York University,Physics,treatment,URM,29,2,1,50.0,1,40,44
+New York University,Physics,treatment,Black,29,2,1,50.0,1,40,15
+New York University,Physics,treatment,Hispanic,29,0,0,0.0,0,40,29
+North Carolina State University,Chemistry,control,female,5,0,0,0.0,0,40,0
+North Carolina State University,Chemistry,control,URM,5,0,0,0.0,0,40,34
+North Carolina State University,Chemistry,control,Black,5,0,0,0.0,0,40,15
+North Carolina State University,Chemistry,control,Hispanic,5,0,0,0.0,0,40,19
+North Carolina State University,Computer Science,control,female,2,1,0,0.0,0,40,0
+North Carolina State University,Computer Science,control,URM,2,0,0,0.0,0,40,29
+North Carolina State University,Computer Science,control,Black,2,0,0,0.0,0,40,12
+North Carolina State University,Computer Science,control,Hispanic,2,0,0,0.0,0,40,17
+North Carolina State University,Mathematics,treatment,female,5,0,0,0.0,0,40,0
+North Carolina State University,Mathematics,treatment,URM,5,1,0,0.0,0,40,36
+North Carolina State University,Mathematics,treatment,Black,5,0,0,0.0,0,40,12
+North Carolina State University,Mathematics,treatment,Hispanic,5,0,0,0.0,0,40,24
+North Carolina State University,Mechanical Engineering,control,female,2,0,0,0.0,0,40,0
+North Carolina State University,Mechanical Engineering,control,URM,2,0,0,0.0,0,40,23
+North Carolina State University,Mechanical Engineering,control,Black,2,0,0,0.0,0,40,12
+North Carolina State University,Mechanical Engineering,control,Hispanic,2,0,0,0.0,0,40,11
+North Carolina State University,Physics,control,female,1,0,0,0.0,0,40,0
+North Carolina State University,Physics,control,URM,1,0,0,0.0,0,40,33
+North Carolina State University,Physics,control,Black,1,0,0,0.0,0,40,10
+North Carolina State University,Physics,control,Hispanic,1,0,0,0.0,0,40,23
+North Dakota State University,Mathematics,treatment,female,1,0,0,0.0,0,40,0
+North Dakota State University,Mathematics,treatment,URM,1,0,0,0.0,0,40,26
+North Dakota State University,Mathematics,treatment,Black,1,0,0,0.0,0,40,14
+North Dakota State University,Mathematics,treatment,Hispanic,1,0,0,0.0,0,40,12
+North Dakota State University,Physics,treatment,female,0,0,0,0.0,0,40,0
+North Dakota State University,Physics,treatment,URM,0,0,0,0.0,0,40,21
+North Dakota State University,Physics,treatment,Black,0,0,0,0.0,0,40,8
+North Dakota State University,Physics,treatment,Hispanic,0,0,0,0.0,0,40,13
+Northeastern University,Chemistry,control,female,1,0,0,0.0,0,40,0
+Northeastern University,Chemistry,control,URM,1,0,0,0.0,0,40,34
+Northeastern University,Chemistry,control,Black,1,0,0,0.0,0,40,16
+Northeastern University,Chemistry,control,Hispanic,1,0,0,0.0,0,40,18
+Northeastern University,Computer Science,treatment,female,3,0,0,0.0,0,40,0
+Northeastern University,Computer Science,treatment,URM,3,0,0,0.0,0,40,36
+Northeastern University,Computer Science,treatment,Black,3,0,0,0.0,0,40,18
+Northeastern University,Computer Science,treatment,Hispanic,3,0,0,0.0,0,40,18
+Northeastern University,Mathematics,treatment,female,5,0,0,0.0,0,40,0
+Northeastern University,Mathematics,treatment,URM,5,0,0,0.0,0,40,31
+Northeastern University,Mathematics,treatment,Black,5,0,0,0.0,0,40,11
+Northeastern University,Mathematics,treatment,Hispanic,5,0,0,0.0,0,40,20
+Northeastern University,Physics,treatment,female,3,1,0,0.0,0,40,0
+Northeastern University,Physics,treatment,URM,3,0,0,0.0,0,40,31
+Northeastern University,Physics,treatment,Black,3,0,0,0.0,0,40,9
+Northeastern University,Physics,treatment,Hispanic,3,0,0,0.0,0,40,22
+Northwestern University,Computer Science,control,female,7,4,0,0.0,0,40,0
+Northwestern University,Computer Science,control,URM,7,0,0,0.0,0,40,35
+Northwestern University,Computer Science,control,Black,7,0,0,0.0,0,40,24
+Northwestern University,Computer Science,control,Hispanic,7,0,0,0.0,0,40,11
+Northwestern University,Mathematics,treatment,female,27,4,0,0.0,0,40,0
+Northwestern University,Mathematics,treatment,URM,27,1,0,0.0,0,40,33
+Northwestern University,Mathematics,treatment,Black,27,1,0,0.0,0,40,15
+Northwestern University,Mathematics,treatment,Hispanic,27,0,0,0.0,0,40,18
+Ohio State University,Chemistry,treatment,female,22,5,0,0.0,0,40,0
+Ohio State University,Chemistry,treatment,URM,22,0,0,0.0,0,40,31
+Ohio State University,Chemistry,treatment,Black,22,0,0,0.0,0,40,14
+Ohio State University,Chemistry,treatment,Hispanic,22,0,0,0.0,0,40,17
+Ohio State University,Mathematics,treatment,female,40,2,0,0.0,0,40,0
+Ohio State University,Mathematics,treatment,URM,40,3,0,0.0,0,40,26
+Ohio State University,Mathematics,treatment,Black,40,1,0,0.0,0,40,13
+Ohio State University,Mathematics,treatment,Hispanic,40,0,0,0.0,0,40,13
+Ohio State University,Physics,treatment,female,34,3,0,0.0,0,40,0
+Ohio State University,Physics,treatment,URM,34,1,0,0.0,0,40,42
+Ohio State University,Physics,treatment,Black,34,0,0,0.0,0,40,14
+Ohio State University,Physics,treatment,Hispanic,34,0,0,0.0,0,40,28
+Ohio University,Chemistry,control,female,1,0,0,0.0,0,40,0
+Ohio University,Chemistry,control,URM,1,0,0,0.0,0,40,23
+Ohio University,Chemistry,control,Black,1,0,0,0.0,0,40,13
+Ohio University,Chemistry,control,Hispanic,1,0,0,0.0,0,40,10
+Ohio University,Physics,treatment,female,2,0,0,0.0,0,40,0
+Ohio University,Physics,treatment,URM,2,0,0,0.0,0,40,19
+Ohio University,Physics,treatment,Black,2,0,0,0.0,0,40,8
+Ohio University,Physics,treatment,Hispanic,2,0,0,0.0,0,40,11
+Oklahoma State University-Stillwater,Chemistry,treatment,female,0,0,0,0.0,0,40,0
+Oklahoma State University-Stillwater,Chemistry,treatment,URM,0,0,0,0.0,0,40,25
+Oklahoma State University-Stillwater,Chemistry,treatment,Black,0,0,0,0.0,0,40,13
+Oklahoma State University-Stillwater,Chemistry,treatment,Hispanic,0,0,0,0.0,0,40,12
+Oklahoma State University-Stillwater,Mathematics,control,female,0,0,0,0.0,0,40,0
+Oklahoma State University-Stillwater,Mathematics,control,URM,0,0,0,0.0,0,40,20
+Oklahoma State University-Stillwater,Mathematics,control,Black,0,0,0,0.0,0,40,8
+Oklahoma State University-Stillwater,Mathematics,control,Hispanic,0,0,0,0.0,0,40,12
+Oklahoma State University-Stillwater,Physics,control,female,0,0,0,0.0,0,40,0
+Oklahoma State University-Stillwater,Physics,control,URM,0,0,0,0.0,0,40,14
+Oklahoma State University-Stillwater,Physics,control,Black,0,0,0,0.0,0,40,4
+Oklahoma State University-Stillwater,Physics,control,Hispanic,0,0,0,0.0,0,40,10
+Old Dominion University,Chemistry,treatment,female,4,1,0,0.0,0,40,0
+Old Dominion University,Chemistry,treatment,URM,4,0,0,0.0,0,40,27
+Old Dominion University,Chemistry,treatment,Black,4,0,0,0.0,0,40,13
+Old Dominion University,Chemistry,treatment,Hispanic,4,0,0,0.0,0,40,14
+Old Dominion University,Computer Science,control,female,5,0,0,0.0,0,40,0
+Old Dominion University,Computer Science,control,URM,5,2,0,0.0,0,40,15
+Old Dominion University,Computer Science,control,Black,5,2,0,0.0,0,40,10
+Old Dominion University,Computer Science,control,Hispanic,5,0,0,0.0,0,40,5
+Old Dominion University,Physics,control,female,0,0,0,0.0,0,40,0
+Old Dominion University,Physics,control,URM,0,0,0,0.0,0,40,21
+Old Dominion University,Physics,control,Black,0,0,0,0.0,0,40,8
+Old Dominion University,Physics,control,Hispanic,0,0,0,0.0,0,40,13
+Oregon State University,Chemistry,control,female,1,0,0,0.0,0,40,0
+Oregon State University,Chemistry,control,URM,1,0,0,0.0,0,40,25
+Oregon State University,Chemistry,control,Black,1,0,0,0.0,0,40,13
+Oregon State University,Chemistry,control,Hispanic,1,0,0,0.0,0,40,12
+Oregon State University,Computer Science,control,female,0,0,0,0.0,0,40,0
+Oregon State University,Computer Science,control,URM,0,0,0,0.0,0,40,20
+Oregon State University,Computer Science,control,Black,0,0,0,0.0,0,40,14
+Oregon State University,Computer Science,control,Hispanic,0,0,0,0.0,0,40,6
+Oregon State University,Mathematics,treatment,female,2,2,0,0.0,0,40,0
+Oregon State University,Mathematics,treatment,URM,2,1,0,0.0,0,40,19
+Oregon State University,Mathematics,treatment,Black,2,0,0,0.0,0,40,5
+Oregon State University,Mathematics,treatment,Hispanic,2,0,0,0.0,0,40,14
+Oregon State University,Mechanical Engineering,treatment,female,0,0,0,0.0,0,40,0
+Oregon State University,Mechanical Engineering,treatment,URM,0,0,0,0.0,0,40,25
+Oregon State University,Mechanical Engineering,treatment,Black,0,0,0,0.0,0,40,14
+Oregon State University,Mechanical Engineering,treatment,Hispanic,0,0,0,0.0,0,40,11
+Oregon State University,Physics,control,female,1,0,0,0.0,0,40,0
+Oregon State University,Physics,control,URM,1,0,0,0.0,0,40,17
+Oregon State University,Physics,control,Black,1,0,0,0.0,0,40,6
+Oregon State University,Physics,control,Hispanic,1,0,0,0.0,0,40,11
+Pennsylvania State University,Chemistry,treatment,female,9,1,0,0.0,0,40,0
+Pennsylvania State University,Chemistry,treatment,URM,9,0,0,0.0,0,40,30
+Pennsylvania State University,Chemistry,treatment,Black,9,0,0,0.0,0,40,12
+Pennsylvania State University,Chemistry,treatment,Hispanic,9,0,0,0.0,0,40,18
+Pennsylvania State University,Mathematics,control,female,40,6,0,0.0,0,40,0
+Pennsylvania State University,Mathematics,control,URM,40,6,0,0.0,0,40,32
+Pennsylvania State University,Mathematics,control,Black,40,1,0,0.0,0,40,14
+Pennsylvania State University,Mathematics,control,Hispanic,40,0,0,0.0,0,40,18
+Pennsylvania State University,Mechanical Engineering,control,female,2,0,0,0.0,0,40,0
+Pennsylvania State University,Mechanical Engineering,control,URM,2,0,0,0.0,0,40,60
+Pennsylvania State University,Mechanical Engineering,control,Black,2,0,0,0.0,0,40,41
+Pennsylvania State University,Mechanical Engineering,control,Hispanic,2,0,0,0.0,0,40,19
+Pennsylvania State University,Physics,control,female,9,0,0,0.0,0,40,0
+Pennsylvania State University,Physics,control,URM,9,2,1,50.0,1,40,47
+Pennsylvania State University,Physics,control,Black,9,1,1,100.0,1,40,15
+Pennsylvania State University,Physics,control,Hispanic,9,0,0,0.0,0,40,32
+Princeton University,Chemistry,treatment,female,23,5,0,0.0,0,40,0
+Princeton University,Chemistry,treatment,URM,23,3,0,0.0,0,40,32
+Princeton University,Chemistry,treatment,Black,23,0,0,0.0,0,40,16
+Princeton University,Chemistry,treatment,Hispanic,23,0,0,0.0,0,40,16
+Princeton University,Computer Science,treatment,female,13,7,0,0.0,0,40,0
+Princeton University,Computer Science,treatment,URM,13,0,0,0.0,0,40,35
+Princeton University,Computer Science,treatment,Black,13,0,0,0.0,0,40,25
+Princeton University,Computer Science,treatment,Hispanic,13,0,0,0.0,0,40,10
+Princeton University,Mathematics,control,female,112,6,0,0.0,0,40,0
+Princeton University,Mathematics,control,URM,112,5,0,0.0,0,40,36
+Princeton University,Mathematics,control,Black,112,1,0,0.0,0,40,15
+Princeton University,Mathematics,control,Hispanic,112,0,0,0.0,0,40,21
+Princeton University,Mechanical Engineering,control,female,10,2,0,0.0,0,40,0
+Princeton University,Mechanical Engineering,control,URM,10,1,0,0.0,0,40,59
+Princeton University,Mechanical Engineering,control,Black,10,1,0,0.0,0,40,39
+Princeton University,Mechanical Engineering,control,Hispanic,10,0,0,0.0,0,40,20
+Princeton University,Physics,control,female,15,2,0,0.0,0,40,0
+Princeton University,Physics,control,URM,15,1,1,100.0,1,40,51
+Princeton University,Physics,control,Black,15,0,0,0.0,0,40,17
+Princeton University,Physics,control,Hispanic,15,0,0,0.0,0,40,34
+Purdue University,Chemistry,control,female,14,2,0,0.0,0,40,0
+Purdue University,Chemistry,control,URM,14,0,0,0.0,0,40,41
+Purdue University,Chemistry,control,Black,14,0,0,0.0,0,40,18
+Purdue University,Chemistry,control,Hispanic,14,0,0,0.0,0,40,23
+Purdue University,Computer Science,treatment,female,7,1,0,0.0,0,40,0
+Purdue University,Computer Science,treatment,URM,7,0,0,0.0,0,40,37
+Purdue University,Computer Science,treatment,Black,7,0,0,0.0,0,40,23
+Purdue University,Computer Science,treatment,Hispanic,7,0,0,0.0,0,40,14
+Purdue University,Mathematics,treatment,female,30,3,0,0.0,0,40,0
+Purdue University,Mathematics,treatment,URM,30,2,0,0.0,0,40,27
+Purdue University,Mathematics,treatment,Black,30,0,0,0.0,0,40,10
+Purdue University,Mathematics,treatment,Hispanic,30,0,0,0.0,0,40,17
+Purdue University,Mechanical Engineering,treatment,female,1,1,0,0.0,0,40,0
+Purdue University,Mechanical Engineering,treatment,URM,1,0,0,0.0,0,40,50
+Purdue University,Mechanical Engineering,treatment,Black,1,0,0,0.0,0,40,31
+Purdue University,Mechanical Engineering,treatment,Hispanic,1,0,0,0.0,0,40,19
+Purdue University,Physics,control,female,20,5,0,0.0,0,40,0
+Purdue University,Physics,control,URM,20,0,0,0.0,0,40,46
+Purdue University,Physics,control,Black,20,0,0,0.0,0,40,11
+Purdue University,Physics,control,Hispanic,20,0,0,0.0,0,40,35
+Rensselaer Polytechnic Institute,Chemistry,treatment,female,2,0,0,0.0,0,40,0
+Rensselaer Polytechnic Institute,Chemistry,treatment,URM,2,0,0,0.0,0,40,37
+Rensselaer Polytechnic Institute,Chemistry,treatment,Black,2,0,0,0.0,0,40,17
+Rensselaer Polytechnic Institute,Chemistry,treatment,Hispanic,2,0,0,0.0,0,40,20
+Rensselaer Polytechnic Institute,Computer Science,control,female,0,0,0,0.0,0,40,0
+Rensselaer Polytechnic Institute,Computer Science,control,URM,0,0,0,0.0,0,40,34
+Rensselaer Polytechnic Institute,Computer Science,control,Black,0,0,0,0.0,0,40,17
+Rensselaer Polytechnic Institute,Computer Science,control,Hispanic,0,0,0,0.0,0,40,17
+Rensselaer Polytechnic Institute,Mathematics,treatment,female,0,0,0,0.0,0,40,0
+Rensselaer Polytechnic Institute,Mathematics,treatment,URM,0,0,0,0.0,0,40,34
+Rensselaer Polytechnic Institute,Mathematics,treatment,Black,0,0,0,0.0,0,40,13
+Rensselaer Polytechnic Institute,Mathematics,treatment,Hispanic,0,0,0,0.0,0,40,21
+Rensselaer Polytechnic Institute,Mechanical Engineering,treatment,female,2,0,0,0.0,0,40,0
+Rensselaer Polytechnic Institute,Mechanical Engineering,treatment,URM,2,0,0,0.0,0,40,29
+Rensselaer Polytechnic Institute,Mechanical Engineering,treatment,Black,2,0,0,0.0,0,40,18
+Rensselaer Polytechnic Institute,Mechanical Engineering,treatment,Hispanic,2,0,0,0.0,0,40,11
+Rensselaer Polytechnic Institute,Physics,control,female,1,0,0,0.0,0,40,0
+Rensselaer Polytechnic Institute,Physics,control,URM,1,0,0,0.0,0,40,31
+Rensselaer Polytechnic Institute,Physics,control,Black,1,0,0,0.0,0,40,7
+Rensselaer Polytechnic Institute,Physics,control,Hispanic,1,0,0,0.0,0,40,24
+Rice University,Chemistry,treatment,female,24,5,0,0.0,0,40,0
+Rice University,Chemistry,treatment,URM,24,2,0,0.0,0,40,30
+Rice University,Chemistry,treatment,Black,24,2,0,0.0,0,40,13
+Rice University,Chemistry,treatment,Hispanic,24,0,0,0.0,0,40,17
+Rice University,Computer Science,control,female,4,1,0,0.0,0,40,0
+Rice University,Computer Science,control,URM,4,0,0,0.0,0,40,34
+Rice University,Computer Science,control,Black,4,0,0,0.0,0,40,24
+Rice University,Computer Science,control,Hispanic,4,0,0,0.0,0,40,10
+Rice University,Mathematics,treatment,female,17,2,0,0.0,0,40,0
+Rice University,Mathematics,treatment,URM,17,1,1,100.0,1,40,33
+Rice University,Mathematics,treatment,Black,17,1,1,100.0,1,40,14
+Rice University,Mathematics,treatment,Hispanic,17,0,0,0.0,0,40,19
+Rice University,Mechanical Engineering,treatment,female,0,0,0,0.0,0,40,0
+Rice University,Mechanical Engineering,treatment,URM,0,0,0,0.0,0,40,58
+Rice University,Mechanical Engineering,treatment,Black,0,0,0,0.0,0,40,40
+Rice University,Mechanical Engineering,treatment,Hispanic,0,0,0,0.0,0,40,18
+Rice University,Physics,treatment,female,13,2,0,0.0,0,40,0
+Rice University,Physics,treatment,URM,13,1,0,0.0,0,40,49
+Rice University,Physics,treatment,Black,13,0,0,0.0,0,40,16
+Rice University,Physics,treatment,Hispanic,13,0,0,0.0,0,40,33
+Rutgers University-New Brunswick,Chemistry,treatment,female,6,2,0,0.0,0,40,0
+Rutgers University-New Brunswick,Chemistry,treatment,URM,6,1,1,100.0,1,40,28
+Rutgers University-New Brunswick,Chemistry,treatment,Black,6,1,1,100.0,1,40,13
+Rutgers University-New Brunswick,Chemistry,treatment,Hispanic,6,0,0,0.0,0,40,15
+Rutgers University-New Brunswick,Computer Science,treatment,female,2,1,0,0.0,0,40,0
+Rutgers University-New Brunswick,Computer Science,treatment,URM,2,0,0,0.0,0,40,35
+Rutgers University-New Brunswick,Computer Science,treatment,Black,2,0,0,0.0,0,40,21
+Rutgers University-New Brunswick,Computer Science,treatment,Hispanic,2,0,0,0.0,0,40,14
+Rutgers University-New Brunswick,Mathematics,control,female,33,2,0,0.0,0,40,0
+Rutgers University-New Brunswick,Mathematics,control,URM,33,4,0,0.0,0,40,28
+Rutgers University-New Brunswick,Mathematics,control,Black,33,0,0,0.0,0,40,13
+Rutgers University-New Brunswick,Mathematics,control,Hispanic,33,0,0,0.0,0,40,15
+Rutgers University-New Brunswick,Mechanical Engineering,treatment,female,4,0,0,0.0,0,40,0
+Rutgers University-New Brunswick,Mechanical Engineering,treatment,URM,4,0,0,0.0,0,40,61
+Rutgers University-New Brunswick,Mechanical Engineering,treatment,Black,4,0,0,0.0,0,40,39
+Rutgers University-New Brunswick,Mechanical Engineering,treatment,Hispanic,4,0,0,0.0,0,40,22
+Rutgers University-New Brunswick,Physics,control,female,28,3,0,0.0,0,40,0
+Rutgers University-New Brunswick,Physics,control,URM,28,3,0,0.0,0,40,43
+Rutgers University-New Brunswick,Physics,control,Black,28,0,0,0.0,0,40,13
+Rutgers University-New Brunswick,Physics,control,Hispanic,28,0,0,0.0,0,40,30
+Stanford University,Chemistry,treatment,female,32,8,0,0.0,0,40,0
+Stanford University,Chemistry,treatment,URM,32,1,0,0.0,0,40,31
+Stanford University,Chemistry,treatment,Black,32,1,0,0.0,0,40,15
+Stanford University,Chemistry,treatment,Hispanic,32,0,0,0.0,0,40,16
+Stanford University,Mathematics,treatment,female,106,10,0,0.0,0,40,0
+Stanford University,Mathematics,treatment,URM,106,1,0,0.0,0,40,36
+Stanford University,Mathematics,treatment,Black,106,0,0,0.0,0,40,15
+Stanford University,Mathematics,treatment,Hispanic,106,0,0,0.0,0,40,21
+Stanford University,Physics,control,female,13,3,0,0.0,0,40,0
+Stanford University,Physics,control,URM,13,1,0,0.0,0,40,50
+Stanford University,Physics,control,Black,13,1,0,0.0,0,40,16
+Stanford University,Physics,control,Hispanic,13,0,0,0.0,0,40,34
+Stony Brook University,Chemistry,control,female,18,4,0,0.0,0,40,0
+Stony Brook University,Chemistry,control,URM,18,1,0,0.0,0,40,34
+Stony Brook University,Chemistry,control,Black,18,1,0,0.0,0,40,16
+Stony Brook University,Chemistry,control,Hispanic,18,0,0,0.0,0,40,18
+Stony Brook University,Computer Science,control,female,1,0,0,0.0,0,40,0
+Stony Brook University,Computer Science,control,URM,1,0,0,0.0,0,40,33
+Stony Brook University,Computer Science,control,Black,1,0,0,0.0,0,40,23
+Stony Brook University,Computer Science,control,Hispanic,1,0,0,0.0,0,40,10
+Stony Brook University,Mathematics,control,female,25,2,0,0.0,0,40,0
+Stony Brook University,Mathematics,control,URM,25,3,0,0.0,0,40,34
+Stony Brook University,Mathematics,control,Black,25,1,0,0.0,0,40,15
+Stony Brook University,Mathematics,control,Hispanic,25,0,0,0.0,0,40,19
+Stony Brook University,Physics,treatment,female,42,7,0,0.0,0,40,0
+Stony Brook University,Physics,treatment,URM,42,4,0,0.0,0,40,45
+Stony Brook University,Physics,treatment,Black,42,0,0,0.0,0,40,16
+Stony Brook University,Physics,treatment,Hispanic,42,0,0,0.0,0,40,29
+Syracuse University,Chemistry,treatment,female,0,0,0,0.0,0,40,0
+Syracuse University,Chemistry,treatment,URM,0,0,0,0.0,0,40,38
+Syracuse University,Chemistry,treatment,Black,0,0,0,0.0,0,40,17
+Syracuse University,Chemistry,treatment,Hispanic,0,0,0,0.0,0,40,21
+Syracuse University,Physics,treatment,female,3,0,0,0.0,0,40,0
+Syracuse University,Physics,treatment,URM,3,0,0,0.0,0,40,34
+Syracuse University,Physics,treatment,Black,3,0,0,0.0,0,40,9
+Syracuse University,Physics,treatment,Hispanic,3,0,0,0.0,0,40,25
+Temple University,Chemistry,treatment,female,0,0,0,0.0,0,40,0
+Temple University,Chemistry,treatment,URM,0,0,0,0.0,0,40,21
+Temple University,Chemistry,treatment,Black,0,0,0,0.0,0,40,13
+Temple University,Chemistry,treatment,Hispanic,0,0,0,0.0,0,40,8
+Temple University,Mathematics,control,female,7,5,0,0.0,0,40,0
+Temple University,Mathematics,control,URM,7,0,0,0.0,0,40,29
+Temple University,Mathematics,control,Black,7,0,0,0.0,0,40,7
+Temple University,Mathematics,control,Hispanic,7,0,0,0.0,0,40,22
+Temple University,Physics,treatment,female,0,0,0,0.0,0,40,0
+Temple University,Physics,treatment,URM,0,0,0,0.0,0,40,18
+Temple University,Physics,treatment,Black,0,0,0,0.0,0,40,6
+Temple University,Physics,treatment,Hispanic,0,0,0,0.0,0,40,12
+Texas A&M University,Chemistry,treatment,female,13,3,0,0.0,0,40,0
+Texas A&M University,Chemistry,treatment,URM,13,3,0,0.0,0,40,40
+Texas A&M University,Chemistry,treatment,Black,13,0,0,0.0,0,40,17
+Texas A&M University,Chemistry,treatment,Hispanic,13,0,0,0.0,0,40,23
+Texas A&M University,Computer Science,control,female,0,0,0,0.0,0,40,0
+Texas A&M University,Computer Science,control,URM,0,0,0,0.0,0,40,35
+Texas A&M University,Computer Science,control,Black,0,0,0,0.0,0,40,20
+Texas A&M University,Computer Science,control,Hispanic,0,0,0,0.0,0,40,15
+Texas A&M University,Mathematics,treatment,female,19,0,0,0.0,0,40,0
+Texas A&M University,Mathematics,treatment,URM,19,5,0,0.0,0,40,30
+Texas A&M University,Mathematics,treatment,Black,19,0,0,0.0,0,40,11
+Texas A&M University,Mathematics,treatment,Hispanic,19,0,0,0.0,0,40,19
+Texas A&M University,Mechanical Engineering,treatment,female,0,0,0,0.0,0,40,0
+Texas A&M University,Mechanical Engineering,treatment,URM,0,0,0,0.0,0,40,32
+Texas A&M University,Mechanical Engineering,treatment,Black,0,0,0,0.0,0,40,18
+Texas A&M University,Mechanical Engineering,treatment,Hispanic,0,0,0,0.0,0,40,14
+Texas Tech University,Chemistry,treatment,female,4,3,0,0.0,0,40,0
+Texas Tech University,Chemistry,treatment,URM,4,1,0,0.0,0,40,25
+Texas Tech University,Chemistry,treatment,Black,4,1,0,0.0,0,40,13
+Texas Tech University,Chemistry,treatment,Hispanic,4,0,0,0.0,0,40,12
+Texas Tech University,Computer Science,treatment,female,1,0,0,0.0,0,40,0
+Texas Tech University,Computer Science,treatment,URM,1,0,0,0.0,0,40,17
+Texas Tech University,Computer Science,treatment,Black,1,0,0,0.0,0,40,12
+Texas Tech University,Computer Science,treatment,Hispanic,1,0,0,0.0,0,40,5
+Texas Tech University,Mathematics,control,female,1,1,0,0.0,0,40,0
+Texas Tech University,Mathematics,control,URM,1,0,0,0.0,0,40,24
+Texas Tech University,Mathematics,control,Black,1,0,0,0.0,0,40,12
+Texas Tech University,Mathematics,control,Hispanic,1,0,0,0.0,0,40,12
+Texas Tech University,Mechanical Engineering,treatment,female,1,0,0,0.0,0,40,0
+Texas Tech University,Mechanical Engineering,treatment,URM,1,0,0,0.0,0,40,28
+Texas Tech University,Mechanical Engineering,treatment,Black,1,0,0,0.0,0,40,17
+Texas Tech University,Mechanical Engineering,treatment,Hispanic,1,0,0,0.0,0,40,11
+Texas Tech University,Physics,treatment,female,1,1,0,0.0,0,40,0
+Texas Tech University,Physics,treatment,URM,1,0,0,0.0,0,40,21
+Texas Tech University,Physics,treatment,Black,1,0,0,0.0,0,40,8
+Texas Tech University,Physics,treatment,Hispanic,1,0,0,0.0,0,40,13
+Tufts University,Chemistry,treatment,female,0,0,0,0.0,0,40,0
+Tufts University,Chemistry,treatment,URM,0,0,0,0.0,0,40,26
+Tufts University,Chemistry,treatment,Black,0,0,0,0.0,0,40,13
+Tufts University,Chemistry,treatment,Hispanic,0,0,0,0.0,0,40,13
+Tufts University,Computer Science,control,female,0,0,0,0.0,0,40,0
+Tufts University,Computer Science,control,URM,0,0,0,0.0,0,40,18
+Tufts University,Computer Science,control,Black,0,0,0,0.0,0,40,7
+Tufts University,Computer Science,control,Hispanic,0,0,0,0.0,0,40,11
+Tufts University,Mathematics,control,female,9,1,0,0.0,0,40,0
+Tufts University,Mathematics,control,URM,9,0,0,0.0,0,40,32
+Tufts University,Mathematics,control,Black,9,0,0,0.0,0,40,8
+Tufts University,Mathematics,control,Hispanic,9,0,0,0.0,0,40,24
+Tufts University,Mechanical Engineering,control,female,0,0,0,0.0,0,40,0
+Tufts University,Mechanical Engineering,control,URM,0,0,0,0.0,0,40,16
+Tufts University,Mechanical Engineering,control,Black,0,0,0,0.0,0,40,9
+Tufts University,Mechanical Engineering,control,Hispanic,0,0,0,0.0,0,40,7
+Tufts University,Physics,treatment,female,3,0,0,0.0,0,40,0
+Tufts University,Physics,treatment,URM,3,0,0,0.0,0,40,20
+Tufts University,Physics,treatment,Black,3,0,0,0.0,0,40,10
+Tufts University,Physics,treatment,Hispanic,3,0,0,0.0,0,40,10
+Tulane University,Chemistry,control,female,2,0,0,0.0,0,40,0
+Tulane University,Chemistry,control,URM,2,0,0,0.0,0,40,23
+Tulane University,Chemistry,control,Black,2,0,0,0.0,0,40,13
+Tulane University,Chemistry,control,Hispanic,2,0,0,0.0,0,40,10
+Tulane University,Computer Science,control,female,1,0,0,0.0,0,40,0
+Tulane University,Computer Science,control,URM,1,0,0,0.0,0,40,22
+Tulane University,Computer Science,control,Black,1,0,0,0.0,0,40,12
+Tulane University,Computer Science,control,Hispanic,1,0,0,0.0,0,40,10
+Tulane University,Mathematics,treatment,female,4,0,0,0.0,0,40,0
+Tulane University,Mathematics,treatment,URM,4,2,0,0.0,0,40,26
+Tulane University,Mathematics,treatment,Black,4,0,0,0.0,0,40,4
+Tulane University,Mathematics,treatment,Hispanic,4,0,0,0.0,0,40,22
+Tulane University,Physics,treatment,female,0,0,0,0.0,0,40,0
+Tulane University,Physics,treatment,URM,0,0,0,0.0,0,40,20
+Tulane University,Physics,treatment,Black,0,0,0,0.0,0,40,7
+Tulane University,Physics,treatment,Hispanic,0,0,0,0.0,0,40,13
+"University at Albany, SUNY",Mathematics,control,female,4,2,0,0.0,0,40,0
+"University at Albany, SUNY",Mathematics,control,URM,4,0,0,0.0,0,40,27
+"University at Albany, SUNY",Mathematics,control,Black,4,0,0,0.0,0,40,14
+"University at Albany, SUNY",Mathematics,control,Hispanic,4,0,0,0.0,0,40,13
+"University at Albany, SUNY",Physics,treatment,female,1,0,0,0.0,0,40,0
+"University at Albany, SUNY",Physics,treatment,URM,1,0,0,0.0,0,40,21
+"University at Albany, SUNY",Physics,treatment,Black,1,0,0,0.0,0,40,8
+"University at Albany, SUNY",Physics,treatment,Hispanic,1,0,0,0.0,0,40,13
+University at Buffalo,Chemistry,control,female,5,2,0,0.0,0,40,0
+University at Buffalo,Chemistry,control,URM,5,1,0,0.0,0,40,26
+University at Buffalo,Chemistry,control,Black,5,0,0,0.0,0,40,14
+University at Buffalo,Chemistry,control,Hispanic,5,0,0,0.0,0,40,12
+University at Buffalo,Computer Science,control,female,1,1,0,0.0,0,40,0
+University at Buffalo,Computer Science,control,URM,1,0,0,0.0,0,40,19
+University at Buffalo,Computer Science,control,Black,1,0,0,0.0,0,40,9
+University at Buffalo,Computer Science,control,Hispanic,1,0,0,0.0,0,40,10
+University at Buffalo,Mathematics,control,female,0,0,0,0.0,0,40,0
+University at Buffalo,Mathematics,control,URM,0,0,0,0.0,0,40,31
+University at Buffalo,Mathematics,control,Black,0,0,0,0.0,0,40,8
+University at Buffalo,Mathematics,control,Hispanic,0,0,0,0.0,0,40,23
+University at Buffalo,Mechanical Engineering,control,female,2,0,0,0.0,0,40,0
+University at Buffalo,Mechanical Engineering,control,URM,2,0,0,0.0,0,40,21
+University at Buffalo,Mechanical Engineering,control,Black,2,0,0,0.0,0,40,13
+University at Buffalo,Mechanical Engineering,control,Hispanic,2,0,0,0.0,0,40,8
+University at Buffalo,Physics,treatment,female,1,0,0,0.0,0,40,0
+University at Buffalo,Physics,treatment,URM,1,0,0,0.0,0,40,17
+University at Buffalo,Physics,treatment,Black,1,0,0,0.0,0,40,7
+University at Buffalo,Physics,treatment,Hispanic,1,0,0,0.0,0,40,10
+University of Alabama,Chemistry,treatment,female,6,1,0,0.0,0,40,0
+University of Alabama,Chemistry,treatment,URM,6,1,0,0.0,0,40,24
+University of Alabama,Chemistry,treatment,Black,6,0,0,0.0,0,40,12
+University of Alabama,Chemistry,treatment,Hispanic,6,0,0,0.0,0,40,12
+University of Alabama,Computer Science,control,female,3,0,0,0.0,0,40,0
+University of Alabama,Computer Science,control,URM,3,0,0,0.0,0,40,17
+University of Alabama,Computer Science,control,Black,3,0,0,0.0,0,40,13
+University of Alabama,Computer Science,control,Hispanic,3,0,0,0.0,0,40,4
+University of Alabama,Mathematics,control,female,2,0,0,0.0,0,40,0
+University of Alabama,Mathematics,control,URM,2,0,0,0.0,0,40,18
+University of Alabama,Mathematics,control,Black,2,0,0,0.0,0,40,8
+University of Alabama,Mathematics,control,Hispanic,2,0,0,0.0,0,40,10
+University of Alabama,Mechanical Engineering,treatment,female,8,3,0,0.0,0,40,0
+University of Alabama,Mechanical Engineering,treatment,URM,8,0,0,0.0,0,40,20
+University of Alabama,Mechanical Engineering,treatment,Black,8,0,0,0.0,0,40,13
+University of Alabama,Mechanical Engineering,treatment,Hispanic,8,0,0,0.0,0,40,7
+University of Alabama,Physics,control,female,8,0,0,0.0,0,40,0
+University of Alabama,Physics,control,URM,8,0,0,0.0,0,40,15
+University of Alabama,Physics,control,Black,8,0,0,0.0,0,40,5
+University of Alabama,Physics,control,Hispanic,8,0,0,0.0,0,40,10
+University of Alabama at Birmingham,Chemistry,treatment,female,4,0,0,0.0,0,40,0
+University of Alabama at Birmingham,Chemistry,treatment,URM,4,0,0,0.0,0,40,26
+University of Alabama at Birmingham,Chemistry,treatment,Black,4,0,0,0.0,0,40,13
+University of Alabama at Birmingham,Chemistry,treatment,Hispanic,4,0,0,0.0,0,40,13
+University of Alabama at Birmingham,Mathematics,control,female,2,0,0,0.0,0,40,0
+University of Alabama at Birmingham,Mathematics,control,URM,2,0,0,0.0,0,40,26
+University of Alabama at Birmingham,Mathematics,control,Black,2,0,0,0.0,0,40,13
+University of Alabama at Birmingham,Mathematics,control,Hispanic,2,0,0,0.0,0,40,13
+University of Alabama in Huntsville,Mathematics,control,female,1,0,0,0.0,0,40,0
+University of Alabama in Huntsville,Mathematics,control,URM,1,0,0,0.0,0,40,21
+University of Alabama in Huntsville,Mathematics,control,Black,1,0,0,0.0,0,40,9
+University of Alabama in Huntsville,Mathematics,control,Hispanic,1,0,0,0.0,0,40,12
+University of Alabama in Huntsville,Physics,control,female,0,0,0,0.0,0,40,0
+University of Alabama in Huntsville,Physics,control,URM,0,0,0,0.0,0,40,15
+University of Alabama in Huntsville,Physics,control,Black,0,0,0,0.0,0,40,6
+University of Alabama in Huntsville,Physics,control,Hispanic,0,0,0,0.0,0,40,9
+University of Arizona,Chemistry,control,female,4,0,0,0.0,0,40,0
+University of Arizona,Chemistry,control,URM,4,0,0,0.0,0,40,39
+University of Arizona,Chemistry,control,Black,4,0,0,0.0,0,40,18
+University of Arizona,Chemistry,control,Hispanic,4,0,0,0.0,0,40,21
+University of Arizona,Computer Science,treatment,female,3,1,0,0.0,0,40,0
+University of Arizona,Computer Science,treatment,URM,3,0,0,0.0,0,40,37
+University of Arizona,Computer Science,treatment,Black,3,0,0,0.0,0,40,23
+University of Arizona,Computer Science,treatment,Hispanic,3,0,0,0.0,0,40,14
+University of Arizona,Mathematics,treatment,female,10,2,0,0.0,0,40,0
+University of Arizona,Mathematics,treatment,URM,10,2,0,0.0,0,40,27
+University of Arizona,Mathematics,treatment,Black,10,0,0,0.0,0,40,11
+University of Arizona,Mathematics,treatment,Hispanic,10,0,0,0.0,0,40,16
+University of Arizona,Mechanical Engineering,control,female,2,2,0,0.0,0,40,0
+University of Arizona,Mechanical Engineering,control,URM,2,0,0,0.0,0,40,53
+University of Arizona,Mechanical Engineering,control,Black,2,0,0,0.0,0,40,32
+University of Arizona,Mechanical Engineering,control,Hispanic,2,0,0,0.0,0,40,21
+University of Arizona,Physics,control,female,10,2,0,0.0,0,40,0
+University of Arizona,Physics,control,URM,10,0,0,0.0,0,40,44
+University of Arizona,Physics,control,Black,10,0,0,0.0,0,40,11
+University of Arizona,Physics,control,Hispanic,10,0,0,0.0,0,40,33
+University of Arkansas,Chemistry,treatment,female,1,0,0,0.0,0,40,0
+University of Arkansas,Chemistry,treatment,URM,1,0,0,0.0,0,40,26
+University of Arkansas,Chemistry,treatment,Black,1,0,0,0.0,0,40,12
+University of Arkansas,Chemistry,treatment,Hispanic,1,0,0,0.0,0,40,14
+University of Arkansas,Mathematics,treatment,female,2,1,0,0.0,0,40,0
+University of Arkansas,Mathematics,treatment,URM,2,0,0,0.0,0,40,27
+University of Arkansas,Mathematics,treatment,Black,2,0,0,0.0,0,40,14
+University of Arkansas,Mathematics,treatment,Hispanic,2,0,0,0.0,0,40,13
+"University of California, Berkeley",Chemistry,treatment,female,15,3,1,33.33333333333333,1,40,0
+"University of California, Berkeley",Chemistry,treatment,URM,15,1,0,0.0,0,40,30
+"University of California, Berkeley",Chemistry,treatment,Black,15,1,0,0.0,0,40,15
+"University of California, Berkeley",Chemistry,treatment,Hispanic,15,0,0,0.0,0,40,15
+"University of California, Berkeley",Computer Science,control,female,3,1,0,0.0,0,40,0
+"University of California, Berkeley",Computer Science,control,URM,3,0,0,0.0,0,40,36
+"University of California, Berkeley",Computer Science,control,Black,3,0,0,0.0,0,40,25
+"University of California, Berkeley",Computer Science,control,Hispanic,3,0,0,0.0,0,40,11
+"University of California, Berkeley",Mathematics,treatment,female,90,14,0,0.0,0,40,0
+"University of California, Berkeley",Mathematics,treatment,URM,90,9,0,0.0,0,40,36
+"University of California, Berkeley",Mathematics,treatment,Black,90,4,0,0.0,0,40,15
+"University of California, Berkeley",Mathematics,treatment,Hispanic,90,0,0,0.0,0,40,21
+"University of California, Berkeley",Mechanical Engineering,control,female,0,0,0,0.0,0,40,0
+"University of California, Berkeley",Mechanical Engineering,control,URM,0,0,0,0.0,0,40,59
+"University of California, Berkeley",Mechanical Engineering,control,Black,0,0,0,0.0,0,40,39
+"University of California, Berkeley",Mechanical Engineering,control,Hispanic,0,0,0,0.0,0,40,20
+"University of California, Berkeley",Physics,control,female,12,4,0,0.0,0,40,0
+"University of California, Berkeley",Physics,control,URM,12,0,0,0.0,0,40,48
+"University of California, Berkeley",Physics,control,Black,12,0,0,0.0,0,40,17
+"University of California, Berkeley",Physics,control,Hispanic,12,0,0,0.0,0,40,31
+"University of California, Davis",Chemistry,treatment,female,0,0,0,0.0,0,40,0
+"University of California, Davis",Chemistry,treatment,URM,0,0,0,0.0,0,40,44
+"University of California, Davis",Chemistry,treatment,Black,0,0,0,0.0,0,40,19
+"University of California, Davis",Chemistry,treatment,Hispanic,0,0,0,0.0,0,40,25
+"University of California, Davis",Mathematics,control,female,22,4,0,0.0,0,40,0
+"University of California, Davis",Mathematics,control,URM,22,1,0,0.0,0,40,29
+"University of California, Davis",Mathematics,control,Black,22,0,0,0.0,0,40,12
+"University of California, Davis",Mathematics,control,Hispanic,22,0,0,0.0,0,40,17
+"University of California, Davis",Physics,control,female,14,3,0,0.0,0,40,0
+"University of California, Davis",Physics,control,URM,14,1,0,0.0,0,40,47
+"University of California, Davis",Physics,control,Black,14,1,0,0.0,0,40,10
+"University of California, Davis",Physics,control,Hispanic,14,0,0,0.0,0,40,37
+"University of California, Irvine",Chemistry,control,female,0,0,0,0.0,0,40,0
+"University of California, Irvine",Chemistry,control,URM,0,0,0,0.0,0,40,40
+"University of California, Irvine",Chemistry,control,Black,0,0,0,0.0,0,40,18
+"University of California, Irvine",Chemistry,control,Hispanic,0,0,0,0.0,0,40,22
+"University of California, Irvine",Computer Science,treatment,female,7,0,0,0.0,0,40,0
+"University of California, Irvine",Computer Science,treatment,URM,7,0,0,0.0,0,40,39
+"University of California, Irvine",Computer Science,treatment,Black,7,0,0,0.0,0,40,24
+"University of California, Irvine",Computer Science,treatment,Hispanic,7,0,0,0.0,0,40,15
+"University of California, Irvine",Mathematics,control,female,19,0,0,0.0,0,40,0
+"University of California, Irvine",Mathematics,control,URM,19,0,0,0.0,0,40,29
+"University of California, Irvine",Mathematics,control,Black,19,0,0,0.0,0,40,11
+"University of California, Irvine",Mathematics,control,Hispanic,19,0,0,0.0,0,40,18
+"University of California, Irvine",Mechanical Engineering,control,female,6,0,0,0.0,0,40,0
+"University of California, Irvine",Mechanical Engineering,control,URM,6,1,0,0.0,0,40,52
+"University of California, Irvine",Mechanical Engineering,control,Black,6,0,0,0.0,0,40,31
+"University of California, Irvine",Mechanical Engineering,control,Hispanic,6,0,0,0.0,0,40,21
+"University of California, Irvine",Physics,treatment,female,16,1,0,0.0,0,40,0
+"University of California, Irvine",Physics,treatment,URM,16,4,0,0.0,0,40,44
+"University of California, Irvine",Physics,treatment,Black,16,3,0,0.0,0,40,11
+"University of California, Irvine",Physics,treatment,Hispanic,16,0,0,0.0,0,40,33
+"University of California, Los Angeles",Chemistry,treatment,female,29,6,0,0.0,0,40,0
+"University of California, Los Angeles",Chemistry,treatment,URM,29,4,1,25.0,1,40,31
+"University of California, Los Angeles",Chemistry,treatment,Black,29,2,0,0.0,0,40,16
+"University of California, Los Angeles",Chemistry,treatment,Hispanic,29,0,0,0.0,0,40,15
+"University of California, Los Angeles",Computer Science,treatment,female,1,0,0,0.0,0,40,0
+"University of California, Los Angeles",Computer Science,treatment,URM,1,0,0,0.0,0,40,35
+"University of California, Los Angeles",Computer Science,treatment,Black,1,0,0,0.0,0,40,24
+"University of California, Los Angeles",Computer Science,treatment,Hispanic,1,0,0,0.0,0,40,11
+"University of California, Los Angeles",Mathematics,control,female,45,2,0,0.0,0,40,0
+"University of California, Los Angeles",Mathematics,control,URM,45,3,0,0.0,0,40,34
+"University of California, Los Angeles",Mathematics,control,Black,45,0,0,0.0,0,40,14
+"University of California, Los Angeles",Mathematics,control,Hispanic,45,0,0,0.0,0,40,20
+"University of California, Los Angeles",Mechanical Engineering,control,female,17,4,0,0.0,0,40,0
+"University of California, Los Angeles",Mechanical Engineering,control,URM,17,0,0,0.0,0,40,61
+"University of California, Los Angeles",Mechanical Engineering,control,Black,17,0,0,0.0,0,40,41
+"University of California, Los Angeles",Mechanical Engineering,control,Hispanic,17,0,0,0.0,0,40,20
+"University of California, Los Angeles",Physics,treatment,female,30,6,0,0.0,0,40,0
+"University of California, Los Angeles",Physics,treatment,URM,30,0,0,0.0,0,40,51
+"University of California, Los Angeles",Physics,treatment,Black,30,0,0,0.0,0,40,17
+"University of California, Los Angeles",Physics,treatment,Hispanic,30,0,0,0.0,0,40,34
+"University of California, Riverside",Chemistry,treatment,female,4,1,0,0.0,0,40,0
+"University of California, Riverside",Chemistry,treatment,URM,4,2,0,0.0,0,40,35
+"University of California, Riverside",Chemistry,treatment,Black,4,0,0,0.0,0,40,16
+"University of California, Riverside",Chemistry,treatment,Hispanic,4,0,0,0.0,0,40,19
+"University of California, Riverside",Computer Science,control,female,0,0,0,0.0,0,40,0
+"University of California, Riverside",Computer Science,control,URM,0,0,0,0.0,0,40,30
+"University of California, Riverside",Computer Science,control,Black,0,0,0,0.0,0,40,12
+"University of California, Riverside",Computer Science,control,Hispanic,0,0,0,0.0,0,40,18
+"University of California, Riverside",Physics,control,female,0,0,0,0.0,0,40,0
+"University of California, Riverside",Physics,control,URM,0,0,0,0.0,0,40,32
+"University of California, Riverside",Physics,control,Black,0,0,0,0.0,0,40,9
+"University of California, Riverside",Physics,control,Hispanic,0,0,0,0.0,0,40,23
+"University of California, San Diego",Chemistry,control,female,17,6,0,0.0,0,40,0
+"University of California, San Diego",Chemistry,control,URM,17,1,0,0.0,0,40,34
+"University of California, San Diego",Chemistry,control,Black,17,0,0,0.0,0,40,16
+"University of California, San Diego",Chemistry,control,Hispanic,17,0,0,0.0,0,40,18
+"University of California, San Diego",Mathematics,treatment,female,44,12,0,0.0,0,40,0
+"University of California, San Diego",Mathematics,treatment,URM,44,5,0,0.0,0,40,34
+"University of California, San Diego",Mathematics,treatment,Black,44,0,0,0.0,0,40,15
+"University of California, San Diego",Mathematics,treatment,Hispanic,44,0,0,0.0,0,40,19
+"University of California, San Diego",Mechanical Engineering,control,female,15,1,0,0.0,0,40,0
+"University of California, San Diego",Mechanical Engineering,control,URM,15,2,0,0.0,0,40,51
+"University of California, San Diego",Mechanical Engineering,control,Black,15,1,0,0.0,0,40,36
+"University of California, San Diego",Mechanical Engineering,control,Hispanic,15,0,0,0.0,0,40,15
+"University of California, San Diego",Physics,treatment,female,9,1,0,0.0,0,40,0
+"University of California, San Diego",Physics,treatment,URM,9,0,0,0.0,0,40,46
+"University of California, San Diego",Physics,treatment,Black,9,0,0,0.0,0,40,16
+"University of California, San Diego",Physics,treatment,Hispanic,9,0,0,0.0,0,40,30
+"University of California, Santa Barbara",Chemistry,treatment,female,17,3,0,0.0,0,40,0
+"University of California, Santa Barbara",Chemistry,treatment,URM,17,1,0,0.0,0,40,31
+"University of California, Santa Barbara",Chemistry,treatment,Black,17,1,0,0.0,0,40,15
+"University of California, Santa Barbara",Chemistry,treatment,Hispanic,17,0,0,0.0,0,40,16
+"University of California, Santa Barbara",Computer Science,treatment,female,6,0,0,0.0,0,40,0
+"University of California, Santa Barbara",Computer Science,treatment,URM,6,0,0,0.0,0,40,37
+"University of California, Santa Barbara",Computer Science,treatment,Black,6,0,0,0.0,0,40,26
+"University of California, Santa Barbara",Computer Science,treatment,Hispanic,6,0,0,0.0,0,40,11
+"University of California, Santa Barbara",Mathematics,control,female,22,5,0,0.0,0,40,0
+"University of California, Santa Barbara",Mathematics,control,URM,22,1,1,100.0,1,40,33
+"University of California, Santa Barbara",Mathematics,control,Black,22,1,1,100.0,1,40,15
+"University of California, Santa Barbara",Mathematics,control,Hispanic,22,0,0,0.0,0,40,18
+"University of California, Santa Barbara",Physics,control,female,7,3,0,0.0,0,40,0
+"University of California, Santa Barbara",Physics,control,URM,7,0,0,0.0,0,40,50
+"University of California, Santa Barbara",Physics,control,Black,7,0,0,0.0,0,40,16
+"University of California, Santa Barbara",Physics,control,Hispanic,7,0,0,0.0,0,40,34
+"University of California, Santa Cruz",Chemistry,treatment,female,4,1,0,0.0,0,40,0
+"University of California, Santa Cruz",Chemistry,treatment,URM,4,1,0,0.0,0,40,41
+"University of California, Santa Cruz",Chemistry,treatment,Black,4,0,0,0.0,0,40,17
+"University of California, Santa Cruz",Chemistry,treatment,Hispanic,4,0,0,0.0,0,40,24
+"University of California, Santa Cruz",Mathematics,treatment,female,1,0,0,0.0,0,40,0
+"University of California, Santa Cruz",Mathematics,treatment,URM,1,0,0,0.0,0,40,31
+"University of California, Santa Cruz",Mathematics,treatment,Black,1,0,0,0.0,0,40,12
+"University of California, Santa Cruz",Mathematics,treatment,Hispanic,1,0,0,0.0,0,40,19
+"University of California, Santa Cruz",Physics,treatment,female,8,2,0,0.0,0,40,0
+"University of California, Santa Cruz",Physics,treatment,URM,8,1,0,0.0,0,40,37
+"University of California, Santa Cruz",Physics,treatment,Black,8,1,0,0.0,0,40,11
+"University of California, Santa Cruz",Physics,treatment,Hispanic,8,0,0,0.0,0,40,26
+University of Central Florida,Mathematics,treatment,female,2,1,0,0.0,0,40,0
+University of Central Florida,Mathematics,treatment,URM,2,1,0,0.0,0,40,25
+University of Central Florida,Mathematics,treatment,Black,2,1,0,0.0,0,40,5
+University of Central Florida,Mathematics,treatment,Hispanic,2,0,0,0.0,0,40,20
+University of Central Florida,Physics,treatment,female,1,0,0,0.0,0,40,0
+University of Central Florida,Physics,treatment,URM,1,1,0,0.0,0,40,19
+University of Central Florida,Physics,treatment,Black,1,0,0,0.0,0,40,7
+University of Central Florida,Physics,treatment,Hispanic,1,0,0,0.0,0,40,12
+University of Chicago,Chemistry,treatment,female,49,5,0,0.0,0,40,0
+University of Chicago,Chemistry,treatment,URM,49,1,0,0.0,0,40,32
+University of Chicago,Chemistry,treatment,Black,49,0,0,0.0,0,40,16
+University of Chicago,Chemistry,treatment,Hispanic,49,0,0,0.0,0,40,16
+University of Chicago,Computer Science,treatment,female,12,4,0,0.0,0,40,0
+University of Chicago,Computer Science,treatment,URM,12,0,0,0.0,0,40,36
+University of Chicago,Computer Science,treatment,Black,12,0,0,0.0,0,40,26
+University of Chicago,Computer Science,treatment,Hispanic,12,0,0,0.0,0,40,10
+University of Chicago,Mathematics,control,female,106,14,0,0.0,0,40,0
+University of Chicago,Mathematics,control,URM,106,5,0,0.0,0,40,36
+University of Chicago,Mathematics,control,Black,106,2,0,0.0,0,40,15
+University of Chicago,Mathematics,control,Hispanic,106,0,0,0.0,0,40,21
+University of Chicago,Physics,treatment,female,5,2,1,50.0,1,40,0
+University of Chicago,Physics,treatment,URM,5,1,1,100.0,1,40,51
+University of Chicago,Physics,treatment,Black,5,1,1,100.0,1,40,17
+University of Chicago,Physics,treatment,Hispanic,5,0,0,0.0,0,40,34
+University of Cincinnati,Chemistry,control,female,0,0,0,0.0,0,40,0
+University of Cincinnati,Chemistry,control,URM,0,0,0,0.0,0,40,21
+University of Cincinnati,Chemistry,control,Black,0,0,0,0.0,0,40,11
+University of Cincinnati,Chemistry,control,Hispanic,0,0,0,0.0,0,40,10
+University of Cincinnati,Mathematics,control,female,1,0,0,0.0,0,40,0
+University of Cincinnati,Mathematics,control,URM,1,0,0,0.0,0,40,25
+University of Cincinnati,Mathematics,control,Black,1,0,0,0.0,0,40,5
+University of Cincinnati,Mathematics,control,Hispanic,1,0,0,0.0,0,40,20
+University of Cincinnati,Mechanical Engineering,control,female,0,0,0,0.0,0,40,0
+University of Cincinnati,Mechanical Engineering,control,URM,0,0,0,0.0,0,40,20
+University of Cincinnati,Mechanical Engineering,control,Black,0,0,0,0.0,0,40,12
+University of Cincinnati,Mechanical Engineering,control,Hispanic,0,0,0,0.0,0,40,8
+University of Colorado Boulder,Chemistry,treatment,female,7,1,0,0.0,0,40,0
+University of Colorado Boulder,Chemistry,treatment,URM,7,1,0,0.0,0,40,32
+University of Colorado Boulder,Chemistry,treatment,Black,7,0,0,0.0,0,40,16
+University of Colorado Boulder,Chemistry,treatment,Hispanic,7,0,0,0.0,0,40,16
+University of Colorado Boulder,Mathematics,control,female,13,0,0,0.0,0,40,0
+University of Colorado Boulder,Mathematics,control,URM,13,0,0,0.0,0,40,35
+University of Colorado Boulder,Mathematics,control,Black,13,0,0,0.0,0,40,14
+University of Colorado Boulder,Mathematics,control,Hispanic,13,0,0,0.0,0,40,21
+University of Colorado Boulder,Mechanical Engineering,control,female,1,0,0,0.0,0,40,0
+University of Colorado Boulder,Mechanical Engineering,control,URM,1,0,0,0.0,0,40,61
+University of Colorado Boulder,Mechanical Engineering,control,Black,1,0,0,0.0,0,40,41
+University of Colorado Boulder,Mechanical Engineering,control,Hispanic,1,0,0,0.0,0,40,20
+University of Colorado Boulder,Physics,control,female,15,4,0,0.0,0,40,0
+University of Colorado Boulder,Physics,control,URM,15,0,0,0.0,0,40,49
+University of Colorado Boulder,Physics,control,Black,15,0,0,0.0,0,40,16
+University of Colorado Boulder,Physics,control,Hispanic,15,0,0,0.0,0,40,33
+University of Colorado Denver,Chemistry,treatment,female,1,0,0,0.0,0,40,0
+University of Colorado Denver,Chemistry,treatment,URM,1,0,0,0.0,0,40,27
+University of Colorado Denver,Chemistry,treatment,Black,1,0,0,0.0,0,40,13
+University of Colorado Denver,Chemistry,treatment,Hispanic,1,0,0,0.0,0,40,14
+University of Colorado Denver,Mathematics,treatment,female,0,0,0,0.0,0,40,0
+University of Colorado Denver,Mathematics,treatment,URM,0,0,0,0.0,0,40,27
+University of Colorado Denver,Mathematics,treatment,Black,0,0,0,0.0,0,40,14
+University of Colorado Denver,Mathematics,treatment,Hispanic,0,0,0,0.0,0,40,13
+University of Connecticut,Chemistry,treatment,female,0,0,0,0.0,0,40,0
+University of Connecticut,Chemistry,treatment,URM,0,0,0,0.0,0,40,26
+University of Connecticut,Chemistry,treatment,Black,0,0,0,0.0,0,40,14
+University of Connecticut,Chemistry,treatment,Hispanic,0,0,0,0.0,0,40,12
+University of Connecticut,Mathematics,treatment,female,2,0,0,0.0,0,40,0
+University of Connecticut,Mathematics,treatment,URM,2,0,0,0.0,0,40,32
+University of Connecticut,Mathematics,treatment,Black,2,0,0,0.0,0,40,8
+University of Connecticut,Mathematics,treatment,Hispanic,2,0,0,0.0,0,40,24
+University of Connecticut,Mechanical Engineering,treatment,female,1,0,0,0.0,0,40,0
+University of Connecticut,Mechanical Engineering,treatment,URM,1,0,0,0.0,0,40,17
+University of Connecticut,Mechanical Engineering,treatment,Black,1,0,0,0.0,0,40,10
+University of Connecticut,Mechanical Engineering,treatment,Hispanic,1,0,0,0.0,0,40,7
+University of Connecticut,Physics,treatment,female,2,0,0,0.0,0,40,0
+University of Connecticut,Physics,treatment,URM,2,0,0,0.0,0,40,17
+University of Connecticut,Physics,treatment,Black,2,0,0,0.0,0,40,8
+University of Connecticut,Physics,treatment,Hispanic,2,0,0,0.0,0,40,9
+University of Delaware,Computer Science,treatment,female,0,0,0,0.0,0,40,0
+University of Delaware,Computer Science,treatment,URM,0,0,0,0.0,0,40,24
+University of Delaware,Computer Science,treatment,Black,0,0,0,0.0,0,40,10
+University of Delaware,Computer Science,treatment,Hispanic,0,0,0,0.0,0,40,14
+University of Delaware,Mathematics,treatment,female,3,2,0,0.0,0,40,0
+University of Delaware,Mathematics,treatment,URM,3,0,0,0.0,0,40,34
+University of Delaware,Mathematics,treatment,Black,3,0,0,0.0,0,40,12
+University of Delaware,Mathematics,treatment,Hispanic,3,0,0,0.0,0,40,22
+University of Delaware,Mechanical Engineering,control,female,0,0,0,0.0,0,40,0
+University of Delaware,Mechanical Engineering,control,URM,0,0,0,0.0,0,40,20
+University of Delaware,Mechanical Engineering,control,Black,0,0,0,0.0,0,40,12
+University of Delaware,Mechanical Engineering,control,Hispanic,0,0,0,0.0,0,40,8
+University of Delaware,Physics,treatment,female,0,0,0,0.0,0,40,0
+University of Delaware,Physics,treatment,URM,0,0,0,0.0,0,40,30
+University of Delaware,Physics,treatment,Black,0,0,0,0.0,0,40,11
+University of Delaware,Physics,treatment,Hispanic,0,0,0,0.0,0,40,19
+University of Denver,Chemistry,control,female,1,0,0,0.0,0,40,0
+University of Denver,Chemistry,control,URM,1,0,0,0.0,0,40,27
+University of Denver,Chemistry,control,Black,1,0,0,0.0,0,40,13
+University of Denver,Chemistry,control,Hispanic,1,0,0,0.0,0,40,14
+University of Denver,Mathematics,control,female,3,1,0,0.0,0,40,0
+University of Denver,Mathematics,control,URM,3,0,0,0.0,0,40,27
+University of Denver,Mathematics,control,Black,3,0,0,0.0,0,40,14
+University of Denver,Mathematics,control,Hispanic,3,0,0,0.0,0,40,13
+University of Denver,Physics,treatment,female,0,0,0,0.0,0,40,0
+University of Denver,Physics,treatment,URM,0,0,0,0.0,0,40,21
+University of Denver,Physics,treatment,Black,0,0,0,0.0,0,40,8
+University of Denver,Physics,treatment,Hispanic,0,0,0,0.0,0,40,13
+University of Florida,Chemistry,control,female,5,0,0,0.0,0,40,0
+University of Florida,Chemistry,control,URM,5,1,0,0.0,0,40,43
+University of Florida,Chemistry,control,Black,5,1,0,0.0,0,40,18
+University of Florida,Chemistry,control,Hispanic,5,0,0,0.0,0,40,25
+University of Florida,Computer Science,treatment,female,0,0,0,0.0,0,40,0
+University of Florida,Computer Science,treatment,URM,0,0,0,0.0,0,40,34
+University of Florida,Computer Science,treatment,Black,0,0,0,0.0,0,40,17
+University of Florida,Computer Science,treatment,Hispanic,0,0,0,0.0,0,40,17
+University of Florida,Mathematics,control,female,7,2,0,0.0,0,40,0
+University of Florida,Mathematics,control,URM,7,0,0,0.0,0,40,29
+University of Florida,Mathematics,control,Black,7,0,0,0.0,0,40,11
+University of Florida,Mathematics,control,Hispanic,7,0,0,0.0,0,40,18
+University of Florida,Mechanical Engineering,treatment,female,1,1,0,0.0,0,40,0
+University of Florida,Mechanical Engineering,treatment,URM,1,0,0,0.0,0,40,51
+University of Florida,Mechanical Engineering,treatment,Black,1,0,0,0.0,0,40,30
+University of Florida,Mechanical Engineering,treatment,Hispanic,1,0,0,0.0,0,40,21
+University of Florida,Physics,control,female,17,2,0,0.0,0,40,0
+University of Florida,Physics,control,URM,17,0,0,0.0,0,40,47
+University of Florida,Physics,control,Black,17,0,0,0.0,0,40,12
+University of Florida,Physics,control,Hispanic,17,0,0,0.0,0,40,35
+University of Georgia,Chemistry,control,female,2,0,0,0.0,0,40,0
+University of Georgia,Chemistry,control,URM,2,0,0,0.0,0,40,27
+University of Georgia,Chemistry,control,Black,2,0,0,0.0,0,40,14
+University of Georgia,Chemistry,control,Hispanic,2,0,0,0.0,0,40,13
+University of Georgia,Mathematics,treatment,female,11,0,0,0.0,0,40,0
+University of Georgia,Mathematics,treatment,URM,11,0,0,0.0,0,40,28
+University of Georgia,Mathematics,treatment,Black,11,0,0,0.0,0,40,6
+University of Georgia,Mathematics,treatment,Hispanic,11,0,0,0.0,0,40,22
+University of Georgia,Physics,control,female,2,0,0,0.0,0,40,0
+University of Georgia,Physics,control,URM,2,2,0,0.0,0,40,18
+University of Georgia,Physics,control,Black,2,2,0,0.0,0,40,8
+University of Georgia,Physics,control,Hispanic,2,0,0,0.0,0,40,10
+University of Hawaii at Manoa,Mathematics,control,female,0,0,0,0.0,0,40,0
+University of Hawaii at Manoa,Mathematics,control,URM,0,0,0,0.0,0,40,18
+University of Hawaii at Manoa,Mathematics,control,Black,0,0,0,0.0,0,40,5
+University of Hawaii at Manoa,Mathematics,control,Hispanic,0,0,0,0.0,0,40,13
+University of Hawaii at Manoa,Mechanical Engineering,treatment,female,1,0,0,0.0,0,40,0
+University of Hawaii at Manoa,Mechanical Engineering,treatment,URM,1,0,0,0.0,0,40,24
+University of Hawaii at Manoa,Mechanical Engineering,treatment,Black,1,0,0,0.0,0,40,14
+University of Hawaii at Manoa,Mechanical Engineering,treatment,Hispanic,1,0,0,0.0,0,40,10
+University of Hawaii at Manoa,Physics,control,female,1,1,0,0.0,0,40,0
+University of Hawaii at Manoa,Physics,control,URM,1,0,0,0.0,0,40,16
+University of Hawaii at Manoa,Physics,control,Black,1,0,0,0.0,0,40,5
+University of Hawaii at Manoa,Physics,control,Hispanic,1,0,0,0.0,0,40,11
+University of Houston,Chemistry,treatment,female,1,0,0,0.0,0,40,0
+University of Houston,Chemistry,treatment,URM,1,0,0,0.0,0,40,27
+University of Houston,Chemistry,treatment,Black,1,0,0,0.0,0,40,14
+University of Houston,Chemistry,treatment,Hispanic,1,0,0,0.0,0,40,13
+University of Houston,Computer Science,treatment,female,0,0,0,0.0,0,40,0
+University of Houston,Computer Science,treatment,URM,0,0,0,0.0,0,40,17
+University of Houston,Computer Science,treatment,Black,0,0,0,0.0,0,40,9
+University of Houston,Computer Science,treatment,Hispanic,0,0,0,0.0,0,40,8
+University of Houston,Mathematics,treatment,female,1,0,0,0.0,0,40,0
+University of Houston,Mathematics,treatment,URM,1,0,0,0.0,0,40,26
+University of Houston,Mathematics,treatment,Black,1,0,0,0.0,0,40,6
+University of Houston,Mathematics,treatment,Hispanic,1,0,0,0.0,0,40,20
+University of Houston,Mechanical Engineering,control,female,4,0,0,0.0,0,40,0
+University of Houston,Mechanical Engineering,control,URM,4,0,0,0.0,0,40,19
+University of Houston,Mechanical Engineering,control,Black,4,0,0,0.0,0,40,11
+University of Houston,Mechanical Engineering,control,Hispanic,4,0,0,0.0,0,40,8
+University of Houston,Physics,control,female,1,0,0,0.0,0,40,0
+University of Houston,Physics,control,URM,1,0,0,0.0,0,40,15
+University of Houston,Physics,control,Black,1,0,0,0.0,0,40,5
+University of Houston,Physics,control,Hispanic,1,0,0,0.0,0,40,10
+University of Illinois Chicago,Chemistry,treatment,female,3,1,0,0.0,0,40,0
+University of Illinois Chicago,Chemistry,treatment,URM,3,0,0,0.0,0,40,35
+University of Illinois Chicago,Chemistry,treatment,Black,3,0,0,0.0,0,40,16
+University of Illinois Chicago,Chemistry,treatment,Hispanic,3,0,0,0.0,0,40,19
+University of Illinois Chicago,Computer Science,control,female,0,0,0,0.0,0,40,0
+University of Illinois Chicago,Computer Science,control,URM,0,0,0,0.0,0,40,24
+University of Illinois Chicago,Computer Science,control,Black,0,0,0,0.0,0,40,11
+University of Illinois Chicago,Computer Science,control,Hispanic,0,0,0,0.0,0,40,13
+University of Illinois Chicago,Mathematics,control,female,2,0,0,0.0,0,40,0
+University of Illinois Chicago,Mathematics,control,URM,2,0,0,0.0,0,40,31
+University of Illinois Chicago,Mathematics,control,Black,2,0,0,0.0,0,40,8
+University of Illinois Chicago,Mathematics,control,Hispanic,2,0,0,0.0,0,40,23
+University of Illinois Chicago,Mechanical Engineering,treatment,female,0,0,0,0.0,0,40,0
+University of Illinois Chicago,Mechanical Engineering,treatment,URM,0,0,0,0.0,0,40,20
+University of Illinois Chicago,Mechanical Engineering,treatment,Black,0,0,0,0.0,0,40,12
+University of Illinois Chicago,Mechanical Engineering,treatment,Hispanic,0,0,0,0.0,0,40,8
+University of Illinois Chicago,Physics,treatment,female,3,0,0,0.0,0,40,0
+University of Illinois Chicago,Physics,treatment,URM,3,1,1,100.0,1,40,32
+University of Illinois Chicago,Physics,treatment,Black,3,0,0,0.0,0,40,13
+University of Illinois Chicago,Physics,treatment,Hispanic,3,0,0,0.0,0,40,19
+University of Illinois Urbana-Champaign,Chemistry,control,female,44,9,0,0.0,0,40,0
+University of Illinois Urbana-Champaign,Chemistry,control,URM,44,2,0,0.0,0,40,31
+University of Illinois Urbana-Champaign,Chemistry,control,Black,44,1,0,0.0,0,40,16
+University of Illinois Urbana-Champaign,Chemistry,control,Hispanic,44,0,0,0.0,0,40,15
+University of Illinois Urbana-Champaign,Computer Science,treatment,female,3,0,0,0.0,0,40,0
+University of Illinois Urbana-Champaign,Computer Science,treatment,URM,3,0,0,0.0,0,40,37
+University of Illinois Urbana-Champaign,Computer Science,treatment,Black,3,0,0,0.0,0,40,26
+University of Illinois Urbana-Champaign,Computer Science,treatment,Hispanic,3,0,0,0.0,0,40,11
+University of Illinois Urbana-Champaign,Mathematics,treatment,female,10,3,0,0.0,0,40,0
+University of Illinois Urbana-Champaign,Mathematics,treatment,URM,10,3,0,0.0,0,40,35
+University of Illinois Urbana-Champaign,Mathematics,treatment,Black,10,1,0,0.0,0,40,14
+University of Illinois Urbana-Champaign,Mathematics,treatment,Hispanic,10,0,0,0.0,0,40,21
+University of Illinois Urbana-Champaign,Mechanical Engineering,treatment,female,15,1,0,0.0,0,40,0
+University of Illinois Urbana-Champaign,Mechanical Engineering,treatment,URM,15,2,0,0.0,0,40,61
+University of Illinois Urbana-Champaign,Mechanical Engineering,treatment,Black,15,1,0,0.0,0,40,41
+University of Illinois Urbana-Champaign,Mechanical Engineering,treatment,Hispanic,15,0,0,0.0,0,40,20
+University of Illinois Urbana-Champaign,Physics,treatment,female,87,15,1,6.666666666666667,1,40,0
+University of Illinois Urbana-Champaign,Physics,treatment,URM,87,3,1,33.33333333333333,1,40,49
+University of Illinois Urbana-Champaign,Physics,treatment,Black,87,1,1,100.0,1,40,15
+University of Illinois Urbana-Champaign,Physics,treatment,Hispanic,87,0,0,0.0,0,40,34
+University of Iowa,Chemistry,control,female,1,0,0,0.0,0,40,0
+University of Iowa,Chemistry,control,URM,1,0,0,0.0,0,40,35
+University of Iowa,Chemistry,control,Black,1,0,0,0.0,0,40,16
+University of Iowa,Chemistry,control,Hispanic,1,0,0,0.0,0,40,19
+University of Iowa,Computer Science,control,female,1,0,0,0.0,0,40,0
+University of Iowa,Computer Science,control,URM,1,0,0,0.0,0,40,29
+University of Iowa,Computer Science,control,Black,1,0,0,0.0,0,40,13
+University of Iowa,Computer Science,control,Hispanic,1,0,0,0.0,0,40,16
+University of Iowa,Mathematics,control,female,0,0,0,0.0,0,40,0
+University of Iowa,Mathematics,control,URM,0,0,0,0.0,0,40,35
+University of Iowa,Mathematics,control,Black,0,0,0,0.0,0,40,12
+University of Iowa,Mathematics,control,Hispanic,0,0,0,0.0,0,40,23
+University of Iowa,Physics,control,female,0,0,0,0.0,0,40,0
+University of Iowa,Physics,control,URM,0,0,0,0.0,0,40,35
+University of Iowa,Physics,control,Black,0,0,0,0.0,0,40,13
+University of Iowa,Physics,control,Hispanic,0,0,0,0.0,0,40,22
+University of Kansas,Chemistry,control,female,2,1,0,0.0,0,40,0
+University of Kansas,Chemistry,control,URM,2,2,0,0.0,0,40,27
+University of Kansas,Chemistry,control,Black,2,0,0,0.0,0,40,14
+University of Kansas,Chemistry,control,Hispanic,2,0,0,0.0,0,40,13
+University of Kansas,Mathematics,control,female,5,0,0,0.0,0,40,0
+University of Kansas,Mathematics,control,URM,5,0,0,0.0,0,40,32
+University of Kansas,Mathematics,control,Black,5,0,0,0.0,0,40,8
+University of Kansas,Mathematics,control,Hispanic,5,0,0,0.0,0,40,24
+University of Kansas,Physics,control,female,10,2,0,0.0,0,40,0
+University of Kansas,Physics,control,URM,10,1,0,0.0,0,40,18
+University of Kansas,Physics,control,Black,10,0,0,0.0,0,40,8
+University of Kansas,Physics,control,Hispanic,10,0,0,0.0,0,40,10
+University of Kentucky,Chemistry,treatment,female,0,0,0,0.0,0,40,0
+University of Kentucky,Chemistry,treatment,URM,0,0,0,0.0,0,40,24
+University of Kentucky,Chemistry,treatment,Black,0,0,0,0.0,0,40,13
+University of Kentucky,Chemistry,treatment,Hispanic,0,0,0,0.0,0,40,11
+University of Kentucky,Computer Science,treatment,female,0,0,0,0.0,0,40,0
+University of Kentucky,Computer Science,treatment,URM,0,0,0,0.0,0,40,18
+University of Kentucky,Computer Science,treatment,Black,0,0,0,0.0,0,40,9
+University of Kentucky,Computer Science,treatment,Hispanic,0,0,0,0.0,0,40,9
+University of Kentucky,Mathematics,control,female,0,0,0,0.0,0,40,0
+University of Kentucky,Mathematics,control,URM,0,0,0,0.0,0,40,24
+University of Kentucky,Mathematics,control,Black,0,0,0,0.0,0,40,6
+University of Kentucky,Mathematics,control,Hispanic,0,0,0,0.0,0,40,18
+University of Kentucky,Mechanical Engineering,treatment,female,2,0,0,0.0,0,40,0
+University of Kentucky,Mechanical Engineering,treatment,URM,2,0,0,0.0,0,40,17
+University of Kentucky,Mechanical Engineering,treatment,Black,2,0,0,0.0,0,40,9
+University of Kentucky,Mechanical Engineering,treatment,Hispanic,2,0,0,0.0,0,40,8
+University of Kentucky,Physics,control,female,1,0,0,0.0,0,40,0
+University of Kentucky,Physics,control,URM,1,0,0,0.0,0,40,17
+University of Kentucky,Physics,control,Black,1,0,0,0.0,0,40,7
+University of Kentucky,Physics,control,Hispanic,1,0,0,0.0,0,40,10
+University of Louisiana at Lafayette,Computer Science,treatment,female,1,0,0,0.0,0,40,0
+University of Louisiana at Lafayette,Computer Science,treatment,URM,1,0,0,0.0,0,40,15
+University of Louisiana at Lafayette,Computer Science,treatment,Black,1,0,0,0.0,0,40,10
+University of Louisiana at Lafayette,Computer Science,treatment,Hispanic,1,0,0,0.0,0,40,5
+University of Louisiana at Lafayette,Mathematics,control,female,0,0,0,0.0,0,40,0
+University of Louisiana at Lafayette,Mathematics,control,URM,0,0,0,0.0,0,40,25
+University of Louisiana at Lafayette,Mathematics,control,Black,0,0,0,0.0,0,40,13
+University of Louisiana at Lafayette,Mathematics,control,Hispanic,0,0,0,0.0,0,40,12
+University of Louisiana at Lafayette,Physics,treatment,female,0,0,0,0.0,0,40,0
+University of Louisiana at Lafayette,Physics,treatment,URM,0,0,0,0.0,0,40,21
+University of Louisiana at Lafayette,Physics,treatment,Black,0,0,0,0.0,0,40,8
+University of Louisiana at Lafayette,Physics,treatment,Hispanic,0,0,0,0.0,0,40,13
+University of Louisville,Chemistry,control,female,0,0,0,0.0,0,40,0
+University of Louisville,Chemistry,control,URM,0,0,0,0.0,0,40,25
+University of Louisville,Chemistry,control,Black,0,0,0,0.0,0,40,12
+University of Louisville,Chemistry,control,Hispanic,0,0,0,0.0,0,40,13
+University of Louisville,Computer Science,control,female,0,0,0,0.0,0,40,0
+University of Louisville,Computer Science,control,URM,0,0,0,0.0,0,40,15
+University of Louisville,Computer Science,control,Black,0,0,0,0.0,0,40,10
+University of Louisville,Computer Science,control,Hispanic,0,0,0,0.0,0,40,5
+University of Louisville,Mathematics,control,female,0,0,0,0.0,0,40,0
+University of Louisville,Mathematics,control,URM,0,0,0,0.0,0,40,27
+University of Louisville,Mathematics,control,Black,0,0,0,0.0,0,40,14
+University of Louisville,Mathematics,control,Hispanic,0,0,0,0.0,0,40,13
+University of Louisville,Mechanical Engineering,treatment,female,0,0,0,0.0,0,40,0
+University of Louisville,Mechanical Engineering,treatment,URM,0,0,0,0.0,0,40,30
+University of Louisville,Mechanical Engineering,treatment,Black,0,0,0,0.0,0,40,18
+University of Louisville,Mechanical Engineering,treatment,Hispanic,0,0,0,0.0,0,40,12
+University of Louisville,Physics,treatment,female,0,0,0,0.0,0,40,0
+University of Louisville,Physics,treatment,URM,0,0,0,0.0,0,40,21
+University of Louisville,Physics,treatment,Black,0,0,0,0.0,0,40,8
+University of Louisville,Physics,treatment,Hispanic,0,0,0,0.0,0,40,13
+University of Maine,Mathematics,control,female,0,0,0,0.0,0,40,0
+University of Maine,Mathematics,control,URM,0,0,0,0.0,0,40,26
+University of Maine,Mathematics,control,Black,0,0,0,0.0,0,40,14
+University of Maine,Mathematics,control,Hispanic,0,0,0,0.0,0,40,12
+University of Maine,Physics,treatment,female,0,0,0,0.0,0,40,0
+University of Maine,Physics,treatment,URM,0,0,0,0.0,0,40,21
+University of Maine,Physics,treatment,Black,0,0,0,0.0,0,40,8
+University of Maine,Physics,treatment,Hispanic,0,0,0,0.0,0,40,13
+"University of Maryland, Baltimore County",Mathematics,treatment,female,4,0,0,0.0,0,40,0
+"University of Maryland, Baltimore County",Mathematics,treatment,URM,4,0,0,0.0,0,40,23
+"University of Maryland, Baltimore County",Mathematics,treatment,Black,4,0,0,0.0,0,40,5
+"University of Maryland, Baltimore County",Mathematics,treatment,Hispanic,4,0,0,0.0,0,40,18
+"University of Maryland, Baltimore County",Physics,control,female,1,1,0,0.0,0,40,0
+"University of Maryland, Baltimore County",Physics,control,URM,1,0,0,0.0,0,40,19
+"University of Maryland, Baltimore County",Physics,control,Black,1,0,0,0.0,0,40,7
+"University of Maryland, Baltimore County",Physics,control,Hispanic,1,0,0,0.0,0,40,12
+"University of Maryland, College Park",Computer Science,treatment,female,8,1,0,0.0,0,40,0
+"University of Maryland, College Park",Computer Science,treatment,URM,8,1,0,0.0,0,40,36
+"University of Maryland, College Park",Computer Science,treatment,Black,8,0,0,0.0,0,40,26
+"University of Maryland, College Park",Computer Science,treatment,Hispanic,8,0,0,0.0,0,40,10
+"University of Maryland, College Park",Mathematics,control,female,96,12,0,0.0,0,40,0
+"University of Maryland, College Park",Mathematics,control,URM,96,5,0,0.0,0,40,36
+"University of Maryland, College Park",Mathematics,control,Black,96,1,0,0.0,0,40,15
+"University of Maryland, College Park",Mathematics,control,Hispanic,96,0,0,0.0,0,40,21
+"University of Maryland, College Park",Physics,control,female,26,5,0,0.0,0,40,0
+"University of Maryland, College Park",Physics,control,URM,26,1,0,0.0,0,40,50
+"University of Maryland, College Park",Physics,control,Black,26,0,0,0.0,0,40,16
+"University of Maryland, College Park",Physics,control,Hispanic,26,0,0,0.0,0,40,34
+University of Massachusetts Amherst,Chemistry,control,female,1,0,0,0.0,0,40,0
+University of Massachusetts Amherst,Chemistry,control,URM,1,0,0,0.0,0,40,36
+University of Massachusetts Amherst,Chemistry,control,Black,1,0,0,0.0,0,40,17
+University of Massachusetts Amherst,Chemistry,control,Hispanic,1,0,0,0.0,0,40,19
+University of Massachusetts Amherst,Computer Science,control,female,4,1,0,0.0,0,40,0
+University of Massachusetts Amherst,Computer Science,control,URM,4,0,0,0.0,0,40,28
+University of Massachusetts Amherst,Computer Science,control,Black,4,0,0,0.0,0,40,11
+University of Massachusetts Amherst,Computer Science,control,Hispanic,4,0,0,0.0,0,40,17
+University of Massachusetts Amherst,Mathematics,control,female,6,2,0,0.0,0,40,0
+University of Massachusetts Amherst,Mathematics,control,URM,6,0,0,0.0,0,40,34
+University of Massachusetts Amherst,Mathematics,control,Black,6,0,0,0.0,0,40,12
+University of Massachusetts Amherst,Mathematics,control,Hispanic,6,0,0,0.0,0,40,22
+University of Memphis,Chemistry,treatment,female,4,1,0,0.0,0,40,0
+University of Memphis,Chemistry,treatment,URM,4,1,1,100.0,1,40,26
+University of Memphis,Chemistry,treatment,Black,4,1,1,100.0,1,40,12
+University of Memphis,Chemistry,treatment,Hispanic,4,0,0,0.0,0,40,14
+University of Memphis,Mathematics,control,female,1,0,0,0.0,0,40,0
+University of Memphis,Mathematics,control,URM,1,0,0,0.0,0,40,26
+University of Memphis,Mathematics,control,Black,1,0,0,0.0,0,40,13
+University of Memphis,Mathematics,control,Hispanic,1,0,0,0.0,0,40,13
+University of Memphis,Physics,treatment,female,2,1,0,0.0,0,40,0
+University of Memphis,Physics,treatment,URM,2,0,0,0.0,0,40,20
+University of Memphis,Physics,treatment,Black,2,0,0,0.0,0,40,8
+University of Memphis,Physics,treatment,Hispanic,2,0,0,0.0,0,40,12
+University of Miami,Chemistry,control,female,3,1,0,0.0,0,40,0
+University of Miami,Chemistry,control,URM,3,0,0,0.0,0,40,25
+University of Miami,Chemistry,control,Black,3,0,0,0.0,0,40,12
+University of Miami,Chemistry,control,Hispanic,3,0,0,0.0,0,40,13
+University of Miami,Mathematics,treatment,female,0,0,0,0.0,0,40,0
+University of Miami,Mathematics,treatment,URM,0,0,0,0.0,0,40,19
+University of Miami,Mathematics,treatment,Black,0,0,0,0.0,0,40,9
+University of Miami,Mathematics,treatment,Hispanic,0,0,0,0.0,0,40,10
+University of Miami,Physics,treatment,female,1,0,0,0.0,0,40,0
+University of Miami,Physics,treatment,URM,1,1,0,0.0,0,40,14
+University of Miami,Physics,treatment,Black,1,0,0,0.0,0,40,5
+University of Miami,Physics,treatment,Hispanic,1,0,0,0.0,0,40,9
+University of Michigan,Chemistry,treatment,female,20,5,0,0.0,0,40,0
+University of Michigan,Chemistry,treatment,URM,20,0,0,0.0,0,40,30
+University of Michigan,Chemistry,treatment,Black,20,0,0,0.0,0,40,15
+University of Michigan,Chemistry,treatment,Hispanic,20,0,0,0.0,0,40,15
+University of Michigan,Computer Science,treatment,female,31,4,0,0.0,0,40,0
+University of Michigan,Computer Science,treatment,URM,31,5,0,0.0,0,40,37
+University of Michigan,Computer Science,treatment,Black,31,2,0,0.0,0,40,26
+University of Michigan,Computer Science,treatment,Hispanic,31,0,0,0.0,0,40,11
+University of Michigan,Mathematics,treatment,female,86,13,0,0.0,0,40,0
+University of Michigan,Mathematics,treatment,URM,86,6,1,16.666666666666664,1,40,35
+University of Michigan,Mathematics,treatment,Black,86,1,1,100.0,1,40,14
+University of Michigan,Mathematics,treatment,Hispanic,86,0,0,0.0,0,40,21
+University of Michigan,Mechanical Engineering,treatment,female,9,3,0,0.0,0,40,0
+University of Michigan,Mechanical Engineering,treatment,URM,9,1,0,0.0,0,40,52
+University of Michigan,Mechanical Engineering,treatment,Black,9,1,0,0.0,0,40,33
+University of Michigan,Mechanical Engineering,treatment,Hispanic,9,0,0,0.0,0,40,19
+University of Michigan,Physics,treatment,female,88,17,0,0.0,0,40,0
+University of Michigan,Physics,treatment,URM,88,7,0,0.0,0,40,51
+University of Michigan,Physics,treatment,Black,88,2,0,0.0,0,40,17
+University of Michigan,Physics,treatment,Hispanic,88,0,0,0.0,0,40,34
+University of Minnesota,Chemistry,control,female,6,0,0,0.0,0,40,0
+University of Minnesota,Chemistry,control,URM,6,3,0,0.0,0,40,39
+University of Minnesota,Chemistry,control,Black,6,0,0,0.0,0,40,16
+University of Minnesota,Chemistry,control,Hispanic,6,0,0,0.0,0,40,23
+University of Minnesota,Computer Science,control,female,10,2,0,0.0,0,40,0
+University of Minnesota,Computer Science,control,URM,10,1,0,0.0,0,40,40
+University of Minnesota,Computer Science,control,Black,10,1,0,0.0,0,40,23
+University of Minnesota,Computer Science,control,Hispanic,10,0,0,0.0,0,40,17
+University of Minnesota,Mathematics,treatment,female,20,2,0,0.0,0,40,0
+University of Minnesota,Mathematics,treatment,URM,20,1,0,0.0,0,40,30
+University of Minnesota,Mathematics,treatment,Black,20,0,0,0.0,0,40,12
+University of Minnesota,Mathematics,treatment,Hispanic,20,0,0,0.0,0,40,18
+University of Minnesota,Mechanical Engineering,treatment,female,10,2,0,0.0,0,40,0
+University of Minnesota,Mechanical Engineering,treatment,URM,10,1,0,0.0,0,40,45
+University of Minnesota,Mechanical Engineering,treatment,Black,10,0,0,0.0,0,40,24
+University of Minnesota,Mechanical Engineering,treatment,Hispanic,10,0,0,0.0,0,40,21
+University of Minnesota,Physics,treatment,female,11,3,0,0.0,0,40,0
+University of Minnesota,Physics,treatment,URM,11,0,0,0.0,0,40,44
+University of Minnesota,Physics,treatment,Black,11,0,0,0.0,0,40,12
+University of Minnesota,Physics,treatment,Hispanic,11,0,0,0.0,0,40,32
+University of Mississippi,Chemistry,treatment,female,0,0,0,0.0,0,40,0
+University of Mississippi,Chemistry,treatment,URM,0,0,0,0.0,0,40,27
+University of Mississippi,Chemistry,treatment,Black,0,0,0,0.0,0,40,13
+University of Mississippi,Chemistry,treatment,Hispanic,0,0,0,0.0,0,40,14
+University of Mississippi,Mathematics,treatment,female,3,0,0,0.0,0,40,0
+University of Mississippi,Mathematics,treatment,URM,3,0,0,0.0,0,40,25
+University of Mississippi,Mathematics,treatment,Black,3,0,0,0.0,0,40,13
+University of Mississippi,Mathematics,treatment,Hispanic,3,0,0,0.0,0,40,12
+University of Mississippi,Physics,control,female,2,0,0,0.0,0,40,0
+University of Mississippi,Physics,control,URM,2,0,0,0.0,0,40,20
+University of Mississippi,Physics,control,Black,2,0,0,0.0,0,40,7
+University of Mississippi,Physics,control,Hispanic,2,0,0,0.0,0,40,13
+University of Missouri,Chemistry,treatment,female,2,1,0,0.0,0,40,0
+University of Missouri,Chemistry,treatment,URM,2,0,0,0.0,0,40,25
+University of Missouri,Chemistry,treatment,Black,2,0,0,0.0,0,40,13
+University of Missouri,Chemistry,treatment,Hispanic,2,0,0,0.0,0,40,12
+University of Missouri,Mathematics,control,female,1,1,0,0.0,0,40,0
+University of Missouri,Mathematics,control,URM,1,1,0,0.0,0,40,16
+University of Missouri,Mathematics,control,Black,1,0,0,0.0,0,40,4
+University of Missouri,Mathematics,control,Hispanic,1,0,0,0.0,0,40,12
+University of Missouri,Physics,treatment,female,1,0,0,0.0,0,40,0
+University of Missouri,Physics,treatment,URM,1,1,0,0.0,0,40,17
+University of Missouri,Physics,treatment,Black,1,0,0,0.0,0,40,6
+University of Missouri,Physics,treatment,Hispanic,1,0,0,0.0,0,40,11
+University of Montana,Chemistry,treatment,female,0,0,0,0.0,0,40,0
+University of Montana,Chemistry,treatment,URM,0,0,0,0.0,0,40,27
+University of Montana,Chemistry,treatment,Black,0,0,0,0.0,0,40,13
+University of Montana,Chemistry,treatment,Hispanic,0,0,0,0.0,0,40,14
+University of Montana,Mathematics,treatment,female,2,0,0,0.0,0,40,0
+University of Montana,Mathematics,treatment,URM,2,0,0,0.0,0,40,27
+University of Montana,Mathematics,treatment,Black,2,0,0,0.0,0,40,14
+University of Montana,Mathematics,treatment,Hispanic,2,0,0,0.0,0,40,13
+University of Nebraska-Lincoln,Chemistry,treatment,female,1,0,0,0.0,0,40,0
+University of Nebraska-Lincoln,Chemistry,treatment,URM,1,0,0,0.0,0,40,26
+University of Nebraska-Lincoln,Chemistry,treatment,Black,1,0,0,0.0,0,40,13
+University of Nebraska-Lincoln,Chemistry,treatment,Hispanic,1,0,0,0.0,0,40,13
+University of Nebraska-Lincoln,Computer Science,control,female,0,0,0,0.0,0,40,0
+University of Nebraska-Lincoln,Computer Science,control,URM,0,0,0,0.0,0,40,19
+University of Nebraska-Lincoln,Computer Science,control,Black,0,0,0,0.0,0,40,9
+University of Nebraska-Lincoln,Computer Science,control,Hispanic,0,0,0,0.0,0,40,10
+University of Nebraska-Lincoln,Mathematics,control,female,2,1,0,0.0,0,40,0
+University of Nebraska-Lincoln,Mathematics,control,URM,2,0,0,0.0,0,40,31
+University of Nebraska-Lincoln,Mathematics,control,Black,2,0,0,0.0,0,40,8
+University of Nebraska-Lincoln,Mathematics,control,Hispanic,2,0,0,0.0,0,40,23
+University of Nebraska-Lincoln,Physics,treatment,female,0,0,0,0.0,0,40,0
+University of Nebraska-Lincoln,Physics,treatment,URM,0,0,0,0.0,0,40,16
+University of Nebraska-Lincoln,Physics,treatment,Black,0,0,0,0.0,0,40,7
+University of Nebraska-Lincoln,Physics,treatment,Hispanic,0,0,0,0.0,0,40,9
+"University of Nevada, Las Vegas",Physics,treatment,female,1,0,0,0.0,0,40,0
+"University of Nevada, Las Vegas",Physics,treatment,URM,1,0,0,0.0,0,40,17
+"University of Nevada, Las Vegas",Physics,treatment,Black,1,0,0,0.0,0,40,6
+"University of Nevada, Las Vegas",Physics,treatment,Hispanic,1,0,0,0.0,0,40,11
+"University of Nevada, Reno",Mathematics,treatment,female,1,0,0,0.0,0,40,0
+"University of Nevada, Reno",Mathematics,treatment,URM,1,0,0,0.0,0,40,26
+"University of Nevada, Reno",Mathematics,treatment,Black,1,0,0,0.0,0,40,14
+"University of Nevada, Reno",Mathematics,treatment,Hispanic,1,0,0,0.0,0,40,12
+University of New Hampshire,Chemistry,treatment,female,0,0,0,0.0,0,40,0
+University of New Hampshire,Chemistry,treatment,URM,0,0,0,0.0,0,40,25
+University of New Hampshire,Chemistry,treatment,Black,0,0,0,0.0,0,40,13
+University of New Hampshire,Chemistry,treatment,Hispanic,0,0,0,0.0,0,40,12
+University of New Hampshire,Mathematics,treatment,female,0,0,0,0.0,0,40,0
+University of New Hampshire,Mathematics,treatment,URM,0,0,0,0.0,0,40,21
+University of New Hampshire,Mathematics,treatment,Black,0,0,0,0.0,0,40,8
+University of New Hampshire,Mathematics,treatment,Hispanic,0,0,0,0.0,0,40,13
+University of New Hampshire,Physics,control,female,0,0,0,0.0,0,40,0
+University of New Hampshire,Physics,control,URM,0,0,0,0.0,0,40,13
+University of New Hampshire,Physics,control,Black,0,0,0,0.0,0,40,4
+University of New Hampshire,Physics,control,Hispanic,0,0,0,0.0,0,40,9
+University of New Mexico,Chemistry,control,female,2,0,0,0.0,0,40,0
+University of New Mexico,Chemistry,control,URM,2,0,0,0.0,0,40,26
+University of New Mexico,Chemistry,control,Black,2,0,0,0.0,0,40,11
+University of New Mexico,Chemistry,control,Hispanic,2,0,0,0.0,0,40,15
+University of New Mexico,Computer Science,treatment,female,0,0,0,0.0,0,40,0
+University of New Mexico,Computer Science,treatment,URM,0,0,0,0.0,0,40,19
+University of New Mexico,Computer Science,treatment,Black,0,0,0,0.0,0,40,9
+University of New Mexico,Computer Science,treatment,Hispanic,0,0,0,0.0,0,40,10
+University of New Mexico,Mathematics,control,female,2,1,0,0.0,0,40,0
+University of New Mexico,Mathematics,control,URM,2,0,0,0.0,0,40,34
+University of New Mexico,Mathematics,control,Black,2,0,0,0.0,0,40,11
+University of New Mexico,Mathematics,control,Hispanic,2,0,0,0.0,0,40,23
+University of New Mexico,Physics,control,female,2,1,0,0.0,0,40,0
+University of New Mexico,Physics,control,URM,2,0,0,0.0,0,40,24
+University of New Mexico,Physics,control,Black,2,0,0,0.0,0,40,11
+University of New Mexico,Physics,control,Hispanic,2,0,0,0.0,0,40,13
+University of North Carolina at Chapel Hill,Chemistry,control,female,7,0,0,0.0,0,40,0
+University of North Carolina at Chapel Hill,Chemistry,control,URM,7,3,1,33.33333333333333,1,40,30
+University of North Carolina at Chapel Hill,Chemistry,control,Black,7,1,0,0.0,0,40,13
+University of North Carolina at Chapel Hill,Chemistry,control,Hispanic,7,0,0,0.0,0,40,17
+University of North Carolina at Chapel Hill,Computer Science,control,female,0,0,0,0.0,0,40,0
+University of North Carolina at Chapel Hill,Computer Science,control,URM,0,0,0,0.0,0,40,36
+University of North Carolina at Chapel Hill,Computer Science,control,Black,0,0,0,0.0,0,40,22
+University of North Carolina at Chapel Hill,Computer Science,control,Hispanic,0,0,0,0.0,0,40,14
+University of North Carolina at Chapel Hill,Mathematics,treatment,female,14,4,0,0.0,0,40,0
+University of North Carolina at Chapel Hill,Mathematics,treatment,URM,14,0,0,0.0,0,40,27
+University of North Carolina at Chapel Hill,Mathematics,treatment,Black,14,0,0,0.0,0,40,10
+University of North Carolina at Chapel Hill,Mathematics,treatment,Hispanic,14,0,0,0.0,0,40,17
+University of North Carolina at Chapel Hill,Physics,treatment,female,4,1,0,0.0,0,40,0
+University of North Carolina at Chapel Hill,Physics,treatment,URM,4,1,0,0.0,0,40,36
+University of North Carolina at Chapel Hill,Physics,treatment,Black,4,0,0,0.0,0,40,8
+University of North Carolina at Chapel Hill,Physics,treatment,Hispanic,4,0,0,0.0,0,40,28
+University of North Texas,Chemistry,control,female,1,1,0,0.0,0,40,0
+University of North Texas,Chemistry,control,URM,1,0,0,0.0,0,40,26
+University of North Texas,Chemistry,control,Black,1,0,0,0.0,0,40,12
+University of North Texas,Chemistry,control,Hispanic,1,0,0,0.0,0,40,14
+University of North Texas,Computer Science,control,female,2,1,0,0.0,0,40,0
+University of North Texas,Computer Science,control,URM,2,0,0,0.0,0,40,15
+University of North Texas,Computer Science,control,Black,2,0,0,0.0,0,40,10
+University of North Texas,Computer Science,control,Hispanic,2,0,0,0.0,0,40,5
+University of North Texas,Mathematics,treatment,female,2,0,0,0.0,0,40,0
+University of North Texas,Mathematics,treatment,URM,2,0,0,0.0,0,40,27
+University of North Texas,Mathematics,treatment,Black,2,0,0,0.0,0,40,14
+University of North Texas,Mathematics,treatment,Hispanic,2,0,0,0.0,0,40,13
+University of North Texas,Mechanical Engineering,treatment,female,3,0,0,0.0,0,40,0
+University of North Texas,Mechanical Engineering,treatment,URM,3,0,0,0.0,0,40,31
+University of North Texas,Mechanical Engineering,treatment,Black,3,0,0,0.0,0,40,18
+University of North Texas,Mechanical Engineering,treatment,Hispanic,3,0,0,0.0,0,40,13
+University of Notre Dame,Chemistry,treatment,female,14,2,0,0.0,0,40,0
+University of Notre Dame,Chemistry,treatment,URM,14,3,0,0.0,0,40,41
+University of Notre Dame,Chemistry,treatment,Black,14,1,0,0.0,0,40,18
+University of Notre Dame,Chemistry,treatment,Hispanic,14,0,0,0.0,0,40,23
+University of Notre Dame,Mathematics,treatment,female,14,0,0,0.0,0,40,0
+University of Notre Dame,Mathematics,treatment,URM,14,0,0,0.0,0,40,30
+University of Notre Dame,Mathematics,treatment,Black,14,0,0,0.0,0,40,11
+University of Notre Dame,Mathematics,treatment,Hispanic,14,0,0,0.0,0,40,19
+University of Notre Dame,Physics,control,female,15,4,0,0.0,0,40,0
+University of Notre Dame,Physics,control,URM,15,2,0,0.0,0,40,38
+University of Notre Dame,Physics,control,Black,15,0,0,0.0,0,40,12
+University of Notre Dame,Physics,control,Hispanic,15,0,0,0.0,0,40,26
+University of Oklahoma,Chemistry,treatment,female,4,0,0,0.0,0,40,0
+University of Oklahoma,Chemistry,treatment,URM,4,1,0,0.0,0,40,26
+University of Oklahoma,Chemistry,treatment,Black,4,1,0,0.0,0,40,13
+University of Oklahoma,Chemistry,treatment,Hispanic,4,0,0,0.0,0,40,13
+University of Oklahoma,Mathematics,treatment,female,5,0,0,0.0,0,40,0
+University of Oklahoma,Mathematics,treatment,URM,5,0,0,0.0,0,40,29
+University of Oklahoma,Mathematics,treatment,Black,5,0,0,0.0,0,40,8
+University of Oklahoma,Mathematics,treatment,Hispanic,5,0,0,0.0,0,40,21
+University of Oklahoma,Physics,control,female,0,0,0,0.0,0,40,0
+University of Oklahoma,Physics,control,URM,0,0,0,0.0,0,40,17
+University of Oklahoma,Physics,control,Black,0,0,0,0.0,0,40,8
+University of Oklahoma,Physics,control,Hispanic,0,0,0,0.0,0,40,9
+University of Oregon,Computer Science,control,female,0,0,0,0.0,0,40,0
+University of Oregon,Computer Science,control,URM,0,0,0,0.0,0,40,28
+University of Oregon,Computer Science,control,Black,0,0,0,0.0,0,40,13
+University of Oregon,Computer Science,control,Hispanic,0,0,0,0.0,0,40,15
+University of Oregon,Mathematics,treatment,female,3,0,0,0.0,0,40,0
+University of Oregon,Mathematics,treatment,URM,3,1,0,0.0,0,40,36
+University of Oregon,Mathematics,treatment,Black,3,1,0,0.0,0,40,12
+University of Oregon,Mathematics,treatment,Hispanic,3,0,0,0.0,0,40,24
+University of Oregon,Physics,control,female,1,1,0,0.0,0,40,0
+University of Oregon,Physics,control,URM,1,0,0,0.0,0,40,32
+University of Oregon,Physics,control,Black,1,0,0,0.0,0,40,13
+University of Oregon,Physics,control,Hispanic,1,0,0,0.0,0,40,19
+University of Pennsylvania,Chemistry,treatment,female,18,3,0,0.0,0,40,0
+University of Pennsylvania,Chemistry,treatment,URM,18,1,0,0.0,0,40,32
+University of Pennsylvania,Chemistry,treatment,Black,18,1,0,0.0,0,40,16
+University of Pennsylvania,Chemistry,treatment,Hispanic,18,0,0,0.0,0,40,16
+University of Pennsylvania,Computer Science,treatment,female,29,4,0,0.0,0,40,0
+University of Pennsylvania,Computer Science,treatment,URM,29,1,0,0.0,0,40,35
+University of Pennsylvania,Computer Science,treatment,Black,29,0,0,0.0,0,40,25
+University of Pennsylvania,Computer Science,treatment,Hispanic,29,0,0,0.0,0,40,10
+University of Pennsylvania,Mathematics,control,female,46,8,0,0.0,0,40,0
+University of Pennsylvania,Mathematics,control,URM,46,5,0,0.0,0,40,36
+University of Pennsylvania,Mathematics,control,Black,46,2,0,0.0,0,40,15
+University of Pennsylvania,Mathematics,control,Hispanic,46,0,0,0.0,0,40,21
+University of Pennsylvania,Mechanical Engineering,treatment,female,14,1,0,0.0,0,40,0
+University of Pennsylvania,Mechanical Engineering,treatment,URM,14,0,0,0.0,0,40,60
+University of Pennsylvania,Mechanical Engineering,treatment,Black,14,0,0,0.0,0,40,40
+University of Pennsylvania,Mechanical Engineering,treatment,Hispanic,14,0,0,0.0,0,40,20
+University of Pittsburgh,Chemistry,control,female,7,3,0,0.0,0,40,0
+University of Pittsburgh,Chemistry,control,URM,7,1,0,0.0,0,40,41
+University of Pittsburgh,Chemistry,control,Black,7,1,0,0.0,0,40,17
+University of Pittsburgh,Chemistry,control,Hispanic,7,0,0,0.0,0,40,24
+University of Pittsburgh,Computer Science,treatment,female,4,2,0,0.0,0,40,0
+University of Pittsburgh,Computer Science,treatment,URM,4,1,0,0.0,0,40,39
+University of Pittsburgh,Computer Science,treatment,Black,4,0,0,0.0,0,40,22
+University of Pittsburgh,Computer Science,treatment,Hispanic,4,0,0,0.0,0,40,17
+University of Pittsburgh,Physics,treatment,female,11,1,0,0.0,0,40,0
+University of Pittsburgh,Physics,treatment,URM,11,1,0,0.0,0,40,43
+University of Pittsburgh,Physics,treatment,Black,11,0,0,0.0,0,40,12
+University of Pittsburgh,Physics,treatment,Hispanic,11,0,0,0.0,0,40,31
+University of Rochester,Chemistry,treatment,female,1,0,0,0.0,0,40,0
+University of Rochester,Chemistry,treatment,URM,1,0,0,0.0,0,40,34
+University of Rochester,Chemistry,treatment,Black,1,0,0,0.0,0,40,16
+University of Rochester,Chemistry,treatment,Hispanic,1,0,0,0.0,0,40,18
+University of Rochester,Computer Science,treatment,female,2,0,0,0.0,0,40,0
+University of Rochester,Computer Science,treatment,URM,2,0,0,0.0,0,40,35
+University of Rochester,Computer Science,treatment,Black,2,0,0,0.0,0,40,18
+University of Rochester,Computer Science,treatment,Hispanic,2,0,0,0.0,0,40,17
+University of Rochester,Mechanical Engineering,treatment,female,0,0,0,0.0,0,40,0
+University of Rochester,Mechanical Engineering,treatment,URM,0,0,0,0.0,0,40,36
+University of Rochester,Mechanical Engineering,treatment,Black,0,0,0,0.0,0,40,19
+University of Rochester,Mechanical Engineering,treatment,Hispanic,0,0,0,0.0,0,40,17
+University of Rochester,Physics,control,female,3,0,0,0.0,0,40,0
+University of Rochester,Physics,control,URM,3,1,0,0.0,0,40,34
+University of Rochester,Physics,control,Black,3,1,0,0.0,0,40,9
+University of Rochester,Physics,control,Hispanic,3,0,0,0.0,0,40,25
+University of South Carolina,Chemistry,control,female,3,0,0,0.0,0,40,0
+University of South Carolina,Chemistry,control,URM,3,0,0,0.0,0,40,27
+University of South Carolina,Chemistry,control,Black,3,0,0,0.0,0,40,14
+University of South Carolina,Chemistry,control,Hispanic,3,0,0,0.0,0,40,13
+University of South Carolina,Mathematics,control,female,1,0,0,0.0,0,40,0
+University of South Carolina,Mathematics,control,URM,1,0,0,0.0,0,40,22
+University of South Carolina,Mathematics,control,Black,1,0,0,0.0,0,40,9
+University of South Carolina,Mathematics,control,Hispanic,1,0,0,0.0,0,40,13
+University of South Carolina,Physics,control,female,0,0,0,0.0,0,40,0
+University of South Carolina,Physics,control,URM,0,0,0,0.0,0,40,15
+University of South Carolina,Physics,control,Black,0,0,0,0.0,0,40,5
+University of South Carolina,Physics,control,Hispanic,0,0,0,0.0,0,40,10
+University of South Florida,Chemistry,control,female,0,0,0,0.0,0,40,0
+University of South Florida,Chemistry,control,URM,0,0,0,0.0,0,40,27
+University of South Florida,Chemistry,control,Black,0,0,0,0.0,0,40,13
+University of South Florida,Chemistry,control,Hispanic,0,0,0,0.0,0,40,14
+University of South Florida,Computer Science,control,female,0,0,0,0.0,0,40,0
+University of South Florida,Computer Science,control,URM,0,0,0,0.0,0,40,13
+University of South Florida,Computer Science,control,Black,0,0,0,0.0,0,40,8
+University of South Florida,Computer Science,control,Hispanic,0,0,0,0.0,0,40,5
+University of South Florida,Mathematics,control,female,4,0,0,0.0,0,40,0
+University of South Florida,Mathematics,control,URM,4,0,0,0.0,0,40,27
+University of South Florida,Mathematics,control,Black,4,0,0,0.0,0,40,14
+University of South Florida,Mathematics,control,Hispanic,4,0,0,0.0,0,40,13
+University of South Florida,Mechanical Engineering,treatment,female,0,0,0,0.0,0,40,0
+University of South Florida,Mechanical Engineering,treatment,URM,0,0,0,0.0,0,40,31
+University of South Florida,Mechanical Engineering,treatment,Black,0,0,0,0.0,0,40,18
+University of South Florida,Mechanical Engineering,treatment,Hispanic,0,0,0,0.0,0,40,13
+University of Southern California,Chemistry,control,female,3,0,0,0.0,0,40,0
+University of Southern California,Chemistry,control,URM,3,1,0,0.0,0,40,36
+University of Southern California,Chemistry,control,Black,3,0,0,0.0,0,40,17
+University of Southern California,Chemistry,control,Hispanic,3,0,0,0.0,0,40,19
+University of Southern California,Computer Science,control,female,1,0,0,0.0,0,40,0
+University of Southern California,Computer Science,control,URM,1,0,0,0.0,0,40,30
+University of Southern California,Computer Science,control,Black,1,0,0,0.0,0,40,12
+University of Southern California,Computer Science,control,Hispanic,1,0,0,0.0,0,40,18
+University of Southern California,Mathematics,control,female,1,0,0,0.0,0,40,0
+University of Southern California,Mathematics,control,URM,1,0,0,0.0,0,40,36
+University of Southern California,Mathematics,control,Black,1,0,0,0.0,0,40,11
+University of Southern California,Mathematics,control,Hispanic,1,0,0,0.0,0,40,25
+University of Southern California,Mechanical Engineering,control,female,0,0,0,0.0,0,40,0
+University of Southern California,Mechanical Engineering,control,URM,0,0,0,0.0,0,40,26
+University of Southern California,Mechanical Engineering,control,Black,0,0,0,0.0,0,40,14
+University of Southern California,Mechanical Engineering,control,Hispanic,0,0,0,0.0,0,40,12
+University of Southern California,Physics,treatment,female,2,2,0,0.0,0,40,0
+University of Southern California,Physics,treatment,URM,2,0,0,0.0,0,40,33
+University of Southern California,Physics,treatment,Black,2,0,0,0.0,0,40,10
+University of Southern California,Physics,treatment,Hispanic,2,0,0,0.0,0,40,23
+University of Southern Mississippi,Chemistry,control,female,2,1,0,0.0,0,40,0
+University of Southern Mississippi,Chemistry,control,URM,2,0,0,0.0,0,40,27
+University of Southern Mississippi,Chemistry,control,Black,2,0,0,0.0,0,40,13
+University of Southern Mississippi,Chemistry,control,Hispanic,2,0,0,0.0,0,40,14
+University of Southern Mississippi,Mechanical Engineering,treatment,female,0,0,0,0.0,0,40,0
+University of Southern Mississippi,Mechanical Engineering,treatment,URM,0,0,0,0.0,0,40,31
+University of Southern Mississippi,Mechanical Engineering,treatment,Black,0,0,0,0.0,0,40,18
+University of Southern Mississippi,Mechanical Engineering,treatment,Hispanic,0,0,0,0.0,0,40,13
+University of Southern Mississippi,Physics,control,female,0,0,0,0.0,0,40,0
+University of Southern Mississippi,Physics,control,URM,0,0,0,0.0,0,40,21
+University of Southern Mississippi,Physics,control,Black,0,0,0,0.0,0,40,8
+University of Southern Mississippi,Physics,control,Hispanic,0,0,0,0.0,0,40,13
+University of Tennessee,Chemistry,control,female,1,0,0,0.0,0,40,0
+University of Tennessee,Chemistry,control,URM,1,1,0,0.0,0,40,32
+University of Tennessee,Chemistry,control,Black,1,0,0,0.0,0,40,13
+University of Tennessee,Chemistry,control,Hispanic,1,0,0,0.0,0,40,19
+University of Tennessee,Computer Science,control,female,0,0,0,0.0,0,40,0
+University of Tennessee,Computer Science,control,URM,0,0,0,0.0,0,40,32
+University of Tennessee,Computer Science,control,Black,0,0,0,0.0,0,40,13
+University of Tennessee,Computer Science,control,Hispanic,0,0,0,0.0,0,40,19
+University of Tennessee,Mathematics,control,female,2,0,0,0.0,0,40,0
+University of Tennessee,Mathematics,control,URM,2,0,0,0.0,0,40,37
+University of Tennessee,Mathematics,control,Black,2,0,0,0.0,0,40,12
+University of Tennessee,Mathematics,control,Hispanic,2,0,0,0.0,0,40,25
+University of Tennessee,Physics,control,female,0,0,0,0.0,0,40,0
+University of Tennessee,Physics,control,URM,0,0,0,0.0,0,40,33
+University of Tennessee,Physics,control,Black,0,0,0,0.0,0,40,10
+University of Tennessee,Physics,control,Hispanic,0,0,0,0.0,0,40,23
+University of Texas at Arlington,Chemistry,treatment,female,4,2,0,0.0,0,40,0
+University of Texas at Arlington,Chemistry,treatment,URM,4,0,0,0.0,0,40,26
+University of Texas at Arlington,Chemistry,treatment,Black,4,0,0,0.0,0,40,13
+University of Texas at Arlington,Chemistry,treatment,Hispanic,4,0,0,0.0,0,40,13
+University of Texas at Arlington,Computer Science,treatment,female,2,0,0,0.0,0,40,0
+University of Texas at Arlington,Computer Science,treatment,URM,2,0,0,0.0,0,40,19
+University of Texas at Arlington,Computer Science,treatment,Black,2,0,0,0.0,0,40,14
+University of Texas at Arlington,Computer Science,treatment,Hispanic,2,0,0,0.0,0,40,5
+University of Texas at Arlington,Mathematics,control,female,3,0,0,0.0,0,40,0
+University of Texas at Arlington,Mathematics,control,URM,3,0,0,0.0,0,40,18
+University of Texas at Arlington,Mathematics,control,Black,3,0,0,0.0,0,40,6
+University of Texas at Arlington,Mathematics,control,Hispanic,3,0,0,0.0,0,40,12
+University of Texas at Arlington,Physics,control,female,3,0,0,0.0,0,40,0
+University of Texas at Arlington,Physics,control,URM,3,0,0,0.0,0,40,16
+University of Texas at Arlington,Physics,control,Black,3,0,0,0.0,0,40,6
+University of Texas at Arlington,Physics,control,Hispanic,3,0,0,0.0,0,40,10
+University of Texas at Austin,Computer Science,treatment,female,6,0,0,0.0,0,40,0
+University of Texas at Austin,Computer Science,treatment,URM,6,1,0,0.0,0,40,37
+University of Texas at Austin,Computer Science,treatment,Black,6,1,0,0.0,0,40,26
+University of Texas at Austin,Computer Science,treatment,Hispanic,6,0,0,0.0,0,40,11
+University of Texas at Austin,Mathematics,control,female,6,1,0,0.0,0,40,0
+University of Texas at Austin,Mathematics,control,URM,6,0,0,0.0,0,40,36
+University of Texas at Austin,Mathematics,control,Black,6,0,0,0.0,0,40,15
+University of Texas at Austin,Mathematics,control,Hispanic,6,0,0,0.0,0,40,21
+University of Texas at Austin,Physics,treatment,female,3,1,0,0.0,0,40,0
+University of Texas at Austin,Physics,treatment,URM,3,0,0,0.0,0,40,51
+University of Texas at Austin,Physics,treatment,Black,3,0,0,0.0,0,40,17
+University of Texas at Austin,Physics,treatment,Hispanic,3,0,0,0.0,0,40,34
+University of Texas at Dallas,Chemistry,control,female,6,0,0,0.0,0,40,0
+University of Texas at Dallas,Chemistry,control,URM,6,0,0,0.0,0,40,26
+University of Texas at Dallas,Chemistry,control,Black,6,0,0,0.0,0,40,14
+University of Texas at Dallas,Chemistry,control,Hispanic,6,0,0,0.0,0,40,12
+University of Texas at Dallas,Mathematics,treatment,female,2,1,0,0.0,0,40,0
+University of Texas at Dallas,Mathematics,treatment,URM,2,0,0,0.0,0,40,27
+University of Texas at Dallas,Mathematics,treatment,Black,2,0,0,0.0,0,40,7
+University of Texas at Dallas,Mathematics,treatment,Hispanic,2,0,0,0.0,0,40,20
+University of Texas at Dallas,Physics,control,female,4,2,0,0.0,0,40,0
+University of Texas at Dallas,Physics,control,URM,4,0,0,0.0,0,40,17
+University of Texas at Dallas,Physics,control,Black,4,0,0,0.0,0,40,7
+University of Texas at Dallas,Physics,control,Hispanic,4,0,0,0.0,0,40,10
+University of Texas at El Paso,Computer Science,control,female,0,0,0,0.0,0,40,0
+University of Texas at El Paso,Computer Science,control,URM,0,0,0,0.0,0,40,14
+University of Texas at El Paso,Computer Science,control,Black,0,0,0,0.0,0,40,10
+University of Texas at El Paso,Computer Science,control,Hispanic,0,0,0,0.0,0,40,4
+University of Texas at El Paso,Mathematics,control,female,1,0,0,0.0,0,40,0
+University of Texas at El Paso,Mathematics,control,URM,1,0,0,0.0,0,40,27
+University of Texas at El Paso,Mathematics,control,Black,1,0,0,0.0,0,40,14
+University of Texas at El Paso,Mathematics,control,Hispanic,1,0,0,0.0,0,40,13
+University of Texas at San Antonio,Chemistry,treatment,female,0,0,0,0.0,0,40,0
+University of Texas at San Antonio,Chemistry,treatment,URM,0,0,0,0.0,0,40,27
+University of Texas at San Antonio,Chemistry,treatment,Black,0,0,0,0.0,0,40,13
+University of Texas at San Antonio,Chemistry,treatment,Hispanic,0,0,0,0.0,0,40,14
+University of Texas at San Antonio,Physics,treatment,female,1,0,0,0.0,0,40,0
+University of Texas at San Antonio,Physics,treatment,URM,1,0,0,0.0,0,40,17
+University of Texas at San Antonio,Physics,treatment,Black,1,0,0,0.0,0,40,6
+University of Texas at San Antonio,Physics,treatment,Hispanic,1,0,0,0.0,0,40,11
+University of Utah,Chemistry,treatment,female,4,2,0,0.0,0,40,0
+University of Utah,Chemistry,treatment,URM,4,1,0,0.0,0,40,37
+University of Utah,Chemistry,treatment,Black,4,0,0,0.0,0,40,16
+University of Utah,Chemistry,treatment,Hispanic,4,0,0,0.0,0,40,21
+University of Utah,Computer Science,treatment,female,0,0,0,0.0,0,40,0
+University of Utah,Computer Science,treatment,URM,0,0,0,0.0,0,40,28
+University of Utah,Computer Science,treatment,Black,0,0,0,0.0,0,40,13
+University of Utah,Computer Science,treatment,Hispanic,0,0,0,0.0,0,40,15
+University of Utah,Mathematics,treatment,female,13,3,0,0.0,0,40,0
+University of Utah,Mathematics,treatment,URM,13,0,0,0.0,0,40,35
+University of Utah,Mathematics,treatment,Black,13,0,0,0.0,0,40,12
+University of Utah,Mathematics,treatment,Hispanic,13,0,0,0.0,0,40,23
+University of Utah,Mechanical Engineering,control,female,0,0,0,0.0,0,40,0
+University of Utah,Mechanical Engineering,control,URM,0,0,0,0.0,0,40,22
+University of Utah,Mechanical Engineering,control,Black,0,0,0,0.0,0,40,14
+University of Utah,Mechanical Engineering,control,Hispanic,0,0,0,0.0,0,40,8
+University of Utah,Physics,control,female,7,0,0,0.0,0,40,0
+University of Utah,Physics,control,URM,7,2,0,0.0,0,40,33
+University of Utah,Physics,control,Black,7,0,0,0.0,0,40,13
+University of Utah,Physics,control,Hispanic,7,0,0,0.0,0,40,20
+University of Virginia,Chemistry,control,female,8,1,0,0.0,0,40,0
+University of Virginia,Chemistry,control,URM,8,1,0,0.0,0,40,40
+University of Virginia,Chemistry,control,Black,8,0,0,0.0,0,40,16
+University of Virginia,Chemistry,control,Hispanic,8,0,0,0.0,0,40,24
+University of Virginia,Mathematics,control,female,19,4,0,0.0,0,40,0
+University of Virginia,Mathematics,control,URM,19,1,0,0.0,0,40,30
+University of Virginia,Mathematics,control,Black,19,0,0,0.0,0,40,11
+University of Virginia,Mathematics,control,Hispanic,19,0,0,0.0,0,40,19
+University of Virginia,Physics,control,female,3,0,0,0.0,0,40,0
+University of Virginia,Physics,control,URM,3,0,0,0.0,0,40,40
+University of Virginia,Physics,control,Black,3,0,0,0.0,0,40,11
+University of Virginia,Physics,control,Hispanic,3,0,0,0.0,0,40,29
+University of Washington,Chemistry,control,female,28,9,0,0.0,0,40,0
+University of Washington,Chemistry,control,URM,28,2,0,0.0,0,40,31
+University of Washington,Chemistry,control,Black,28,1,0,0.0,0,40,15
+University of Washington,Chemistry,control,Hispanic,28,0,0,0.0,0,40,16
+University of Washington,Computer Science,treatment,female,17,5,0,0.0,0,40,0
+University of Washington,Computer Science,treatment,URM,17,0,0,0.0,0,40,36
+University of Washington,Computer Science,treatment,Black,17,0,0,0.0,0,40,25
+University of Washington,Computer Science,treatment,Hispanic,17,0,0,0.0,0,40,11
+University of Washington,Mathematics,treatment,female,32,12,0,0.0,0,40,0
+University of Washington,Mathematics,treatment,URM,32,3,0,0.0,0,40,36
+University of Washington,Mathematics,treatment,Black,32,1,0,0.0,0,40,15
+University of Washington,Mathematics,treatment,Hispanic,32,0,0,0.0,0,40,21
+University of Washington,Mechanical Engineering,treatment,female,2,0,0,0.0,0,40,0
+University of Washington,Mechanical Engineering,treatment,URM,2,1,0,0.0,0,40,58
+University of Washington,Mechanical Engineering,treatment,Black,2,1,0,0.0,0,40,39
+University of Washington,Mechanical Engineering,treatment,Hispanic,2,0,0,0.0,0,40,19
+University of Washington,Physics,treatment,female,31,5,0,0.0,0,40,0
+University of Washington,Physics,treatment,URM,31,1,1,100.0,1,40,48
+University of Washington,Physics,treatment,Black,31,0,0,0.0,0,40,17
+University of Washington,Physics,treatment,Hispanic,31,0,0,0.0,0,40,31
+University of Wisconsin-Madison,Chemistry,treatment,female,23,10,0,0.0,0,40,0
+University of Wisconsin-Madison,Chemistry,treatment,URM,23,1,0,0.0,0,40,32
+University of Wisconsin-Madison,Chemistry,treatment,Black,23,0,0,0.0,0,40,15
+University of Wisconsin-Madison,Chemistry,treatment,Hispanic,23,0,0,0.0,0,40,17
+University of Wisconsin-Madison,Mathematics,control,female,90,12,0,0.0,0,40,0
+University of Wisconsin-Madison,Mathematics,control,URM,90,4,0,0.0,0,40,32
+University of Wisconsin-Madison,Mathematics,control,Black,90,1,0,0.0,0,40,14
+University of Wisconsin-Madison,Mathematics,control,Hispanic,90,0,0,0.0,0,40,18
+University of Wisconsin-Madison,Mechanical Engineering,treatment,female,10,2,0,0.0,0,40,0
+University of Wisconsin-Madison,Mechanical Engineering,treatment,URM,10,0,0,0.0,0,40,59
+University of Wisconsin-Madison,Mechanical Engineering,treatment,Black,10,0,0,0.0,0,40,38
+University of Wisconsin-Madison,Mechanical Engineering,treatment,Hispanic,10,0,0,0.0,0,40,21
+University of Wisconsin-Madison,Physics,control,female,36,5,0,0.0,0,40,0
+University of Wisconsin-Madison,Physics,control,URM,36,1,0,0.0,0,40,43
+University of Wisconsin-Madison,Physics,control,Black,36,0,0,0.0,0,40,16
+University of Wisconsin-Madison,Physics,control,Hispanic,36,0,0,0.0,0,40,27
+University of Wisconsin-Milwaukee,Mathematics,control,female,0,0,0,0.0,0,40,0
+University of Wisconsin-Milwaukee,Mathematics,control,URM,0,0,0,0.0,0,40,21
+University of Wisconsin-Milwaukee,Mathematics,control,Black,0,0,0,0.0,0,40,4
+University of Wisconsin-Milwaukee,Mathematics,control,Hispanic,0,0,0,0.0,0,40,17
+University of Wisconsin-Milwaukee,Physics,control,female,0,0,0,0.0,0,40,0
+University of Wisconsin-Milwaukee,Physics,control,URM,0,0,0,0.0,0,40,17
+University of Wisconsin-Milwaukee,Physics,control,Black,0,0,0,0.0,0,40,6
+University of Wisconsin-Milwaukee,Physics,control,Hispanic,0,0,0,0.0,0,40,11
+Utah State University,Chemistry,treatment,female,3,0,0,0.0,0,40,0
+Utah State University,Chemistry,treatment,URM,3,0,0,0.0,0,40,27
+Utah State University,Chemistry,treatment,Black,3,0,0,0.0,0,40,13
+Utah State University,Chemistry,treatment,Hispanic,3,0,0,0.0,0,40,14
+Utah State University,Mathematics,control,female,0,0,0,0.0,0,40,0
+Utah State University,Mathematics,control,URM,0,0,0,0.0,0,40,27
+Utah State University,Mathematics,control,Black,0,0,0,0.0,0,40,14
+Utah State University,Mathematics,control,Hispanic,0,0,0,0.0,0,40,13
+Utah State University,Mechanical Engineering,treatment,female,0,0,0,0.0,0,40,0
+Utah State University,Mechanical Engineering,treatment,URM,0,0,0,0.0,0,40,31
+Utah State University,Mechanical Engineering,treatment,Black,0,0,0,0.0,0,40,18
+Utah State University,Mechanical Engineering,treatment,Hispanic,0,0,0,0.0,0,40,13
+Utah State University,Physics,treatment,female,0,0,0,0.0,0,40,0
+Utah State University,Physics,treatment,URM,0,0,0,0.0,0,40,20
+Utah State University,Physics,treatment,Black,0,0,0,0.0,0,40,8
+Utah State University,Physics,treatment,Hispanic,0,0,0,0.0,0,40,12
+Vanderbilt University,Chemistry,treatment,female,5,1,0,0.0,0,40,0
+Vanderbilt University,Chemistry,treatment,URM,5,0,0,0.0,0,40,36
+Vanderbilt University,Chemistry,treatment,Black,5,0,0,0.0,0,40,13
+Vanderbilt University,Chemistry,treatment,Hispanic,5,0,0,0.0,0,40,23
+Vanderbilt University,Mathematics,control,female,13,4,0,0.0,0,40,0
+Vanderbilt University,Mathematics,control,URM,13,3,0,0.0,0,40,30
+Vanderbilt University,Mathematics,control,Black,13,0,0,0.0,0,40,11
+Vanderbilt University,Mathematics,control,Hispanic,13,0,0,0.0,0,40,19
+Vanderbilt University,Mechanical Engineering,control,female,0,0,0,0.0,0,40,0
+Vanderbilt University,Mechanical Engineering,control,URM,0,0,0,0.0,0,40,44
+Vanderbilt University,Mechanical Engineering,control,Black,0,0,0,0.0,0,40,24
+Vanderbilt University,Mechanical Engineering,control,Hispanic,0,0,0,0.0,0,40,20
+Vanderbilt University,Physics,control,female,7,2,0,0.0,0,40,0
+Vanderbilt University,Physics,control,URM,7,0,0,0.0,0,40,41
+Vanderbilt University,Physics,control,Black,7,0,0,0.0,0,40,11
+Vanderbilt University,Physics,control,Hispanic,7,0,0,0.0,0,40,30
+Virginia Commonwealth University,Chemistry,treatment,female,4,0,0,0.0,0,40,0
+Virginia Commonwealth University,Chemistry,treatment,URM,4,0,0,0.0,0,40,27
+Virginia Commonwealth University,Chemistry,treatment,Black,4,0,0,0.0,0,40,13
+Virginia Commonwealth University,Chemistry,treatment,Hispanic,4,0,0,0.0,0,40,14
+Virginia Commonwealth University,Mathematics,treatment,female,6,1,0,0.0,0,40,0
+Virginia Commonwealth University,Mathematics,treatment,URM,6,1,0,0.0,0,40,27
+Virginia Commonwealth University,Mathematics,treatment,Black,6,1,0,0.0,0,40,14
+Virginia Commonwealth University,Mathematics,treatment,Hispanic,6,0,0,0.0,0,40,13
+Virginia Commonwealth University,Mechanical Engineering,treatment,female,2,1,0,0.0,0,40,0
+Virginia Commonwealth University,Mechanical Engineering,treatment,URM,2,0,0,0.0,0,40,30
+Virginia Commonwealth University,Mechanical Engineering,treatment,Black,2,0,0,0.0,0,40,18
+Virginia Commonwealth University,Mechanical Engineering,treatment,Hispanic,2,0,0,0.0,0,40,12
+Virginia Commonwealth University,Physics,treatment,female,1,0,0,0.0,0,40,0
+Virginia Commonwealth University,Physics,treatment,URM,1,0,0,0.0,0,40,20
+Virginia Commonwealth University,Physics,treatment,Black,1,0,0,0.0,0,40,7
+Virginia Commonwealth University,Physics,treatment,Hispanic,1,0,0,0.0,0,40,13
+Virginia Tech,Chemistry,treatment,female,3,0,0,0.0,0,40,0
+Virginia Tech,Chemistry,treatment,URM,3,0,0,0.0,0,40,38
+Virginia Tech,Chemistry,treatment,Black,3,0,0,0.0,0,40,17
+Virginia Tech,Chemistry,treatment,Hispanic,3,0,0,0.0,0,40,21
+Virginia Tech,Computer Science,control,female,7,2,0,0.0,0,40,0
+Virginia Tech,Computer Science,control,URM,7,2,0,0.0,0,40,34
+Virginia Tech,Computer Science,control,Black,7,0,0,0.0,0,40,16
+Virginia Tech,Computer Science,control,Hispanic,7,0,0,0.0,0,40,18
+Virginia Tech,Mathematics,control,female,6,0,0,0.0,0,40,0
+Virginia Tech,Mathematics,control,URM,6,0,0,0.0,0,40,26
+Virginia Tech,Mathematics,control,Black,6,0,0,0.0,0,40,10
+Virginia Tech,Mathematics,control,Hispanic,6,0,0,0.0,0,40,16
+Virginia Tech,Mechanical Engineering,control,female,1,0,0,0.0,0,40,0
+Virginia Tech,Mechanical Engineering,control,URM,1,1,0,0.0,0,40,33
+Virginia Tech,Mechanical Engineering,control,Black,1,1,0,0.0,0,40,18
+Virginia Tech,Mechanical Engineering,control,Hispanic,1,0,0,0.0,0,40,15
+Virginia Tech,Physics,control,female,14,4,0,0.0,0,40,0
+Virginia Tech,Physics,control,URM,14,0,0,0.0,0,40,35
+Virginia Tech,Physics,control,Black,14,0,0,0.0,0,40,8
+Virginia Tech,Physics,control,Hispanic,14,0,0,0.0,0,40,27
+Washington State University,Chemistry,treatment,female,3,0,0,0.0,0,40,0
+Washington State University,Chemistry,treatment,URM,3,0,0,0.0,0,40,26
+Washington State University,Chemistry,treatment,Black,3,0,0,0.0,0,40,13
+Washington State University,Chemistry,treatment,Hispanic,3,0,0,0.0,0,40,13
+Washington State University,Computer Science,treatment,female,0,0,0,0.0,0,40,0
+Washington State University,Computer Science,treatment,URM,0,0,0,0.0,0,40,15
+Washington State University,Computer Science,treatment,Black,0,0,0,0.0,0,40,7
+Washington State University,Computer Science,treatment,Hispanic,0,0,0,0.0,0,40,8
+Washington State University,Mathematics,treatment,female,1,0,0,0.0,0,40,0
+Washington State University,Mathematics,treatment,URM,1,0,0,0.0,0,40,30
+Washington State University,Mathematics,treatment,Black,1,0,0,0.0,0,40,8
+Washington State University,Mathematics,treatment,Hispanic,1,0,0,0.0,0,40,22
+Washington State University,Mechanical Engineering,control,female,2,0,0,0.0,0,40,0
+Washington State University,Mechanical Engineering,control,URM,2,0,0,0.0,0,40,17
+Washington State University,Mechanical Engineering,control,Black,2,0,0,0.0,0,40,11
+Washington State University,Mechanical Engineering,control,Hispanic,2,0,0,0.0,0,40,6
+Washington State University,Physics,treatment,female,1,0,0,0.0,0,40,0
+Washington State University,Physics,treatment,URM,1,0,0,0.0,0,40,17
+Washington State University,Physics,treatment,Black,1,0,0,0.0,0,40,8
+Washington State University,Physics,treatment,Hispanic,1,0,0,0.0,0,40,9
+Washington University in St. Louis,Chemistry,treatment,female,4,1,0,0.0,0,40,0
+Washington University in St. Louis,Chemistry,treatment,URM,4,0,0,0.0,0,40,40
+Washington University in St. Louis,Chemistry,treatment,Black,4,0,0,0.0,0,40,17
+Washington University in St. Louis,Chemistry,treatment,Hispanic,4,0,0,0.0,0,40,23
+Washington University in St. Louis,Computer Science,treatment,female,2,0,0,0.0,0,40,0
+Washington University in St. Louis,Computer Science,treatment,URM,2,0,0,0.0,0,40,38
+Washington University in St. Louis,Computer Science,treatment,Black,2,0,0,0.0,0,40,21
+Washington University in St. Louis,Computer Science,treatment,Hispanic,2,0,0,0.0,0,40,17
+Washington University in St. Louis,Mathematics,treatment,female,8,2,0,0.0,0,40,0
+Washington University in St. Louis,Mathematics,treatment,URM,8,1,0,0.0,0,40,30
+Washington University in St. Louis,Mathematics,treatment,Black,8,0,0,0.0,0,40,11
+Washington University in St. Louis,Mathematics,treatment,Hispanic,8,0,0,0.0,0,40,19
+Washington University in St. Louis,Mechanical Engineering,control,female,5,0,0,0.0,0,40,0
+Washington University in St. Louis,Mechanical Engineering,control,URM,5,0,0,0.0,0,40,42
+Washington University in St. Louis,Mechanical Engineering,control,Black,5,0,0,0.0,0,40,22
+Washington University in St. Louis,Mechanical Engineering,control,Hispanic,5,0,0,0.0,0,40,20
+Washington University in St. Louis,Physics,control,female,8,0,0,0.0,0,40,0
+Washington University in St. Louis,Physics,control,URM,8,2,0,0.0,0,40,39
+Washington University in St. Louis,Physics,control,Black,8,0,0,0.0,0,40,11
+Washington University in St. Louis,Physics,control,Hispanic,8,0,0,0.0,0,40,28
+Wayne State University,Chemistry,control,female,5,1,0,0.0,0,40,0
+Wayne State University,Chemistry,control,URM,5,1,0,0.0,0,40,28
+Wayne State University,Chemistry,control,Black,5,1,0,0.0,0,40,14
+Wayne State University,Chemistry,control,Hispanic,5,0,0,0.0,0,40,14
+Wayne State University,Computer Science,control,female,0,0,0,0.0,0,40,0
+Wayne State University,Computer Science,control,URM,0,0,0,0.0,0,40,17
+Wayne State University,Computer Science,control,Black,0,0,0,0.0,0,40,14
+Wayne State University,Computer Science,control,Hispanic,0,0,0,0.0,0,40,3
+Wayne State University,Mathematics,control,female,1,0,0,0.0,0,40,0
+Wayne State University,Mathematics,control,URM,1,0,0,0.0,0,40,23
+Wayne State University,Mathematics,control,Black,1,0,0,0.0,0,40,13
+Wayne State University,Mathematics,control,Hispanic,1,0,0,0.0,0,40,10
+Wayne State University,Mechanical Engineering,control,female,0,0,0,0.0,0,40,0
+Wayne State University,Mechanical Engineering,control,URM,0,0,0,0.0,0,40,26
+Wayne State University,Mechanical Engineering,control,Black,0,0,0,0.0,0,40,17
+Wayne State University,Mechanical Engineering,control,Hispanic,0,0,0,0.0,0,40,9
+Wayne State University,Physics,treatment,female,2,0,0,0.0,0,40,0
+Wayne State University,Physics,treatment,URM,2,0,0,0.0,0,40,17
+Wayne State University,Physics,treatment,Black,2,0,0,0.0,0,40,6
+Wayne State University,Physics,treatment,Hispanic,2,0,0,0.0,0,40,11
+West Virginia University,Chemistry,treatment,female,0,0,0,0.0,0,40,0
+West Virginia University,Chemistry,treatment,URM,0,0,0,0.0,0,40,22
+West Virginia University,Chemistry,treatment,Black,0,0,0,0.0,0,40,11
+West Virginia University,Chemistry,treatment,Hispanic,0,0,0,0.0,0,40,11
+West Virginia University,Mathematics,treatment,female,0,0,0,0.0,0,40,0
+West Virginia University,Mathematics,treatment,URM,0,0,0,0.0,0,40,20
+West Virginia University,Mathematics,treatment,Black,0,0,0,0.0,0,40,4
+West Virginia University,Mathematics,treatment,Hispanic,0,0,0,0.0,0,40,16
+West Virginia University,Physics,treatment,female,0,0,0,0.0,0,40,0
+West Virginia University,Physics,treatment,URM,0,0,0,0.0,0,40,17
+West Virginia University,Physics,treatment,Black,0,0,0,0.0,0,40,6
+West Virginia University,Physics,treatment,Hispanic,0,0,0,0.0,0,40,11
+Yale University,Chemistry,control,female,11,1,0,0.0,0,40,0
+Yale University,Chemistry,control,URM,11,0,0,0.0,0,40,32
+Yale University,Chemistry,control,Black,11,0,0,0.0,0,40,16
+Yale University,Chemistry,control,Hispanic,11,0,0,0.0,0,40,16
+Yale University,Computer Science,control,female,4,1,0,0.0,0,40,0
+Yale University,Computer Science,control,URM,4,1,0,0.0,0,40,35
+Yale University,Computer Science,control,Black,4,1,0,0.0,0,40,25
+Yale University,Computer Science,control,Hispanic,4,0,0,0.0,0,40,10
+Yale University,Mathematics,control,female,68,4,0,0.0,0,40,0
+Yale University,Mathematics,control,URM,68,1,0,0.0,0,40,35
+Yale University,Mathematics,control,Black,68,0,0,0.0,0,40,14
+Yale University,Mathematics,control,Hispanic,68,0,0,0.0,0,40,21
+Yale University,Physics,treatment,female,23,8,0,0.0,0,40,0
+Yale University,Physics,treatment,URM,23,1,0,0.0,0,40,49
+Yale University,Physics,treatment,Black,23,0,0,0.0,0,40,15
+Yale University,Physics,treatment,Hispanic,23,0,0,0.0,0,40,34

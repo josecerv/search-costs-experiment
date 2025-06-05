@@ -1,0 +1,167 @@
+{
+  "analysis_date": "2025-06-05 08:11:46.702266",
+  "results": [
+    {
+      "demographic": "female",
+      "condition": "treatment",
+      "pct_speakers_from_database": 0.4761904761904761,
+      "count_speakers_from_database": 4,
+      "total_speakers_in_demographic": 416,
+      "any_speaker_from_database_pct": 1.5444015444015444,
+      "n_departments": 259,
+      "mean_available_in_database": 0.0
+    },
+    {
+      "demographic": "female",
+      "condition": "control",
+      "pct_speakers_from_database": 0.0,
+      "count_speakers_from_database": 0,
+      "total_speakers_in_demographic": 361,
+      "any_speaker_from_database_pct": 0.0,
+      "n_departments": 271,
+      "mean_available_in_database": 0.0
+    },
+    {
+      "demographic": "female",
+      "condition": "treatment_effect",
+      "pct_speakers_from_database": 0.4761904761904761,
+      "count_speakers_from_database": null,
+      "total_speakers_in_demographic": null,
+      "any_speaker_from_database_pct": null,
+      "n_departments": null,
+      "mean_available_in_database": null,
+      "p_value": 0.06704116563833115,
+      "relative_increase_pct": null
+    },
+    {
+      "demographic": "URM",
+      "condition": "treatment",
+      "pct_speakers_from_database": 3.120978120978121,
+      "count_speakers_from_database": 12,
+      "total_speakers_in_demographic": 174,
+      "any_speaker_from_database_pct": 4.633204633204633,
+      "n_departments": 259,
+      "mean_available_in_database": 31.455598455598455
+    },
+    {
+      "demographic": "URM",
+      "condition": "control",
+      "pct_speakers_from_database": 2.029520295202952,
+      "count_speakers_from_database": 9,
+      "total_speakers_in_demographic": 148,
+      "any_speaker_from_database_pct": 3.3210332103321036,
+      "n_departments": 271,
+      "mean_available_in_database": 30.900369003690038
+    },
+    {
+      "demographic": "URM",
+      "condition": "treatment_effect",
+      "pct_speakers_from_database": 1.0914578257751688,
+      "count_speakers_from_database": null,
+      "total_speakers_in_demographic": null,
+      "any_speaker_from_database_pct": null,
+      "n_departments": null,
+      "mean_available_in_database": null,
+      "p_value": 0.3742268190885226,
+      "relative_increase_pct": 53.77910377910378
+    },
+    {
+      "demographic": "Black",
+      "condition": "treatment",
+      "pct_speakers_from_database": 2.5096525096525095,
+      "count_speakers_from_database": 7,
+      "total_speakers_in_demographic": 60,
+      "any_speaker_from_database_pct": 2.7027027027027026,
+      "n_departments": 259,
+      "mean_available_in_database": 14.656370656370656
+    },
+    {
+      "demographic": "Black",
+      "condition": "control",
+      "pct_speakers_from_database": 0.7380073800738007,
+      "count_speakers_from_database": 2,
+      "total_speakers_in_demographic": 42,
+      "any_speaker_from_database_pct": 0.7380073800738007,
+      "n_departments": 271,
+      "mean_available_in_database": 14.07380073800738
+    },
+    {
+      "demographic": "Black",
+      "condition": "treatment_effect",
+      "pct_speakers_from_database": 1.7716451295787088,
+      "count_speakers_from_database": null,
+      "total_speakers_in_demographic": null,
+      "any_speaker_from_database_pct": null,
+      "n_departments": null,
+      "mean_available_in_database": null,
+      "p_value": 0.099761093517938,
+      "relative_increase_pct": 240.05791505791504
+    },
+    {
+      "demographic": "Hispanic",
+      "condition": "treatment",
+      "pct_speakers_from_database": 1.1583011583011582,
+      "count_speakers_from_database": 4,
+      "total_speakers_in_demographic": 114,
+      "any_speaker_from_database_pct": 1.5444015444015444,
+      "n_departments": 259,
+      "mean_available_in_database": 16.7992277992278
+    },
+    {
+      "demographic": "Hispanic",
+      "condition": "control",
+      "pct_speakers_from_database": 1.7220172201722015,
+      "count_speakers_from_database": 7,
+      "total_speakers_in_demographic": 106,
+      "any_speaker_from_database_pct": 2.5830258302583027,
+      "n_departments": 271,
+      "mean_available_in_database": 16.826568265682656
+    },
+    {
+      "demographic": "Hispanic",
+      "condition": "treatment_effect",
+      "pct_speakers_from_database": -0.5637160618710433,
+      "count_speakers_from_database": null,
+      "total_speakers_in_demographic": null,
+      "any_speaker_from_database_pct": null,
+      "n_departments": null,
+      "mean_available_in_database": null,
+      "p_value": 0.5466395786679312,
+      "relative_increase_pct": -32.7357970215113
+    }
+  ],
+  "summary": {
+    "female": {
+      "treatment_pct": 0.4761904761904761,
+      "control_pct": 0.0,
+      "treatment_count": 4,
+      "control_count": 0,
+      "treatment_any_pct": 1.5444015444015444,
+      "control_any_pct": 0.0
+    },
+    "URM": {
+      "treatment_pct": 3.120978120978121,
+      "control_pct": 2.029520295202952,
+      "treatment_count": 12,
+      "control_count": 9,
+      "treatment_any_pct": 4.633204633204633,
+      "control_any_pct": 3.3210332103321036
+    },
+    "Black": {
+      "treatment_pct": 2.5096525096525095,
+      "control_pct": 0.7380073800738007,
+      "treatment_count": 7,
+      "control_count": 2,
+      "treatment_any_pct": 2.7027027027027026,
+      "control_any_pct": 0.7380073800738007
+    },
+    "Hispanic": {
+      "treatment_pct": 1.1583011583011582,
+      "control_pct": 1.7220172201722015,
+      "treatment_count": 4,
+      "control_count": 7,
+      "treatment_any_pct": 1.5444015444015444,
+      "control_any_pct": 2.5830258302583027
+    }
+  }
+}

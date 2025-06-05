@@ -1,99 +1,92 @@
 # Statistical Analysis Scripts
 
-This directory contains the core scripts for the search cost study statistical analysis.
+This directory contains scripts for analyzing the impact of URM databases on seminar speaker selection in the Search Costs RCT.
 
-## Main Scripts
+## Overview
 
-### Core Analysis Scripts
+The main analysis examines whether departments selected speakers from the URM databases provided in the treatment condition, properly accounting for the peer university algorithm used in the experiment.
 
-1. **comprehensive_analysis.py**
-   - Main analysis script that runs all pre-registered analyses
-   - Uses the pre-created master analysis dataset
-   - Generates regression tables and summary statistics
-   - Handles primary outcomes, semester analysis, discipline breakdowns, and additional demographics
+## Main Script
 
-2. **create_analysis_dataset.py**
-   - Creates the master analysis dataset used by comprehensive_analysis.py
-   - Merges data from multiple sources (seminars, demographics, controls)
-   - Calculates outcome variables and prepares all control variables
-   - Generates both full-year and semester-specific outcomes
+### `analyze_database_impact.py`
+Comprehensive analysis of database impact on speaker selection.
 
-3. **create_seminar_batch_mapping.py**
-   - Creates the mapping between seminars and email campaign batches
-   - Essential for batch fixed effects in regression models
-   - Must be run before create_analysis_dataset.py
+**What it does:**
+- Implements the peer university selection algorithm (±20 ranks, expanding to 40 peers)
+- Matches seminar speakers with database faculty using LLM results
+- Calculates percentages, counts, and binary presence for each demographic group
+- Compares treatment vs control conditions
+- Generates detailed reports and summary statistics
 
-### Database Matching Scripts
+**Key analyses:**
+1. **% of speakers from database** - What percentage of female/URM/Black/Hispanic speakers from peer universities were from the database?
+2. **Count of speakers from database** - Raw counts of matched speakers
+3. **Binary presence** - Did the department select ANY speaker from the database?
 
-4. **llm_database_speaker_matching.py**
-   - Uses GPT-4o to match URM database faculty to seminar speakers
-   - Handles name variations, middle names, and university moves
-   - Caches results for efficiency
-   - Output: `llm_database_speaker_matches.csv` with all 550 faculty match results
-
-5. **analyze_peer_denominators.py**
-   - Analyzes database usage with correct denominators (peer university speakers)
-   - Implements the Qualtrics peer selection algorithm (40+ universities, 20+ URM faculty)
-   - Calculates treatment effects for database usage
-   - Output: `peer_database_usage_correct_denominator.csv`
-
-### Legacy Database Analysis Scripts
-
-6. **analyze_database_treatment_effect.py**
-   - Earlier analysis of database treatment effects
-   - Uses simpler matching approach
-
-7. **analyze_black_database_selection.py**
-   - Analyzes Black speaker selection from databases
-   - Pre-LLM matching approach
-
-8. **create_database_speaker_match_report.py**
-   - Creates detailed reports on database-speaker matches
-   - Useful for validation and debugging
-
-### Utility Scripts
-
-9. **show_dataset_structure.py**
-   - Utility script to display the structure of the master analysis dataset
-   - Shows all variable names and categories
-   - Useful for understanding the data structure
+**Outputs:**
+- `database_impact_by_department.csv` - Department-level results
+- `database_impact_summary.csv` - Summary statistics by condition and demographic
+- `database_impact_treatment_effects.csv` - Treatment effect estimates and p-values
+- `database_impact_analysis_report.md` - Comprehensive human-readable report
+- `database_impact_analysis.json` - Machine-readable summary
 
 ## Running the Analysis
 
-### Standard Analysis Pipeline
-
 ```bash
-# From the scripts directory
-python create_seminar_batch_mapping.py
-python create_analysis_dataset.py
-python comprehensive_analysis.py
+cd /mnt/c/Users/jcerv/Jose/search-costs/05_statistical_analysis
+poetry run python scripts/analyze_database_impact.py
 ```
 
-### Database Matching Analysis
+## Key Findings (as of June 5, 2025)
 
-```bash
-# Run LLM-based matching (takes ~30 minutes)
-python llm_database_speaker_matching.py
+### Direct Database Usage
+- **Female speakers**: Treatment 0.48% vs Control 0.00% (p=0.067)
+- **URM speakers**: Treatment 3.12% vs Control 2.03% (53.8% increase, p=0.374)
+- **Black speakers**: Treatment 2.51% vs Control 0.74% (240.1% increase, p=0.100)
+- **Hispanic speakers**: No matches in either condition
 
-# Analyze results with peer denominators
-python analyze_peer_denominators.py
-```
+### Key Insights
+1. Direct database usage was minimal (~2-3% of relevant speakers)
+2. Treatment departments showed higher usage for Black speakers (240% increase)
+3. The main treatment effect likely worked through indirect mechanisms (awareness, signaling)
 
-## Output Files
+## Supporting Scripts
 
-All outputs are saved to `../outputs/`:
+### `create_analysis_dataset.py`
+Creates the master analysis dataset by merging all data sources. Run this if you need to refresh the master dataset.
 
-### Core Analysis Outputs
-- `master_analysis_dataset.csv` - Complete dataset for analysis
-- `primary_results_summary.csv` - Main regression results
-- `regression_summary_final.csv` - Detailed regression tables
-- `semester_analysis_summary_final.csv` - Results by semester
-- `discipline_analysis_summary_final.csv` - Results by discipline
-- `comprehensive_results_final.json` - Complete results in JSON format
+### `llm_database_speaker_matching.py`
+Uses GPT-4o to match database faculty with seminar speakers. Results are cached in `cache/llm_matching_cache.json`.
 
-### Database Matching Outputs
-- `llm_database_speaker_matches.csv` - All 550 faculty with match results
-- `llm_matching_analysis.json` - Summary statistics
-- `peer_database_usage_correct_denominator.csv` - Department-level usage with peer denominators
-- `peer_denominator_analysis_summary.json` - Treatment effect analysis
-- `llm_race_mismatches.csv` - Cases where database and speaker demographics differ
+### `create_seminar_batch_mapping.py`
+Maps seminars to email batches for treatment assignment tracking.
+
+### `comprehensive_analysis.py`
+Runs full regression analysis with clustered standard errors (for broader RCT analysis beyond database impact).
+
+## Data Dependencies
+
+The analysis requires:
+1. **Speaker appearances data**: `04_demographic_analysis/outputs/speaker_appearances_analysis.csv`
+2. **URM databases**: `02_intervention_materials/databases/*.csv`
+3. **LLM matching results**: `outputs/llm_database_speaker_matches.csv`
+4. **Faculty counts**: `06_archive/department faculty count.csv`
+
+## Technical Notes
+
+### Peer University Algorithm
+The analysis replicates the exact algorithm used in the Qualtrics survey:
+1. Start with universities ±20 ranks from the department
+2. Expand symmetrically if needed to ensure at least 40 peer universities
+3. Filter database and speakers to only those from peer universities
+
+### Matching Methodology
+- Uses LLM (GPT-4o) results that account for:
+  - Name variations (nicknames, middle names, accents)
+  - University moves between database creation and speaking
+  - High-confidence matches only
+
+### Statistical Tests
+- Two-sample t-tests for treatment effects
+- Department-level analysis (unit of randomization)
+- Percentages calculated with appropriate denominators (peer university speakers only)
