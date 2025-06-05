@@ -8,7 +8,7 @@ The main analysis examines whether departments selected speakers from the URM da
 
 ## Main Scripts
 
-### `analyze_database_impact_final.py` (CURRENT)
+### `analyze_database_impact.py`
 **Clean analysis of database impact at the seminar level**
 
 **What it does:**
@@ -28,33 +28,12 @@ For each seminar:
 - `database_impact_summary_final.csv` - Summary statistics with p-values
 - `database_impact_final.json` - Complete report in JSON format
 
-### `analyze_database_impact.py` (ORIGINAL)
-Comprehensive analysis of database impact on speaker selection.
-
-**What it does:**
-- Implements the peer university selection algorithm (±20 ranks, expanding to 40 peers)
-- Matches seminar speakers with database faculty using LLM results
-- Calculates percentages, counts, and binary presence for each demographic group
-- Compares treatment vs control conditions
-- Generates detailed reports and summary statistics
-
-**Key analyses:**
-1. **% of speakers from database** - What percentage of female/URM/Black/Hispanic speakers from peer universities were from the database?
-2. **Count of speakers from database** - Raw counts of matched speakers
-3. **Binary presence** - Did the department select ANY speaker from the database?
-
-**Outputs:**
-- `database_impact_by_department.csv` - Department-level results
-- `database_impact_summary.csv` - Summary statistics by condition and demographic
-- `database_impact_treatment_effects.csv` - Treatment effect estimates and p-values
-- `database_impact_analysis_report.md` - Comprehensive human-readable report
-- `database_impact_analysis.json` - Machine-readable summary
 
 ## Running the Analysis
 
 ```bash
 cd search-costs/05_statistical_analysis
-poetry run python scripts/analyze_database_impact_final.py
+poetry run python scripts/analyze_database_impact.py
 ```
 
 ## Key Findings (June 2025)
