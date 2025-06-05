@@ -6,9 +6,29 @@ This directory contains scripts for analyzing the impact of URM databases on sem
 
 The main analysis examines whether departments selected speakers from the URM databases provided in the treatment condition, properly accounting for the peer university algorithm used in the experiment.
 
-## Main Script
+## Main Scripts
 
-### `analyze_database_impact.py`
+### `analyze_database_impact_final.py` (CURRENT)
+**Clean analysis of database impact at the seminar level**
+
+**What it does:**
+For each seminar:
+- **Denominator**: ALL speakers in the seminar (not just peer speakers)
+- **Numerator**: Speakers who were in the tailored database shown to that department
+  - This includes only URM faculty from the department's peer universities (±20 ranks, min 40)
+  - The database was tailored - each department only saw faculty from their peer institutions
+
+**Key metrics:**
+- % of all seminar speakers who came from the database
+- Count of speakers from the database by demographic (URM, Black, Hispanic, Female)
+- Binary: whether the seminar had ANY speaker from the database
+
+**Outputs:**
+- `database_impact_final.csv` - Seminar-level results
+- `database_impact_summary_final.csv` - Summary statistics with p-values
+- `database_impact_final.json` - Complete report in JSON format
+
+### `analyze_database_impact.py` (ORIGINAL)
 Comprehensive analysis of database impact on speaker selection.
 
 **What it does:**
@@ -33,22 +53,44 @@ Comprehensive analysis of database impact on speaker selection.
 ## Running the Analysis
 
 ```bash
-cd /mnt/c/Users/jcerv/Jose/search-costs/05_statistical_analysis
-poetry run python scripts/analyze_database_impact.py
+cd search-costs/05_statistical_analysis
+poetry run python scripts/analyze_database_impact_final.py
 ```
 
-## Key Findings (as of June 5, 2025)
+## Key Findings (June 2025)
 
-### Direct Database Usage
-- **Female speakers**: Treatment 0.48% vs Control 0.00% (p=0.067)
-- **URM speakers**: Treatment 3.12% vs Control 2.03% (53.8% increase, p=0.374)
-- **Black speakers**: Treatment 2.51% vs Control 0.74% (240.1% increase, p=0.100)
-- **Hispanic speakers**: No matches in either condition
+### Overall Statistics
+- **Seminars analyzed**: 1,656 (811 treatment, 845 control)
+- **Total speaker appearances**: 23,168
+- **Total unique speakers**: 21,982
+
+### Database Impact: % of ALL Speakers from Tailored Database
+
+**All/URM Speakers:**
+- Treatment: 0.131% ± 0.920%
+- Control: 0.165% ± 1.947%
+- No significant difference (p=0.659)
+
+**Black Speakers:**
+- Treatment: 0.076% ± 0.724%
+- Control: 0.034% ± 0.571%
+- 122% relative increase but not significant (p=0.193)
+
+**Seminars with ANY Speaker from Database:**
+- Treatment: 19/811 (2.3%)
+- Control: 15/845 (1.8%)
+- Not significant (p=0.489)
+
+**Seminars with ANY Black Speaker from Database:**
+- Treatment: 10/811 (1.2%)
+- Control: 4/845 (0.5%)
+- 2.6x higher but not quite significant (p=0.111)
 
 ### Key Insights
-1. Direct database usage was minimal (~2-3% of relevant speakers)
-2. Treatment departments showed higher usage for Black speakers (240% increase)
-3. The main treatment effect likely worked through indirect mechanisms (awareness, signaling)
+1. **Extremely low usage rates** - Only 0.13% of speakers came from the database
+2. **Only 2.3% of seminars** had any speaker from the database
+3. **Directional effect for Black speakers** - Treatment seminars 2.6x more likely to have a Black database speaker
+4. **Total impact minimal** - Only 19 speakers out of 11,295 in treatment came from database
 
 ## Supporting Scripts
 

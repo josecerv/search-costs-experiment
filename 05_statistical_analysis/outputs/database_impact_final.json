@@ -1,0 +1,64 @@
+{
+  "analysis_date": "2025-06-05 12:36:01.298489",
+  "methodology": "Percentage of all seminar speakers who were from the tailored database",
+  "overall": {
+    "seminars_analyzed": 1656,
+    "treatment_seminars": 811,
+    "control_seminars": 845,
+    "total_speakers": 23168,
+    "unique_speakers": 21982
+  },
+  "key_results": [
+    {
+      "metric": "All speakers",
+      "treatment_mean": 0.1312918229671598,
+      "treatment_std": 0.9203567076323742,
+      "control_mean": 0.16457817331708613,
+      "control_std": 1.9472314631716396,
+      "difference_pp": -0.03328635034992633,
+      "relative_pct": -20.225252036182745,
+      "p_value": 0.6587302621081179
+    },
+    {
+      "metric": "URM speakers",
+      "treatment_mean": 0.1312918229671598,
+      "treatment_std": 0.9203567076323742,
+      "control_mean": 0.16457817331708613,
+      "control_std": 1.9472314631716396,
+      "difference_pp": -0.03328635034992633,
+      "relative_pct": -20.225252036182745,
+      "p_value": 0.6587302621081179
+    },
+    {
+      "metric": "Black speakers",
+      "treatment_mean": 0.07568715942796474,
+      "treatment_std": 0.7242171680932573,
+      "control_mean": 0.03404474114533286,
+      "control_std": 0.5713983124552674,
+      "difference_pp": 0.04164241828263188,
+      "relative_pct": 122.31674226825653,
+      "p_value": 0.19317117387238114
+    },
+    {
+      "metric": "Hispanic speakers",
+      "treatment_mean": 0.05560466353919508,
+      "treatment_std": 0.5753203214689292,
+      "control_mean": 0.13053343217175328,
+      "control_std": 1.8638972139734968,
+      "difference_pp": -0.07492876863255821,
+      "relative_pct": -57.40197540655212,
+      "p_value": 0.2733243886423515
+    },
+    {
+      "metric": "Female speakers",
+      "treatment_mean": 0.0,
+      "treatment_std": 0.0,
+      "control_mean": 0.0,
+      "control_std": 0.0,
+      "difference_pp": 0.0,
+      "relative_pct": NaN,
+      "p_value": NaN
+    }
+  ],
+  "interpretation": "Treatment shows what % of speakers came from the URM database shown to that department"
+}
