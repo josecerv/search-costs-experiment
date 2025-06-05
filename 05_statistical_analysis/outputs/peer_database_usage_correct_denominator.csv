@@ -1,0 +1,569 @@
+university,discipline,condition,peer_universities,shown_database_size,shown_black_faculty,total_speakers,speakers_from_peer_unis,speakers_from_shown_db,percent_of_all_speakers,percent_of_peer_speakers,used_shown_db,black_speakers_total,black_from_peers,black_from_shown_db
+Arizona State University,Mathematics,control,40,33,12,50,9,0,0.0,0.0,False,0,0,0
+Arizona State University,Physics,treatment,40,29,9,81,19,0,0.0,0.0,False,2,0,0
+Arizona State University,Chemistry,control,40,33,12,72,14,0,0.0,0.0,False,4,0,0
+Arizona State University,Computer Science,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+Arizona State University,Mechanical Engineering,treatment,40,37,21,49,22,0,0.0,0.0,False,4,2,0
+Auburn University,Mathematics,control,40,32,10,87,8,0,0.0,0.0,False,2,0,0
+Auburn University,Mechanical Engineering,control,40,35,19,4,1,0,0.0,0.0,False,0,0,0
+Auburn University,Chemistry,treatment,40,23,12,31,3,0,0.0,0.0,False,0,0,0
+Auburn University,Computer Science,control,40,29,18,12,0,0,0.0,0.0,False,0,0,0
+Baylor University,Mathematics,control,40,30,11,35,7,0,0.0,0.0,False,1,0,0
+Baylor University,Physics,control,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+Baylor University,Chemistry,control,40,36,16,10,1,0,0.0,0.0,False,0,0,0
+Binghamton University,Mathematics,control,40,29,10,124,4,0,0.0,0.0,False,1,0,0
+Binghamton University,Computer Science,control,40,25,14,14,1,0,0.0,0.0,False,0,0,0
+Binghamton University,Mechanical Engineering,control,40,34,19,6,1,0,0.0,0.0,False,0,0,0
+Boston College,Mathematics,control,40,36,13,39,4,0,0.0,0.0,False,1,0,0
+Boston College,Physics,treatment,40,28,11,23,4,0,0.0,0.0,False,1,1,0
+Boston University,Physics,control,40,40,9,68,9,0,0.0,0.0,False,1,0,0
+Boston University,Mathematics,treatment,40,35,12,76,11,0,0.0,0.0,False,2,0,0
+Boston University,Computer Science,treatment,40,31,17,50,9,0,0.0,0.0,False,0,0,0
+Boston University,Mechanical Engineering,control,40,37,21,13,4,0,0.0,0.0,False,1,1,0
+Boston University,Chemistry,treatment,40,27,12,33,7,0,0.0,0.0,False,1,0,0
+Brandeis University,Physics,treatment,40,28,8,41,1,0,0.0,0.0,False,1,0,0
+Brandeis University,Computer Science,control,40,25,14,6,1,0,0.0,0.0,False,0,0,0
+Brandeis University,Mathematics,treatment,40,33,13,65,11,0,0.0,0.0,False,4,1,0
+Brown University,Physics,treatment,40,45,14,36,10,0,0.0,0.0,False,1,0,0
+Brown University,Mechanical Engineering,treatment,40,37,22,15,5,0,0.0,0.0,False,0,0,0
+Brown University,Mathematics,control,40,35,15,169,69,0,0.0,0.0,False,2,0,0
+Brown University,Chemistry,control,40,35,13,71,9,1,0.014084507042253521,0.1111111111111111,True,3,0,0
+Brown University,Computer Science,control,40,35,21,33,10,0,0.0,0.0,False,0,0,0
+California Institute of Technology,Physics,control,40,48,16,43,22,0,0.0,0.0,False,1,1,0
+California Institute of Technology,Chemistry,control,40,25,13,52,16,0,0.0,0.0,False,0,0,0
+California Institute of Technology,Mechanical Engineering,treatment,40,61,40,13,4,0,0.0,0.0,False,1,0,0
+California Institute of Technology,Mathematics,control,40,36,15,79,39,0,0.0,0.0,False,2,0,0
+California Institute of Technology,Computer Science,control,40,36,22,6,4,0,0.0,0.0,False,0,0,0
+Carnegie Mellon University,Computer Science,control,40,36,22,144,20,0,0.0,0.0,False,2,0,0
+Carnegie Mellon University,Mathematics,treatment,40,34,14,57,17,0,0.0,0.0,False,1,1,0
+Carnegie Mellon University,Mechanical Engineering,control,40,63,40,4,1,0,0.0,0.0,False,0,0,0
+Carnegie Mellon University,Chemistry,control,40,26,14,9,2,0,0.0,0.0,False,1,0,0
+Case Western Reserve University,Physics,control,40,33,8,40,7,0,0.0,0.0,False,0,0,0
+Case Western Reserve University,Mathematics,treatment,40,31,9,40,0,0,0.0,0.0,False,2,0,0
+Case Western Reserve University,Computer Science,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+Case Western Reserve University,Chemistry,control,40,34,14,17,2,0,0.0,0.0,False,0,0,0
+Clemson University,Mathematics,treatment,40,27,8,15,2,0,0.0,0.0,False,0,0,0
+Clemson University,Mechanical Engineering,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+Clemson University,Physics,control,40,28,9,5,0,0,0.0,0.0,False,0,0,0
+Clemson University,Computer Science,control,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+Clemson University,Chemistry,control,40,29,13,31,7,0,0.0,0.0,False,2,0,0
+Colorado School of Mines,Physics,control,40,26,11,17,4,0,0.0,0.0,False,2,0,0
+Colorado School of Mines,Mathematics,control,40,27,11,17,5,0,0.0,0.0,False,0,0,0
+Colorado School of Mines,Mechanical Engineering,control,40,37,20,4,1,0,0.0,0.0,False,0,0,0
+Colorado School of Mines,Computer Science,control,40,31,20,18,2,0,0.0,0.0,False,0,0,0
+Colorado School of Mines,Chemistry,control,40,33,14,23,5,0,0.0,0.0,False,1,0,0
+Colorado State University,Mathematics,treatment,40,29,11,66,7,0,0.0,0.0,False,4,1,0
+Colorado State University,Chemistry,treatment,40,36,13,65,9,0,0.0,0.0,False,2,0,0
+Colorado State University,Computer Science,control,40,24,14,33,2,0,0.0,0.0,False,0,0,0
+Colorado State University,Physics,control,40,25,10,29,2,0,0.0,0.0,False,0,0,0
+Columbia University,Mathematics,treatment,40,34,14,222,92,1,0.0045045045045045045,0.010869565217391304,True,6,5,0
+Columbia University,Computer Science,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+Columbia University,Physics,treatment,40,46,16,102,34,1,0.00980392156862745,0.029411764705882353,True,2,0,0
+Columbia University,Mechanical Engineering,treatment,40,59,39,5,1,0,0.0,0.0,False,0,0,0
+Columbia University,Chemistry,treatment,40,25,13,25,11,0,0.0,0.0,False,1,1,0
+Cornell University,Computer Science,control,40,35,21,144,42,1,0.006944444444444444,0.023809523809523808,True,4,0,0
+Cornell University,Mathematics,control,40,35,15,134,37,0,0.0,0.0,False,2,0,0
+Cornell University,Physics,control,40,49,16,51,21,0,0.0,0.0,False,1,0,0
+Cornell University,Mechanical Engineering,control,40,64,41,12,5,0,0.0,0.0,False,0,0,0
+Cornell University,Chemistry,control,40,25,13,58,35,0,0.0,0.0,False,0,0,0
+Dartmouth College,Mathematics,treatment,40,35,12,91,14,0,0.0,0.0,False,4,0,0
+Dartmouth College,Physics,control,40,29,6,19,4,0,0.0,0.0,False,0,0,0
+Dartmouth College,Chemistry,treatment,40,34,15,16,3,0,0.0,0.0,False,1,0,0
+Drexel University,Mechanical Engineering,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+Drexel University,Mathematics,control,40,31,12,15,2,0,0.0,0.0,False,0,0,0
+Duke University,Mathematics,control,40,36,15,28,12,0,0.0,0.0,False,0,0,0
+Duke University,Chemistry,control,40,23,13,26,10,1,0.038461538461538464,0.1,True,1,1,0
+Duke University,Computer Science,treatment,40,36,22,20,2,0,0.0,0.0,False,0,0,0
+Duke University,Mechanical Engineering,control,40,65,41,21,9,0,0.0,0.0,False,0,0,0
+Emory University,Physics,control,40,28,7,8,1,0,0.0,0.0,False,0,0,0
+Emory University,Mathematics,treatment,40,34,11,24,4,0,0.0,0.0,False,2,0,0
+Emory University,Chemistry,control,40,26,14,50,20,1,0.02,0.05,True,0,0,0
+Florida International University,Physics,treatment,40,19,6,11,1,0,0.0,0.0,False,1,0,0
+Florida International University,Chemistry,treatment,40,23,14,9,2,0,0.0,0.0,False,0,0,0
+Florida International University,Mathematics,treatment,40,25,8,32,0,0,0.0,0.0,False,2,0,0
+Florida State University,Physics,control,40,32,9,44,5,1,0.022727272727272728,0.2,True,0,0,0
+Florida State University,Mathematics,treatment,40,39,13,68,8,0,0.0,0.0,False,1,0,0
+Florida State University,Chemistry,control,40,33,14,120,10,0,0.0,0.0,False,12,0,0
+Florida State University,Computer Science,treatment,40,32,20,15,1,0,0.0,0.0,False,0,0,0
+Florida State University,Mechanical Engineering,treatment,40,31,16,9,2,0,0.0,0.0,False,1,0,0
+George Mason University,Chemistry,treatment,40,25,13,14,3,0,0.0,0.0,False,1,0,0
+George Mason University,Mathematics,control,40,30,12,71,7,0,0.0,0.0,False,1,1,0
+George Mason University,Mechanical Engineering,treatment,40,32,17,12,0,0,0.0,0.0,False,0,0,0
+George Mason University,Physics,control,40,16,7,26,2,0,0.0,0.0,False,0,0,0
+George Mason University,Computer Science,control,40,30,20,2,0,0,0.0,0.0,False,0,0,0
+George Washington University,Mathematics,control,40,30,11,20,1,0,0.0,0.0,False,2,0,0
+George Washington University,Physics,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+George Washington University,Chemistry,treatment,40,23,12,16,1,0,0.0,0.0,False,1,0,0
+Georgetown University,Physics,control,40,21,9,19,1,0,0.0,0.0,False,0,0,0
+Georgetown University,Chemistry,control,40,23,11,24,2,0,0.0,0.0,False,3,0,0
+Georgetown University,Mathematics,control,40,34,14,19,1,0,0.0,0.0,False,0,0,0
+Georgia Institute of Technology,Physics,treatment,40,47,16,41,20,0,0.0,0.0,False,0,0,0
+Georgia Institute of Technology,Chemistry,treatment,40,23,11,22,11,0,0.0,0.0,False,1,1,0
+Georgia Institute of Technology,Computer Science,treatment,40,36,22,23,10,0,0.0,0.0,False,0,0,0
+Georgia Institute of Technology,Mechanical Engineering,control,40,61,37,11,3,0,0.0,0.0,False,0,0,0
+Georgia State University,Physics,control,40,19,6,18,1,0,0.0,0.0,False,1,0,0
+Georgia State University,Chemistry,control,40,25,13,23,3,0,0.0,0.0,False,2,0,0
+"Graduate Center, CUNY",Mathematics,treatment,40,39,14,314,40,0,0.0,0.0,False,3,1,0
+"Graduate Center, CUNY",Mechanical Engineering,treatment,40,35,19,10,0,0,0.0,0.0,False,0,0,0
+Harvard University,Computer Science,treatment,40,34,21,37,17,0,0.0,0.0,False,0,0,0
+Harvard University,Physics,treatment,40,47,16,86,39,0,0.0,0.0,False,0,0,0
+Harvard University,Mechanical Engineering,control,40,65,41,11,2,0,0.0,0.0,False,0,0,0
+Harvard University,Chemistry,treatment,40,25,13,18,10,0,0.0,0.0,False,1,0,0
+Indiana University Bloomington,Chemistry,control,40,28,15,27,8,0,0.0,0.0,False,1,0,0
+Indiana University Bloomington,Mathematics,treatment,40,42,17,96,22,0,0.0,0.0,False,1,0,0
+Indiana University Bloomington,Physics,control,40,31,8,24,2,0,0.0,0.0,False,1,0,0
+Iowa State University,Mathematics,control,40,38,12,66,7,0,0.0,0.0,False,2,1,0
+Iowa State University,Chemistry,control,40,36,14,53,14,0,0.0,0.0,False,0,0,0
+Iowa State University,Computer Science,control,40,34,23,6,1,0,0.0,0.0,False,0,0,0
+Iowa State University,Physics,treatment,40,30,8,20,6,0,0.0,0.0,False,0,0,0
+Iowa State University,Mechanical Engineering,control,40,36,19,2,0,0,0.0,0.0,False,0,0,0
+Johns Hopkins University,Chemistry,control,40,25,13,12,7,0,0.0,0.0,False,0,0,0
+Johns Hopkins University,Physics,control,40,46,14,118,31,2,0.01694915254237288,0.06451612903225806,True,0,0,0
+Johns Hopkins University,Mathematics,control,40,35,14,95,38,0,0.0,0.0,False,3,0,0
+Johns Hopkins University,Mechanical Engineering,control,40,64,40,31,4,0,0.0,0.0,False,0,0,0
+Johns Hopkins University,Computer Science,control,40,36,22,37,23,0,0.0,0.0,False,0,0,0
+Kansas State University,Physics,treatment,40,20,8,52,4,0,0.0,0.0,False,0,0,0
+Kansas State University,Chemistry,treatment,40,29,12,10,3,0,0.0,0.0,False,1,0,0
+Kansas State University,Mathematics,treatment,40,29,11,27,2,0,0.0,0.0,False,0,0,0
+Kent State University,Mathematics,control,40,17,8,51,0,0,0.0,0.0,False,0,0,0
+Kent State University,Chemistry,treatment,40,26,14,11,0,0,0.0,0.0,False,0,0,0
+Kent State University,Physics,control,40,19,6,36,2,0,0.0,0.0,False,0,0,0
+Louisiana State University,Mathematics,treatment,40,33,9,132,19,0,0.0,0.0,False,1,0,0
+Louisiana State University,Chemistry,treatment,40,26,12,65,2,0,0.0,0.0,False,6,0,0
+Louisiana State University,Physics,control,40,27,11,36,1,0,0.0,0.0,False,0,0,0
+Louisiana State University,Computer Science,control,40,25,14,8,2,0,0.0,0.0,False,0,0,0
+Massachusetts Institute of Technology,Mathematics,control,40,34,15,220,57,1,0.004545454545454545,0.017543859649122806,True,4,2,1
+Massachusetts Institute of Technology,Chemistry,treatment,40,23,11,53,19,0,0.0,0.0,False,2,1,0
+Massachusetts Institute of Technology,Physics,treatment,40,47,16,128,46,1,0.0078125,0.021739130434782608,True,1,1,0
+Massachusetts Institute of Technology,Computer Science,control,40,35,21,69,25,0,0.0,0.0,False,0,0,0
+Massachusetts Institute of Technology,Mechanical Engineering,treatment,40,64,40,12,1,0,0.0,0.0,False,0,0,0
+Michigan State University,Physics,control,40,42,15,51,9,0,0.0,0.0,False,1,0,0
+Michigan State University,Mathematics,control,40,36,13,211,31,0,0.0,0.0,False,1,0,0
+Michigan State University,Computer Science,control,40,30,19,19,2,0,0.0,0.0,False,0,0,0
+Michigan State University,Chemistry,treatment,40,30,14,7,1,0,0.0,0.0,False,0,0,0
+Mississippi State University,Chemistry,treatment,40,24,13,11,2,0,0.0,0.0,False,1,0,0
+Mississippi State University,Physics,treatment,40,19,6,23,2,0,0.0,0.0,False,2,0,0
+Mississippi State University,Computer Science,control,40,25,14,1,0,0,0.0,0.0,False,0,0,0
+Mississippi State University,Mathematics,treatment,40,16,7,9,0,0,0.0,0.0,False,0,0,0
+Montana State University,Mathematics,treatment,40,17,8,41,0,0,0.0,0.0,False,1,0,0
+Montana State University,Computer Science,control,40,25,14,11,0,0,0.0,0.0,False,0,0,0
+Montana State University,Physics,control,40,16,6,7,1,0,0.0,0.0,False,0,0,0
+Montana State University,Chemistry,treatment,40,25,14,25,1,0,0.0,0.0,False,2,0,0
+New Jersey Institute of Technology,Computer Science,control,40,25,14,29,3,0,0.0,0.0,False,0,0,0
+New Jersey Institute of Technology,Mathematics,treatment,40,29,11,35,3,0,0.0,0.0,False,0,0,0
+New Jersey Institute of Technology,Physics,treatment,40,17,5,30,1,0,0.0,0.0,False,0,0,0
+New York University,Mathematics,control,40,35,14,141,53,0,0.0,0.0,False,2,1,0
+New York University,Physics,treatment,40,46,14,138,44,2,0.014492753623188406,0.045454545454545456,True,2,2,2
+New York University,Chemistry,control,40,32,13,37,5,0,0.0,0.0,False,0,0,0
+New York University,Computer Science,treatment,40,34,20,67,14,0,0.0,0.0,False,1,0,0
+North Carolina State University,Mathematics,treatment,40,33,12,73,11,0,0.0,0.0,False,1,1,0
+North Carolina State University,Chemistry,control,40,31,13,66,8,0,0.0,0.0,False,3,1,0
+North Carolina State University,Physics,control,40,27,8,30,1,0,0.0,0.0,False,1,0,0
+North Carolina State University,Mechanical Engineering,control,40,35,20,13,3,0,0.0,0.0,False,0,0,0
+North Carolina State University,Computer Science,control,40,30,18,29,5,0,0.0,0.0,False,1,0,0
+North Dakota State University,Mathematics,treatment,40,16,8,23,1,0,0.0,0.0,False,0,0,0
+North Dakota State University,Physics,treatment,40,19,6,5,0,0,0.0,0.0,False,0,0,0
+North Dakota State University,Computer Science,control,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+Northeastern University,Computer Science,treatment,40,32,20,23,9,0,0.0,0.0,False,0,0,0
+Northeastern University,Mathematics,treatment,40,32,10,21,5,0,0.0,0.0,False,0,0,0
+Northeastern University,Physics,treatment,40,26,7,16,3,0,0.0,0.0,False,0,0,0
+Northeastern University,Chemistry,control,40,33,13,14,0,0,0.0,0.0,False,1,0,0
+Northwestern University,Mathematics,treatment,40,35,15,73,29,0,0.0,0.0,False,1,1,0
+Northwestern University,Computer Science,control,40,33,19,19,2,0,0.0,0.0,False,1,0,0
+Ohio State University,Mathematics,treatment,40,36,17,201,45,0,0.0,0.0,False,1,1,0
+Ohio State University,Physics,treatment,40,43,14,143,40,0,0.0,0.0,False,5,0,0
+Ohio State University,Chemistry,treatment,40,25,13,48,16,0,0.0,0.0,False,1,0,0
+Ohio University,Physics,treatment,40,23,9,37,1,0,0.0,0.0,False,1,0,0
+Ohio University,Chemistry,control,40,29,15,2,0,0,0.0,0.0,False,0,0,0
+Ohio University,Mathematics,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+Oklahoma State University-Stillwater,Mathematics,control,40,30,11,85,2,1,0.011764705882352941,0.5,True,0,0,0
+Oklahoma State University-Stillwater,Chemistry,treatment,40,28,14,4,0,0,0.0,0.0,False,0,0,0
+Oklahoma State University-Stillwater,Physics,control,40,16,7,1,0,0,0.0,0.0,False,0,0,0
+Old Dominion University,Chemistry,treatment,40,26,14,34,4,0,0.0,0.0,False,1,0,0
+Old Dominion University,Computer Science,control,40,25,14,31,4,0,0.0,0.0,False,2,2,0
+Old Dominion University,Physics,control,40,19,6,9,0,0,0.0,0.0,False,0,0,0
+Old Dominion University,Mathematics,control,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+Oregon State University,Computer Science,control,40,33,21,31,2,0,0.0,0.0,False,0,0,0
+Oregon State University,Mathematics,treatment,40,29,11,131,5,0,0.0,0.0,False,0,0,0
+Oregon State University,Mechanical Engineering,treatment,40,35,19,41,1,0,0.0,0.0,False,4,0,0
+Oregon State University,Physics,control,40,19,7,39,1,0,0.0,0.0,False,1,0,0
+Oregon State University,Chemistry,control,40,32,13,5,1,0,0.0,0.0,False,0,0,0
+Pennsylvania State University,Mathematics,control,40,39,16,187,28,0,0.0,0.0,False,1,0,0
+Pennsylvania State University,Physics,control,40,47,15,23,8,1,0.043478260869565216,0.125,True,1,1,1
+Pennsylvania State University,Mechanical Engineering,control,40,64,41,15,2,0,0.0,0.0,False,1,0,0
+Pennsylvania State University,Chemistry,treatment,40,27,13,32,13,0,0.0,0.0,False,2,0,0
+Princeton University,Mathematics,control,40,36,15,328,110,0,0.0,0.0,False,4,1,0
+Princeton University,Chemistry,treatment,40,25,13,40,28,0,0.0,0.0,False,0,0,0
+Princeton University,Physics,control,40,49,16,40,16,1,0.025,0.0625,True,0,0,0
+Princeton University,Mechanical Engineering,control,40,63,39,14,9,0,0.0,0.0,False,1,1,0
+Princeton University,Computer Science,treatment,40,34,21,14,9,0,0.0,0.0,False,0,0,0
+Purdue University,Physics,control,40,43,11,82,15,0,0.0,0.0,False,0,0,0
+Purdue University,Mathematics,treatment,40,41,18,128,30,0,0.0,0.0,False,2,0,0
+Purdue University,Chemistry,control,40,24,13,95,22,0,0.0,0.0,False,5,0,0
+Purdue University,Computer Science,treatment,40,35,22,73,13,0,0.0,0.0,False,1,0,0
+Purdue University,Mechanical Engineering,treatment,40,60,39,8,5,0,0.0,0.0,False,0,0,0
+Rensselaer Polytechnic Institute,Mathematics,treatment,40,33,10,18,0,0,0.0,0.0,False,0,0,0
+Rensselaer Polytechnic Institute,Chemistry,treatment,40,32,14,9,1,0,0.0,0.0,False,1,0,0
+Rensselaer Polytechnic Institute,Mechanical Engineering,treatment,40,39,23,13,3,0,0.0,0.0,False,0,0,0
+Rensselaer Polytechnic Institute,Physics,control,40,27,5,20,1,0,0.0,0.0,False,0,0,0
+Rensselaer Polytechnic Institute,Computer Science,control,40,32,22,5,0,0,0.0,0.0,False,0,0,0
+Rice University,Mathematics,treatment,40,37,16,73,20,1,0.0136986301369863,0.05,True,3,1,1
+Rice University,Physics,treatment,40,47,16,39,14,0,0.0,0.0,False,0,0,0
+Rice University,Computer Science,control,40,34,20,9,3,0,0.0,0.0,False,0,0,0
+Rice University,Chemistry,treatment,40,22,12,45,21,0,0.0,0.0,False,2,1,0
+Rice University,Mechanical Engineering,treatment,40,63,39,8,0,0,0.0,0.0,False,1,0,0
+Rutgers University-New Brunswick,Physics,control,40,46,15,188,32,0,0.0,0.0,False,0,0,0
+Rutgers University-New Brunswick,Mathematics,control,40,37,17,173,40,0,0.0,0.0,False,1,1,0
+Rutgers University-New Brunswick,Computer Science,treatment,40,34,18,27,3,0,0.0,0.0,False,0,0,0
+Rutgers University-New Brunswick,Chemistry,treatment,40,28,12,31,7,1,0.03225806451612903,0.14285714285714285,True,1,1,1
+Rutgers University-New Brunswick,Mechanical Engineering,treatment,40,41,22,14,1,0,0.0,0.0,False,1,0,0
+Stanford University,Chemistry,treatment,40,24,12,46,34,0,0.0,0.0,False,1,1,0
+Stanford University,Mathematics,treatment,40,36,15,225,105,0,0.0,0.0,False,4,0,0
+Stanford University,Physics,control,40,48,15,22,14,0,0.0,0.0,False,1,1,0
+Stony Brook University,Physics,treatment,40,44,15,158,44,0,0.0,0.0,False,2,0,0
+Stony Brook University,Mathematics,control,40,38,17,96,18,0,0.0,0.0,False,1,1,0
+Stony Brook University,Chemistry,control,40,32,13,51,2,0,0.0,0.0,False,1,0,0
+Stony Brook University,Computer Science,control,40,29,16,14,3,0,0.0,0.0,False,0,0,0
+Syracuse University,Physics,treatment,40,29,7,44,3,0,0.0,0.0,False,4,0,0
+Syracuse University,Chemistry,treatment,40,31,14,8,2,0,0.0,0.0,False,1,0,0
+Temple University,Mathematics,control,40,30,9,109,13,0,0.0,0.0,False,4,1,0
+Temple University,Physics,treatment,40,24,9,1,0,0,0.0,0.0,False,0,0,0
+Temple University,Chemistry,treatment,40,33,14,6,0,0,0.0,0.0,False,1,0,0
+Texas A&M University,Mathematics,treatment,40,42,17,131,35,1,0.007633587786259542,0.02857142857142857,True,2,1,1
+Texas A&M University,Chemistry,treatment,40,23,12,70,26,0,0.0,0.0,False,1,1,0
+Texas A&M University,Computer Science,control,40,27,16,4,0,0,0.0,0.0,False,0,0,0
+Texas A&M University,Mechanical Engineering,treatment,40,61,40,12,0,0,0.0,0.0,False,1,0,0
+Texas A&M University,Physics,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+Texas Tech University,Computer Science,treatment,40,23,13,14,2,0,0.0,0.0,False,0,0,0
+Texas Tech University,Chemistry,treatment,40,24,14,28,2,0,0.0,0.0,False,2,0,0
+Texas Tech University,Mathematics,control,40,25,8,40,3,0,0.0,0.0,False,1,0,0
+Texas Tech University,Mechanical Engineering,treatment,40,32,18,10,1,0,0.0,0.0,False,0,0,0
+Texas Tech University,Physics,treatment,40,19,6,29,2,0,0.0,0.0,False,0,0,0
+Tufts University,Mathematics,control,40,33,10,70,17,0,0.0,0.0,False,2,1,0
+Tufts University,Physics,treatment,40,23,10,68,0,0,0.0,0.0,False,2,0,0
+Tufts University,Chemistry,treatment,40,31,13,23,4,0,0.0,0.0,False,2,1,0
+Tufts University,Computer Science,control,40,30,19,52,3,0,0.0,0.0,False,1,0,0
+Tufts University,Mechanical Engineering,control,40,40,21,21,2,0,0.0,0.0,False,0,0,0
+Tulane University,Mathematics,treatment,40,36,12,62,7,0,0.0,0.0,False,1,0,0
+Tulane University,Computer Science,control,40,35,23,21,1,0,0.0,0.0,False,0,0,0
+Tulane University,Chemistry,control,40,23,11,21,6,0,0.0,0.0,False,0,0,0
+Tulane University,Physics,treatment,40,23,9,12,0,0,0.0,0.0,False,1,0,0
+"University at Albany, SUNY",Physics,treatment,40,19,6,10,1,0,0.0,0.0,False,0,0,0
+"University at Albany, SUNY",Mathematics,control,40,20,9,48,4,0,0.0,0.0,False,1,0,0
+"University at Albany, SUNY",Chemistry,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University at Buffalo,Computer Science,control,40,29,19,9,0,0,0.0,0.0,False,0,0,0
+University at Buffalo,Mathematics,control,40,30,11,34,1,0,0.0,0.0,False,0,0,0
+University at Buffalo,Chemistry,control,40,36,15,25,6,1,0.04,0.16666666666666666,True,1,0,0
+University at Buffalo,Physics,treatment,40,20,7,34,1,0,0.0,0.0,False,1,0,0
+University at Buffalo,Mechanical Engineering,control,40,35,19,15,2,0,0.0,0.0,False,1,0,0
+University of Alabama,Chemistry,treatment,40,23,12,21,6,0,0.0,0.0,False,0,0,0
+University of Alabama,Computer Science,control,40,23,12,6,2,0,0.0,0.0,False,0,0,0
+University of Alabama,Physics,control,40,17,7,31,6,0,0.0,0.0,False,1,1,0
+University of Alabama,Mathematics,control,40,25,10,15,2,0,0.0,0.0,False,0,0,0
+University of Alabama,Mechanical Engineering,treatment,40,34,19,55,13,0,0.0,0.0,False,1,0,0
+University of Alabama at Birmingham,Mathematics,control,40,27,9,12,3,0,0.0,0.0,False,0,0,0
+University of Alabama at Birmingham,Chemistry,treatment,40,25,14,21,5,0,0.0,0.0,False,1,0,0
+University of Alabama in Huntsville,Mathematics,control,40,16,7,1,0,0,0.0,0.0,False,0,0,0
+University of Alabama in Huntsville,Physics,control,40,18,6,5,0,0,0.0,0.0,False,0,0,0
+University of Arizona,Mathematics,treatment,40,37,14,69,10,1,0.014492753623188406,0.1,True,0,0,0
+University of Arizona,Chemistry,control,40,36,15,47,5,0,0.0,0.0,False,0,0,0
+University of Arizona,Physics,control,40,41,13,67,8,0,0.0,0.0,False,1,0,0
+University of Arizona,Mechanical Engineering,control,40,35,19,9,2,0,0.0,0.0,False,0,0,0
+University of Arizona,Computer Science,treatment,40,30,21,6,2,0,0.0,0.0,False,0,0,0
+University of Arkansas,Physics,control,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Arkansas,Mathematics,treatment,40,21,10,43,1,0,0.0,0.0,False,0,0,0
+University of Arkansas,Chemistry,treatment,40,25,13,14,2,0,0.0,0.0,False,2,0,0
+"University of California, Berkeley",Mathematics,treatment,40,36,15,308,104,2,0.006493506493506494,0.019230769230769232,True,11,5,1
+"University of California, Berkeley",Chemistry,treatment,40,23,12,37,15,0,0.0,0.0,False,1,1,0
+"University of California, Berkeley",Physics,control,40,46,16,34,12,0,0.0,0.0,False,0,0,0
+"University of California, Berkeley",Mechanical Engineering,control,40,63,39,2,0,0,0.0,0.0,False,0,0,0
+"University of California, Berkeley",Computer Science,control,40,35,21,11,3,0,0.0,0.0,False,0,0,0
+"University of California, Davis",Mathematics,control,40,37,16,158,21,0,0.0,0.0,False,2,0,0
+"University of California, Davis",Physics,control,40,42,11,100,15,0,0.0,0.0,False,2,1,0
+"University of California, Davis",Chemistry,treatment,40,28,14,19,1,0,0.0,0.0,False,1,0,0
+"University of California, Irvine",Mathematics,control,40,41,17,114,21,0,0.0,0.0,False,2,0,0
+"University of California, Irvine",Physics,treatment,40,39,10,92,15,0,0.0,0.0,False,6,3,0
+"University of California, Irvine",Computer Science,treatment,40,35,20,32,10,0,0.0,0.0,False,0,0,0
+"University of California, Irvine",Chemistry,control,40,25,13,17,0,0,0.0,0.0,False,0,0,0
+"University of California, Irvine",Mechanical Engineering,control,40,39,22,20,8,0,0.0,0.0,False,0,0,0
+"University of California, Los Angeles",Mathematics,control,40,34,14,199,45,0,0.0,0.0,False,0,0,0
+"University of California, Los Angeles",Physics,treatment,40,49,16,106,29,0,0.0,0.0,False,2,0,0
+"University of California, Los Angeles",Chemistry,treatment,40,24,13,90,29,1,0.011111111111111112,0.034482758620689655,True,4,2,0
+"University of California, Los Angeles",Mechanical Engineering,control,40,65,41,31,16,0,0.0,0.0,False,0,0,0
+"University of California, Los Angeles",Computer Science,treatment,40,34,20,11,4,0,0.0,0.0,False,1,0,0
+"University of California, Riverside",Computer Science,control,40,30,19,7,0,0,0.0,0.0,False,0,0,0
+"University of California, Riverside",Chemistry,treatment,40,36,14,71,3,0,0.0,0.0,False,1,0,0
+"University of California, Riverside",Physics,control,40,28,8,18,0,0,0.0,0.0,False,0,0,0
+"University of California, Riverside",Mechanical Engineering,control,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+"University of California, San Diego",Mathematics,treatment,40,34,15,168,50,0,0.0,0.0,False,1,0,0
+"University of California, San Diego",Chemistry,control,40,25,13,53,19,0,0.0,0.0,False,0,0,0
+"University of California, San Diego",Mechanical Engineering,control,40,59,38,68,20,0,0.0,0.0,False,2,1,0
+"University of California, San Diego",Physics,treatment,40,44,15,37,8,0,0.0,0.0,False,1,0,0
+"University of California, Santa Barbara",Computer Science,treatment,40,36,20,10,0,0,0.0,0.0,False,0,0,0
+"University of California, Santa Barbara",Physics,control,40,48,15,25,7,0,0.0,0.0,False,0,0,0
+"University of California, Santa Barbara",Chemistry,treatment,40,24,12,41,19,0,0.0,0.0,False,2,1,0
+"University of California, Santa Barbara",Mathematics,control,40,38,18,57,19,0,0.0,0.0,False,1,0,0
+"University of California, Santa Barbara",Mechanical Engineering,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+"University of California, Santa Cruz",Physics,treatment,40,36,9,60,9,0,0.0,0.0,False,1,1,0
+"University of California, Santa Cruz",Mathematics,treatment,40,35,10,18,3,0,0.0,0.0,False,0,0,0
+"University of California, Santa Cruz",Chemistry,treatment,40,34,13,17,3,0,0.0,0.0,False,2,0,0
+University of Central Florida,Mathematics,treatment,40,15,7,21,1,0,0.0,0.0,False,1,1,0
+University of Central Florida,Physics,treatment,40,21,7,17,1,0,0.0,0.0,False,0,0,0
+University of Central Florida,Chemistry,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Chicago,Mathematics,control,40,36,15,223,105,1,0.004484304932735426,0.009523809523809525,True,4,2,0
+University of Chicago,Chemistry,treatment,40,25,13,84,48,0,0.0,0.0,False,0,0,0
+University of Chicago,Physics,treatment,40,49,16,10,4,1,0.1,0.25,True,1,1,1
+University of Chicago,Computer Science,treatment,40,35,22,24,8,0,0.0,0.0,False,0,0,0
+University of Cincinnati,Mechanical Engineering,control,40,35,19,12,0,0,0.0,0.0,False,0,0,0
+University of Cincinnati,Chemistry,control,40,29,13,6,0,0,0.0,0.0,False,0,0,0
+University of Cincinnati,Mathematics,control,40,24,9,10,1,0,0.0,0.0,False,0,0,0
+University of Colorado Boulder,Mathematics,control,40,35,12,168,15,0,0.0,0.0,False,5,0,0
+University of Colorado Boulder,Physics,control,40,47,15,42,15,0,0.0,0.0,False,0,0,0
+University of Colorado Boulder,Chemistry,treatment,40,28,14,38,10,0,0.0,0.0,False,0,0,0
+University of Colorado Boulder,Mechanical Engineering,control,40,58,37,15,1,0,0.0,0.0,False,0,0,0
+University of Colorado Denver,Mathematics,treatment,40,17,8,15,0,0,0.0,0.0,False,1,0,0
+University of Colorado Denver,Chemistry,treatment,40,26,14,36,1,0,0.0,0.0,False,3,0,0
+University of Connecticut,Mathematics,treatment,40,34,13,74,2,0,0.0,0.0,False,0,0,0
+University of Connecticut,Physics,treatment,40,19,10,36,1,0,0.0,0.0,False,0,0,0
+University of Connecticut,Chemistry,treatment,40,30,13,24,1,0,0.0,0.0,False,1,0,0
+University of Connecticut,Mechanical Engineering,treatment,40,35,19,9,1,0,0.0,0.0,False,0,0,0
+University of Delaware,Mathematics,treatment,40,32,10,45,5,0,0.0,0.0,False,0,0,0
+University of Delaware,Physics,treatment,40,25,9,16,0,0,0.0,0.0,False,0,0,0
+University of Delaware,Mechanical Engineering,control,40,40,21,9,1,0,0.0,0.0,False,0,0,0
+University of Delaware,Computer Science,treatment,40,33,21,9,1,0,0.0,0.0,False,0,0,0
+University of Denver,Chemistry,control,40,26,14,6,0,0,0.0,0.0,False,1,0,0
+University of Denver,Physics,treatment,40,19,6,19,0,0,0.0,0.0,False,0,0,0
+University of Denver,Mathematics,control,40,17,8,21,3,0,0.0,0.0,False,0,0,0
+University of Florida,Mathematics,control,40,33,11,71,8,0,0.0,0.0,False,3,1,0
+University of Florida,Physics,control,40,44,11,90,14,0,0.0,0.0,False,0,0,0
+University of Florida,Computer Science,treatment,40,26,13,1,0,0,0.0,0.0,False,0,0,0
+University of Florida,Mechanical Engineering,treatment,40,54,33,3,0,0,0.0,0.0,False,0,0,0
+University of Florida,Chemistry,control,40,28,14,42,9,0,0.0,0.0,False,4,0,0
+University of Georgia,Mathematics,treatment,40,35,12,192,17,0,0.0,0.0,False,4,0,0
+University of Georgia,Chemistry,control,40,29,12,87,3,0,0.0,0.0,False,4,0,0
+University of Georgia,Computer Science,control,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Georgia,Physics,control,40,23,9,22,2,0,0.0,0.0,False,3,2,0
+University of Hawaii at Manoa,Mathematics,control,40,18,8,1,0,0,0.0,0.0,False,0,0,0
+University of Hawaii at Manoa,Physics,control,40,17,7,12,1,0,0.0,0.0,False,0,0,0
+University of Hawaii at Manoa,Mechanical Engineering,treatment,40,35,19,8,1,0,0.0,0.0,False,1,0,0
+University of Hawaii at Manoa,Chemistry,control,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Houston,Mathematics,treatment,40,28,11,92,3,0,0.0,0.0,False,0,0,0
+University of Houston,Mechanical Engineering,control,40,35,19,29,4,0,0.0,0.0,False,0,0,0
+University of Houston,Physics,control,40,20,6,28,1,0,0.0,0.0,False,1,0,0
+University of Houston,Computer Science,treatment,40,24,14,20,0,0,0.0,0.0,False,0,0,0
+University of Houston,Chemistry,treatment,40,31,13,27,3,0,0.0,0.0,False,0,0,0
+University of Illinois Chicago,Physics,treatment,40,26,11,83,3,1,0.012048192771084338,0.3333333333333333,True,2,0,0
+University of Illinois Chicago,Mathematics,control,40,35,10,34,7,0,0.0,0.0,False,0,0,0
+University of Illinois Chicago,Mechanical Engineering,treatment,40,35,19,12,1,0,0.0,0.0,False,1,0,0
+University of Illinois Chicago,Computer Science,control,40,30,21,2,0,0,0.0,0.0,False,0,0,0
+University of Illinois Chicago,Chemistry,treatment,40,36,14,26,3,0,0.0,0.0,False,1,0,0
+University of Illinois Urbana-Champaign,Physics,treatment,40,47,14,207,90,1,0.004830917874396135,0.011111111111111112,True,4,1,1
+University of Illinois Urbana-Champaign,Mechanical Engineering,treatment,40,65,41,30,12,0,0.0,0.0,False,1,1,0
+University of Illinois Urbana-Champaign,Chemistry,control,40,24,13,81,47,0,0.0,0.0,False,1,1,0
+University of Illinois Urbana-Champaign,Mathematics,treatment,40,35,14,20,12,0,0.0,0.0,False,1,1,0
+University of Illinois Urbana-Champaign,Computer Science,treatment,40,36,22,10,2,0,0.0,0.0,False,0,0,0
+University of Iowa,Chemistry,control,40,31,14,15,3,0,0.0,0.0,False,1,0,0
+University of Iowa,Mathematics,control,40,30,12,24,1,0,0.0,0.0,False,1,0,0
+University of Iowa,Computer Science,control,40,32,20,10,2,0,0.0,0.0,False,1,0,0
+University of Iowa,Physics,control,40,29,11,4,0,0,0.0,0.0,False,1,0,0
+University of Kansas,Chemistry,control,40,35,15,90,3,0,0.0,0.0,False,6,0,0
+University of Kansas,Physics,control,40,19,8,90,5,0,0.0,0.0,False,3,0,0
+University of Kansas,Mathematics,control,40,33,10,72,2,0,0.0,0.0,False,1,0,0
+University of Kentucky,Mechanical Engineering,treatment,40,33,17,13,1,0,0.0,0.0,False,0,0,0
+University of Kentucky,Mathematics,control,40,32,10,12,0,0,0.0,0.0,False,0,0,0
+University of Kentucky,Physics,control,40,21,8,42,1,0,0.0,0.0,False,0,0,0
+University of Kentucky,Computer Science,treatment,40,25,14,19,0,0,0.0,0.0,False,0,0,0
+University of Kentucky,Chemistry,treatment,40,28,13,19,1,0,0.0,0.0,False,1,0,0
+University of Louisiana at Lafayette,Chemistry,control,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Louisiana at Lafayette,Mathematics,control,40,15,7,32,3,0,0.0,0.0,False,2,2,0
+University of Louisiana at Lafayette,Physics,treatment,40,19,6,10,0,0,0.0,0.0,False,0,0,0
+University of Louisiana at Lafayette,Computer Science,treatment,40,25,14,14,0,0,0.0,0.0,False,0,0,0
+University of Louisiana at Lafayette,Mechanical Engineering,control,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Louisville,Mathematics,control,40,17,8,11,0,0,0.0,0.0,False,0,0,0
+University of Louisville,Physics,treatment,40,19,6,7,0,0,0.0,0.0,False,0,0,0
+University of Louisville,Mechanical Engineering,treatment,40,34,19,1,0,0,0.0,0.0,False,0,0,0
+University of Louisville,Chemistry,control,40,23,12,37,0,0,0.0,0.0,False,0,0,0
+University of Louisville,Computer Science,control,40,25,14,4,0,0,0.0,0.0,False,0,0,0
+University of Maine,Mathematics,control,40,16,8,11,0,0,0.0,0.0,False,0,0,0
+University of Maine,Mechanical Engineering,control,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Maine,Physics,treatment,40,19,6,2,0,0,0.0,0.0,False,0,0,0
+"University of Maryland, Baltimore County",Physics,control,40,21,7,35,0,0,0.0,0.0,False,0,0,0
+"University of Maryland, Baltimore County",Mathematics,treatment,40,19,8,39,3,0,0.0,0.0,False,1,0,0
+"University of Maryland, College Park",Mathematics,control,40,39,18,260,82,0,0.0,0.0,False,6,1,0
+"University of Maryland, College Park",Mechanical Engineering,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+"University of Maryland, College Park",Physics,control,40,48,15,100,25,0,0.0,0.0,False,1,0,0
+"University of Maryland, College Park",Computer Science,treatment,40,35,22,19,6,0,0.0,0.0,False,0,0,0
+University of Massachusetts Amherst,Mathematics,control,40,29,12,98,9,0,0.0,0.0,False,0,0,0
+University of Massachusetts Amherst,Chemistry,control,40,36,15,12,2,0,0.0,0.0,False,0,0,0
+University of Massachusetts Amherst,Computer Science,control,40,34,21,23,12,0,0.0,0.0,False,0,0,0
+University of Memphis,Mathematics,control,40,16,7,13,2,0,0.0,0.0,False,0,0,0
+University of Memphis,Chemistry,treatment,40,25,13,18,4,1,0.05555555555555555,0.25,True,2,1,1
+University of Memphis,Computer Science,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Memphis,Physics,treatment,40,18,6,26,2,0,0.0,0.0,False,2,0,0
+University of Miami,Computer Science,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Miami,Mathematics,treatment,40,28,11,21,2,0,0.0,0.0,False,0,0,0
+University of Miami,Physics,treatment,40,17,7,20,1,0,0.0,0.0,False,0,0,0
+University of Miami,Chemistry,control,40,26,14,10,4,0,0.0,0.0,False,0,0,0
+University of Michigan,Mathematics,treatment,40,35,14,301,84,1,0.0033222591362126247,0.011904761904761904,True,4,1,1
+University of Michigan,Mechanical Engineering,treatment,40,56,33,18,6,0,0.0,0.0,False,1,1,0
+University of Michigan,Computer Science,treatment,40,36,22,90,24,0,0.0,0.0,False,5,2,0
+University of Michigan,Physics,treatment,40,49,16,207,86,0,0.0,0.0,False,10,2,0
+University of Michigan,Chemistry,treatment,40,23,12,42,22,0,0.0,0.0,False,0,0,0
+University of Minnesota,Mathematics,treatment,40,40,18,133,30,0,0.0,0.0,False,5,1,0
+University of Minnesota,Physics,treatment,40,41,10,57,10,1,0.017543859649122806,0.1,True,2,0,0
+University of Minnesota,Chemistry,control,40,26,14,27,12,0,0.0,0.0,False,1,1,0
+University of Minnesota,Mechanical Engineering,treatment,40,63,39,45,16,0,0.0,0.0,False,2,0,0
+University of Minnesota,Computer Science,control,40,36,20,34,12,0,0.0,0.0,False,1,1,0
+University of Mississippi,Chemistry,treatment,40,26,14,6,1,0,0.0,0.0,False,0,0,0
+University of Mississippi,Mathematics,treatment,40,15,7,16,3,0,0.0,0.0,False,5,0,0
+University of Mississippi,Physics,control,40,18,5,24,3,0,0.0,0.0,False,0,0,0
+University of Missouri,Mathematics,control,40,32,9,49,2,0,0.0,0.0,False,3,0,0
+University of Missouri,Chemistry,treatment,40,25,13,17,0,0,0.0,0.0,False,0,0,0
+University of Missouri,Mechanical Engineering,control,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Missouri,Physics,treatment,40,17,7,45,2,0,0.0,0.0,False,0,0,0
+University of Montana,Chemistry,treatment,40,26,14,46,0,0,0.0,0.0,False,2,0,0
+University of Montana,Mathematics,treatment,40,17,8,11,2,0,0.0,0.0,False,0,0,0
+University of Nebraska-Lincoln,Chemistry,treatment,40,28,14,26,0,0,0.0,0.0,False,0,0,0
+University of Nebraska-Lincoln,Mathematics,control,40,31,10,9,3,0,0.0,0.0,False,0,0,0
+University of Nebraska-Lincoln,Computer Science,control,40,25,14,1,0,0,0.0,0.0,False,0,0,0
+University of Nebraska-Lincoln,Physics,treatment,40,18,7,7,0,0,0.0,0.0,False,1,0,0
+"University of Nevada, Las Vegas",Physics,treatment,40,19,6,19,1,0,0.0,0.0,False,0,0,0
+"University of Nevada, Reno",Computer Science,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+"University of Nevada, Reno",Mathematics,treatment,40,16,8,28,0,0,0.0,0.0,False,0,0,0
+University of New Hampshire,Mathematics,treatment,40,21,8,10,0,0,0.0,0.0,False,0,0,0
+University of New Hampshire,Chemistry,treatment,40,26,14,36,0,0,0.0,0.0,False,0,0,0
+University of New Hampshire,Physics,control,40,19,7,6,0,0,0.0,0.0,False,0,0,0
+University of New Mexico,Computer Science,treatment,40,23,14,2,0,0,0.0,0.0,False,0,0,0
+University of New Mexico,Mathematics,control,40,29,11,46,7,0,0.0,0.0,False,1,0,0
+University of New Mexico,Physics,control,40,24,11,41,2,0,0.0,0.0,False,0,0,0
+University of New Mexico,Chemistry,control,40,24,12,35,4,0,0.0,0.0,False,3,0,0
+University of North Carolina at Chapel Hill,Mathematics,treatment,40,38,16,52,18,0,0.0,0.0,False,1,0,0
+University of North Carolina at Chapel Hill,Chemistry,control,40,24,12,88,14,1,0.011363636363636364,0.07142857142857142,True,7,1,0
+University of North Carolina at Chapel Hill,Physics,treatment,40,40,14,23,3,0,0.0,0.0,False,0,0,0
+University of North Carolina at Chapel Hill,Computer Science,control,40,34,19,2,0,0,0.0,0.0,False,0,0,0
+University of North Texas,Mathematics,treatment,40,17,8,28,3,0,0.0,0.0,False,1,0,0
+University of North Texas,Mechanical Engineering,treatment,40,35,19,21,9,0,0.0,0.0,False,1,0,0
+University of North Texas,Physics,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of North Texas,Chemistry,control,40,25,13,28,2,0,0.0,0.0,False,1,0,0
+University of North Texas,Computer Science,control,40,25,14,40,1,0,0.0,0.0,False,2,0,0
+University of Notre Dame,Physics,control,40,34,9,98,16,0,0.0,0.0,False,2,0,0
+University of Notre Dame,Mathematics,treatment,40,40,17,108,23,0,0.0,0.0,False,0,0,0
+University of Notre Dame,Chemistry,treatment,40,32,14,45,12,0,0.0,0.0,False,4,1,0
+University of Oklahoma,Mathematics,treatment,40,28,11,86,4,0,0.0,0.0,False,5,0,0
+University of Oklahoma,Physics,control,40,18,8,22,0,0,0.0,0.0,False,0,0,0
+University of Oklahoma,Chemistry,treatment,40,30,15,22,2,0,0.0,0.0,False,2,0,0
+University of Oregon,Physics,control,40,30,11,24,1,0,0.0,0.0,False,0,0,0
+University of Oregon,Mathematics,treatment,40,37,13,109,4,0,0.0,0.0,False,3,2,0
+University of Oregon,Computer Science,control,40,33,21,10,0,0,0.0,0.0,False,0,0,0
+University of Pennsylvania,Mathematics,control,40,36,15,121,46,0,0.0,0.0,False,5,2,0
+University of Pennsylvania,Computer Science,treatment,40,34,21,40,21,0,0.0,0.0,False,0,0,0
+University of Pennsylvania,Chemistry,treatment,40,25,13,29,18,0,0.0,0.0,False,2,1,0
+University of Pennsylvania,Mechanical Engineering,treatment,40,64,40,22,9,0,0.0,0.0,False,0,0,0
+University of Pittsburgh,Computer Science,treatment,40,31,19,10,1,0,0.0,0.0,False,0,0,0
+University of Pittsburgh,Physics,treatment,40,41,9,74,12,0,0.0,0.0,False,0,0,0
+University of Pittsburgh,Chemistry,control,40,31,14,24,7,0,0.0,0.0,False,2,1,0
+University of Rochester,Chemistry,treatment,40,29,13,6,0,0,0.0,0.0,False,0,0,0
+University of Rochester,Physics,control,40,31,9,66,3,0,0.0,0.0,False,2,1,0
+University of Rochester,Mechanical Engineering,treatment,40,35,19,3,0,0,0.0,0.0,False,0,0,0
+University of Rochester,Computer Science,treatment,40,30,19,17,1,0,0.0,0.0,False,0,0,0
+University of South Carolina,Mathematics,control,40,30,12,42,7,0,0.0,0.0,False,1,0,0
+University of South Carolina,Physics,control,40,21,8,23,1,0,0.0,0.0,False,0,0,0
+University of South Carolina,Chemistry,control,40,34,14,24,3,0,0.0,0.0,False,0,0,0
+University of South Florida,Mathematics,control,40,17,8,51,7,0,0.0,0.0,False,0,0,0
+University of South Florida,Computer Science,control,40,23,12,16,0,0,0.0,0.0,False,0,0,0
+University of South Florida,Mechanical Engineering,treatment,40,35,19,6,1,0,0.0,0.0,False,1,0,0
+University of South Florida,Chemistry,control,40,26,14,2,0,0,0.0,0.0,False,0,0,0
+University of Southern California,Mathematics,control,40,40,15,7,2,0,0.0,0.0,False,1,0,0
+University of Southern California,Physics,treatment,40,29,8,47,2,0,0.0,0.0,False,1,0,0
+University of Southern California,Chemistry,control,40,32,14,48,15,0,0.0,0.0,False,0,0,0
+University of Southern California,Mechanical Engineering,control,40,54,33,28,6,0,0.0,0.0,False,0,0,0
+University of Southern California,Computer Science,control,40,36,22,11,3,0,0.0,0.0,False,1,0,0
+University of Southern Mississippi,Mechanical Engineering,treatment,40,35,19,42,5,0,0.0,0.0,False,6,0,0
+University of Southern Mississippi,Chemistry,control,40,26,14,12,1,0,0.0,0.0,False,0,0,0
+University of Southern Mississippi,Physics,control,40,19,6,2,0,0,0.0,0.0,False,0,0,0
+University of Tennessee,Chemistry,control,40,30,12,10,1,0,0.0,0.0,False,1,0,0
+University of Tennessee,Physics,control,40,28,8,24,0,0,0.0,0.0,False,0,0,0
+University of Tennessee,Mathematics,control,40,37,13,41,1,0,0.0,0.0,False,0,0,0
+University of Tennessee,Mechanical Engineering,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Tennessee,Computer Science,control,40,25,14,4,0,0,0.0,0.0,False,0,0,0
+University of Texas at Arlington,Computer Science,treatment,40,24,13,28,4,0,0.0,0.0,False,0,0,0
+University of Texas at Arlington,Chemistry,treatment,40,25,13,17,1,0,0.0,0.0,False,0,0,0
+University of Texas at Arlington,Physics,control,40,15,7,16,3,0,0.0,0.0,False,1,0,0
+University of Texas at Arlington,Mathematics,control,40,17,8,19,3,0,0.0,0.0,False,1,0,0
+University of Texas at Arlington,Mechanical Engineering,control,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Texas at Austin,Computer Science,treatment,40,36,22,16,5,0,0.0,0.0,False,1,0,0
+University of Texas at Austin,Physics,treatment,40,49,16,14,3,0,0.0,0.0,False,1,0,0
+University of Texas at Austin,Mathematics,control,40,36,15,27,6,0,0.0,0.0,False,1,0,0
+University of Texas at Dallas,Mathematics,treatment,40,21,9,43,1,0,0.0,0.0,False,0,0,0
+University of Texas at Dallas,Mechanical Engineering,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Texas at Dallas,Chemistry,control,40,26,14,29,4,0,0.0,0.0,False,1,0,0
+University of Texas at Dallas,Physics,control,40,22,9,29,4,0,0.0,0.0,False,0,0,0
+University of Texas at El Paso,Mathematics,control,40,17,8,13,2,0,0.0,0.0,False,0,0,0
+University of Texas at El Paso,Chemistry,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Texas at El Paso,Computer Science,control,40,24,14,3,0,0,0.0,0.0,False,0,0,0
+University of Texas at San Antonio,Physics,treatment,40,15,4,26,1,0,0.0,0.0,False,0,0,0
+University of Texas at San Antonio,Mathematics,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Texas at San Antonio,Chemistry,treatment,40,26,14,15,1,0,0.0,0.0,False,1,0,0
+University of Utah,Chemistry,treatment,40,27,13,33,7,0,0.0,0.0,False,0,0,0
+University of Utah,Mathematics,treatment,40,38,14,134,30,0,0.0,0.0,False,1,0,0
+University of Utah,Physics,control,40,31,11,61,7,0,0.0,0.0,False,0,0,0
+University of Utah,Mechanical Engineering,control,40,35,19,3,0,0,0.0,0.0,False,0,0,0
+University of Utah,Computer Science,treatment,40,32,17,4,1,0,0.0,0.0,False,0,0,0
+University of Virginia,Mathematics,control,40,39,15,170,17,0,0.0,0.0,False,2,0,0
+University of Virginia,Physics,control,40,37,9,41,4,0,0.0,0.0,False,0,0,0
+University of Virginia,Chemistry,control,40,31,14,21,7,0,0.0,0.0,False,0,0,0
+University of Washington,Mathematics,treatment,40,38,17,88,19,0,0.0,0.0,False,3,0,0
+University of Washington,Physics,treatment,40,46,16,89,30,1,0.011235955056179775,0.03333333333333333,True,0,0,0
+University of Washington,Chemistry,control,40,25,13,71,26,0,0.0,0.0,False,1,1,0
+University of Washington,Mechanical Engineering,treatment,40,42,23,6,2,0,0.0,0.0,False,2,1,0
+University of Washington,Computer Science,treatment,40,35,21,25,11,0,0.0,0.0,False,0,0,0
+University of Wisconsin-Madison,Mathematics,control,40,34,14,302,111,0,0.0,0.0,False,4,1,0
+University of Wisconsin-Madison,Physics,control,40,46,15,153,40,0,0.0,0.0,False,4,0,0
+University of Wisconsin-Madison,Chemistry,treatment,40,25,13,55,25,0,0.0,0.0,False,2,1,0
+University of Wisconsin-Madison,Mechanical Engineering,treatment,40,65,41,18,11,0,0.0,0.0,False,0,0,0
+University of Wisconsin-Milwaukee,Computer Science,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Wisconsin-Milwaukee,Physics,control,40,19,7,19,1,0,0.0,0.0,False,0,0,0
+University of Wisconsin-Milwaukee,Mechanical Engineering,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+University of Wisconsin-Milwaukee,Mathematics,control,40,17,8,14,0,0,0.0,0.0,False,1,0,0
+Utah State University,Mathematics,control,40,16,7,3,0,0,0.0,0.0,False,0,0,0
+Utah State University,Chemistry,treatment,40,26,14,28,3,0,0.0,0.0,False,1,0,0
+Utah State University,Physics,treatment,40,18,6,2,0,0,0.0,0.0,False,0,0,0
+Utah State University,Mechanical Engineering,treatment,40,35,19,4,0,0,0.0,0.0,False,0,0,0
+Vanderbilt University,Physics,control,40,36,9,28,6,0,0.0,0.0,False,0,0,0
+Vanderbilt University,Mathematics,control,40,39,14,80,11,0,0.0,0.0,False,1,0,0
+Vanderbilt University,Mechanical Engineering,control,40,37,22,13,2,0,0.0,0.0,False,0,0,0
+Vanderbilt University,Chemistry,treatment,40,29,10,23,7,0,0.0,0.0,False,1,0,0
+Virginia Commonwealth University,Computer Science,control,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+Virginia Commonwealth University,Chemistry,treatment,40,26,14,26,4,0,0.0,0.0,False,2,0,0
+Virginia Commonwealth University,Mathematics,treatment,40,17,8,77,3,0,0.0,0.0,False,12,1,0
+Virginia Commonwealth University,Mechanical Engineering,treatment,40,34,19,25,1,0,0.0,0.0,False,0,0,0
+Virginia Commonwealth University,Physics,treatment,40,18,5,12,1,0,0.0,0.0,False,0,0,0
+Virginia Tech,Mathematics,control,40,31,11,76,5,0,0.0,0.0,False,0,0,0
+Virginia Tech,Physics,control,40,32,9,45,14,0,0.0,0.0,False,2,0,0
+Virginia Tech,Mechanical Engineering,control,40,64,40,6,1,0,0.0,0.0,False,1,0,0
+Virginia Tech,Chemistry,treatment,40,35,15,17,0,0,0.0,0.0,False,1,0,0
+Virginia Tech,Computer Science,control,40,34,18,43,6,0,0.0,0.0,False,1,0,0
+Washington State University,Chemistry,treatment,40,24,13,14,2,0,0.0,0.0,False,1,0,0
+Washington State University,Physics,treatment,40,19,8,26,1,0,0.0,0.0,False,1,0,0
+Washington State University,Mechanical Engineering,control,40,34,19,26,0,0,0.0,0.0,False,1,0,0
+Washington State University,Mathematics,treatment,40,21,9,14,0,0,0.0,0.0,False,0,0,0
+Washington State University,Computer Science,treatment,40,23,13,11,0,0,0.0,0.0,False,1,0,0
+Washington University in St. Louis,Computer Science,treatment,40,30,16,8,1,0,0.0,0.0,False,0,0,0
+Washington University in St. Louis,Physics,control,40,35,9,80,10,0,0.0,0.0,False,0,0,0
+Washington University in St. Louis,Mathematics,treatment,40,36,13,75,8,0,0.0,0.0,False,2,0,0
+Washington University in St. Louis,Mechanical Engineering,control,40,37,22,15,4,0,0.0,0.0,False,0,0,0
+Washington University in St. Louis,Chemistry,treatment,40,32,14,11,4,0,0.0,0.0,False,0,0,0
+Wayne State University,Physics,treatment,40,19,6,23,4,0,0.0,0.0,False,0,0,0
+Wayne State University,Chemistry,control,40,31,13,52,14,1,0.019230769230769232,0.07142857142857142,True,10,3,1
+Wayne State University,Mathematics,control,40,21,9,24,3,0,0.0,0.0,False,0,0,0
+Wayne State University,Computer Science,control,40,25,14,19,1,0,0.0,0.0,False,0,0,0
+Wayne State University,Mechanical Engineering,control,40,34,18,1,0,0,0.0,0.0,False,0,0,0
+West Virginia University,Mechanical Engineering,control,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+West Virginia University,Physics,treatment,40,19,7,13,0,0,0.0,0.0,False,0,0,0
+West Virginia University,Chemistry,treatment,40,29,14,20,1,0,0.0,0.0,False,4,0,0
+West Virginia University,Mathematics,treatment,40,17,8,1,0,0,0.0,0.0,False,0,0,0
+West Virginia University,Computer Science,treatment,0,0,0,0,0,0,0.0,0.0,False,0,0,0
+Yale University,Computer Science,control,40,34,21,6,3,0,0.0,0.0,False,1,1,0
+Yale University,Mathematics,control,40,35,14,167,59,0,0.0,0.0,False,1,0,0
+Yale University,Physics,treatment,40,47,14,50,22,0,0.0,0.0,False,1,0,0
+Yale University,Chemistry,control,40,25,13,18,10,0,0.0,0.0,False,0,0,0

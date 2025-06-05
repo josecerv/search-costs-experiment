@@ -1,0 +1,22 @@
+{
+  "average_shown_database_size": {
+    "treatment": 22.127659574468087,
+    "control": 23.38111888111888
+  },
+  "binary_used_database": {
+    "treatment_count": 21,
+    "treatment_total": 282,
+    "treatment_percent": 0.07446808510638298,
+    "control_count": 22,
+    "control_total": 286,
+    "control_percent": 0.07692307692307693
+  },
+  "percent_from_database": {
+    "treatment": 0.0022652598080871032,
+    "control": 0.0025505089177534726
+  },
+  "black_speakers_from_database": {
+    "treatment_total": 12,
+    "control_total": 5
+  }
+}

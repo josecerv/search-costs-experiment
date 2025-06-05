@@ -1,0 +1,31 @@
+{
+  "peer_universities": {
+    "treatment_mean": 37.11347517730496,
+    "control_mean": 38.25874125874126
+  },
+  "database_size": {
+    "treatment_mean": 29.166666666666668,
+    "control_mean": 30.604895104895103
+  },
+  "black_faculty_shown": {
+    "treatment_mean": 13.49290780141844,
+    "control_mean": 14.024475524475525
+  },
+  "binary_used_database": {
+    "treatment_count": 17,
+    "treatment_total": 282,
+    "treatment_percent": 0.06028368794326241,
+    "control_count": 14,
+    "control_total": 286,
+    "control_percent": 0.04895104895104895,
+    "p_value": 0.6819753692949025
+  },
+  "percent_from_database": {
+    "treatment": 0.0011590002603051506,
+    "control": 0.0009756435211272579
+  },
+  "black_speakers_from_database": {
+    "treatment_total": 10,
+    "control_total": 3
+  }
+}
