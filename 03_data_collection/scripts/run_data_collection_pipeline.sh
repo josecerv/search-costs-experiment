@@ -47,7 +47,9 @@ fi
 
 # Step 2: Run the main data processing pipeline
 echo -e "\n${BLUE}Step 2: Processing and standardizing data...${NC}"
-echo -e "${YELLOW}Note: Speaker enrichment is now enabled by default. Use --skip-enrichment to disable.${NC}"
+echo -e "${YELLOW}Note: Speaker enrichment (affiliations + PhD years) is enabled by default.${NC}"
+echo -e "${YELLOW}      This includes improved PhD year extraction with rank validation.${NC}"
+echo -e "${YELLOW}      Use --skip-enrichment to disable enrichment.${NC}"
 poetry run python create_final_dataset.py
 
 if [ $? -eq 0 ]; then

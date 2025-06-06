@@ -13,7 +13,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 01fa01-187e22-7b,Duke University,Mathematics,control,4,4,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 02178a-edb0b8-b1,"University of California, Irvine",Physics,treatment,25,25,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 022725-6d33b2-9b,Louisiana State University,Mathematics,treatment,24,24,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-024587-53f55d-3d,Colorado State University,Mathematics,treatment,23,18,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+024587-53f55d-3d,Colorado State University,Mathematics,treatment,23,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 024600-71da61-b1,University of Memphis,Mathematics,control,4,4,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 0246a9-3c736f-77,Clemson University,Mathematics,treatment,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 0248f3-7f4441-14,Tufts University,Mathematics,control,19,19,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -33,7 +33,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 058e33-5258a5-fd,Boston University,Physics,control,7,7,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 059130-ac3c3e-80,North Carolina State University,Mathematics,treatment,1,1,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 059b2e-0ac028-51,North Carolina State University,Mathematics,treatment,7,7,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-05feb1-c7c890-af,Binghamton University,Mathematics,control,36,34,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+05feb1-c7c890-af,Binghamton University,Mathematics,control,36,29,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 0691a6-6ee969-47,Yale University,Computer Science,control,6,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 06af24-486e60-04,University of Massachusetts Amherst,Mathematics,control,9,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 06d591-975592-48,New York University,Mathematics,control,13,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -43,7 +43,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 078e81-afde7a-ca,Syracuse University,Physics,treatment,13,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 07a019-01ca44-a1,Brown University,Physics,treatment,17,17,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 07b159-e11b6a-30,University of Tennessee,Chemistry,control,10,10,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-0827ad-65389c-d1,University of Michigan,Mathematics,treatment,31,24,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+0827ad-65389c-d1,University of Michigan,Mathematics,treatment,31,22,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 0829eb-fb5608-35,Cornell University,Computer Science,control,29,29,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 082a7c-cef7a5-58,Kent State University,Mathematics,control,7,5,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 084aec-dcee6d-fb,Purdue University,Physics,control,13,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -99,15 +99,15 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 0fa505-face0a-59,"Graduate Center, CUNY",Mathematics,treatment,12,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 10858b-fc8543-e6,Brandeis University,Computer Science,control,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 10d866-56146b-9d,"University of California, Los Angeles",Chemistry,treatment,28,26,1,1,0,1,0,3.571428571428571,3.571428571428571,0.0,3.571428571428571,0.0,1,1,0,1,0
-10e2eb-1ed185-c0,University of Missouri,Mathematics,control,15,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+10e2eb-1ed185-c0,University of Missouri,Mathematics,control,15,11,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 1194d0-7e014e-48,University of Georgia,Mathematics,treatment,5,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-119ae7-646532-6c,"University of California, San Diego",Chemistry,control,19,19,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+119ae7-646532-6c,"University of California, San Diego",Chemistry,control,19,18,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 11a9ad-20255e-57,"University of California, Los Angeles",Mechanical Engineering,control,12,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 11b003-d5eaf2-f8,Washington State University,Chemistry,treatment,14,14,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 11de47-300d27-53,Syracuse University,Chemistry,treatment,8,8,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 123a1a-2a31c8-a1,California Institute of Technology,Mechanical Engineering,treatment,13,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 124b83-56b845-1b,"University of California, San Diego",Chemistry,control,2,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-12586a-a1faa7-b5,Carnegie Mellon University,Computer Science,control,48,46,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+12586a-a1faa7-b5,Carnegie Mellon University,Computer Science,control,48,42,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 127ee4-f4f08b-b5,Carnegie Mellon University,Computer Science,control,15,15,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 1285a6-8fe8c1-93,University of Chicago,Mathematics,control,18,17,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 12d4e7-bdfb96-da,"University of California, San Diego",Mathematics,treatment,14,14,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -120,7 +120,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 13d5b1-86734f-f1,"University of California, Davis",Mathematics,control,2,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 140dcc-499b35-b5,Harvard University,Computer Science,treatment,13,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 141fdc-305d40-35,Boston College,Mathematics,control,29,29,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-142e80-600353-9e,University of Houston,Mechanical Engineering,control,29,29,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+142e80-600353-9e,University of Houston,Mechanical Engineering,control,29,28,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 1451db-5f5159-60,Columbia University,Mathematics,treatment,6,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 14568e-f0fc54-c7,University of Arizona,Mathematics,treatment,22,18,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 145b13-d2c791-0d,"University of California, Santa Barbara",Computer Science,treatment,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -172,7 +172,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 1b0b84-44e690-a3,University of Texas at Arlington,Computer Science,treatment,28,28,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 1b1c2d-c3a1c0-e8,New York University,Mathematics,control,8,7,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 1b210a-2435c7-a9,Binghamton University,Mathematics,control,9,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-1b6b3d-38f401-de,Texas A&M University,Mathematics,treatment,18,18,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+1b6b3d-38f401-de,Texas A&M University,Mathematics,treatment,18,14,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 1b7fc8-db4f7a-19,University of Connecticut,Mathematics,treatment,2,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 1ba1fc-40358b-b7,University of Chicago,Physics,treatment,10,10,1,1,1,0,1,10.0,10.0,10.0,0.0,10.0,1,1,1,0,1
 1bb2ba-4337df-01,"University of California, Riverside",Chemistry,treatment,23,23,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -284,10 +284,10 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 2b64a2-439aff-3c,University of Virginia,Physics,control,11,10,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 2b6f21-88b562-82,Harvard University,Physics,treatment,23,23,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 2ba917-158630-c2,"University of California, Los Angeles",Mechanical Engineering,control,19,19,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-2baa2e-bd8e39-bc,University of Michigan,Mathematics,treatment,10,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+2baa2e-bd8e39-bc,University of Michigan,Mathematics,treatment,10,8,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 2bb577-beec08-36,Tufts University,Physics,treatment,6,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 2bcbfb-c365c7-42,"University of California, Berkeley",Mathematics,treatment,15,15,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-2be995-e1ff50-6a,"University of California, Davis",Physics,control,16,16,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+2be995-e1ff50-6a,"University of California, Davis",Physics,control,16,16,1,1,0,1,0,6.25,6.25,0.0,6.25,0.0,1,1,0,1,0
 2bf4a9-cf5a5d-cb,University of Illinois Urbana-Champaign,Physics,treatment,23,23,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 2c76c7-e003bf-44,"University of Maryland, College Park",Mathematics,control,23,19,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 2cbcb0-7f6dad-b0,Kansas State University,Physics,treatment,15,11,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -342,7 +342,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 333e3d-08f9ee-03,Ohio State University,Chemistry,treatment,14,14,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 3351f6-ea5f02-59,Carnegie Mellon University,Mathematics,treatment,8,8,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 3372e0-993a9f-54,California Institute of Technology,Mathematics,control,15,14,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-338895-06c1c2-6e,Pennsylvania State University,Mathematics,control,13,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+338895-06c1c2-6e,Pennsylvania State University,Mathematics,control,13,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 338bb0-beb76d-55,University of Michigan,Chemistry,treatment,5,5,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 33e8d2-9520a6-58,Indiana University Bloomington,Mathematics,treatment,7,7,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 33f1bf-d6aad8-24,University of Colorado Boulder,Mathematics,control,26,21,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -385,7 +385,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 390d1f-19dc2b-96,University of Louisiana at Lafayette,Mathematics,control,5,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 390fc3-1803cf-5a,Stanford University,Mathematics,treatment,29,28,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 391871-9e99d4-be,Purdue University,Physics,control,1,1,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-39321f-ede49a-c5,Colorado State University,Mathematics,treatment,11,11,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+39321f-ede49a-c5,Colorado State University,Mathematics,treatment,11,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 395f3e-8895d8-35,University of Massachusetts Amherst,Mathematics,control,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 3989f4-ab5b0f-1e,University of Massachusetts Amherst,Chemistry,control,12,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 398a4e-1d36c2-ad,University of Tennessee,Mathematics,control,5,5,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -410,7 +410,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 3c2a38-0ca61e-4a,Harvard University,Chemistry,treatment,9,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 3c3776-1602c0-6b,University of Memphis,Chemistry,treatment,18,18,1,1,1,0,0,5.555555555555555,5.555555555555555,5.555555555555555,0.0,0.0,1,1,1,0,0
 3c48d8-464bed-81,University of Alabama,Computer Science,control,6,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-3c491a-3bbe4b-59,Brandeis University,Mathematics,treatment,9,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+3c491a-3bbe4b-59,Brandeis University,Mathematics,treatment,9,8,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 3c95d3-9d8946-11,University of Chicago,Computer Science,treatment,24,24,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 3cbf2f-6c91c9-cc,University of Massachusetts Amherst,Mathematics,control,4,4,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 3ce6fe-4618b2-83,"University of California, Davis",Mathematics,control,14,14,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -428,7 +428,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 3e9d38-c2423f-ed,Princeton University,Mathematics,control,24,24,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 3ea741-6f1bfe-35,Princeton University,Chemistry,treatment,7,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 3eb2d1-f43d48-3d,"University of California, Irvine",Physics,treatment,2,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-3ed1e4-abc2aa-bd,University of Georgia,Mathematics,treatment,32,32,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+3ed1e4-abc2aa-bd,University of Georgia,Mathematics,treatment,32,26,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 3edce7-18d358-3a,Massachusetts Institute of Technology,Mathematics,control,12,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 3efd7d-7da279-ff,Arizona State University,Mathematics,control,20,20,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 3f4eff-e104a0-47,Rutgers University-New Brunswick,Physics,control,16,16,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -467,7 +467,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 436a96-84b0be-17,University of Massachusetts Amherst,Mathematics,control,24,24,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 43aa94-d5b5eb-64,"University of California, Los Angeles",Mathematics,control,17,17,1,1,0,1,0,5.88235294117647,5.88235294117647,0.0,5.88235294117647,0.0,1,1,0,1,0
 43ecc9-390f1d-82,Duke University,Chemistry,control,20,20,1,1,0,1,0,5.0,5.0,0.0,5.0,0.0,1,1,0,1,0
-444fb5-6376b0-81,Texas A&M University,Mathematics,treatment,18,11,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+444fb5-6376b0-81,Texas A&M University,Mathematics,treatment,18,10,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 4474db-7e569d-6f,University of Massachusetts Amherst,Mathematics,control,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 4487a3-b142a0-1d,New York University,Computer Science,treatment,14,14,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 44c646-03227c-ba,University of Iowa,Chemistry,control,7,7,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -546,8 +546,8 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 5075ea-d8a95f-aa,Tulane University,Mathematics,treatment,7,7,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 5093ca-546bca-93,Montana State University,Mathematics,treatment,18,18,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 50c066-4d8396-2d,University of Colorado Boulder,Physics,control,18,18,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-50de8c-9d3ee9-5f,Yale University,Mathematics,control,59,52,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-51348d-da8c2a-83,Yale University,Physics,treatment,29,28,1,1,0,1,1,3.4482758620689653,3.4482758620689653,0.0,3.4482758620689653,3.4482758620689653,1,1,0,1,1
+50de8c-9d3ee9-5f,Yale University,Mathematics,control,59,51,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+51348d-da8c2a-83,Yale University,Physics,treatment,29,28,1,0,0,0,1,3.4482758620689653,0.0,0.0,0.0,3.4482758620689653,1,0,0,0,1
 513b7e-461441-5d,University of Central Florida,Physics,treatment,17,15,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 514299-d1024c-4e,University of Rochester,Chemistry,treatment,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 518749-24c60d-c9,Massachusetts Institute of Technology,Mathematics,control,13,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -574,7 +574,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 539afd-82647c-2e,Massachusetts Institute of Technology,Mechanical Engineering,treatment,12,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 53addd-76f490-bc,University of Colorado Boulder,Chemistry,treatment,2,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 53b3ce-1dbb51-8e,Rutgers University-New Brunswick,Mathematics,control,13,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-53d5ec-300b01-fe,"Graduate Center, CUNY",Mathematics,treatment,27,23,2,2,0,2,0,7.4074074074074066,7.4074074074074066,0.0,7.4074074074074066,0.0,1,1,0,1,0
+53d5ec-300b01-fe,"Graduate Center, CUNY",Mathematics,treatment,27,23,2,0,0,0,0,7.4074074074074066,0.0,0.0,0.0,0.0,1,0,0,0,0
 53df1c-c10c46-5b,University at Buffalo,Physics,treatment,27,26,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 54c6cd-e1042a-d7,Indiana University Bloomington,Physics,control,19,18,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 54f579-b0fb32-10,University of Louisiana at Lafayette,Physics,treatment,10,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -610,7 +610,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 58fc8d-86e321-50,University of Louisiana at Lafayette,Mathematics,control,2,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 59395b-23c135-4e,"University of California, Berkeley",Physics,control,20,20,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 595aec-31aac3-db,University of Wisconsin-Madison,Chemistry,treatment,8,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-5971c5-78dc61-cf,Ohio State University,Mathematics,treatment,24,19,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+5971c5-78dc61-cf,Ohio State University,Mathematics,treatment,24,18,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 59937b-c12dc1-6a,University of North Texas,Mathematics,treatment,15,15,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 59b256-c93966-44,Purdue University,Chemistry,control,13,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 59b606-239bdc-24,University of Alabama in Huntsville,Physics,control,5,5,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -659,12 +659,12 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 61d20b-62eb03-0d,University of Chicago,Mathematics,control,13,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 61f06c-5af08a-f8,"University of California, San Diego",Chemistry,control,1,1,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 621dd3-751cc2-b1,Louisiana State University,Chemistry,treatment,24,24,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-62526a-38e9b6-93,Brown University,Chemistry,control,27,26,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+62526a-38e9b6-93,Brown University,Chemistry,control,27,21,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 6260a2-ec2f93-2d,University of Nebraska-Lincoln,Computer Science,control,1,1,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 62702d-0f2cb4-f6,Colorado School of Mines,Mechanical Engineering,control,4,4,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 627383-96707f-71,University of Illinois Urbana-Champaign,Computer Science,treatment,10,10,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 629bfe-3e4bd3-de,University of Washington,Mathematics,treatment,2,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-62ace6-0e753d-2b,Yale University,Mathematics,control,67,60,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+62ace6-0e753d-2b,Yale University,Mathematics,control,67,59,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 62e359-67cb5a-c1,University of North Carolina at Chapel Hill,Mathematics,treatment,15,15,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 631334-d8bf31-54,"Graduate Center, CUNY",Mechanical Engineering,treatment,10,10,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 631734-c6dd1b-bd,Brown University,Mathematics,control,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -681,7 +681,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 64e5fb-fdfec0-4a,Washington University in St. Louis,Mathematics,treatment,32,29,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 652978-5b5ab0-6b,"University of California, Los Angeles",Mathematics,control,6,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 65459b-730d5e-2c,University of Michigan,Physics,treatment,42,36,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-6545c0-f910bc-91,University of Oregon,Mathematics,treatment,67,61,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+6545c0-f910bc-91,University of Oregon,Mathematics,treatment,67,60,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 655443-807273-cf,University of Michigan,Mathematics,treatment,13,11,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 65625a-9ddacd-7f,North Carolina State University,Chemistry,control,17,16,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 65b373-55daea-a6,Boston University,Computer Science,treatment,10,10,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -690,13 +690,13 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 663396-502db0-61,Rice University,Computer Science,control,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 668246-942f12-f1,Dartmouth College,Chemistry,treatment,16,16,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 669415-e22903-3f,University of Minnesota,Mathematics,treatment,10,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-6714ca-11e111-73,Tufts University,Computer Science,control,52,52,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+6714ca-11e111-73,Tufts University,Computer Science,control,52,51,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 674556-05bcb3-bb,Florida State University,Mathematics,treatment,14,14,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 676015-5ae8ab-a6,"University of California, Berkeley",Chemistry,treatment,2,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 678695-6f6bc6-44,Colorado State University,Mathematics,treatment,17,16,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 679527-c7ae53-82,Georgia Institute of Technology,Physics,treatment,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 6799ca-645daf-f4,Washington University in St. Louis,Mathematics,treatment,14,14,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-67fcf9-5db00c-b8,Florida State University,Mathematics,treatment,20,16,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+67fcf9-5db00c-b8,Florida State University,Mathematics,treatment,20,14,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 68097c-562c16-a9,University of New Mexico,Physics,control,22,22,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 6848c2-39065a-bc,"Graduate Center, CUNY",Mathematics,treatment,9,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 6865a9-8980b0-37,"University of California, Santa Barbara",Physics,control,25,25,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -731,7 +731,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 6c5728-11e20d-e3,Tufts University,Physics,treatment,2,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 6c5d31-7dac92-04,University of Pennsylvania,Chemistry,treatment,9,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 6c9552-41c5c9-cc,University of Tennessee,Mathematics,control,6,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-6cb94d-f5c64b-ba,Old Dominion University,Computer Science,control,31,26,2,2,2,0,0,6.451612903225806,6.451612903225806,6.451612903225806,0.0,0.0,1,1,1,0,0
+6cb94d-f5c64b-ba,Old Dominion University,Computer Science,control,31,25,2,2,2,0,0,6.451612903225806,6.451612903225806,6.451612903225806,0.0,0.0,1,1,1,0,0
 6d3e0d-cdbaaf-26,Northwestern University,Mathematics,treatment,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 6d6b92-12b97a-d2,Indiana University Bloomington,Mathematics,treatment,11,10,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 6d9a7e-fb10da-a0,"University of California, Davis",Physics,control,8,8,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -748,7 +748,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 6fc2fa-060c9c-4e,University of Utah,Mathematics,treatment,27,27,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 6fedb4-29d156-a3,University of Michigan,Computer Science,treatment,2,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 6fef66-483091-f3,Mississippi State University,Physics,treatment,23,23,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-6ffd67-a86bca-19,University of Florida,Physics,control,31,26,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+6ffd67-a86bca-19,University of Florida,Physics,control,31,24,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 7011a0-9fe669-5b,Purdue University,Mathematics,treatment,23,23,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 702c10-db74c6-ea,"University of California, Santa Barbara",Chemistry,treatment,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 70580c-c37d81-0b,University of Virginia,Mathematics,control,16,16,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -778,7 +778,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 730a88-875fa3-6f,Cornell University,Mathematics,control,16,16,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 734636-624c92-70,Princeton University,Mathematics,control,5,5,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 735f8d-81d79e-00,University of South Florida,Mechanical Engineering,treatment,6,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-737142-ae1f9e-4e,University of Wisconsin-Madison,Mathematics,control,18,18,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+737142-ae1f9e-4e,University of Wisconsin-Madison,Mathematics,control,18,17,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 7372d2-9e9ce4-da,Ohio State University,Mathematics,treatment,24,22,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 73a5de-475ec5-b4,North Carolina State University,Mathematics,treatment,19,19,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 73f147-e9e87f-ec,"University of California, Irvine",Mathematics,control,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -872,7 +872,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 846dab-fd06e9-1c,University of Chicago,Mathematics,control,24,22,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 8485ce-63972b-3a,University at Buffalo,Chemistry,control,17,17,1,0,0,0,1,5.88235294117647,0.0,0.0,0.0,5.88235294117647,1,0,0,0,1
 84eaa4-b62058-14,"University of California, San Diego",Mathematics,treatment,9,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-850036-345483-3e,University of Washington,Physics,treatment,71,70,1,1,0,1,0,1.4084507042253522,1.4084507042253522,0.0,1.4084507042253522,0.0,1,1,0,1,0
+850036-345483-3e,University of Washington,Physics,treatment,71,70,1,0,0,0,0,1.4084507042253522,0.0,0.0,0.0,0.0,1,0,0,0,0
 850d7e-3a0243-48,Cornell University,Computer Science,control,18,18,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 853d83-9318ce-32,Auburn University,Mathematics,control,12,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 853f4c-d41244-32,University of Pittsburgh,Physics,treatment,21,20,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -890,7 +890,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 86fd12-31766b-f6,University of Kansas,Chemistry,control,10,10,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 873820-959d97-04,Northeastern University,Mathematics,treatment,5,5,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 87ac9d-2b52a6-cc,University of Utah,Mathematics,treatment,21,21,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-87c14d-dd4a98-f8,Stony Brook University,Physics,treatment,17,17,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+87c14d-dd4a98-f8,Stony Brook University,Physics,treatment,17,14,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 87c22a-2b2915-dd,New York University,Mathematics,control,13,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 87dcbf-17d917-79,University of Michigan,Mathematics,treatment,7,7,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 87f65e-e23c21-35,Ohio State University,Mathematics,treatment,13,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -948,11 +948,11 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 8f68f5-8c76fa-3b,"University of California, Berkeley",Mathematics,treatment,1,1,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 8f6d42-5f019f-d3,Montana State University,Physics,control,7,7,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 8f83c8-44b530-a3,University of North Carolina at Chapel Hill,Chemistry,control,11,11,1,1,0,1,0,9.090909090909092,9.090909090909092,0.0,9.090909090909092,0.0,1,1,0,1,0
-8fcd0d-8c43a5-32,Ohio State University,Chemistry,treatment,15,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+8fcd0d-8c43a5-32,Ohio State University,Chemistry,treatment,15,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 90368f-0d4672-eb,Purdue University,Physics,control,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 905d6e-1462e5-2f,"University of California, Davis",Mathematics,control,13,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 90731d-d7251d-93,University of Wisconsin-Madison,Chemistry,treatment,4,4,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-907bf9-56b6cb-0c,University of Florida,Mathematics,control,15,15,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+907bf9-56b6cb-0c,University of Florida,Mathematics,control,15,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 90972a-c6d5a9-74,University of Tennessee,Mathematics,control,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 90ec43-9f1fb5-27,University of North Carolina at Chapel Hill,Mathematics,treatment,9,7,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 9103cc-1faafd-4e,Boston University,Mathematics,treatment,17,16,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -978,7 +978,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 939278-c83e19-d9,University of Pennsylvania,Mathematics,control,10,10,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 939f3c-b0f39d-6e,University of Minnesota,Chemistry,control,18,18,1,1,1,0,1,5.555555555555555,5.555555555555555,5.555555555555555,0.0,5.555555555555555,1,1,1,0,1
 93c229-58ef11-36,Carnegie Mellon University,Computer Science,control,19,19,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-93cb37-006186-d4,University of Michigan,Mathematics,treatment,6,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+93cb37-006186-d4,University of Michigan,Mathematics,treatment,6,5,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 93e080-b3e46c-a0,"University of California, Berkeley",Mathematics,treatment,43,41,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 944599-aba4e5-da,Tulane University,Mathematics,treatment,5,5,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 948e19-f5b647-93,New York University,Mathematics,control,12,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -1010,7 +1010,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 97b4bc-abdb40-4c,George Mason University,Mathematics,control,14,14,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 97bbac-0098cb-fc,"University of California, Santa Cruz",Physics,treatment,8,8,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 9842ab-884d58-36,"University of California, Berkeley",Mathematics,treatment,7,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-9874cf-ce5618-5e,Oregon State University,Physics,control,30,28,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+9874cf-ce5618-5e,Oregon State University,Physics,control,30,27,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 988554-4c0175-a3,Florida State University,Chemistry,control,1,1,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 9887a8-15e5a5-3f,Oregon State University,Mathematics,treatment,18,15,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 991e5a-a4de9a-5b,University of Illinois Urbana-Champaign,Chemistry,control,31,30,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -1039,7 +1039,7 @@ seminar_id,university,discipline,condition,total_speakers,unique_speakers,speake
 9c8930-de0b8f-5b,University of Utah,Physics,control,1,1,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 9cb837-8982bd-b2,University of North Carolina at Chapel Hill,Chemistry,control,15,15,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 9dde82-2cf9a0-89,"University of California, Irvine",Physics,treatment,6,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-9e1636-773cc0-d6,University of Wisconsin-Madison,Mathematics,control,13,10,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+9e1636-773cc0-d6,University of Wisconsin-Madison,Mathematics,control,13,8,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 9e7616-191888-ca,Texas A&M University,Mathematics,treatment,1,1,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 9ec117-a13f2f-a7,University of Colorado Boulder,Physics,control,4,4,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 9eec13-bdb8fa-21,University of Michigan,Mathematics,treatment,9,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -1068,7 +1068,7 @@ a3e1f0-566b71-c5,Auburn University,Mathematics,control,11,11,0,0,0,0,0,0.0,0.0,0
 a3e911-55a010-dd,Carnegie Mellon University,Computer Science,control,5,5,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 a41714-3d989b-a0,Wayne State University,Computer Science,control,19,19,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 a424e9-cbf2fe-e2,University of Alabama,Mathematics,control,2,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-a43131-f167c3-e8,University of Georgia,Mathematics,treatment,76,64,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+a43131-f167c3-e8,University of Georgia,Mathematics,treatment,76,63,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 a47318-b1b4f9-4f,University of Texas at Dallas,Mathematics,treatment,10,8,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 a4a3a6-a63ecd-6a,Brown University,Mathematics,control,10,10,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 a4cc96-3a4fcd-87,Johns Hopkins University,Mechanical Engineering,control,25,24,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -1086,7 +1086,7 @@ a67823-9e13a0-05,Tufts University,Mathematics,control,5,5,0,0,0,0,0,0.0,0.0,0.0,
 a68b20-2b1a3e-b6,"Graduate Center, CUNY",Mathematics,treatment,7,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 a692bb-accbaf-38,Louisiana State University,Chemistry,treatment,9,9,1,1,1,0,0,11.11111111111111,11.11111111111111,11.11111111111111,0.0,0.0,1,1,1,0,0
 a6ae3c-9eebd9-3e,"University of California, Los Angeles",Mathematics,control,13,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-a6dc14-dfb760-a7,University of Michigan,Mathematics,treatment,29,21,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+a6dc14-dfb760-a7,University of Michigan,Mathematics,treatment,29,20,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 a717e0-9977cf-a3,University at Buffalo,Mathematics,control,4,4,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 a73341-50e535-78,Temple University,Mathematics,control,17,15,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 a7924a-b6a6a3-a6,Georgia Institute of Technology,Mechanical Engineering,control,6,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -1117,7 +1117,7 @@ ab5b4e-4221d6-e8,"University of California, Los Angeles",Mathematics,control,28,
 ab72ad-fe0769-8d,University of Utah,Computer Science,treatment,4,4,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 ab89a7-a8e628-1a,Columbia University,Mathematics,treatment,22,22,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 abb873-dc3dd8-eb,University of Minnesota,Mathematics,treatment,7,7,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-ac530a-4b1327-25,University of Kentucky,Physics,control,13,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+ac530a-4b1327-25,University of Kentucky,Physics,control,13,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 ac90d5-0efae8-e0,Kansas State University,Mathematics,treatment,7,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 ac954d-8f3d91-cf,University of South Carolina,Mathematics,control,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 ac9f50-100f05-13,Michigan State University,Mathematics,control,15,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -1253,7 +1253,7 @@ c017dc-96bbb1-8f,Washington University in St. Louis,Physics,control,12,12,0,0,0,
 c02109-2cd04d-25,Pennsylvania State University,Mathematics,control,2,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 c07852-d1d5bc-bf,Washington University in St. Louis,Mathematics,treatment,6,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 c079a1-0f99fc-a5,"University of California, San Diego",Mathematics,treatment,4,4,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-c07d4f-a98325-91,"University of California, San Diego",Chemistry,control,25,25,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+c07d4f-a98325-91,"University of California, San Diego",Chemistry,control,25,22,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 c0923a-a93022-4e,Louisiana State University,Mathematics,treatment,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 c0b0d5-bde040-dc,Princeton University,Mathematics,control,9,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 c0ccce-d5765d-42,"University of California, San Diego",Mechanical Engineering,control,8,8,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -1269,7 +1269,7 @@ c190ef-b1bf31-07,Rutgers University-New Brunswick,Mathematics,control,23,23,0,0,
 c19135-df3606-4b,Purdue University,Chemistry,control,19,19,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 c1a20f-c969f0-35,Louisiana State University,Chemistry,treatment,28,26,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 c1a989-ff9525-d0,University of Utah,Mathematics,treatment,20,19,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-c1b506-7671e3-3f,University of Michigan,Mathematics,treatment,26,19,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+c1b506-7671e3-3f,University of Michigan,Mathematics,treatment,26,17,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 c1c8c7-5f94a7-84,Washington University in St. Louis,Physics,control,16,16,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 c1e7be-7dff0d-b8,"University of California, Berkeley",Chemistry,treatment,1,1,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 c2515f-12671d-97,University of Arizona,Chemistry,control,9,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -1306,7 +1306,7 @@ c814a9-b5a50b-72,"University of California, Santa Barbara",Mathematics,control,1
 c87eeb-01097a-f5,Massachusetts Institute of Technology,Physics,treatment,25,25,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 c89321-29c7b6-37,Purdue University,Mathematics,treatment,17,17,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 c8c193-25a082-69,Boston University,Physics,control,12,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-c8d299-1ef019-ec,Kent State University,Mathematics,control,42,19,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+c8d299-1ef019-ec,Kent State University,Mathematics,control,42,18,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 c8f3ca-af7bb8-23,"University of California, Santa Cruz",Mathematics,treatment,1,1,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 c90079-bd3836-2b,University of Arizona,Physics,control,17,17,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 c98170-d99af0-28,Purdue University,Chemistry,control,12,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -1430,9 +1430,9 @@ db9cf3-552ad4-dd,University of North Texas,Mathematics,treatment,7,7,0,0,0,0,0,0
 dbbef8-3ed7e6-b5,Brown University,Mathematics,control,35,35,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 dbd0f5-f5a008-99,University of Notre Dame,Chemistry,treatment,24,24,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 dc2ced-2906a5-dc,Stanford University,Physics,control,22,22,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-dc9d86-ed5328-15,Iowa State University,Mathematics,control,27,27,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+dc9d86-ed5328-15,Iowa State University,Mathematics,control,27,24,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 dcd903-e43435-91,University of Florida,Chemistry,control,42,40,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-dd20fd-0c13b6-62,Oregon State University,Mathematics,treatment,17,16,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+dd20fd-0c13b6-62,Oregon State University,Mathematics,treatment,17,15,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 dd72b4-c616d7-d9,Princeton University,Mathematics,control,15,15,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 dd7434-f5068a-05,University of Pennsylvania,Mathematics,control,2,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 ddab79-175ccf-2c,Purdue University,Computer Science,treatment,13,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -1456,7 +1456,7 @@ e07029-756bcc-d6,University of Wisconsin-Madison,Chemistry,treatment,9,9,0,0,0,0
 e077f4-d030f7-25,Rutgers University-New Brunswick,Chemistry,treatment,6,6,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 e09f61-d1354f-65,Indiana University Bloomington,Physics,control,4,4,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 e0a24e-6b3a34-3b,Columbia University,Physics,treatment,15,14,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-e0b321-06e3a5-fd,Cornell University,Computer Science,control,9,9,1,1,0,1,0,11.11111111111111,11.11111111111111,0.0,11.11111111111111,0.0,1,1,0,1,0
+e0b321-06e3a5-fd,Cornell University,Computer Science,control,9,9,1,0,0,0,0,11.11111111111111,0.0,0.0,0.0,0.0,1,0,0,0,0
 e0bb44-3b6096-91,University of Massachusetts Amherst,Mathematics,control,3,3,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 e0d5ca-21e936-43,"University of California, Berkeley",Chemistry,treatment,4,4,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 e11e1c-cc16b0-26,Columbia University,Mathematics,treatment,14,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -1541,7 +1541,7 @@ ebe0bd-cfb517-5a,Dartmouth College,Mathematics,treatment,12,11,0,0,0,0,0,0.0,0.0
 ec0050-d84fe6-73,Oregon State University,Mechanical Engineering,treatment,24,24,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 eceaab-0f0cc6-7f,University of Minnesota,Mathematics,treatment,25,25,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 ed1459-1750b2-0f,"University of Maryland, College Park",Mathematics,control,27,24,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-ed47b5-bcf2a0-b5,Ohio State University,Chemistry,treatment,19,18,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+ed47b5-bcf2a0-b5,Ohio State University,Chemistry,treatment,19,15,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 ed484b-f3b587-fa,Stanford University,Mathematics,treatment,10,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 eddb64-40d70b-b2,Texas A&M University,Mathematics,treatment,18,11,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 edee66-715064-0b,Florida International University,Mathematics,treatment,2,2,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -1556,7 +1556,7 @@ ef08db-85b641-06,University of Colorado Boulder,Chemistry,treatment,32,32,0,0,0,
 ef2346-b6a782-38,University of Michigan,Computer Science,treatment,4,4,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 ef3641-707959-29,Louisiana State University,Chemistry,treatment,4,4,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 ef3c8f-538ead-31,Brown University,Mathematics,control,20,20,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-ef50c7-063fea-f4,University of Oregon,Mathematics,treatment,31,26,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+ef50c7-063fea-f4,University of Oregon,Mathematics,treatment,31,23,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 ef889f-b805bf-bb,University of Pennsylvania,Mathematics,control,13,13,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 efa2dc-c9810a-dc,Colorado State University,Chemistry,treatment,10,10,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 efe576-5978b3-3a,Auburn University,Computer Science,control,12,11,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -1619,7 +1619,7 @@ f9a08f-ff91ec-77,Yale University,Mathematics,control,5,5,0,0,0,0,0,0.0,0.0,0.0,0
 f9e662-3c0e16-a9,Virginia Commonwealth University,Mathematics,treatment,10,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 f9e9c4-251abf-62,Iowa State University,Chemistry,control,12,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 f9f4fd-83e346-b3,Florida State University,Chemistry,control,9,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-fa33f3-a5e719-4c,University of Georgia,Mathematics,treatment,22,21,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+fa33f3-a5e719-4c,University of Georgia,Mathematics,treatment,22,20,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 fa95cc-1c00f2-7e,Colorado State University,Physics,control,29,29,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 faf5af-cf5a4a-53,Columbia University,Physics,treatment,24,24,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 fb33f9-63d7ee-b5,Ohio State University,Mathematics,treatment,5,5,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -1628,7 +1628,7 @@ fbc0c9-9288ab-df,Purdue University,Chemistry,control,12,12,0,0,0,0,0,0.0,0.0,0.0
 fbe2ba-5f8eab-21,Brown University,Mathematics,control,12,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 fc0598-ee834b-c9,Massachusetts Institute of Technology,Mathematics,control,24,24,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 fc1036-fa14ec-59,Stony Brook University,Physics,treatment,16,16,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-fc1c08-122f75-0a,"Graduate Center, CUNY",Mathematics,treatment,22,19,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+fc1c08-122f75-0a,"Graduate Center, CUNY",Mathematics,treatment,22,18,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 fc239e-e6a33c-c6,"University of California, Los Angeles",Mathematics,control,7,7,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 fc42f0-1c727c-ef,Drexel University,Mathematics,control,15,15,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 fc8643-0fceb2-83,Wayne State University,Mathematics,control,8,8,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
@@ -1638,7 +1638,7 @@ fcd883-ff382a-7e,Rutgers University-New Brunswick,Chemistry,treatment,11,11,1,1,
 fcdb2f-495f4e-4e,Texas Tech University,Physics,treatment,29,29,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 fcdd45-92e229-20,Georgetown University,Mathematics,control,19,19,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 fd5b5c-f7e9b5-fd,Boston College,Physics,treatment,23,23,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
-fd8b82-029fb4-b4,"University of California, San Diego",Mathematics,treatment,9,9,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
+fd8b82-029fb4-b4,"University of California, San Diego",Mathematics,treatment,9,8,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 fdc27d-877d04-8f,University of Chicago,Mathematics,control,20,20,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 fdd0ed-31bb6e-20,University of Houston,Mathematics,treatment,12,12,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0
 fe0d69-e9f89d-07,Iowa State University,Chemistry,control,10,10,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0,0,0,0,0

@@ -262,6 +262,10 @@ class OptimizedDemographicAnalysis:
                 rank_std_col = f'rank_{i}_standardized'
                 uni_std_col = f'university_{i}_standardized'
                 
+                # Check for PhD year column
+                phd_year_col = f'phd_graduation_year_{i}'
+                phd_year = row.get(phd_year_col) if phd_year_col in df.columns else None
+                
                 # Create speaker appearance record
                 speaker_details = {
                     'speaker_num_in_seminar': i,
@@ -271,7 +275,8 @@ class OptimizedDemographicAnalysis:
                     'rank': row.get(rank_std_col, row.get(rank_col, '')) if rank_std_col in df.columns else row.get(rank_col, ''),
                     'affiliation_raw': row.get(uni_col, '') if uni_col in df.columns else '',
                     'affiliation_standardized': row.get(uni_std_col, '') if uni_std_col in df.columns else '',
-                    'date': row.get(date_col, '') if date_col in df.columns else ''
+                    'date': row.get(date_col, '') if date_col in df.columns else '',
+                    'phd_graduation_year': phd_year if pd.notna(phd_year) else None
                 }
                 
                 # Combine seminar and speaker info
@@ -614,7 +619,7 @@ class OptimizedDemographicAnalysis:
             
             # First try face analysis if high confidence AND valid category
             if (row.get('face_analysis_success', False) and 
-                row.get('face_race_confidence', 0) > 98 and 
+                row.get('face_race_confidence', 0) > 90 and 
                 face_race in valid_races):
                 return face_race
             # Otherwise use name analysis if available
@@ -690,6 +695,7 @@ class OptimizedDemographicAnalysis:
         print(f"  Merging {len(appearances)} appearances with {len(speakers_df)} speaker demographics...")
         
         # Merge appearances with speaker demographics
+        # Note: phd_graduation_year comes from appearances, not speakers_df
         appearances_with_demographics = appearances.merge(
             speakers_df[['speaker_id', 'combined_gender', 'combined_race', 'is_urm',
                         'face_gender', 'face_gender_confidence', 'face_race', 'face_race_confidence',

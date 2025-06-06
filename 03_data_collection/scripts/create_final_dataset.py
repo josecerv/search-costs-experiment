@@ -254,6 +254,45 @@ async def main(skip_enrichment: bool = False, enrich_sample: int = None):
         enricher = SeminarSpeakerEnricher()
         df_final = await enricher.enrich_seminar_data(df_final, sample_size=enrich_sample)
         logger.info("Speaker enrichment completed")
+        
+        # Step 4b: Re-standardize affiliations that were filled in by enrichment
+        logger.info("\nStep 4b: Standardizing newly enriched affiliations...")
+        university_standardizer = UniversityStandardizer()
+        
+        # Collect all university columns that might have been updated
+        university_columns = [col for col in df_final.columns if col.startswith('university_') and col.split('_')[-1].isdigit()]
+        
+        # Check which universities need standardization (those without standardized version)
+        universities_to_standardize = []
+        for col in university_columns:
+            std_col = f"{col}_standardized"
+            for idx, row in df_final.iterrows():
+                if pd.notna(row.get(col)) and (std_col not in df_final.columns or pd.isna(row.get(std_col))):
+                    university = str(row.get(col))
+                    if university and university not in universities_to_standardize:
+                        universities_to_standardize.append(university)
+        
+        if universities_to_standardize:
+            logger.info(f"Found {len(universities_to_standardize)} new affiliations to standardize")
+            
+            # Get standardized mappings
+            university_mapping = await university_standardizer.standardize_universities_batch(universities_to_standardize)
+            
+            # Apply standardization
+            for col in university_columns:
+                standardized_col = f'{col}_standardized'
+                if standardized_col not in df_final.columns:
+                    df_final[standardized_col] = None
+                
+                # Update standardization for this column
+                for idx, row in df_final.iterrows():
+                    if pd.notna(row.get(col)) and pd.isna(row.get(standardized_col)):
+                        university = str(row.get(col))
+                        if university in university_mapping:
+                            df_final.at[idx, standardized_col] = university_mapping[university]
+                        else:
+                            df_final.at[idx, standardized_col] = university
+        
     else:
         logger.info("\nStep 4: Skipping speaker enrichment (--skip-enrichment flag used)")
     

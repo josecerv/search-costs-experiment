@@ -131,27 +131,36 @@ class SpeakerDataEnricher:
                 logger.error(f"Error querying affiliation for {first_name} {last_name}: {e}")
                 return None
     
-    async def _query_phd_year(self, first_name: str, last_name: str, discipline: str, affiliation: str) -> Optional[str]:
-        """Query Perplexity for PhD graduation year"""
+    async def _query_phd_year(self, first_name: str, last_name: str, discipline: str, affiliation: str, rank: str = "") -> Optional[str]:
+        """Query Perplexity for PhD graduation year with improved prompt and validation"""
         async with self.semaphore:
             try:
+                # Add rank context to improve accuracy
+                rank_context = ""
+                if rank:
+                    rank_context = f"Their current academic rank is {rank}. "
+                
                 messages = [
                     {
                         "role": "system",
                         "content": (
-                            "You are a precise research assistant. When asked about PhD graduation years, "
-                            "return ONLY: a 4-digit year (e.g., 2015), '0' for current graduate students, "
-                            "or 'NA' for those without a PhD who are not graduate students."
+                            "You are a precise research assistant. When asked about PhD graduation years:\n"
+                            "- Return ONLY a 4-digit year for PAST PhD graduations (e.g., 2015)\n"
+                            "- Return '0' ONLY for current PhD students (not postdocs or faculty)\n"
+                            "- Return 'NA' for those without a PhD\n"
+                            "- NEVER return future years or expected graduation dates\n"
+                            "- Professors CANNOT be current students - they have already graduated"
                         )
                     },
                     {
                         "role": "user",
                         "content": (
                             f"{first_name} {last_name} works in {discipline} "
-                            f"{'and is affiliated with ' + affiliation if affiliation and affiliation != 'UNKNOWN' else ''}. "
-                            "What year did they receive their PhD? "
-                            "Return ONLY: the 4-digit year (e.g., 2015), '0' if current graduate student, "
-                            "or 'NA' if no PhD and not a graduate student."
+                            f"{'at ' + affiliation if affiliation and affiliation != 'UNKNOWN' else ''}. "
+                            f"{rank_context}"
+                            "What year did they complete/graduate with their PhD? "
+                            "Remember: Return ONLY the past graduation year (not future), "
+                            "'0' for current PhD students only, or 'NA' if no PhD."
                         )
                     }
                 ]
@@ -165,8 +174,8 @@ class SpeakerDataEnricher:
                 
                 phd_year = response.choices[0].message.content.strip()
                 
-                # Validate response
-                validated_year = self._validate_phd_year(phd_year)
+                # Validate response with rank context
+                validated_year = self._validate_phd_year(phd_year, rank)
                 return validated_year
                 
             except Exception as e:
@@ -200,8 +209,8 @@ class SpeakerDataEnricher:
         
         return True
     
-    def _validate_phd_year(self, phd_year: str) -> Optional[str]:
-        """Validate and normalize PhD year response"""
+    def _validate_phd_year(self, phd_year: str, rank: str = "") -> Optional[str]:
+        """Validate and normalize PhD year response with rank-based validation"""
         if not phd_year:
             return None
         
@@ -214,29 +223,57 @@ class SpeakerDataEnricher:
         
         # Check for current student
         if phd_year == "0" or "CURRENT" in phd_year or "STUDENT" in phd_year:
+            # Validate against rank - professors cannot be current students
+            if rank:
+                professor_ranks = ['professor', 'associate professor', 'assistant professor',
+                                 'full professor', 'prof', 'prof.', 'emeritus', 'adjunct']
+                if any(prof_rank in rank.lower() for prof_rank in professor_ranks):
+                    # This is likely an error - professors are not current students
+                    logger.warning(f"Rank '{rank}' marked as current student - likely an error")
+                    return None
             return "0"
         
         # Extract year if present
         year_match = re.search(r'(\d{4})', phd_year)
         if year_match:
             year = int(year_match.group(1))
-            # Validate reasonable range
+            # Validate reasonable range (no future years)
             current_year = datetime.now().year
             if 1900 <= year <= current_year:
                 return str(year)
+            elif year > current_year:
+                logger.warning(f"Future PhD year {year} detected - ignoring")
+                return None
         
         return None
     
-    async def enrich_speaker(self, row: Dict) -> Tuple[Optional[str], Optional[str], bool]:
-        """Enrich a single speaker with affiliation and PhD year. Returns (affiliation, phd_year, is_cache_hit)"""
+    async def enrich_speaker(self, row: Dict, skip_existing_phd: bool = True) -> Tuple[Optional[str], Optional[str], bool]:
+        """
+        Enrich a single speaker with affiliation and PhD year.
+        
+        Args:
+            row: Speaker data including first_name, last_name, discipline, affiliation, rank
+            skip_existing_phd: If True, skip speakers who already have PhD data
+            
+        Returns:
+            Tuple of (affiliation, phd_year, is_cache_hit)
+        """
         first_name = str(row.get('first_name', '')).strip()
         last_name = str(row.get('last_name', '')).strip()
         discipline = str(row.get('discipline', '')).strip()
         current_affiliation = str(row.get('affiliation', '')).strip()
+        rank = str(row.get('rank', '')).strip()
+        existing_phd = row.get('phd_graduation_year')
         
         # Skip if no name
         if not first_name or not last_name:
             return None, None, False
+        
+        # Skip if already has PhD data and skip_existing_phd is True
+        # Check if existing_phd is actually a valid value (not None, NaN, or empty string)
+        if skip_existing_phd and pd.notna(existing_phd) and str(existing_phd).strip().lower() not in ['', 'nan', 'none']:
+            logger.debug(f"Skipping {first_name} {last_name} - already has PhD year: {existing_phd}")
+            return current_affiliation, existing_phd, True  # Return existing data
         
         # Check cache first
         cache_key = self._generate_cache_key(first_name, last_name, discipline, current_affiliation)
@@ -252,8 +289,8 @@ class SpeakerDataEnricher:
                 retrieved_affiliation = current_affiliation
             await asyncio.sleep(0.5)  # Rate limit
         
-        # Query for PhD year
-        phd_year = await self._query_phd_year(first_name, last_name, discipline, retrieved_affiliation)
+        # Query for PhD year with rank context
+        phd_year = await self._query_phd_year(first_name, last_name, discipline, retrieved_affiliation, rank)
         await asyncio.sleep(0.5)  # Rate limit
         
         # Cache results
@@ -271,8 +308,18 @@ class SpeakerDataEnricher:
         
         return retrieved_affiliation, phd_year, False  # False = API call made
     
-    async def enrich_dataframe(self, df: pd.DataFrame, sample_size: Optional[int] = None) -> pd.DataFrame:
-        """Enrich entire dataframe with affiliations and PhD years"""
+    async def enrich_dataframe(self, df: pd.DataFrame, sample_size: Optional[int] = None, skip_existing_phd: bool = True) -> pd.DataFrame:
+        """
+        Enrich entire dataframe with affiliations and PhD years.
+        
+        Args:
+            df: DataFrame with speaker data
+            sample_size: Optional sample size for testing
+            skip_existing_phd: If True, skip speakers who already have PhD data
+        
+        Returns:
+            Enriched DataFrame
+        """
         logger.info(f"Starting enrichment for {len(df)} speakers")
         logger.info(f"Cache contains {len(self.cache)} existing entries")
         
@@ -284,6 +331,10 @@ class SpeakerDataEnricher:
             df_enriched['retrieved_affiliation'] = None
         if 'phd_graduation_year' not in df_enriched.columns:
             df_enriched['phd_graduation_year'] = None
+        
+        # Count existing PhD data
+        existing_phd_count = df_enriched['phd_graduation_year'].notna().sum()
+        logger.info(f"Speakers with existing PhD data: {existing_phd_count}")
         
         # Sample if requested
         if sample_size and sample_size < len(df_enriched):
@@ -297,6 +348,7 @@ class SpeakerDataEnricher:
         total_processed = 0
         cache_hits = 0
         api_calls = 0
+        skipped_existing = 0
         
         for i in range(0, len(sample_indices), batch_size):
             batch_indices = sample_indices[i:i + batch_size]
@@ -304,26 +356,39 @@ class SpeakerDataEnricher:
             
             for idx in batch_indices:
                 row = df_enriched.loc[idx]
-                task = self.enrich_speaker(row.to_dict())
+                task = self.enrich_speaker(row.to_dict(), skip_existing_phd=skip_existing_phd)
                 batch_tasks.append((idx, task))
             
             # Process batch
             results = await asyncio.gather(*[task for _, task in batch_tasks])
             
-            # Update dataframe and track cache hits
+            # Update dataframe and track statistics
             for (idx, _), (affiliation, phd_year, is_cache_hit) in zip(batch_tasks, results):
-                if affiliation:
-                    df_enriched.at[idx, 'retrieved_affiliation'] = affiliation
-                if phd_year:
-                    df_enriched.at[idx, 'phd_graduation_year'] = phd_year
+                # Get original data
+                original_phd = df_enriched.at[idx, 'phd_graduation_year']
                 
-                if is_cache_hit:
-                    cache_hits += 1
+                # Check if this speaker was skipped due to existing PhD data
+                was_skipped = skip_existing_phd and pd.notna(original_phd) and str(original_phd).strip().lower() not in ['', 'nan', 'none']
+                
+                if was_skipped:
+                    skipped_existing += 1
+                    # Even if skipped, count cache hit status
+                    if is_cache_hit:
+                        cache_hits += 1
                 else:
-                    api_calls += 1
+                    # Update the dataframe with new data
+                    if affiliation:
+                        df_enriched.at[idx, 'retrieved_affiliation'] = affiliation
+                    if phd_year:
+                        df_enriched.at[idx, 'phd_graduation_year'] = phd_year
+                    
+                    if is_cache_hit:
+                        cache_hits += 1
+                    else:
+                        api_calls += 1
             
             total_processed += len(batch_indices)
-            logger.info(f"Processed {total_processed}/{len(sample_indices)} speakers")
+            logger.info(f"Processed {total_processed}/{len(sample_indices)} speakers (skipped {skipped_existing} with existing PhD data)")
             
             # Rate limit between batches
             if self.request_count >= self.max_requests_per_batch:
@@ -337,13 +402,19 @@ class SpeakerDataEnricher:
         # Log summary statistics
         enriched_affiliations = df_enriched['retrieved_affiliation'].notna().sum()
         enriched_phd_years = df_enriched['phd_graduation_year'].notna().sum()
+        new_phd_years = enriched_phd_years - existing_phd_count
         
         logger.info(f"\nEnrichment Summary:")
         logger.info(f"  - Total speakers: {len(df_enriched)}")
+        logger.info(f"  - Skipped (already had PhD data in input): {skipped_existing}")
+        logger.info(f"  - Retrieved from cache: {cache_hits}")
+        logger.info(f"  - New API calls made: {api_calls}")
+        logger.info(f"  - Total processed: {cache_hits + api_calls}")
+        if (cache_hits + api_calls) > 0:
+            logger.info(f"  - Cache hit rate: {cache_hits/(cache_hits+api_calls)*100:.1f}%")
         logger.info(f"  - Affiliations enriched: {enriched_affiliations}")
-        logger.info(f"  - PhD years enriched: {enriched_phd_years}")
-        logger.info(f"  - Cache hits: {cache_hits} ({cache_hits/(cache_hits+api_calls)*100:.1f}% hit rate)" if (cache_hits+api_calls) > 0 else "  - Cache hits: 0")
-        logger.info(f"  - API calls: {api_calls}")
+        logger.info(f"  - PhD years total: {enriched_phd_years}")
+        logger.info(f"  - PhD years newly added: {new_phd_years}")
         logger.info(f"  - Cache now contains: {len(self.cache)} entries")
         
         return df_enriched

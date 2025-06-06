@@ -266,6 +266,9 @@ class AnalysisDatasetCreator:
             spring_start = pd.Timestamp('2025-01-01')
             spring_end = pd.Timestamp('2025-06-30')
             
+            # Initialize PhD year tracking
+            phd_years = []
+            
             # Process each speaker appearance
             for _, speaker in appearances.iterrows():
                 # Parse date for semester classification
@@ -279,6 +282,18 @@ class AnalysisDatasetCreator:
                         elif spring_start <= date <= spring_end:
                             semester = 'Spring'
                             spring_total += 1
+                    except:
+                        pass
+                
+                # Extract PhD year and calculate years from PhD
+                if pd.notna(speaker.get('phd_graduation_year')):
+                    try:
+                        phd_year = float(speaker['phd_graduation_year'])
+                        if phd_year == 0:  # Current student
+                            phd_years.append(-1)
+                        elif 1900 <= phd_year <= 2024:  # Valid past year
+                            years_from_phd = 2025 - phd_year
+                            phd_years.append(years_from_phd)
                     except:
                         pass
                 
@@ -351,6 +366,39 @@ class AnalysisDatasetCreator:
             spring_pct_hispanic = (spring_hispanic / spring_with_demographics * 100) if spring_with_demographics > 0 else 0
             spring_pct_female = (spring_female / spring_with_demographics * 100) if spring_with_demographics > 0 else 0
             
+            # Calculate PhD year statistics
+            num_speakers_with_phd_year = len(phd_years)
+            pct_speakers_with_phd_year = (num_speakers_with_phd_year / total_speakers * 100) if total_speakers > 0 else 0
+            
+            if num_speakers_with_phd_year > 0:
+                # Separate current students from those with PhDs
+                phd_years_array = np.array(phd_years)
+                current_students = (phd_years_array == -1).sum()
+                phd_holders = phd_years_array[phd_years_array >= 0]
+                
+                if len(phd_holders) > 0:
+                    mean_years_from_phd = float(np.mean(phd_holders))
+                    median_years_from_phd = float(np.median(phd_holders))
+                    min_years_from_phd = float(np.min(phd_holders))
+                    max_years_from_phd = float(np.max(phd_holders))
+                else:
+                    # All speakers are current students
+                    mean_years_from_phd = -1.0
+                    median_years_from_phd = -1.0
+                    min_years_from_phd = -1.0
+                    max_years_from_phd = -1.0
+                
+                num_current_students = int(current_students)
+                pct_current_students = (num_current_students / num_speakers_with_phd_year * 100)
+            else:
+                # No PhD year data
+                mean_years_from_phd = np.nan
+                median_years_from_phd = np.nan
+                min_years_from_phd = np.nan
+                max_years_from_phd = np.nan
+                num_current_students = 0
+                pct_current_students = 0.0
+            
             # Store seminar statistics
             seminar_stats.append({
                 'seminar_id': seminar_id,
@@ -414,7 +462,17 @@ class AnalysisDatasetCreator:
                 'spring_pct_urm': spring_pct_urm,
                 'spring_pct_black': spring_pct_black,
                 'spring_pct_hispanic': spring_pct_hispanic,
-                'spring_pct_female': spring_pct_female
+                'spring_pct_female': spring_pct_female,
+                
+                # PhD year statistics
+                'num_speakers_with_phd_year': num_speakers_with_phd_year,
+                'pct_speakers_with_phd_year': pct_speakers_with_phd_year,
+                'mean_years_from_phd': mean_years_from_phd,
+                'median_years_from_phd': median_years_from_phd,
+                'min_years_from_phd': min_years_from_phd,
+                'max_years_from_phd': max_years_from_phd,
+                'num_current_students': num_current_students,
+                'pct_current_students': pct_current_students
             })
         
         self.seminar_df = pd.DataFrame(seminar_stats)
@@ -681,6 +739,13 @@ class AnalysisDatasetCreator:
                 'email_recipients': float(self.seminar_df['num_recipients'].notna().sum() / len(self.seminar_df)),
                 'peer_departments': float((self.seminar_df['total_peer_departments'] > 0).sum() / len(self.seminar_df)),
                 'urm_in_peers': float((self.seminar_df['total_urm_peer_faculty'] > 0).sum() / len(self.seminar_df))
+            },
+            'phd_year_statistics': {
+                'seminars_with_phd_data': int((self.seminar_df['num_speakers_with_phd_year'] > 0).sum()),
+                'coverage_rate': float((self.seminar_df['num_speakers_with_phd_year'] > 0).sum() / len(self.seminar_df)),
+                'mean_years_from_phd': float(self.seminar_df['mean_years_from_phd'].mean()) if not self.seminar_df['mean_years_from_phd'].isna().all() else None,
+                'mean_pct_with_phd': float(self.seminar_df['pct_speakers_with_phd_year'].mean()),
+                'mean_pct_current_students': float(self.seminar_df['pct_current_students'].mean())
             },
             'columns': list(self.seminar_df.columns)
         }

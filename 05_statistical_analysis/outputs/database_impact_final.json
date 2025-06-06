@@ -1,33 +1,33 @@
 {
-  "analysis_date": "2025-06-05 18:30:17.773420",
+  "analysis_date": "2025-06-06 13:51:51.983298",
   "methodology": "Percentage of all seminar speakers who were from the tailored database",
   "overall": {
     "seminars_analyzed": 1656,
     "treatment_seminars": 811,
     "control_seminars": 845,
     "total_speakers": 23168,
-    "unique_speakers": 21982
+    "unique_speakers": 21897
   },
   "key_results": [
     {
       "metric": "All speakers",
       "treatment_mean": 0.25140932921650766,
       "treatment_std": 1.4441205291959482,
-      "control_mean": 0.29518902722997675,
-      "control_std": 2.202775887910099,
-      "difference_pp": -0.04377969801346909,
-      "relative_pct": -14.831072287575605,
-      "p_value": 0.6339743479665774
+      "control_mean": 0.3025854769341188,
+      "control_std": 2.2122562120165297,
+      "difference_pp": -0.05117614771761114,
+      "relative_pct": -16.912955716230098,
+      "p_value": 0.5789737954678496
     },
     {
       "metric": "URM speakers",
-      "treatment_mean": 0.2260633914168091,
-      "treatment_std": 1.3802811678181024,
-      "control_mean": 0.2130073384001849,
-      "control_std": 2.0395972611767226,
-      "difference_pp": 0.013056053016624186,
-      "relative_pct": 6.129391181864021,
-      "p_value": 0.8792555217364393
+      "treatment_mean": 0.21094115470447647,
+      "treatment_std": 1.351637370465385,
+      "control_mean": 0.20725454418585224,
+      "control_std": 2.0155357346702427,
+      "difference_pp": 0.0036866105186242337,
+      "relative_pct": 1.7787839263578817,
+      "p_value": 0.9652809247219992
     },
     {
       "metric": "Black speakers",
@@ -41,13 +41,13 @@
     },
     {
       "metric": "Hispanic speakers",
-      "treatment_mean": 0.07861218767346781,
-      "treatment_std": 0.6993051949457952,
-      "control_mean": 0.14734105468965558,
-      "control_std": 1.9091423558628444,
-      "difference_pp": -0.06872886701618777,
-      "relative_pct": -46.64610767240085,
-      "p_value": 0.3347116437798999
+      "treatment_mean": 0.06348995096113523,
+      "treatment_std": 0.6374246190814465,
+      "control_mean": 0.14158826047532289,
+      "control_std": 1.8832141196560277,
+      "difference_pp": -0.07809830951418766,
+      "relative_pct": -55.1587463904179,
+      "p_value": 0.2624621488079786
     },
     {
       "metric": "Female speakers",

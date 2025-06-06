@@ -97,6 +97,10 @@ class SeminarSpeakerEnricher:
                 
                 speaker_ids_seen.add(speaker_id)
                 
+                # Check for existing PhD year
+                phd_year_col = f'phd_graduation_year_{i}'
+                existing_phd_year = row.get(phd_year_col) if phd_year_col in df.columns else None
+                
                 # Add to list
                 speakers_list.append({
                     'speaker_id': speaker_id,
@@ -105,7 +109,8 @@ class SeminarSpeakerEnricher:
                     'discipline': seminar_discipline,
                     'affiliation': affiliation,
                     'rank': rank,
-                    'full_name': full_name
+                    'full_name': full_name,
+                    'phd_graduation_year': existing_phd_year  # Include existing PhD year
                 })
         
         speakers_df = pd.DataFrame(speakers_list)
@@ -126,7 +131,7 @@ class SeminarSpeakerEnricher:
         
         # Step 2: Enrich unique speakers
         logger.info(f"Enriching {len(unique_speakers)} unique speakers...")
-        enriched_speakers = await self.enricher.enrich_dataframe(unique_speakers, sample_size)
+        enriched_speakers = await self.enricher.enrich_dataframe(unique_speakers, sample_size, skip_existing_phd=True)
         
         # Step 3: Create lookup dictionaries
         affiliation_lookup = {}
@@ -135,9 +140,11 @@ class SeminarSpeakerEnricher:
         for _, speaker in enriched_speakers.iterrows():
             speaker_id = speaker['speaker_id']
             
-            # Use retrieved affiliation if available, otherwise keep original
+            # Track retrieved affiliations for filling missing values
             if pd.notna(speaker.get('retrieved_affiliation')) and speaker['retrieved_affiliation']:
-                affiliation_lookup[speaker_id] = speaker['retrieved_affiliation']
+                # Only use retrieved affiliation if original was missing
+                if pd.isna(speaker.get('affiliation')) or speaker.get('affiliation', '').strip() == '':
+                    affiliation_lookup[speaker_id] = speaker['retrieved_affiliation']
             
             # Add PhD year if available
             if pd.notna(speaker.get('phd_graduation_year')) and speaker['phd_graduation_year']:
@@ -147,14 +154,13 @@ class SeminarSpeakerEnricher:
         logger.info("Mapping enrichments back to seminar data...")
         df_enriched = df.copy()
         
-        # Add new columns for each speaker position
+        # Add PhD year columns for each speaker position
         for i in range(1, 129):
             fn_col = f'First Name_{i}'
             if fn_col not in df_enriched.columns:
                 break
             
-            # Add columns for this speaker position
-            df_enriched[f'retrieved_affiliation_{i}'] = None
+            # Add PhD year column for this speaker position
             df_enriched[f'phd_graduation_year_{i}'] = None
         
         # Map enrichments
@@ -196,25 +202,24 @@ class SeminarSpeakerEnricher:
                 speaker_id = generate_speaker_id(full_name, seminar_discipline, affiliation)
                 
                 # Map enrichments
+                # Fill missing affiliations with retrieved values
                 if speaker_id in affiliation_lookup:
-                    df_enriched.at[idx, f'retrieved_affiliation_{i}'] = affiliation_lookup[speaker_id]
-                    enriched_count += 1
+                    # Only fill if the original affiliation is missing
+                    if pd.isna(affiliation) or affiliation.strip() == '':
+                        df_enriched.at[idx, uni_col] = affiliation_lookup[speaker_id]
+                        enriched_count += 1
                 
+                # Add PhD year
                 if speaker_id in phd_year_lookup:
                     df_enriched.at[idx, f'phd_graduation_year_{i}'] = phd_year_lookup[speaker_id]
         
-        logger.info(f"Enriched {enriched_count} speaker appearances")
+        logger.info(f"Filled {enriched_count} missing affiliations")
         
         # Log summary statistics
         total_speakers = sum(1 for idx, row in df_enriched.iterrows() 
                            for i in range(1, 129) 
                            if f'First Name_{i}' in df_enriched.columns 
                            and pd.notna(row.get(f'First Name_{i}')))
-        
-        enriched_affiliations = sum(1 for idx, row in df_enriched.iterrows() 
-                                  for i in range(1, 129) 
-                                  if f'retrieved_affiliation_{i}' in df_enriched.columns 
-                                  and pd.notna(row.get(f'retrieved_affiliation_{i}')))
         
         enriched_phd_years = sum(1 for idx, row in df_enriched.iterrows() 
                                for i in range(1, 129) 
@@ -223,8 +228,8 @@ class SeminarSpeakerEnricher:
         
         logger.info(f"\nEnrichment Summary:")
         logger.info(f"  - Total speaker appearances: {total_speakers}")
-        logger.info(f"  - Unique speakers enriched: {len(unique_speakers)}")
-        logger.info(f"  - Affiliations added: {enriched_affiliations}")
+        logger.info(f"  - Unique speakers processed: {len(unique_speakers)}")
+        logger.info(f"  - Missing affiliations filled: {enriched_count}")
         logger.info(f"  - PhD years added: {enriched_phd_years}")
         
         return df_enriched
