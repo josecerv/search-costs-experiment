@@ -1,10 +1,10 @@
 {
-  "creation_date": "2025-06-06T13:30:14.804022",
-  "n_seminars": 1656,
-  "n_treatment": 811,
+  "creation_date": "2025-06-06T20:01:39.799218",
+  "n_seminars": 1654,
+  "n_treatment": 809,
   "n_control": 845,
   "n_seminars_with_fall": 1448,
-  "n_seminars_with_spring": 1397,
+  "n_seminars_with_spring": 1385,
   "control_variable_coverage": {
     "bin_categories": 1.0,
     "batch_numbers": 1.0,
@@ -15,11 +15,11 @@
     "urm_in_peers": 1.0
   },
   "phd_year_statistics": {
-    "seminars_with_phd_data": 1644,
-    "coverage_rate": 0.9927536231884058,
-    "mean_years_from_phd": 15.534651602905548,
-    "mean_pct_with_phd": 87.46790312537529,
-    "mean_pct_current_students": 14.388786994312563
+    "seminars_with_phd_data": 1643,
+    "coverage_rate": 0.9933494558645707,
+    "mean_years_from_phd": 15.508875154802586,
+    "mean_pct_with_phd": 87.56248100455485,
+    "mean_pct_current_students": 14.581504229799124
   },
   "columns": [
     "seminar_id",
