@@ -1,0 +1,142 @@
+{
+  "data_summary": {
+    "n_seminars": 1654,
+    "n_with_phd_data": 1643,
+    "mean_years_from_phd": 15.508875154802586,
+    "quartiles": {
+      "0.25": 10.23611111111111,
+      "0.5": 15.0,
+      "0.75": 19.80357142857143
+    }
+  },
+  "moderation_analysis": {
+    "main_effect": {
+      "coefficient": 0.7225188909537325,
+      "p_value": 0.17881049827746703,
+      "n": 1643
+    },
+    "continuous_moderation": {
+      "treatment": 0.753524044989016,
+      "years_from_phd": -0.07632121061654541,
+      "interaction": -0.0422743207179165,
+      "interaction_p": 0.5455983885999124,
+      "n": 1643
+    },
+    "categorical_moderation": {
+      "Mid Career": {
+        "interaction_coef": -0.5967219531757744,
+        "p_value": 0.6953221461646708
+      },
+      "Senior": {
+        "interaction_coef": -1.8486037820674623,
+        "p_value": 0.22469923866400002
+      },
+      "Very Senior": {
+        "interaction_coef": -1.9493477656090468,
+        "p_value": 0.2006272691782008
+      }
+    },
+    "simple_slopes": [
+      {
+        "years_from_phd": 5.5088751548025865,
+        "treatment_effect": 1.1762672521681812,
+        "std_error": 0.88235759777849,
+        "p_value": 0.18250035097243344,
+        "significant": false
+      },
+      {
+        "years_from_phd": 10.508875154802586,
+        "treatment_effect": 0.9648956485785986,
+        "std_error": 0.640968093575835,
+        "p_value": 0.13222837236924612,
+        "significant": false
+      },
+      {
+        "years_from_phd": 15.508875154802586,
+        "treatment_effect": 0.753524044989016,
+        "std_error": 0.536337820042422,
+        "p_value": 0.16003824020145907,
+        "significant": false
+      },
+      {
+        "years_from_phd": 20.50887515480259,
+        "treatment_effect": 0.5421524413994335,
+        "std_error": 0.6395384359319455,
+        "p_value": 0.3965913832939423,
+        "significant": false
+      },
+      {
+        "years_from_phd": 25.50887515480259,
+        "treatment_effect": 0.330780837809851,
+        "std_error": 0.8802803862755919,
+        "p_value": 0.7070896855978364,
+        "significant": false
+      },
+      {
+        "years_from_phd": 30.50887515480259,
+        "treatment_effect": 0.1194092342202685,
+        "std_error": 1.1769922257557761,
+        "p_value": 0.9191909721483644,
+        "significant": false
+      },
+      {
+        "years_from_phd": 35.50887515480259,
+        "treatment_effect": -0.09196236936931401,
+        "std_error": 1.496750090736049,
+        "p_value": 0.9510077096738458,
+        "significant": false
+      }
+    ],
+    "other_outcomes": {
+      "num_urm": {
+        "label": "Count of URM speakers",
+        "interaction": 0.0004934028527006401,
+        "p_value": 0.9521981985673817
+      },
+      "pct_female": {
+        "label": "Percentage female speakers",
+        "interaction": 0.07326716314169603,
+        "p_value": 0.47679991218084106
+      },
+      "num_female": {
+        "label": "Count of female speakers",
+        "interaction": 0.02506935204030992,
+        "p_value": 0.10876830118053012
+      }
+    }
+  },
+  "subgroup_analysis": {
+    "Early Career": {
+      "n": 411,
+      "n_treatment": 185,
+      "n_control": 226,
+      "treatment_effect": 1.9782817673367477,
+      "p_value": 0.14997770803166763,
+      "mean_years_from_phd": 6.682956694489039
+    },
+    "Mid Career": {
+      "n": 409,
+      "n_treatment": 203,
+      "n_control": 206,
+      "treatment_effect": 1.3564053798397908,
+      "p_value": 0.18081917804476322,
+      "mean_years_from_phd": 12.60056314217985
+    },
+    "Senior": {
+      "n": 412,
+      "n_treatment": 213,
+      "n_control": 199,
+      "treatment_effect": -0.12421480573457577,
+      "p_value": 0.8870522884697959,
+      "mean_years_from_phd": 17.208587936949716
+    },
+    "Very Senior": {
+      "n": 411,
+      "n_treatment": 202,
+      "n_control": 209,
+      "treatment_effect": -0.07217481200016052,
+      "p_value": 0.9432959579365602,
+      "mean_years_from_phd": 25.52510492148616
+    }
+  }
+}
