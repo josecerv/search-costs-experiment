@@ -46,11 +46,11 @@ header-includes:
 \toprule
 Statistic & Value \\
 \midrule
-Number of seminars & 1656 \\
-Number of unique departments & 530 \\
-Total speakers across all seminars & 23168 \\
-Mean speakers per seminar & 13.99 \\
-SD speakers per seminar & 9.95 \\
+Number of seminars & 1654 \\
+Number of unique departments & 528 \\
+Total speakers across all seminars & 23069 \\
+Mean speakers per seminar & 13.95 \\
+SD speakers per seminar & 9.90 \\
 Min speakers in a seminar & 1 \\
 Max speakers in a seminar & 76 \\
 \bottomrule
@@ -66,13 +66,13 @@ Max speakers in a seminar & 76 \\
 \toprule
 Demographic Group & Mean \% & SD \% & Mean Count & SD Count & Pct. Any \\
 \midrule
-URM & 8.00 & 11.50 & 1.09 & 1.36 & 56.5 \\
-Black & 2.27 & 5.97 & 0.32 & 0.69 & 24.1 \\
-Hispanic & 5.70 & 9.84 & 0.77 & 1.10 & 45.8 \\
-Female & 16.92 & 16.18 & 2.40 & 2.49 & 76.1 \\
+URM & 7.44 & 11.09 & 1.00 & 1.28 & 54.2 \\
+Black & 2.23 & 5.96 & 0.32 & 0.68 & 23.3 \\
+Hispanic & 5.18 & 9.49 & 0.68 & 1.01 & 42.9 \\
+Female & 16.99 & 16.25 & 2.39 & 2.48 & 75.9 \\
 \bottomrule
 \end{tabular}
-\parbox{\linewidth}{\footnotesize Note: N =  1656  seminars. Percentages calculated among speakers with demographic data available. 'Pct. Any' indicates the percentage of seminars that have at least one speaker from that demographic group.}
+\parbox{\linewidth}{\footnotesize Note: N =  1654  seminars. Percentages calculated among speakers with demographic data available. 'Pct. Any' indicates the percentage of seminars that have at least one speaker from that demographic group.}
 \end{table}
 
 ### Department Faculty Demographics
@@ -86,12 +86,12 @@ Female & 16.92 & 16.18 & 2.40 & 2.49 & 76.1 \\
 \toprule
 Statistic & Mean & SD \\
 \midrule
-Total faculty per department & 34.0 & 18.0 \\
-\% URM faculty & 4.11 & 4.40 \\
-\% Women faculty & 20.39 & 7.59 \\
+Total faculty per department & 34.0 & 18.1 \\
+\% URM faculty & 4.09 & 4.40 \\
+\% Women faculty & 20.40 & 7.58 \\
 \bottomrule
 \end{tabular}
-\parbox{\linewidth}{\footnotesize Note: N =  530  unique departments. Department faculty demographics based on 2024 coding.}
+\parbox{\linewidth}{\footnotesize Note: N =  528  unique departments. Department faculty demographics based on 2024 coding.}
 \end{table}
 
 ## Summary Statistics by Discipline
@@ -108,11 +108,11 @@ Total faculty per department & 34.0 & 18.0 \\
 \toprule
 Discipline & N Seminars & N Depts & Mean Speakers & SD Speakers \\
 \midrule
-Chemistry & 271 & 123 & 14.7 & 11.1 \\
+Chemistry & 270 & 122 & 14.5 & 10.9 \\
 Computer Science & 142 & 82 & 13.1 & 10.3 \\
 Mathematics & 811 & 134 & 13.2 & 9.1 \\
-Mechanical Engineering & 82 & 66 & 12.9 & 10.2 \\
-Physics & 350 & 125 & 15.9 & 10.4 \\
+Mechanical Engineering & 81 & 65 & 13.0 & 10.2 \\
+Physics & 350 & 125 & 15.8 & 10.4 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -126,11 +126,11 @@ Physics & 350 & 125 & 15.9 & 10.4 \\
 \toprule
 Discipline & N Seminars & Mean \% & SD \% & Mean Count & Pct. Has Any \\
 \midrule
-Chemistry & 271 & 9.38 & 10.58 & 1.34 & 66.1 \\
-Computer Science & 142 & 4.86 & 9.01 & 0.61 & 38.0 \\
-Mathematics & 811 & 7.58 & 11.22 & 1.02 & 52.3 \\
-Mechanical Engineering & 82 & 8.44 & 9.16 & 1.15 & 63.4 \\
-Physics & 350 & 9.06 & 13.73 & 1.26 & 64.6 \\
+Chemistry & 270 & 8.88 & 10.52 & 1.27 & 64.1 \\
+Computer Science & 142 & 4.48 & 8.21 & 0.54 & 36.6 \\
+Mathematics & 811 & 7.11 & 10.72 & 0.94 & 50.4 \\
+Mechanical Engineering & 81 & 8.20 & 9.17 & 1.12 & 61.7 \\
+Physics & 350 & 8.11 & 13.33 & 1.12 & 60.6 \\
 \bottomrule
 \end{tabular}
 \parbox{\linewidth}{\footnotesize Note: Statistics are for seminar speakers. 'Pct. Has Any' indicates percentage of seminars with at least one URM speaker.}
@@ -146,11 +146,11 @@ Physics & 350 & 9.06 & 13.73 & 1.26 & 64.6 \\
  & \multicolumn{2}{c}{Black} & \multicolumn{2}{c}{Hispanic} & \multicolumn{2}{c}{Female} \\
 Discipline & Mean \% & Pct. Any & Mean \% & Pct. Any & Mean \% & Pct. Any \\
 \midrule
-Chemistry & 4.33 & 40.6 & 4.94 & 48.0 & 23.44 & 86.3 \\
-Computer Science & 1.46 & 16.9 & 3.40 & 27.5 & 19.21 & 79.6 \\
-Mathematics & 1.74 & 19.7 & 5.82 & 44.4 & 14.00 & 70.5 \\
-Mechanical Engineering & 3.34 & 32.9 & 5.10 & 46.3 & 19.30 & 75.6 \\
-Physics & 1.98 & 22.3 & 7.08 & 54.9 & 17.16 & 79.7 \\
+Chemistry & 4.23 & 39.6 & 4.53 & 45.2 & 23.72 & 86.7 \\
+Computer Science & 1.55 & 17.6 & 2.93 & 24.6 & 19.20 & 78.2 \\
+Mathematics & 1.80 & 19.4 & 5.31 & 41.2 & 14.00 & 70.3 \\
+Mechanical Engineering & 2.95 & 28.4 & 5.25 & 46.9 & 19.83 & 76.5 \\
+Physics & 1.82 & 20.9 & 6.29 & 51.4 & 17.14 & 79.4 \\
 \bottomrule
 \end{tabular}
 \parbox{\linewidth}{\footnotesize Note: Statistics are for seminar speakers. 'Pct. Any' indicates percentage of seminars with at least one speaker from that group.}
@@ -169,10 +169,10 @@ Physics & 1.98 & 22.3 & 7.08 & 54.9 & 17.16 & 79.7 \\
  & & \multicolumn{2}{c}{Faculty Size} & \multicolumn{2}{c}{\% URM Faculty} & \multicolumn{2}{c}{\% Women Faculty} \\
 Discipline & N Depts & Mean & SD & Mean & SD & Mean & SD \\
 \midrule
-Chemistry & 123 & 28.5 & 11.9 & 4.81 & 4.48 & 24.42 & 7.15 \\
+Chemistry & 122 & 28.6 & 11.9 & 4.76 & 4.47 & 24.40 & 7.18 \\
 Computer Science & 82 & 43.5 & 25.0 & 2.79 & 3.27 & 20.12 & 7.28 \\
 Mathematics & 134 & 33.9 & 16.2 & 3.63 & 3.54 & 19.82 & 7.67 \\
-Mechanical Engineering & 66 & 36.1 & 19.1 & 5.56 & 5.44 & 19.56 & 7.63 \\
+Mechanical Engineering & 65 & 36.4 & 19.1 & 5.57 & 5.48 & 19.70 & 7.61 \\
 Physics & 125 & 32.0 & 16.4 & 4.03 & 4.90 & 17.64 & 6.52 \\
 \bottomrule
 \end{tabular}
@@ -192,14 +192,14 @@ Physics & 125 & 32.0 & 16.4 & 4.03 & 4.90 & 17.64 & 6.52 \\
  & \multicolumn{3}{c}{URM} & \multicolumn{2}{c}{Black} & \multicolumn{2}{c}{Hispanic} \\
 Semester (N) & Mean \% & Mean Count & Pct. Any & Mean \% & Pct. Any & Mean \% & Pct. Any \\
 \midrule
-Fall (1448) & 7.57 & 0.58 & 39.0 & 1.77 & 12.2 & 5.78 & 31.4 \\
-Spring (1397) & 8.14 & 0.70 & 43.7 & 2.71 & 18.6 & 5.40 & 32.4 \\
+Fall (1448) & 7.08 & 0.53 & 36.3 & 1.73 & 11.7 & 5.33 & 28.9 \\
+Spring (1385) & 7.56 & 0.64 & 41.9 & 2.69 & 18.4 & 4.84 & 29.9 \\
 \midrule
  & \multicolumn{3}{c}{Female} & \multicolumn{2}{c}{Total Speakers} & & \\
 Semester & Mean \% & Mean Count & Pct. Any & Mean & SD & & \\
 \midrule
-Fall & 16.10 & 1.27 & 61.9 & 7.75 & 5.50 & & \\
-Spring & 17.77 & 1.52 & 64.3 & 8.56 & 6.92 & & \\
+Fall & 16.16 & 1.27 & 62.0 & 7.75 & 5.50 & & \\
+Spring & 17.75 & 1.52 & 64.5 & 8.56 & 6.87 & & \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -220,14 +220,14 @@ Spring & 17.77 & 1.52 & 64.3 & 8.56 & 6.92 & & \\
  & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.551$^{}$ & 0.489$^{}$ & 0.083$^{}$ & 0.052$^{}$ & 0.006$^{}$ & 0.000$^{}$  \\
- &  (0.540) & (0.533) & (0.070) & (0.067) & (0.025) & (0.023)  \\
-Constant  &  8.846$^{***}$ & 4.199$^{+}$ & 1.286$^{***}$ & 0.306$^{}$ & 0.643$^{***}$ & 0.286$^{**}$  \\
- &  (1.589) & (2.167) & (0.178) & (0.298) & (0.063) & (0.110)  \\
+Treatment  &  0.664$^{}$ & 0.633$^{}$ & 0.087$^{}$ & 0.059$^{}$ & 0.017$^{}$ & 0.008$^{}$  \\
+ &  (0.520) & (0.517) & (0.066) & (0.065) & (0.025) & (0.024)  \\
+Constant  &  8.446$^{***}$ & 4.001$^{+}$ & 1.163$^{***}$ & 0.248$^{}$ & 0.589$^{***}$ & 0.219$^{+}$  \\
+ &  (1.633) & (2.098) & (0.172) & (0.285) & (0.072) & (0.117)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,656 & 1,656 & 1,656 & 1,656 & 1,656 & 1,656  \\
-Adjusted $R^2$ &  0.010 & 0.015 & 0.026 & 0.034 & 0.030 & 0.044  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.010 & 0.015 & 0.029 & 0.037 & 0.025 & 0.039  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -248,14 +248,14 @@ Adjusted $R^2$ &  0.010 & 0.015 & 0.026 & 0.034 & 0.030 & 0.044  \\
  & \% Count & \% Count & Count Count & Count Count & Any Count & Any Count \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  -0.461$^{}$ & -0.427$^{}$ & 0.083$^{}$ & 0.052$^{}$ & -0.544$^{}$ & -0.479$^{}$  \\
- &  (0.554) & (0.546) & (0.070) & (0.067) & (0.525) & (0.518)  \\
-Constant  &  16.810$^{***}$ & 13.460$^{***}$ & 1.286$^{***}$ & 0.306$^{}$ & 15.524$^{***}$ & 13.154$^{***}$  \\
- &  (1.313) & (2.452) & (0.178) & (0.298) & (1.244) & (2.311)  \\
+Treatment  &  -0.488$^{}$ & -0.483$^{}$ & 0.087$^{}$ & 0.059$^{}$ & -0.574$^{}$ & -0.542$^{}$  \\
+ &  (0.553) & (0.545) & (0.066) & (0.065) & (0.526) & (0.519)  \\
+Constant  &  16.744$^{***}$ & 13.098$^{***}$ & 1.163$^{***}$ & 0.248$^{}$ & 15.580$^{***}$ & 12.850$^{***}$  \\
+ &  (1.311) & (2.440) & (0.172) & (0.285) & (1.243) & (2.301)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,656 & 1,656 & 1,656 & 1,656 & 1,656 & 1,656  \\
-Adjusted $R^2$ &  0.031 & 0.058 & 0.026 & 0.034 & 0.030 & 0.058  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.033 & 0.057 & 0.029 & 0.037 & 0.032 & 0.058  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -273,10 +273,10 @@ Adjusted $R^2$ &  0.031 & 0.058 & 0.026 & 0.034 & 0.030 & 0.058  \\
 \toprule
 Outcome & Coefficient & SE \\
 \midrule
-URM Speakers & 0.0829 & (0.0670) \\
-Non-URM Speakers & -0.5440 & (0.4589) \\
+URM Speakers & 0.0866 & (0.0631) \\
+Non-URM Speakers & -0.5742 & (0.4594) \\
 \midrule
-Sum of Effects & -0.4611 & --- \\
+Sum of Effects & -0.4876 & --- \\
 \midrule
 \multicolumn{3}{l}{\textit{Wald Test: H0: Treatment effect on URM + Treatment effect on Non-URM = 0}} \\
 \bottomrule
@@ -300,14 +300,14 @@ Sum of Effects & -0.4611 & --- \\
  & \% Black & \% Black & Count Black & Count Black & Any Black & Any Black \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.553$^{+}$ & 0.541$^{+}$ & 0.067$^{}$ & 0.066$^{+}$ & 0.043$^{+}$ & 0.045$^{*}$  \\
- &  (0.311) & (0.291) & (0.041) & (0.038) & (0.023) & (0.023)  \\
-Constant  &  2.859$^{***}$ & 0.763$^{}$ & 0.457$^{***}$ & 0.123$^{}$ & 0.292$^{***}$ & 0.079$^{}$  \\
- &  (0.825) & (1.347) & (0.112) & (0.174) & (0.066) & (0.110)  \\
+Treatment  &  0.679$^{*}$ & 0.664$^{*}$ & 0.083$^{*}$ & 0.081$^{*}$ & 0.055$^{*}$ & 0.054$^{*}$  \\
+ &  (0.309) & (0.294) & (0.039) & (0.038) & (0.023) & (0.022)  \\
+Constant  &  2.707$^{***}$ & 0.933$^{}$ & 0.430$^{***}$ & 0.103$^{}$ & 0.289$^{***}$ & 0.051$^{}$  \\
+ &  (0.791) & (1.301) & (0.103) & (0.167) & (0.061) & (0.104)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,656 & 1,656 & 1,656 & 1,656 & 1,656 & 1,656  \\
-Adjusted $R^2$ &  0.029 & 0.034 & 0.049 & 0.058 & 0.042 & 0.050  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.026 & 0.031 & 0.048 & 0.057 & 0.036 & 0.044  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -326,14 +326,14 @@ Adjusted $R^2$ &  0.029 & 0.034 & 0.049 & 0.058 & 0.042 & 0.050  \\
  & \% Hispanic & \% Hispanic & Count Hispanic & Count Hispanic & Any Hispanic & Any Hispanic \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.013$^{}$ & -0.046$^{}$ & 0.016$^{}$ & -0.016$^{}$ & -0.011$^{}$ & -0.018$^{}$  \\
- &  (0.471) & (0.484) & (0.053) & (0.052) & (0.025) & (0.025)  \\
-Constant  &  5.776$^{***}$ & 3.220$^{+}$ & 0.803$^{***}$ & 0.147$^{}$ & 0.512$^{***}$ & 0.257$^{*}$  \\
- &  (1.473) & (1.954) & (0.150) & (0.245) & (0.065) & (0.107)  \\
+Treatment  &  -0.001$^{}$ & -0.025$^{}$ & 0.004$^{}$ & -0.024$^{}$ & -0.020$^{}$ & -0.032$^{}$  \\
+ &  (0.457) & (0.471) & (0.050) & (0.049) & (0.025) & (0.025)  \\
+Constant  &  5.526$^{***}$ & 2.851$^{}$ & 0.707$^{***}$ & 0.109$^{}$ & 0.443$^{***}$ & 0.164$^{}$  \\
+ &  (1.524) & (1.905) & (0.149) & (0.230) & (0.076) & (0.111)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,656 & 1,656 & 1,656 & 1,656 & 1,656 & 1,656  \\
-Adjusted $R^2$ &  0.005 & 0.005 & 0.014 & 0.022 & 0.018 & 0.023  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.006 & 0.006 & 0.015 & 0.022 & 0.018 & 0.024  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -352,14 +352,14 @@ Adjusted $R^2$ &  0.005 & 0.005 & 0.014 & 0.022 & 0.018 & 0.023  \\
  & \% Female & \% Female & Count Female & Count Female & Any Female & Any Female \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.116$^{}$ & -0.402$^{}$ & -0.065$^{}$ & -0.131$^{}$ & -0.005$^{}$ & -0.011$^{}$  \\
- &  (0.833) & (0.824) & (0.129) & (0.128) & (0.022) & (0.021)  \\
-Constant  &  21.582$^{***}$ & 13.460$^{***}$ & 3.630$^{***}$ & 2.248$^{***}$ & 0.859$^{***}$ & 0.670$^{***}$  \\
- &  (2.080) & (3.946) & (0.354) & (0.598) & (0.064) & (0.100)  \\
+Treatment  &  0.354$^{}$ & -0.117$^{}$ & -0.061$^{}$ & -0.130$^{}$ & 0.001$^{}$ & -0.003$^{}$  \\
+ &  (0.840) & (0.833) & (0.129) & (0.128) & (0.022) & (0.021)  \\
+Constant  &  21.904$^{***}$ & 13.802$^{***}$ & 3.602$^{***}$ & 2.169$^{***}$ & 0.870$^{***}$ & 0.682$^{***}$  \\
+ &  (2.114) & (4.028) & (0.356) & (0.599) & (0.063) & (0.099)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,656 & 1,656 & 1,656 & 1,656 & 1,656 & 1,656  \\
-Adjusted $R^2$ &  0.049 & 0.057 & 0.086 & 0.102 & 0.018 & 0.030  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.051 & 0.058 & 0.085 & 0.101 & 0.017 & 0.028  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -378,14 +378,14 @@ Adjusted $R^2$ &  0.049 & 0.057 & 0.086 & 0.102 & 0.018 & 0.030  \\
  & \% URM Female & \% URM Female & Count URM Female & Count URM Female & Any URM Female & Any URM Female \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  -0.058$^{}$ & -0.124$^{}$ & 0.024$^{}$ & 0.014$^{}$ & 0.016$^{}$ & 0.007$^{}$  \\
- &  (0.175) & (0.185) & (0.020) & (0.020) & (0.018) & (0.018)  \\
-Constant  &  1.910$^{**}$ & -0.032$^{}$ & 0.214$^{***}$ & -0.046$^{}$ & 0.182$^{***}$ & -0.057$^{}$  \\
- &  (0.611) & (0.599) & (0.063) & (0.093) & (0.052) & (0.081)  \\
+Treatment  &  0.011$^{}$ & -0.047$^{}$ & 0.022$^{}$ & 0.014$^{}$ & 0.015$^{}$ & 0.008$^{}$  \\
+ &  (0.171) & (0.182) & (0.019) & (0.019) & (0.016) & (0.017)  \\
+Constant  &  1.815$^{**}$ & -0.072$^{}$ & 0.207$^{***}$ & -0.002$^{}$ & 0.177$^{***}$ & -0.013$^{}$  \\
+ &  (0.604) & (0.582) & (0.060) & (0.091) & (0.049) & (0.078)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,656 & 1,656 & 1,656 & 1,656 & 1,656 & 1,656  \\
-Adjusted $R^2$ &  0.015 & 0.021 & 0.044 & 0.059 & 0.046 & 0.060  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.014 & 0.018 & 0.041 & 0.051 & 0.041 & 0.050  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -404,14 +404,14 @@ Adjusted $R^2$ &  0.015 & 0.021 & 0.044 & 0.059 & 0.046 & 0.060  \\
  & \% Black Female & \% Black Female & Count Black Female & Count Black Female & Any Black Female & Any Black Female \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.096$^{}$ & 0.109$^{}$ & 0.006$^{}$ & 0.006$^{}$ & 0.006$^{}$ & 0.007$^{}$  \\
- &  (0.073) & (0.074) & (0.010) & (0.010) & (0.009) & (0.009)  \\
-Constant  &  0.589$^{***}$ & 0.169$^{}$ & 0.080$^{**}$ & 0.025$^{}$ & 0.066$^{**}$ & 0.026$^{}$  \\
- &  (0.176) & (0.285) & (0.025) & (0.043) & (0.022) & (0.037)  \\
+Treatment  &  0.141$^{*}$ & 0.150$^{*}$ & 0.012$^{}$ & 0.013$^{}$ & 0.014$^{+}$ & 0.015$^{+}$  \\
+ &  (0.069) & (0.072) & (0.009) & (0.009) & (0.008) & (0.008)  \\
+Constant  &  0.493$^{**}$ & 0.063$^{}$ & 0.056$^{*}$ & 0.003$^{}$ & 0.044$^{*}$ & 0.003$^{}$  \\
+ &  (0.153) & (0.272) & (0.024) & (0.042) & (0.020) & (0.036)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,656 & 1,656 & 1,656 & 1,656 & 1,656 & 1,656  \\
-Adjusted $R^2$ &  0.033 & 0.038 & 0.021 & 0.026 & 0.018 & 0.022  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.032 & 0.036 & 0.024 & 0.029 & 0.020 & 0.025  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -430,14 +430,14 @@ Adjusted $R^2$ &  0.033 & 0.038 & 0.021 & 0.026 & 0.018 & 0.022  \\
  & \% Black Male & \% Black Male & Count Black Male & Count Black Male & Any Black Male & Any Black Male \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.457$^{+}$ & 0.432$^{+}$ & 0.062$^{+}$ & 0.061$^{+}$ & 0.049$^{*}$ & 0.051$^{*}$  \\
- &  (0.264) & (0.246) & (0.034) & (0.032) & (0.023) & (0.022)  \\
-Constant  &  2.270$^{**}$ & 0.594$^{}$ & 0.371$^{***}$ & 0.094$^{}$ & 0.281$^{***}$ & 0.061$^{}$  \\
- &  (0.725) & (1.202) & (0.097) & (0.147) & (0.065) & (0.108)  \\
+Treatment  &  0.538$^{*}$ & 0.514$^{*}$ & 0.071$^{*}$ & 0.070$^{*}$ & 0.058$^{*}$ & 0.056$^{*}$  \\
+ &  (0.264) & (0.249) & (0.034) & (0.033) & (0.022) & (0.022)  \\
+Constant  &  2.215$^{**}$ & 0.870$^{}$ & 0.365$^{***}$ & 0.097$^{}$ & 0.279$^{***}$ & 0.034$^{}$  \\
+ &  (0.708) & (1.164) & (0.092) & (0.143) & (0.060) & (0.103)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,656 & 1,656 & 1,656 & 1,656 & 1,656 & 1,656  \\
-Adjusted $R^2$ &  0.020 & 0.024 & 0.045 & 0.052 & 0.041 & 0.049  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.018 & 0.022 & 0.040 & 0.047 & 0.035 & 0.044  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -456,14 +456,14 @@ Adjusted $R^2$ &  0.020 & 0.024 & 0.045 & 0.052 & 0.041 & 0.049  \\
  & \% Hispanic Female & \% Hispanic Female & Count Hispanic Female & Count Hispanic Female & Any Hispanic Female & Any Hispanic Female \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  -0.158$^{}$ & -0.240$^{}$ & 0.010$^{}$ & -0.002$^{}$ & 0.005$^{}$ & -0.005$^{}$  \\
- &  (0.162) & (0.176) & (0.014) & (0.013) & (0.012) & (0.012)  \\
-Constant  &  1.297$^{*}$ & -0.245$^{}$ & 0.066$^{}$ & -0.092$^{}$ & 0.058$^{}$ & -0.094$^{}$  \\
- &  (0.586) & (0.501) & (0.045) & (0.068) & (0.036) & (0.060)  \\
+Treatment  &  -0.134$^{}$ & -0.204$^{}$ & 0.007$^{}$ & 0.000$^{}$ & 0.004$^{}$ & -0.002$^{}$  \\
+ &  (0.160) & (0.174) & (0.013) & (0.013) & (0.012) & (0.012)  \\
+Constant  &  1.298$^{*}$ & -0.178$^{}$ & 0.062$^{}$ & -0.063$^{}$ & 0.056$^{}$ & -0.065$^{}$  \\
+ &  (0.587) & (0.485) & (0.044) & (0.066) & (0.034) & (0.057)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,656 & 1,656 & 1,656 & 1,656 & 1,656 & 1,656  \\
-Adjusted $R^2$ &  0.002 & 0.005 & 0.008 & 0.020 & 0.007 & 0.019  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.002 & 0.004 & 0.010 & 0.018 & 0.008 & 0.016  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -482,14 +482,14 @@ Adjusted $R^2$ &  0.002 & 0.005 & 0.008 & 0.020 & 0.007 & 0.019  \\
  & \% Hispanic Male & \% Hispanic Male & Count Hispanic Male & Count Hispanic Male & Any Hispanic Male & Any Hispanic Male \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.171$^{}$ & 0.194$^{}$ & 0.005$^{}$ & -0.014$^{}$ & -0.011$^{}$ & -0.017$^{}$  \\
- &  (0.401) & (0.411) & (0.047) & (0.046) & (0.025) & (0.025)  \\
-Constant  &  4.479$^{***}$ & 3.465$^{*}$ & 0.736$^{***}$ & 0.249$^{}$ & 0.508$^{***}$ & 0.275$^{*}$  \\
- &  (1.296) & (1.719) & (0.130) & (0.212) & (0.064) & (0.107)  \\
+Treatment  &  0.133$^{}$ & 0.179$^{}$ & -0.004$^{}$ & -0.024$^{}$ & -0.021$^{}$ & -0.032$^{}$  \\
+ &  (0.389) & (0.400) & (0.045) & (0.044) & (0.025) & (0.025)  \\
+Constant  &  4.228$^{**}$ & 3.029$^{+}$ & 0.639$^{***}$ & 0.169$^{}$ & 0.439$^{***}$ & 0.178$^{}$  \\
+ &  (1.346) & (1.688) & (0.130) & (0.200) & (0.076) & (0.110)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,656 & 1,656 & 1,656 & 1,656 & 1,656 & 1,656  \\
-Adjusted $R^2$ &  0.008 & 0.007 & 0.014 & 0.021 & 0.019 & 0.023  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.008 & 0.007 & 0.013 & 0.020 & 0.019 & 0.025  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -501,7 +501,7 @@ Adjusted $R^2$ &  0.008 & 0.007 & 0.014 & 0.021 & 0.019 & 0.023  \\
 # Discipline Subgroup Analysis
 
 
-\subsubsection{Chemistry (N=271)}
+\subsubsection{Chemistry (N=270)}
 
 \begin{table}[H]
 \caption{Chemistry : Effect on URM Speaker Representation}
@@ -513,14 +513,14 @@ Adjusted $R^2$ &  0.008 & 0.007 & 0.014 & 0.021 & 0.019 & 0.023  \\
  & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.201$^{}$ & -0.525$^{}$ & -0.155$^{}$ & -0.209$^{}$ & 0.028$^{}$ & 0.014$^{}$  \\
- &  (1.202) & (1.172) & (0.173) & (0.172) & (0.052) & (0.055)  \\
-Constant  &  5.780$^{*}$ & -1.909$^{}$ & 0.863$^{*}$ & -0.725$^{}$ & 0.146$^{}$ & -0.233$^{}$  \\
- &  (2.678) & (5.712) & (0.421) & (0.783) & (0.119) & (0.255)  \\
+Treatment  &  0.469$^{}$ & -0.413$^{}$ & -0.105$^{}$ & -0.185$^{}$ & 0.023$^{}$ & -0.006$^{}$  \\
+ &  (1.173) & (1.162) & (0.165) & (0.165) & (0.052) & (0.057)  \\
+Constant  &  6.332$^{*}$ & -1.871$^{}$ & 0.930$^{*}$ & -0.747$^{}$ & 0.233$^{+}$ & -0.288$^{}$  \\
+ &  (2.674) & (5.820) & (0.411) & (0.779) & (0.133) & (0.266)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  271 & 271 & 271 & 271 & 271 & 271  \\
-Adjusted $R^2$ &  -0.025 & -0.017 & 0.109 & 0.110 & 0.097 & 0.095  \\
+N &  270 & 270 & 270 & 270 & 270 & 270  \\
+Adjusted $R^2$ &  -0.024 & -0.019 & 0.100 & 0.108 & 0.106 & 0.115  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -536,14 +536,14 @@ Adjusted $R^2$ &  -0.025 & -0.017 & 0.109 & 0.110 & 0.097 & 0.095  \\
  & \% Black & \% Black & Count Black & Count Black & Any Black & Any Black \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.408$^{}$ & 0.070$^{}$ & -0.036$^{}$ & -0.039$^{}$ & 0.065$^{}$ & 0.030$^{}$  \\
- &  (1.081) & (0.874) & (0.126) & (0.106) & (0.067) & (0.063)  \\
-Constant  &  2.574$^{}$ & -7.905$^{*}$ & 0.386$^{}$ & -1.361$^{*}$ & 0.148$^{}$ & -0.776$^{*}$  \\
- &  (2.585) & (3.829) & (0.248) & (0.555) & (0.157) & (0.314)  \\
+Treatment  &  0.740$^{}$ & 0.399$^{}$ & 0.021$^{}$ & 0.024$^{}$ & 0.090$^{}$ & 0.062$^{}$  \\
+ &  (1.057) & (0.848) & (0.121) & (0.100) & (0.065) & (0.059)  \\
+Constant  &  2.261$^{}$ & -8.839$^{*}$ & 0.314$^{}$ & -1.603$^{**}$ & 0.120$^{}$ & -0.963$^{**}$  \\
+ &  (2.566) & (3.921) & (0.246) & (0.535) & (0.155) & (0.295)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  271 & 271 & 271 & 271 & 271 & 271  \\
-Adjusted $R^2$ &  -0.031 & -0.004 & 0.053 & 0.092 & 0.064 & 0.111  \\
+N &  270 & 270 & 270 & 270 & 270 & 270  \\
+Adjusted $R^2$ &  -0.033 & -0.013 & 0.045 & 0.084 & 0.045 & 0.098  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -559,14 +559,14 @@ Adjusted $R^2$ &  -0.031 & -0.004 & 0.053 & 0.092 & 0.064 & 0.111  \\
  & \% Hispanic & \% Hispanic & Count Hispanic & Count Hispanic & Any Hispanic & Any Hispanic \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  -0.140$^{}$ & -0.549$^{}$ & -0.131$^{}$ & -0.189$^{}$ & -0.083$^{}$ & -0.102$^{}$  \\
- &  (1.027) & (1.059) & (0.127) & (0.142) & (0.062) & (0.062)  \\
-Constant  &  2.371$^{}$ & 3.785$^{}$ & 0.445$^{}$ & 0.376$^{}$ & 0.147$^{}$ & 0.194$^{}$  \\
- &  (1.865) & (5.014) & (0.370) & (0.554) & (0.154) & (0.298)  \\
+Treatment  &  -0.205$^{}$ & -0.771$^{}$ & -0.139$^{}$ & -0.230$^{+}$ & -0.105$^{}$ & -0.153$^{*}$  \\
+ &  (0.976) & (0.983) & (0.117) & (0.125) & (0.064) & (0.063)  \\
+Constant  &  3.238$^{+}$ & 4.762$^{}$ & 0.584$^{}$ & 0.596$^{}$ & 0.258$^{}$ & 0.261$^{}$  \\
+ &  (1.788) & (4.913) & (0.361) & (0.548) & (0.162) & (0.304)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  271 & 271 & 271 & 271 & 271 & 271  \\
-Adjusted $R^2$ &  -0.019 & -0.020 & 0.053 & 0.073 & 0.035 & 0.049  \\
+N &  270 & 270 & 270 & 270 & 270 & 270  \\
+Adjusted $R^2$ &  -0.024 & -0.021 & 0.046 & 0.077 & 0.035 & 0.062  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -585,14 +585,14 @@ Adjusted $R^2$ &  -0.019 & -0.020 & 0.053 & 0.073 & 0.035 & 0.049  \\
  & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.990$^{}$ & 1.204$^{}$ & 0.153$^{}$ & 0.140$^{}$ & 0.019$^{}$ & 0.007$^{}$  \\
- &  (0.724) & (0.832) & (0.099) & (0.111) & (0.031) & (0.031)  \\
-Constant  &  6.446$^{***}$ & 5.107$^{}$ & 0.996$^{***}$ & 0.258$^{}$ & 0.546$^{***}$ & 0.284$^{}$  \\
- &  (1.399) & (4.528) & (0.153) & (0.611) & (0.057) & (0.177)  \\
+Treatment  &  0.944$^{}$ & 1.212$^{}$ & 0.154$^{}$ & 0.151$^{}$ & 0.022$^{}$ & 0.012$^{}$  \\
+ &  (0.719) & (0.793) & (0.094) & (0.103) & (0.034) & (0.033)  \\
+Constant  &  6.229$^{***}$ & 6.083$^{}$ & 0.872$^{***}$ & 0.210$^{}$ & 0.503$^{***}$ & 0.215$^{}$  \\
+ &  (1.421) & (4.161) & (0.145) & (0.546) & (0.068) & (0.193)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
 N &  811 & 811 & 811 & 811 & 811 & 811  \\
-Adjusted $R^2$ &  0.002 & -0.001 & -0.001 & -0.003 & -0.008 & 0.000  \\
+Adjusted $R^2$ &  0.001 & -0.001 & 0.000 & -0.002 & -0.009 & -0.000  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -608,14 +608,14 @@ Adjusted $R^2$ &  0.002 & -0.001 & -0.001 & -0.003 & -0.008 & 0.000  \\
  & \% Black & \% Black & Count Black & Count Black & Any Black & Any Black \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.277$^{}$ & 0.514$^{}$ & 0.071$^{}$ & 0.103$^{+}$ & 0.011$^{}$ & 0.017$^{}$  \\
- &  (0.372) & (0.412) & (0.051) & (0.055) & (0.030) & (0.026)  \\
-Constant  &  0.440$^{}$ & 0.772$^{}$ & 0.176$^{*}$ & 0.333$^{}$ & 0.142$^{**}$ & 0.029$^{}$  \\
- &  (0.489) & (2.356) & (0.071) & (0.266) & (0.050) & (0.149)  \\
+Treatment  &  0.236$^{}$ & 0.526$^{}$ & 0.077$^{}$ & 0.113$^{*}$ & 0.019$^{}$ & 0.028$^{}$  \\
+ &  (0.393) & (0.430) & (0.049) & (0.054) & (0.029) & (0.027)  \\
+Constant  &  0.896$^{+}$ & 1.729$^{}$ & 0.195$^{**}$ & 0.334$^{}$ & 0.170$^{***}$ & 0.053$^{}$  \\
+ &  (0.533) & (2.406) & (0.072) & (0.262) & (0.051) & (0.151)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
 N &  811 & 811 & 811 & 811 & 811 & 811  \\
-Adjusted $R^2$ &  0.025 & 0.039 & 0.012 & 0.028 & 0.011 & 0.032  \\
+Adjusted $R^2$ &  0.012 & 0.020 & 0.010 & 0.023 & 0.005 & 0.019  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -631,14 +631,14 @@ Adjusted $R^2$ &  0.025 & 0.039 & 0.012 & 0.028 & 0.011 & 0.032  \\
  & \% Hispanic & \% Hispanic & Count Hispanic & Count Hispanic & Any Hispanic & Any Hispanic \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.731$^{}$ & 0.694$^{}$ & 0.086$^{}$ & 0.039$^{}$ & 0.038$^{}$ & 0.026$^{}$  \\
- &  (0.654) & (0.706) & (0.079) & (0.079) & (0.033) & (0.035)  \\
-Constant  &  5.931$^{***}$ & 4.182$^{}$ & 0.802$^{***}$ & -0.112$^{}$ & 0.481$^{***}$ & 0.324$^{+}$  \\
- &  (1.376) & (3.457) & (0.139) & (0.496) & (0.065) & (0.195)  \\
+Treatment  &  0.727$^{}$ & 0.690$^{}$ & 0.081$^{}$ & 0.039$^{}$ & 0.028$^{}$ & 0.010$^{}$  \\
+ &  (0.640) & (0.682) & (0.074) & (0.072) & (0.034) & (0.036)  \\
+Constant  &  5.257$^{***}$ & 4.202$^{}$ & 0.658$^{***}$ & -0.161$^{}$ & 0.398$^{***}$ & 0.182$^{}$  \\
+ &  (1.389) & (3.374) & (0.133) & (0.430) & (0.079) & (0.198)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
 N &  811 & 811 & 811 & 811 & 811 & 811  \\
-Adjusted $R^2$ &  -0.006 & -0.005 & -0.003 & 0.000 & -0.004 & -0.004  \\
+Adjusted $R^2$ &  -0.004 & -0.002 & -0.001 & 0.003 & -0.001 & -0.001  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -657,14 +657,14 @@ Adjusted $R^2$ &  -0.006 & -0.005 & -0.003 & 0.000 & -0.004 & -0.004  \\
  & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  -0.103$^{}$ & -0.114$^{}$ & 0.164$^{}$ & 0.128$^{}$ & -0.020$^{}$ & -0.015$^{}$  \\
- &  (1.281) & (1.227) & (0.142) & (0.142) & (0.062) & (0.056)  \\
-Constant  &  14.377$^{***}$ & 10.257$^{}$ & 1.394$^{***}$ & 1.843$^{}$ & 0.534$^{***}$ & 0.919$^{}$  \\
- &  (2.280) & (13.749) & (0.169) & (1.488) & (0.063) & (0.592)  \\
+Treatment  &  0.040$^{}$ & 0.104$^{}$ & 0.148$^{}$ & 0.116$^{}$ & -0.012$^{}$ & -0.009$^{}$  \\
+ &  (1.192) & (1.142) & (0.133) & (0.132) & (0.060) & (0.052)  \\
+Constant  &  13.433$^{***}$ & 9.484$^{}$ & 1.248$^{***}$ & 1.333$^{}$ & 0.407$^{***}$ & 0.829$^{}$  \\
+ &  (2.389) & (13.067) & (0.170) & (1.516) & (0.074) & (0.562)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
 N &  350 & 350 & 350 & 350 & 350 & 350  \\
-Adjusted $R^2$ &  -0.002 & -0.011 & -0.006 & 0.005 & 0.002 & 0.037  \\
+Adjusted $R^2$ &  0.003 & -0.005 & 0.004 & 0.012 & 0.001 & 0.029  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -680,14 +680,14 @@ Adjusted $R^2$ &  -0.002 & -0.011 & -0.006 & 0.005 & 0.002 & 0.037  \\
  & \% Black & \% Black & Count Black & Count Black & Any Black & Any Black \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  1.234$^{*}$ & 1.433$^{*}$ & 0.158$^{*}$ & 0.175$^{*}$ & 0.117$^{*}$ & 0.131$^{*}$  \\
- &  (0.623) & (0.634) & (0.067) & (0.069) & (0.050) & (0.053)  \\
-Constant  &  0.637$^{}$ & 1.899$^{}$ & 0.072$^{}$ & 0.568$^{}$ & 0.042$^{}$ & 0.396$^{}$  \\
- &  (0.680) & (4.277) & (0.085) & (0.566) & (0.058) & (0.401)  \\
+Treatment  &  1.479$^{*}$ & 1.604$^{**}$ & 0.174$^{*}$ & 0.182$^{**}$ & 0.123$^{*}$ & 0.128$^{*}$  \\
+ &  (0.603) & (0.613) & (0.068) & (0.069) & (0.048) & (0.050)  \\
+Constant  &  -0.216$^{}$ & -0.091$^{}$ & 0.031$^{}$ & 0.229$^{}$ & 0.001$^{}$ & 0.017$^{}$  \\
+ &  (0.409) & (4.601) & (0.082) & (0.649) & (0.052) & (0.443)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
 N &  350 & 350 & 350 & 350 & 350 & 350  \\
-Adjusted $R^2$ &  0.005 & 0.004 & 0.014 & 0.009 & 0.005 & 0.011  \\
+Adjusted $R^2$ &  0.002 & -0.002 & 0.020 & 0.009 & 0.012 & 0.015  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -703,14 +703,14 @@ Adjusted $R^2$ &  0.005 & 0.004 & 0.014 & 0.009 & 0.005 & 0.011  \\
  & \% Hispanic & \% Hispanic & Count Hispanic & Count Hispanic & Any Hispanic & Any Hispanic \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  -1.337$^{}$ & -1.547$^{}$ & 0.006$^{}$ & -0.048$^{}$ & -0.058$^{}$ & -0.064$^{}$  \\
- &  (1.266) & (1.251) & (0.132) & (0.134) & (0.065) & (0.062)  \\
-Constant  &  13.741$^{***}$ & 8.358$^{}$ & 1.321$^{***}$ & 1.275$^{}$ & 0.528$^{***}$ & 0.730$^{}$  \\
- &  (2.312) & (12.784) & (0.149) & (1.340) & (0.077) & (0.602)  \\
+Treatment  &  -1.439$^{}$ & -1.500$^{}$ & -0.026$^{}$ & -0.066$^{}$ & -0.074$^{}$ & -0.075$^{}$  \\
+ &  (1.170) & (1.160) & (0.115) & (0.119) & (0.064) & (0.060)  \\
+Constant  &  13.649$^{***}$ & 9.574$^{}$ & 1.217$^{***}$ & 1.104$^{}$ & 0.435$^{***}$ & 0.738$^{}$  \\
+ &  (2.389) & (11.919) & (0.153) & (1.278) & (0.081) & (0.581)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
 N &  350 & 350 & 350 & 350 & 350 & 350  \\
-Adjusted $R^2$ &  -0.004 & -0.013 & -0.015 & 0.012 & -0.001 & 0.007  \\
+Adjusted $R^2$ &  0.001 & -0.010 & -0.007 & 0.014 & -0.002 & 0.010  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -729,14 +729,14 @@ Adjusted $R^2$ &  -0.004 & -0.013 & -0.015 & 0.012 & -0.001 & 0.007  \\
  & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  2.294$^{+}$ & 2.702$^{}$ & 0.124$^{}$ & 0.081$^{}$ & 0.108$^{}$ & 0.126$^{}$  \\
- &  (1.377) & (1.764) & (0.153) & (0.212) & (0.095) & (0.094)  \\
-Constant  &  8.046$^{***}$ & 11.043$^{}$ & 1.463$^{***}$ & 3.887$^{*}$ & 0.807$^{***}$ & 2.656$^{***}$  \\
- &  (1.495) & (13.793) & (0.274) & (1.535) & (0.178) & (0.725)  \\
+Treatment  &  2.148$^{}$ & 2.645$^{}$ & 0.073$^{}$ & 0.063$^{}$ & 0.110$^{}$ & 0.109$^{}$  \\
+ &  (1.370) & (1.775) & (0.162) & (0.212) & (0.091) & (0.094)  \\
+Constant  &  7.104$^{***}$ & 16.416$^{}$ & 1.378$^{***}$ & 4.200$^{**}$ & 0.882$^{***}$ & 2.540$^{***}$  \\
+ &  (1.952) & (13.370) & (0.329) & (1.453) & (0.186) & (0.674)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
 N &  142 & 142 & 142 & 142 & 142 & 142  \\
-Adjusted $R^2$ &  0.078 & 0.108 & 0.121 & 0.105 & 0.104 & 0.115  \\
+Adjusted $R^2$ &  0.031 & 0.076 & 0.067 & 0.058 & 0.081 & 0.100  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -752,14 +752,14 @@ Adjusted $R^2$ &  0.078 & 0.108 & 0.121 & 0.105 & 0.104 & 0.115  \\
  & \% Black & \% Black & Count Black & Count Black & Any Black & Any Black \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.332$^{}$ & -0.106$^{}$ & -0.041$^{}$ & -0.063$^{}$ & -0.015$^{}$ & -0.045$^{}$  \\
- &  (0.671) & (0.645) & (0.067) & (0.071) & (0.056) & (0.065)  \\
-Constant  &  3.892$^{**}$ & 1.140$^{}$ & 0.629$^{**}$ & 1.695$^{+}$ & 0.487$^{**}$ & 1.112$^{}$  \\
- &  (1.485) & (9.061) & (0.226) & (0.975) & (0.158) & (0.745)  \\
+Treatment  &  0.203$^{}$ & -0.178$^{}$ & -0.057$^{}$ & -0.065$^{}$ & -0.018$^{}$ & -0.042$^{}$  \\
+ &  (0.698) & (0.713) & (0.064) & (0.072) & (0.055) & (0.067)  \\
+Constant  &  4.152$^{**}$ & 3.617$^{}$ & 0.703$^{***}$ & 2.104$^{*}$ & 0.603$^{***}$ & 1.437$^{*}$  \\
+ &  (1.454) & (9.859) & (0.207) & (0.917) & (0.155) & (0.696)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
 N &  142 & 142 & 142 & 142 & 142 & 142  \\
-Adjusted $R^2$ &  -0.018 & -0.052 & 0.026 & 0.011 & 0.029 & 0.009  \\
+Adjusted $R^2$ &  -0.041 & -0.076 & 0.042 & 0.027 & 0.051 & 0.026  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -775,21 +775,21 @@ Adjusted $R^2$ &  -0.018 & -0.052 & 0.026 & 0.011 & 0.029 & 0.009  \\
  & \% Hispanic & \% Hispanic & Count Hispanic & Count Hispanic & Any Hispanic & Any Hispanic \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  1.962$^{}$ & 2.808$^{}$ & 0.165$^{}$ & 0.144$^{}$ & 0.144$^{}$ & 0.168$^{+}$  \\
- &  (1.426) & (1.699) & (0.141) & (0.184) & (0.098) & (0.090)  \\
-Constant  &  4.154$^{*}$ & 9.903$^{}$ & 0.834$^{***}$ & 2.192$^{+}$ & 0.628$^{**}$ & 2.314$^{**}$  \\
- &  (1.790) & (11.083) & (0.244) & (1.142) & (0.207) & (0.752)  \\
+Treatment  &  1.945$^{}$ & 2.823$^{}$ & 0.131$^{}$ & 0.128$^{}$ & 0.136$^{}$ & 0.156$^{+}$  \\
+ &  (1.458) & (1.754) & (0.145) & (0.182) & (0.096) & (0.089)  \\
+Constant  &  2.952$^{}$ & 12.798$^{}$ & 0.675$^{*}$ & 2.097$^{+}$ & 0.589$^{**}$ & 2.245$^{**}$  \\
+ &  (2.209) & (11.268) & (0.305) & (1.089) & (0.224) & (0.704)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
 N &  142 & 142 & 142 & 142 & 142 & 142  \\
-Adjusted $R^2$ &  0.077 & 0.141 & 0.075 & 0.065 & 0.092 & 0.115  \\
+Adjusted $R^2$ &  0.039 & 0.101 & 0.029 & 0.018 & 0.066 & 0.088  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
 \end{tabularx}
 \end{table}
 
-\subsubsection{Mechanical Engineering (N=82)}
+\subsubsection{Mechanical Engineering (N=81)}
 
 \begin{table}[H]
 \caption{Mechanical Engineering : Effect on URM Speaker Representation}
@@ -801,14 +801,14 @@ Adjusted $R^2$ &  0.077 & 0.141 & 0.075 & 0.065 & 0.092 & 0.115  \\
  & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  2.911$^{}$ & 2.506$^{}$ & 0.657$^{*}$ & 0.809$^{*}$ & 0.037$^{}$ & 0.059$^{}$  \\
- &  (1.980) & (1.934) & (0.315) & (0.375) & (0.111) & (0.124)  \\
-Constant  &  14.817$^{*}$ & 5.334$^{}$ & 2.077$^{*}$ & 2.189$^{}$ & 0.722$^{**}$ & 0.505$^{}$  \\
- &  (5.933) & (10.184) & (0.927) & (2.385) & (0.267) & (0.542)  \\
+Treatment  &  3.859$^{+}$ & 2.959$^{}$ & 0.665$^{*}$ & 0.731$^{+}$ & 0.113$^{}$ & 0.107$^{}$  \\
+ &  (2.026) & (2.002) & (0.300) & (0.370) & (0.116) & (0.130)  \\
+Constant  &  17.140$^{**}$ & 0.793$^{}$ & 2.618$^{**}$ & 1.814$^{}$ & 0.792$^{**}$ & 0.316$^{}$  \\
+ &  (5.984) & (11.347) & (0.963) & (2.267) & (0.279) & (0.597)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  82 & 82 & 82 & 82 & 82 & 82  \\
-Adjusted $R^2$ &  0.005 & -0.001 & -0.009 & 0.105 & 0.016 & 0.028  \\
+N &  81 & 81 & 81 & 81 & 81 & 81  \\
+Adjusted $R^2$ &  0.039 & 0.055 & 0.033 & 0.133 & -0.002 & -0.009  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -824,14 +824,14 @@ Adjusted $R^2$ &  0.005 & -0.001 & -0.009 & 0.105 & 0.016 & 0.028  \\
  & \% Black & \% Black & Count Black & Count Black & Any Black & Any Black \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  2.910$^{*}$ & 2.147$^{*}$ & 0.585$^{**}$ & 0.511$^{*}$ & 0.291$^{**}$ & 0.293$^{**}$  \\
- &  (1.106) & (0.940) & (0.206) & (0.207) & (0.100) & (0.102)  \\
-Constant  &  7.825$^{**}$ & 9.327$^{+}$ & 0.777$^{**}$ & 0.480$^{}$ & 0.657$^{**}$ & 0.941$^{*}$  \\
- &  (2.564) & (5.491) & (0.229) & (1.987) & (0.197) & (0.470)  \\
+Treatment  &  3.942$^{***}$ & 2.942$^{**}$ & 0.646$^{***}$ & 0.551$^{*}$ & 0.346$^{***}$ & 0.310$^{**}$  \\
+ &  (0.999) & (0.937) & (0.185) & (0.210) & (0.090) & (0.097)  \\
+Constant  &  8.540$^{**}$ & 6.694$^{}$ & 0.966$^{***}$ & 0.498$^{}$ & 0.818$^{***}$ & 0.679$^{}$  \\
+ &  (2.526) & (5.016) & (0.149) & (1.711) & (0.174) & (0.466)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  82 & 82 & 82 & 82 & 82 & 82  \\
-Adjusted $R^2$ &  0.070 & 0.095 & 0.067 & 0.121 & 0.070 & 0.137  \\
+N &  81 & 81 & 81 & 81 & 81 & 81  \\
+Adjusted $R^2$ &  0.153 & 0.170 & 0.129 & 0.185 & 0.157 & 0.196  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -847,14 +847,14 @@ Adjusted $R^2$ &  0.070 & 0.095 & 0.067 & 0.121 & 0.070 & 0.137  \\
  & \% Hispanic & \% Hispanic & Count Hispanic & Count Hispanic & Any Hispanic & Any Hispanic \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.001$^{}$ & 0.359$^{}$ & 0.072$^{}$ & 0.298$^{}$ & -0.050$^{}$ & 0.004$^{}$  \\
- &  (1.872) & (1.898) & (0.227) & (0.248) & (0.122) & (0.132)  \\
-Constant  &  6.992$^{}$ & -3.994$^{}$ & 1.300$^{}$ & 1.709$^{}$ & 0.495$^{+}$ & 0.086$^{}$  \\
- &  (4.310) & (10.321) & (0.839) & (1.473) & (0.274) & (0.613)  \\
+Treatment  &  -0.083$^{}$ & 0.017$^{}$ & 0.019$^{}$ & 0.181$^{}$ & -0.034$^{}$ & 0.006$^{}$  \\
+ &  (1.897) & (1.900) & (0.227) & (0.244) & (0.122) & (0.132)  \\
+Constant  &  8.600$^{+}$ & -5.901$^{}$ & 1.652$^{+}$ & 1.316$^{}$ & 0.585$^{*}$ & 0.036$^{}$  \\
+ &  (4.526) & (11.026) & (0.926) & (1.569) & (0.291) & (0.645)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  82 & 82 & 82 & 82 & 82 & 82  \\
-Adjusted $R^2$ &  -0.072 & -0.088 & -0.027 & 0.036 & -0.018 & -0.005  \\
+N &  81 & 81 & 81 & 81 & 81 & 81  \\
+Adjusted $R^2$ &  -0.053 & -0.041 & 0.025 & 0.067 & -0.015 & 0.001  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -864,30 +864,68 @@ Adjusted $R^2$ &  -0.072 & -0.088 & -0.027 & 0.036 & -0.018 & -0.005  \\
 ## Testing for Significant Moderation Across Disciplines
 
 \textbf{F-test for Treatment × Discipline Interactions (Black Speakers):}
-F-statistic: 1.404 
-p-value: 0.2302 
+F-statistic: 3.721 
+p-value: 0.0051 
 Degrees of freedom: 4 
 
-We cannot reject the null hypothesis that treatment effects are equal across disciplines.
-The variation in treatment effects across fields may be due to random chance.
+The treatment effect on Black speaker representation varies significantly across disciplines (p < 0.05).
+This indicates that the diversity intervention has heterogeneous effects depending on the academic field.
 
 \textbf{F-test for Treatment × Discipline Interactions (URM Speakers):}
-F-statistic: 0.522 
-p-value: 0.7197 
+F-statistic: 0.714 
+p-value: 0.5824 
 Degrees of freedom: 4 
 
 \textbf{Individual Interaction Effects (Black Speakers):}
                                       Estimate Std. Error t value Pr(>|t|)
-treatment:disc_mathematics             -0.0655     0.8589 -0.0763   0.9392
-treatment:disc_physics                  0.9641     0.9726  0.9913   0.3217
-treatment:disc_computer_science        -0.1349     1.2487 -0.1081   0.9140
-treatment:disc_mechanical_engineering   2.7427     1.4976  1.8315   0.0672
+treatment:disc_mathematics             -0.0625     0.0604 -1.0337   0.3014
+treatment:disc_physics                  0.0231     0.0684  0.3383   0.7352
+treatment:disc_computer_science        -0.1077     0.0878 -1.2269   0.2201
+treatment:disc_mechanical_engineering   0.2800     0.1058  2.6475   0.0082
 
 \newpage
 
 # Semester-Specific Analysis
 
 ## Fall Semester
+
+
+Call:
+lm(formula = as.formula(formula_str), data = data_complete)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-12.605  -7.477  -4.980   3.554  95.007 
+
+Coefficients:
+                            Estimate Std. Error t value Pr(>|t|)   
+(Intercept)                  6.35696    2.14015   2.970  0.00302 **
+treatment                    0.94922    0.72180   1.315  0.18870   
+bin_0_1                      1.48922    1.89568   0.786  0.43224   
+bin_1_3                      1.14316    1.82433   0.627  0.53101   
+bin_3_5                      2.00801    1.74786   1.149  0.25081   
+bin_5_7                     -0.03272    1.74150  -0.019  0.98501   
+bin_7_11                     2.18899    1.68911   1.296  0.19520   
+bin_11_17                   -1.42973    1.67659  -0.853  0.39393   
+disc_mathematics             0.05245    1.19124   0.044  0.96489   
+disc_physics                 0.34638    1.21922   0.284  0.77637   
+disc_computer_science       -4.91430    1.54564  -3.179  0.00151 **
+disc_mechanical_engineering -2.70485    1.89142  -1.430  0.15292   
+batch_1                      0.87044    1.66325   0.523  0.60082   
+batch_2                      1.38845    1.96032   0.708  0.47889   
+batch_3                     -2.13347    1.55207  -1.375  0.16947   
+batch_4                      2.76342    1.55058   1.782  0.07493 . 
+batch_5                      0.89058    1.51030   0.590  0.55551   
+batch_6                     -0.14252    1.51698  -0.094  0.92516   
+batch_7                     -1.22984    1.50242  -0.819  0.41317   
+batch_8                      0.61867    1.60368   0.386  0.69972   
+batch_9                     -2.64601    1.53713  -1.721  0.08539 . 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 13.5 on 1427 degrees of freedom
+Multiple R-squared:  0.03113,	Adjusted R-squared:  0.01755 
+F-statistic: 2.292 on 20 and 1427 DF,  p-value: 0.000971
 
 \begin{table}[H]
 \caption{Fall: Effect on URM Speakers}
@@ -899,14 +937,14 @@ treatment:disc_mechanical_engineering   2.7427     1.4976  1.8315   0.0672
  & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  1.016$^{}$ & 0.908$^{}$ & 0.094$^{*}$ & 0.063$^{}$ & 0.038$^{}$ & 0.025$^{}$  \\
- &  (0.703) & (0.699) & (0.047) & (0.046) & (0.025) & (0.026)  \\
-Constant  &  6.031$^{*}$ & -2.836$^{}$ & 0.525$^{***}$ & -0.301$^{}$ & 0.368$^{***}$ & -0.034$^{}$  \\
- &  (2.452) & (3.146) & (0.146) & (0.219) & (0.071) & (0.112)  \\
+Treatment  &  0.949$^{}$ & 0.859$^{}$ & 0.078$^{+}$ & 0.049$^{}$ & 0.033$^{}$ & 0.020$^{}$  \\
+ &  (0.695) & (0.687) & (0.046) & (0.044) & (0.025) & (0.025)  \\
+Constant  &  6.357$^{**}$ & -2.483$^{}$ & 0.538$^{***}$ & -0.283$^{}$ & 0.366$^{***}$ & -0.058$^{}$  \\
+ &  (2.449) & (3.059) & (0.145) & (0.212) & (0.070) & (0.111)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
 N &  1,448 & 1,448 & 1,448 & 1,448 & 1,448 & 1,448  \\
-Adjusted $R^2$ &  0.018 & 0.026 & 0.026 & 0.041 & 0.031 & 0.040  \\
+Adjusted $R^2$ &  0.018 & 0.026 & 0.024 & 0.040 & 0.023 & 0.035  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -922,14 +960,14 @@ Adjusted $R^2$ &  0.018 & 0.026 & 0.026 & 0.041 & 0.031 & 0.040  \\
  & \% Black & \% Black & Count Black & Count Black & Any Black & Any Black \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.407$^{}$ & 0.379$^{}$ & 0.048$^{*}$ & 0.045$^{*}$ & 0.035$^{*}$ & 0.034$^{+}$  \\
- &  (0.335) & (0.335) & (0.021) & (0.021) & (0.017) & (0.018)  \\
-Constant  &  2.661$^{**}$ & -1.611$^{}$ & 0.207$^{***}$ & -0.058$^{}$ & 0.162$^{***}$ & -0.043$^{}$  \\
- &  (0.978) & (1.408) & (0.060) & (0.095) & (0.047) & (0.081)  \\
+Treatment  &  0.494$^{}$ & 0.456$^{}$ & 0.053$^{*}$ & 0.050$^{*}$ & 0.043$^{**}$ & 0.042$^{*}$  \\
+ &  (0.333) & (0.334) & (0.021) & (0.021) & (0.017) & (0.017)  \\
+Constant  &  2.863$^{**}$ & -1.651$^{}$ & 0.224$^{***}$ & -0.075$^{}$ & 0.172$^{***}$ & -0.067$^{}$  \\
+ &  (0.987) & (1.434) & (0.061) & (0.097) & (0.046) & (0.080)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
 N &  1,448 & 1,448 & 1,448 & 1,448 & 1,448 & 1,448  \\
-Adjusted $R^2$ &  0.024 & 0.037 & 0.038 & 0.048 & 0.033 & 0.041  \\
+Adjusted $R^2$ &  0.023 & 0.037 & 0.033 & 0.046 & 0.028 & 0.041  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -945,14 +983,14 @@ Adjusted $R^2$ &  0.024 & 0.037 & 0.038 & 0.048 & 0.033 & 0.041  \\
  & \% Hispanic & \% Hispanic & Count Hispanic & Count Hispanic & Any Hispanic & Any Hispanic \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.592$^{}$ & 0.497$^{}$ & 0.045$^{}$ & 0.015$^{}$ & 0.023$^{}$ & 0.008$^{}$  \\
- &  (0.649) & (0.672) & (0.041) & (0.040) & (0.025) & (0.026)  \\
-Constant  &  3.227$^{}$ & -1.469$^{}$ & 0.306$^{*}$ & -0.266$^{}$ & 0.234$^{**}$ & -0.065$^{}$  \\
- &  (2.372) & (3.050) & (0.134) & (0.197) & (0.074) & (0.113)  \\
+Treatment  &  0.437$^{}$ & 0.371$^{}$ & 0.024$^{}$ & -0.003$^{}$ & 0.009$^{}$ & -0.006$^{}$  \\
+ &  (0.635) & (0.657) & (0.038) & (0.038) & (0.024) & (0.025)  \\
+Constant  &  3.351$^{}$ & -1.075$^{}$ & 0.301$^{*}$ & -0.231$^{}$ & 0.236$^{**}$ & -0.066$^{}$  \\
+ &  (2.358) & (2.931) & (0.134) & (0.188) & (0.073) & (0.109)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
 N &  1,448 & 1,448 & 1,448 & 1,448 & 1,448 & 1,448  \\
-Adjusted $R^2$ &  0.012 & 0.011 & 0.021 & 0.031 & 0.023 & 0.028  \\
+Adjusted $R^2$ &  0.011 & 0.010 & 0.020 & 0.030 & 0.022 & 0.028  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -971,14 +1009,14 @@ Adjusted $R^2$ &  0.012 & 0.011 & 0.021 & 0.031 & 0.023 & 0.028  \\
  & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.310$^{}$ & 0.238$^{}$ & -0.018$^{}$ & -0.017$^{}$ & -0.026$^{}$ & -0.026$^{}$  \\
- &  (0.769) & (0.783) & (0.058) & (0.058) & (0.027) & (0.027)  \\
-Constant  &  9.432$^{***}$ & 8.842$^{**}$ & 1.148$^{***}$ & 0.985$^{***}$ & 0.611$^{***}$ & 0.488$^{***}$  \\
- &  (1.939) & (3.301) & (0.166) & (0.268) & (0.064) & (0.113)  \\
+Treatment  &  0.468$^{}$ & 0.520$^{}$ & 0.007$^{}$ & 0.009$^{}$ & -0.013$^{}$ & -0.013$^{}$  \\
+ &  (0.737) & (0.757) & (0.055) & (0.056) & (0.028) & (0.028)  \\
+Constant  &  8.564$^{***}$ & 8.921$^{**}$ & 0.985$^{***}$ & 0.897$^{***}$ & 0.539$^{***}$ & 0.420$^{***}$  \\
+ &  (1.839) & (3.097) & (0.144) & (0.251) & (0.073) & (0.122)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,397 & 1,397 & 1,397 & 1,397 & 1,397 & 1,397  \\
-Adjusted $R^2$ &  0.001 & 0.001 & 0.020 & 0.017 & 0.026 & 0.028  \\
+N &  1,385 & 1,385 & 1,385 & 1,385 & 1,385 & 1,385  \\
+Adjusted $R^2$ &  0.001 & 0.000 & 0.022 & 0.019 & 0.022 & 0.023  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -994,14 +1032,14 @@ Adjusted $R^2$ &  0.001 & 0.001 & 0.020 & 0.017 & 0.026 & 0.028  \\
  & \% Black & \% Black & Count Black & Count Black & Any Black & Any Black \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.663$^{}$ & 0.655$^{}$ & 0.021$^{}$ & 0.025$^{}$ & 0.014$^{}$ & 0.017$^{}$  \\
- &  (0.462) & (0.439) & (0.036) & (0.035) & (0.023) & (0.022)  \\
-Constant  &  2.382$^{*}$ & 1.354$^{}$ & 0.369$^{***}$ & 0.302$^{+}$ & 0.257$^{***}$ & 0.184$^{+}$  \\
- &  (1.067) & (1.768) & (0.097) & (0.156) & (0.064) & (0.106)  \\
+Treatment  &  0.831$^{+}$ & 0.844$^{+}$ & 0.036$^{}$ & 0.039$^{}$ & 0.026$^{}$ & 0.028$^{}$  \\
+ &  (0.464) & (0.446) & (0.035) & (0.034) & (0.023) & (0.023)  \\
+Constant  &  1.814$^{+}$ & 1.523$^{}$ & 0.322$^{***}$ & 0.305$^{*}$ & 0.235$^{***}$ & 0.176$^{+}$  \\
+ &  (1.018) & (1.731) & (0.088) & (0.149) & (0.059) & (0.102)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,397 & 1,397 & 1,397 & 1,397 & 1,397 & 1,397  \\
-Adjusted $R^2$ &  0.010 & 0.010 & 0.031 & 0.034 & 0.023 & 0.024  \\
+N &  1,385 & 1,385 & 1,385 & 1,385 & 1,385 & 1,385  \\
+Adjusted $R^2$ &  0.010 & 0.009 & 0.031 & 0.033 & 0.022 & 0.022  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -1017,14 +1055,14 @@ Adjusted $R^2$ &  0.010 & 0.010 & 0.031 & 0.034 & 0.023 & 0.024  \\
  & \% Hispanic & \% Hispanic & Count Hispanic & Count Hispanic & Any Hispanic & Any Hispanic \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  -0.332$^{}$ & -0.401$^{}$ & -0.038$^{}$ & -0.041$^{}$ & -0.034$^{}$ & -0.035$^{}$  \\
- &  (0.649) & (0.675) & (0.043) & (0.043) & (0.026) & (0.026)  \\
-Constant  &  6.832$^{***}$ & 7.270$^{*}$ & 0.762$^{***}$ & 0.661$^{**}$ & 0.490$^{***}$ & 0.382$^{***}$  \\
- &  (1.719) & (3.036) & (0.131) & (0.213) & (0.067) & (0.109)  \\
+Treatment  &  -0.342$^{}$ & -0.310$^{}$ & -0.028$^{}$ & -0.030$^{}$ & -0.034$^{}$ & -0.036$^{}$  \\
+ &  (0.625) & (0.648) & (0.040) & (0.040) & (0.026) & (0.027)  \\
+Constant  &  6.528$^{***}$ & 7.174$^{*}$ & 0.645$^{***}$ & 0.571$^{**}$ & 0.415$^{***}$ & 0.337$^{**}$  \\
+ &  (1.662) & (2.817) & (0.115) & (0.193) & (0.073) & (0.108)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,397 & 1,397 & 1,397 & 1,397 & 1,397 & 1,397  \\
-Adjusted $R^2$ &  -0.005 & -0.004 & 0.010 & 0.012 & 0.021 & 0.023  \\
+N &  1,385 & 1,385 & 1,385 & 1,385 & 1,385 & 1,385  \\
+Adjusted $R^2$ &  -0.007 & -0.007 & 0.008 & 0.010 & 0.013 & 0.015  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -1047,18 +1085,18 @@ Adjusted $R^2$ &  -0.005 & -0.004 & 0.010 & 0.012 & 0.021 & 0.023  \\
  & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.506$^{}$ & 0.480$^{}$ & 0.084$^{}$ & 0.045$^{}$ & 0.009$^{}$ & -0.001$^{}$  \\
- &  (0.531) & (0.529) & (0.069) & (0.067) & (0.024) & (0.023)  \\
-Constant  &  10.010$^{***}$ & 5.767$^{**}$ & 1.218$^{***}$ & 0.344$^{}$ & 0.578$^{***}$ & 0.267$^{*}$  \\
- &  (1.619) & (2.032) & (0.188) & (0.274) & (0.069) & (0.104)  \\
-Dept Ranking (centered)  &  0.016$^{}$ & 0.029$^{*}$ & -0.003$^{*}$ & -0.001$^{}$ & -0.001$^{**}$ & -0.001$^{}$  \\
- &  (0.013) & (0.013) & (0.001) & (0.002) & (0.001) & (0.001)  \\
-Treatment $\times$ Dept Ranking (centered)  &  0.006$^{}$ & 0.006$^{}$ & 0.004$^{*}$ & 0.005$^{*}$ & 0.001$^{}$ & 0.001$^{}$  \\
- &  (0.017) & (0.017) & (0.002) & (0.002) & (0.001) & (0.001)  \\
+Treatment  &  0.623$^{}$ & 0.622$^{}$ & 0.087$^{}$ & 0.051$^{}$ & 0.018$^{}$ & 0.007$^{}$  \\
+ &  (0.513) & (0.513) & (0.065) & (0.064) & (0.025) & (0.024)  \\
+Constant  &  9.549$^{***}$ & 5.515$^{**}$ & 1.117$^{***}$ & 0.297$^{}$ & 0.529$^{***}$ & 0.203$^{+}$  \\
+ &  (1.639) & (1.956) & (0.175) & (0.256) & (0.077) & (0.110)  \\
+Dept Ranking (centered)  &  0.014$^{}$ & 0.028$^{*}$ & -0.003$^{**}$ & -0.001$^{}$ & -0.002$^{**}$ & -0.001$^{}$  \\
+ &  (0.013) & (0.013) & (0.001) & (0.001) & (0.001) & (0.001)  \\
+Treatment $\times$ Dept Ranking (centered)  &  0.008$^{}$ & 0.007$^{}$ & 0.005$^{**}$ & 0.005$^{**}$ & 0.001$^{}$ & 0.001$^{+}$  \\
+ &  (0.016) & (0.016) & (0.002) & (0.002) & (0.001) & (0.001)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,656 & 1,656 & 1,656 & 1,656 & 1,656 & 1,656  \\
-Adjusted $R^2$ &  0.011 & 0.014 & 0.029 & 0.038 & 0.034 & 0.045  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.011 & 0.014 & 0.033 & 0.042 & 0.029 & 0.040  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -1079,18 +1117,18 @@ Adjusted $R^2$ &  0.011 & 0.014 & 0.029 & 0.038 & 0.034 & 0.045  \\
  & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.713$^{}$ & 0.495$^{}$ & 0.057$^{}$ & 0.048$^{}$ & -0.003$^{}$ & 0.000$^{}$  \\
- &  (0.555) & (0.530) & (0.072) & (0.067) & (0.025) & (0.023)  \\
-Constant  &  8.860$^{***}$ & 3.392$^{}$ & 1.271$^{***}$ & 0.357$^{}$ & 0.625$^{***}$ & 0.283$^{**}$  \\
- &  (1.546) & (2.203) & (0.187) & (0.314) & (0.064) & (0.108)  \\
-Total Faculty (centered)  &  -0.030$^{}$ & -0.022$^{}$ & 0.004$^{}$ & 0.003$^{}$ & 0.001$^{}$ & -0.000$^{}$  \\
- &  (0.026) & (0.025) & (0.003) & (0.003) & (0.001) & (0.001)  \\
-Treatment $\times$ Total Faculty (centered)  &  0.017$^{}$ & 0.005$^{}$ & -0.002$^{}$ & -0.003$^{}$ & 0.000$^{}$ & 0.000$^{}$  \\
- &  (0.030) & (0.030) & (0.004) & (0.004) & (0.001) & (0.001)  \\
+Treatment  &  0.834$^{}$ & 0.650$^{}$ & 0.063$^{}$ & 0.055$^{}$ & 0.008$^{}$ & 0.009$^{}$  \\
+ &  (0.531) & (0.513) & (0.069) & (0.065) & (0.025) & (0.024)  \\
+Constant  &  8.374$^{***}$ & 3.142$^{}$ & 1.154$^{***}$ & 0.295$^{}$ & 0.567$^{***}$ & 0.213$^{+}$  \\
+ &  (1.593) & (2.097) & (0.179) & (0.294) & (0.070) & (0.114)  \\
+Total Faculty (centered)  &  -0.035$^{}$ & -0.028$^{}$ & 0.004$^{}$ & 0.003$^{}$ & 0.001$^{}$ & -0.000$^{}$  \\
+ &  (0.026) & (0.026) & (0.003) & (0.003) & (0.001) & (0.001)  \\
+Treatment $\times$ Total Faculty (centered)  &  0.025$^{}$ & 0.013$^{}$ & -0.002$^{}$ & -0.003$^{}$ & 0.001$^{}$ & 0.000$^{}$  \\
+ &  (0.029) & (0.029) & (0.003) & (0.003) & (0.001) & (0.001)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,656 & 1,656 & 1,656 & 1,656 & 1,656 & 1,656  \\
-Adjusted $R^2$ &  0.009 & 0.014 & 0.027 & 0.034 & 0.031 & 0.044  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.010 & 0.014 & 0.029 & 0.037 & 0.026 & 0.038  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
@@ -1111,23 +1149,159 @@ Adjusted $R^2$ &  0.009 & 0.014 & 0.027 & 0.034 & 0.031 & 0.044  \\
  & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
-Treatment  &  0.555$^{}$ & 0.457$^{}$ & 0.088$^{}$ & 0.050$^{}$ & 0.008$^{}$ & -0.000$^{}$  \\
- &  (0.534) & (0.533) & (0.068) & (0.067) & (0.024) & (0.023)  \\
-Constant  &  8.679$^{***}$ & 7.735$^{***}$ & 1.238$^{***}$ & 0.881$^{***}$ & 0.622$^{***}$ & 0.485$^{***}$  \\
- &  (1.518) & (1.806) & (0.174) & (0.248) & (0.060) & (0.092)  \\
-Peer URM Faculty (centered)  &  0.076$^{}$ & 0.148$^{**}$ & 0.018$^{**}$ & 0.021$^{**}$ & 0.007$^{**}$ & 0.007$^{**}$  \\
- &  (0.054) & (0.056) & (0.006) & (0.007) & (0.002) & (0.002)  \\
-Treatment $\times$ Peer URM Faculty (centered)  &  -0.078$^{}$ & -0.069$^{}$ & -0.004$^{}$ & -0.005$^{}$ & -0.001$^{}$ & -0.002$^{}$  \\
- &  (0.075) & (0.074) & (0.008) & (0.008) & (0.003) & (0.003)  \\
+Treatment  &  0.670$^{}$ & 0.611$^{}$ & 0.091$^{}$ & 0.056$^{}$ & 0.018$^{}$ & 0.008$^{}$  \\
+ &  (0.516) & (0.518) & (0.065) & (0.064) & (0.025) & (0.024)  \\
+Constant  &  8.283$^{***}$ & 7.695$^{***}$ & 1.116$^{***}$ & 0.815$^{***}$ & 0.569$^{***}$ & 0.419$^{***}$  \\
+ &  (1.575) & (1.789) & (0.167) & (0.234) & (0.068) & (0.100)  \\
+Peer URM Faculty (centered)  &  0.069$^{}$ & 0.139$^{*}$ & 0.017$^{**}$ & 0.021$^{***}$ & 0.007$^{**}$ & 0.007$^{**}$  \\
+ &  (0.053) & (0.054) & (0.005) & (0.006) & (0.002) & (0.002)  \\
+Treatment $\times$ Peer URM Faculty (centered)  &  -0.057$^{}$ & -0.047$^{}$ & -0.005$^{}$ & -0.006$^{}$ & -0.001$^{}$ & -0.001$^{}$  \\
+ &  (0.071) & (0.071) & (0.008) & (0.008) & (0.003) & (0.003)  \\
 \midrule
 Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
-N &  1,656 & 1,656 & 1,656 & 1,656 & 1,656 & 1,656  \\
-Adjusted $R^2$ &  0.010 & 0.015 & 0.032 & 0.034 & 0.039 & 0.044  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.010 & 0.014 & 0.035 & 0.037 & 0.034 & 0.038  \\
 \bottomrule
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
 \multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
 \end{tabularx}
 \end{table}
+
+\newpage
+
+## Exploratory Analysis: Seniority Moderation
+
+### Analysis 1: Does speaker seniority moderate the treatment effect?
+
+
+\clearpage
+\section{Exploratory Analysis: Seniority Moderation}
+
+\subsection{Distribution of Years Since PhD}
+
+\textbf{Seniority Data Coverage:}
+
+- Total seminars with seniority data: 1624 (98.2\% of total)
+- Number of departments: 522
+- Mean of seminar-level mean years since PhD: 15.7 (SD = 7.5)
+- Median of seminar-level mean years since PhD: 15.1
+- Range of seminar means: 1.0 to 59.0 years
+- IQR of seminar means: 10.5 to 20.0 years
+
+\subsection{Continuous Moderation Analysis}
+
+We test whether the average seniority of speakers in a seminar moderates the treatment effect on Black speaker representation.
+
+Note: Seniority is measured as the mean years since PhD for speakers in each seminar.
+
+\subsubsection{Outcome: Percentage Black Speakers}
+
+\begin{table}[H]
+\caption{Seniority Moderation Analysis: Percentage Black Speakers}
+\centering
+\begin{tabular}{lccc}
+\toprule
+ & (1) & (2) & (3) \\
+ & Main Effects & Interaction & With Controls \\
+\midrule
+Treatment & 0.8131* & 0.8330* & 0.9043** \\
+ & (0.3357) & (0.3440) & (0.3280) \\
+Years Since PhD (centered) & -0.0161 & -0.0018 & -0.0017 \\
+ & (0.0188) & (0.0234) & (0.0233) \\
+Treatment × Years Since PhD &   & -0.0311 & -0.0368 \\
+ &   & (0.0385) & (0.0385) \\
+\midrule
+Observations & 1624 & 1624 & 1624 \\
+R-squared & 0.005 & 0.005 & 0.017 \\
+Controls & No & No & Yes \\
+\bottomrule
+\end{tabular}
+\parbox{\linewidth}{\footnotesize Note: Clustered standard errors at department level in parentheses. Years since PhD is the mean years since PhD for speakers in each seminar, centered at the median. Controls include department ranking, total faculty, and fraction URM faculty. Significance: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001.}
+\end{table}
+
+\subsubsection{Outcome: Any Black Speakers}
+
+\begin{table}[H]
+\caption{Seniority Moderation Analysis: Any Black Speakers}
+\centering
+\begin{tabular}{lccc}
+\toprule
+ & (1) & (2) & (3) \\
+ & Main Effects & Interaction & With Controls \\
+\midrule
+Treatment & 0.0632** & 0.0611* & 0.0689** \\
+ & (0.0239) & (0.0240) & (0.0236) \\
+Years Since PhD (centered) & 0.0003 & -0.0012 & -0.0012 \\
+ & (0.0013) & (0.0016) & (0.0016) \\
+Treatment × Years Since PhD &   & 0.0032 & 0.0029 \\
+ &   & (0.0027) & (0.0026) \\
+\midrule
+Observations & 1624 & 1624 & 1624 \\
+R-squared & 0.006 & 0.006 & 0.014 \\
+Controls & No & No & Yes \\
+\bottomrule
+\end{tabular}
+\parbox{\linewidth}{\footnotesize Note: Clustered standard errors at department level in parentheses. Years since PhD is the mean years since PhD for speakers in each seminar, centered at the median. Controls include department ranking, total faculty, and fraction URM faculty. Significance: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001.}
+\end{table}
+
+\subsection{Subgroup Analysis: Seminars with Senior vs Junior Speakers}
+
+\textbf{Median Split Groups:}
+
+- Seminars with junior speakers (n=812): Mean = 10.0 years, Range = 1.0-15.1 years
+- Seminars with senior speakers (n=812): Mean = 21.4 years, Range = 15.1-59.0 years
+
+\subsubsection{Outcome: Percentage Black Speakers}
+
+\begin{table}[H]
+\caption{Subgroup Analysis by Seniority: Percentage Black Speakers}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{Seminars with Junior Speakers} & \multicolumn{2}{c}{Seminars with Senior Speakers} \\
+ & (1) & (2) & (3) & (4) \\
+ & Simple & With Controls & Simple & With Controls \\
+\midrule
+Treatment & 1.0238* & 1.1521* & 0.5718 & 0.6162 \\
+ & (0.4826) & (0.4819) & (0.4160) & (0.4001) \\
+\midrule
+Observations & 812 & 812 & 812 & 812 \\
+R-squared & 0.006 & 0.024 & 0.003 & 0.010 \\
+Controls & No & Yes & No & Yes \\
+\bottomrule
+\end{tabular}
+\parbox{\linewidth}{\footnotesize Note: Clustered standard errors at department level in parentheses. Junior/Senior split at median of seminar-level mean years since PhD. Controls include department ranking, total faculty, and fraction URM faculty. Significance: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001.}
+\end{table}
+
+\textbf{Test for Difference Between Groups:}
+
+Difference in treatment effect (Senior - Junior): -0.4520 (SE = 0.6026), p = 0.4534
+
+\subsubsection{Outcome: Any Black Speakers}
+
+\begin{table}[H]
+\caption{Subgroup Analysis by Seniority: Any Black Speakers}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+ & \multicolumn{2}{c}{Seminars with Junior Speakers} & \multicolumn{2}{c}{Seminars with Senior Speakers} \\
+ & (1) & (2) & (3) & (4) \\
+ & Simple & With Controls & Simple & With Controls \\
+\midrule
+Treatment & 0.0324 & 0.0429 & 0.0910** & 0.0938** \\
+ & (0.0305) & (0.0307) & (0.0340) & (0.0340) \\
+\midrule
+Observations & 812 & 812 & 812 & 812 \\
+R-squared & 0.002 & 0.007 & 0.011 & 0.020 \\
+Controls & No & Yes & No & Yes \\
+\bottomrule
+\end{tabular}
+\parbox{\linewidth}{\footnotesize Note: Clustered standard errors at department level in parentheses. Junior/Senior split at median of seminar-level mean years since PhD. Controls include department ranking, total faculty, and fraction URM faculty. Significance: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001.}
+\end{table}
+
+\textbf{Test for Difference Between Groups:}
+
+Difference in treatment effect (Senior - Junior): 0.0586 (SE = 0.0437), p = 0.1804
 
 
 \clearpage
@@ -1145,35 +1319,41 @@ Analysis & Outcome & Variable & Model & Coef. & SE & t-stat & p-value & Sig. \\
 \midrule
 \multicolumn{9}{l}{\textbf{Discipline Analysis}} \\
 \midrule
-Computer Science & \% URM & Treatment & Simple & 2.2940 & 1.3771 & 1.666 & 0.0983 & + \\
-Computer Science & Any Hispanic & Treatment & Extended & 0.1681 & 0.0900 & 1.868 & 0.0643 & + \\
-Mathematics & Count Black & Treatment & Extended & 0.1025 & 0.0554 & 1.851 & 0.0646 & + \\
-Mechanical Engineering & \% Black & Treatment & Simple & 2.9095 & 1.1062 & 2.630 & 0.0106 & * \\
-Mechanical Engineering & Any Black & Treatment & Simple & 0.2906 & 0.1002 & 2.902 & 0.0051 & ** \\
-Mechanical Engineering & Count Black & Treatment & Simple & 0.5852 & 0.2060 & 2.841 & 0.0060 & ** \\
-Mechanical Engineering & Count URM & Treatment & Extended & 0.8090 & 0.3750 & 2.157 & 0.0352 & * \\
-Physics & \% Black & Treatment & Extended & 1.4331 & 0.6338 & 2.261 & 0.0244 & * \\
-Physics & Any Black & Treatment & Extended & 0.1306 & 0.0529 & 2.469 & 0.0140 & * \\
-Physics & Count Black & Treatment & Extended & 0.1753 & 0.0691 & 2.538 & 0.0116 & * \\
+Chemistry & Any Hispanic & Treatment & Extended & -0.1528 & 0.0628 & -2.433 & 0.0157 & * \\
+Chemistry & Count Hispanic & Treatment & Extended & -0.2296 & 0.1246 & -1.842 & 0.0666 & + \\
+Computer Science & Any Hispanic & Treatment & Extended & 0.1556 & 0.0892 & 1.745 & 0.0836 & + \\
+Mathematics & Count Black & Treatment & Extended & 0.1125 & 0.0541 & 2.079 & 0.0379 & * \\
+Mechanical Engineering & \% Black & Treatment & Simple & 3.9420 & 0.9989 & 3.946 & 0.0002 & *** \\
+Mechanical Engineering & \% URM & Treatment & Simple & 3.8590 & 2.0259 & 1.905 & 0.0613 & + \\
+Mechanical Engineering & Any Black & Treatment & Simple & 0.3462 & 0.0898 & 3.855 & 0.0003 & *** \\
+Mechanical Engineering & Count Black & Treatment & Simple & 0.6458 & 0.1853 & 3.486 & 0.0009 & *** \\
+Mechanical Engineering & Count URM & Treatment & Simple & 0.6652 & 0.2998 & 2.219 & 0.0301 & * \\
+Physics & \% Black & Treatment & Extended & 1.6042 & 0.6127 & 2.618 & 0.0093 & ** \\
+Physics & Any Black & Treatment & Simple & 0.1228 & 0.0479 & 2.561 & 0.0109 & * \\
+Physics & Count Black & Treatment & Extended & 0.1820 & 0.0692 & 2.629 & 0.0090 & ** \\
 \addlinespace[0.5em]
 \multicolumn{9}{l}{\textbf{Identity Analysis}} \\
 \midrule
-Demographic Subgroup & \% Black & Treatment & Extended & 0.5413 & 0.2910 & 1.860 & 0.0631 & + \\
-Demographic Subgroup & \% Black Male & Treatment & Extended & 0.4320 & 0.2461 & 1.755 & 0.0794 & + \\
-Demographic Subgroup & Any Black & Treatment & Extended & 0.0453 & 0.0227 & 1.993 & 0.0464 & * \\
-Demographic Subgroup & Any Black Male & Treatment & Extended & 0.0507 & 0.0224 & 2.258 & 0.0241 & * \\
-Demographic Subgroup & Count Black & Treatment & Extended & 0.0657 & 0.0381 & 1.723 & 0.0850 & + \\
-Demographic Subgroup & Count Black Male & Treatment & Extended & 0.0613 & 0.0324 & 1.889 & 0.0590 & + \\
+Demographic Subgroup & \% Black & Treatment & Extended & 0.6640 & 0.2941 & 2.258 & 0.0241 & * \\
+Demographic Subgroup & \% Black Female & Treatment & Extended & 0.1503 & 0.0719 & 2.091 & 0.0367 & * \\
+Demographic Subgroup & \% Black Male & Treatment & Extended & 0.5136 & 0.2486 & 2.066 & 0.0390 & * \\
+Demographic Subgroup & Any Black & Treatment & Simple & 0.0547 & 0.0227 & 2.412 & 0.0160 & * \\
+Demographic Subgroup & Any Black Female & Treatment & Extended & 0.0149 & 0.0081 & 1.839 & 0.0662 & + \\
+Demographic Subgroup & Any Black Male & Treatment & Simple & 0.0578 & 0.0225 & 2.576 & 0.0101 & * \\
+Demographic Subgroup & Count Black & Treatment & Extended & 0.0812 & 0.0376 & 2.157 & 0.0311 & * \\
+Demographic Subgroup & Count Black Male & Treatment & Extended & 0.0696 & 0.0326 & 2.133 & 0.0331 & * \\
 \addlinespace[0.5em]
 \multicolumn{9}{l}{\textbf{Moderation Analysis}} \\
 \midrule
-Department Rank & Count URM & Treatment $\times$ Dept Ranking & Extended & 0.0046 & 0.0019 & 2.394 & 0.0168 & * \\
+Department Rank & Any URM & Treatment $\times$ Dept Ranking & Extended & 0.0012 & 0.0006 & 1.857 & 0.0634 & + \\
+Department Rank & Count URM & Treatment $\times$ Dept Ranking & Extended & 0.0054 & 0.0018 & 2.966 & 0.0031 & ** \\
 \addlinespace[0.5em]
 \multicolumn{9}{l}{\textbf{Semester Analysis}} \\
 \midrule
-Fall Semester & Any Black & Treatment & Simple & 0.0352 & 0.0172 & 2.051 & 0.0405 & * \\
-Fall Semester & Count Black & Treatment & Simple & 0.0479 & 0.0213 & 2.252 & 0.0245 & * \\
-Fall Semester & Count URM & Treatment & Simple & 0.0943 & 0.0472 & 1.998 & 0.0459 & * \\
+Fall Semester & Any Black & Treatment & Simple & 0.0434 & 0.0167 & 2.603 & 0.0093 & ** \\
+Fall Semester & Count Black & Treatment & Simple & 0.0531 & 0.0209 & 2.541 & 0.0112 & * \\
+Fall Semester & Count URM & Treatment & Simple & 0.0780 & 0.0456 & 1.711 & 0.0873 & + \\
+Spring Semester & \% Black & Treatment & Extended & 0.8443 & 0.4464 & 1.891 & 0.0588 & + \\
 \bottomrule
 \end{tabular}
 } % End group for scriptsize and tabcolsep

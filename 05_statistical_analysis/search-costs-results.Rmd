@@ -1471,6 +1471,7 @@ data_fall <- data %>% filter(has_fall_speakers == 1)
 pct_fall_urm_m1 <- run_regression(paste("fall_pct_urm ~ treatment +", paste(base_controls, collapse = " + ")), data_fall)
 count_fall_urm_m1 <- run_regression(paste("fall_num_urm ~ treatment +", paste(base_controls, collapse = " + ")), data_fall)
 binary_fall_urm_m1 <- run_regression(paste("fall_has_any_urm ~ treatment +", paste(base_controls, collapse = " + ")), data_fall)
+summary(pct_fall_urm_m1)
 
 pct_fall_urm_m2 <- run_regression(paste("fall_pct_urm ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_fall)
 count_fall_urm_m2 <- run_regression(paste("fall_num_urm ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_fall)
@@ -1807,6 +1808,298 @@ create_moderator_table(
   "tab:mod_peer_urm",
   "Peer URM Faculty (centered)"
 )
+```
+
+\newpage
+
+## Exploratory Analysis: Seniority Moderation
+
+### Analysis 1: Does speaker seniority moderate the treatment effect?
+
+```{r seniority-moderation, warning=FALSE, message=FALSE}
+cat("\n\n\\clearpage\n")
+cat("\\section{Exploratory Analysis: Seniority Moderation}\n\n")
+
+# First, let's examine the distribution of years since PhD
+cat("\\subsection{Distribution of Years Since PhD}\n\n")
+
+# Use the aggregated seniority data at the seminar level
+analysis_data_seniority <- data %>%
+  filter(!is.na(mean_years_from_phd) & mean_years_from_phd > 0)
+
+# Summary statistics
+seniority_summary <- analysis_data_seniority %>%
+  summarise(
+    n_seminars = n(),
+    n_departments = n_distinct(department_std),
+    mean_of_means = mean(mean_years_from_phd, na.rm = TRUE),
+    median_of_means = median(mean_years_from_phd, na.rm = TRUE),
+    sd_of_means = sd(mean_years_from_phd, na.rm = TRUE),
+    min_mean = min(mean_years_from_phd, na.rm = TRUE),
+    max_mean = max(mean_years_from_phd, na.rm = TRUE),
+    q25_mean = quantile(mean_years_from_phd, 0.25, na.rm = TRUE),
+    q75_mean = quantile(mean_years_from_phd, 0.75, na.rm = TRUE)
+  )
+
+cat(sprintf("\\textbf{Seniority Data Coverage:}\n\n"))
+cat(sprintf("- Total seminars with seniority data: %d (%.1f\\%% of total)\n", 
+            seniority_summary$n_seminars, 
+            100 * seniority_summary$n_seminars / nrow(data)))
+cat(sprintf("- Number of departments: %d\n", seniority_summary$n_departments))
+cat(sprintf("- Mean of seminar-level mean years since PhD: %.1f (SD = %.1f)\n", 
+            seniority_summary$mean_of_means, seniority_summary$sd_of_means))
+cat(sprintf("- Median of seminar-level mean years since PhD: %.1f\n", seniority_summary$median_of_means))
+cat(sprintf("- Range of seminar means: %.1f to %.1f years\n", 
+            seniority_summary$min_mean, seniority_summary$max_mean))
+cat(sprintf("- IQR of seminar means: %.1f to %.1f years\n\n", 
+            seniority_summary$q25_mean, seniority_summary$q75_mean))
+
+# Continuous moderation analysis
+cat("\\subsection{Continuous Moderation Analysis}\n\n")
+cat("We test whether the average seniority of speakers in a seminar moderates the treatment effect on Black speaker representation.\n\n")
+cat("Note: Seniority is measured as the mean years since PhD for speakers in each seminar.\n\n")
+
+# Function to run seniority moderation analysis
+run_seniority_moderation <- function(outcome_var, outcome_label) {
+  cat(sprintf("\\subsubsection{Outcome: %s}\n\n", outcome_label))
+  
+  # Center years since PhD for interpretation
+  median_years <- median(analysis_data_seniority$mean_years_from_phd, na.rm = TRUE)
+  
+  model_data <- analysis_data_seniority %>%
+    filter(!is.na(mean_years_from_phd) & !is.na(!!sym(outcome_var))) %>%
+    mutate(years_since_phd_centered = mean_years_from_phd - median_years)
+  
+  # Model 1: Main effects only
+  formula1 <- as.formula(paste0(outcome_var, " ~ treatment + years_since_phd_centered"))
+  model1 <- lm(formula1, data = model_data)
+  model1$cluster_se <- get_clustered_se(model1, model_data$department_std)
+  
+  # Model 2: With interaction
+  formula2 <- as.formula(paste0(outcome_var, " ~ treatment * years_since_phd_centered"))
+  model2 <- lm(formula2, data = model_data)
+  model2$cluster_se <- get_clustered_se(model2, model_data$department_std)
+  
+  # Model 3: With controls
+  formula3 <- as.formula(paste0(outcome_var, " ~ treatment * years_since_phd_centered + ",
+                               "dept_ranking + total_faculty + frac_urm_faculty"))
+  model3 <- lm(formula3, data = model_data)
+  model3$cluster_se <- get_clustered_se(model3, model_data$department_std)
+  
+  # Display results
+  cat("\\begin{table}[H]\n")
+  cat(sprintf("\\caption{Seniority Moderation Analysis: %s}\n", outcome_label))
+  cat("\\centering\n")
+  cat("\\begin{tabular}{lccc}\n")
+  cat("\\toprule\n")
+  cat(" & (1) & (2) & (3) \\\\\n")
+  cat(" & Main Effects & Interaction & With Controls \\\\\n")
+  cat("\\midrule\n")
+  
+  # Extract coefficients
+  models <- list(model1, model2, model3)
+  coef_names <- c("Treatment", "Years Since PhD (centered)", "Treatment × Years Since PhD")
+  
+  for (coef_name in coef_names) {
+    if (coef_name == "Treatment") var_name <- "treatment"
+    else if (coef_name == "Years Since PhD (centered)") var_name <- "years_since_phd_centered"
+    else var_name <- "treatment:years_since_phd_centered"
+    
+    cat(sprintf("%s & ", coef_name))
+    
+    for (i in 1:3) {
+      if (var_name %in% names(coef(models[[i]]))) {
+        coef_val <- coef(models[[i]])[var_name]
+        se_val <- models[[i]]$cluster_se[var_name]
+        t_stat <- coef_val / se_val
+        pval <- 2 * pt(-abs(t_stat), df = df.residual(models[[i]]))
+        
+        sig_stars <- ifelse(pval < 0.001, "***",
+                          ifelse(pval < 0.01, "**",
+                                ifelse(pval < 0.05, "*",
+                                      ifelse(pval < 0.1, "+", ""))))
+        
+        cat(sprintf("%.4f%s", coef_val, sig_stars))
+        if (i < 3) cat(" & ") else cat(" \\\\\n")
+      } else {
+        cat(" ")
+        if (i < 3) cat(" & ") else cat(" \\\\\n")
+      }
+    }
+    
+    # Print standard errors on next line
+    cat(sprintf(" & "))
+    for (i in 1:3) {
+      if (var_name %in% names(coef(models[[i]]))) {
+        se_val <- models[[i]]$cluster_se[var_name]
+        cat(sprintf("(%.4f)", se_val))
+        if (i < 3) cat(" & ") else cat(" \\\\\n")
+      } else {
+        cat(" ")
+        if (i < 3) cat(" & ") else cat(" \\\\\n")
+      }
+    }
+  }
+  
+  cat("\\midrule\n")
+  cat(sprintf("Observations & %d & %d & %d \\\\\n", 
+              nrow(model1$model), nrow(model2$model), nrow(model3$model)))
+  cat(sprintf("R-squared & %.3f & %.3f & %.3f \\\\\n",
+              summary(model1)$r.squared, summary(model2)$r.squared, summary(model3)$r.squared))
+  cat("Controls & No & No & Yes \\\\\n")
+  cat("\\bottomrule\n")
+  cat("\\end{tabular}\n")
+  cat("\\parbox{\\linewidth}{\\footnotesize Note: Clustered standard errors at department level in parentheses. Years since PhD is the mean years since PhD for speakers in each seminar, centered at the median. Controls include department ranking, total faculty, and fraction URM faculty. Significance: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001.}\n")
+  cat("\\end{table}\n\n")
+  
+  # Return models for later use
+  return(list(main = model1, interaction = model2, controls = model3))
+}
+
+# Run for both outcomes
+black_seniority_models <- run_seniority_moderation("pct_black", "Percentage Black Speakers")
+any_black_seniority_models <- run_seniority_moderation("has_any_black", "Any Black Speakers")
+
+# Median split analysis
+cat("\\subsection{Subgroup Analysis: Seminars with Senior vs Junior Speakers}\n\n")
+
+# Create senior/junior split based on mean years since PhD
+analysis_data_split <- analysis_data_seniority %>%
+  filter(!is.na(mean_years_from_phd)) %>%
+  mutate(
+    seniority_group = if_else(mean_years_from_phd > median(mean_years_from_phd, na.rm = TRUE),
+                             "Senior", "Junior")
+  )
+
+# Summary by group
+split_summary <- analysis_data_split %>%
+  group_by(seniority_group) %>%
+  summarise(
+    n = n(),
+    mean_years = mean(mean_years_from_phd, na.rm = TRUE),
+    min_years = min(mean_years_from_phd, na.rm = TRUE),
+    max_years = max(mean_years_from_phd, na.rm = TRUE)
+  )
+
+cat("\\textbf{Median Split Groups:}\n\n")
+for (i in 1:nrow(split_summary)) {
+  cat(sprintf("- Seminars with %s speakers (n=%d): Mean = %.1f years, Range = %.1f-%.1f years\n",
+              tolower(split_summary$seniority_group[i]),
+              split_summary$n[i],
+              split_summary$mean_years[i],
+              split_summary$min_years[i],
+              split_summary$max_years[i]))
+}
+cat("\n")
+
+# Function for subgroup analysis
+run_subgroup_analysis <- function(outcome_var, outcome_label) {
+  cat(sprintf("\\subsubsection{Outcome: %s}\n\n", outcome_label))
+  
+  # Run models for each subgroup
+  junior_data <- filter(analysis_data_split, seniority_group == "Junior")
+  senior_data <- filter(analysis_data_split, seniority_group == "Senior")
+  
+  # Simple models
+  junior_model <- lm(as.formula(paste0(outcome_var, " ~ treatment")), data = junior_data)
+  junior_model$cluster_se <- get_clustered_se(junior_model, junior_data$department_std)
+  
+  senior_model <- lm(as.formula(paste0(outcome_var, " ~ treatment")), data = senior_data)
+  senior_model$cluster_se <- get_clustered_se(senior_model, senior_data$department_std)
+  
+  # With controls
+  control_formula <- paste0(outcome_var, " ~ treatment + dept_ranking + total_faculty + ",
+                           "frac_urm_faculty")
+  
+  junior_model_ctrl <- lm(as.formula(control_formula), data = junior_data)
+  junior_model_ctrl$cluster_se <- get_clustered_se(junior_model_ctrl, junior_data$department_std)
+  
+  senior_model_ctrl <- lm(as.formula(control_formula), data = senior_data)  
+  senior_model_ctrl$cluster_se <- get_clustered_se(senior_model_ctrl, senior_data$department_std)
+  
+  # Create comparison table
+  cat("\\begin{table}[H]\n")
+  cat(sprintf("\\caption{Subgroup Analysis by Seniority: %s}\n", outcome_label))
+  cat("\\centering\n")
+  cat("\\begin{tabular}{lcccc}\n")
+  cat("\\toprule\n")
+  cat(" & \\multicolumn{2}{c}{Seminars with Junior Speakers} & \\multicolumn{2}{c}{Seminars with Senior Speakers} \\\\\n")
+  cat(" & (1) & (2) & (3) & (4) \\\\\n")
+  cat(" & Simple & With Controls & Simple & With Controls \\\\\n")
+  cat("\\midrule\n")
+  
+  # Treatment coefficient
+  junior_coef <- coef(junior_model)["treatment"]
+  junior_se <- junior_model$cluster_se["treatment"]
+  junior_t <- junior_coef / junior_se
+  junior_pval <- 2 * pt(-abs(junior_t), df = df.residual(junior_model))
+  
+  junior_coef_ctrl <- coef(junior_model_ctrl)["treatment"]
+  junior_se_ctrl <- junior_model_ctrl$cluster_se["treatment"]
+  junior_t_ctrl <- junior_coef_ctrl / junior_se_ctrl
+  junior_pval_ctrl <- 2 * pt(-abs(junior_t_ctrl), df = df.residual(junior_model_ctrl))
+  
+  senior_coef <- coef(senior_model)["treatment"]
+  senior_se <- senior_model$cluster_se["treatment"]
+  senior_t <- senior_coef / senior_se
+  senior_pval <- 2 * pt(-abs(senior_t), df = df.residual(senior_model))
+  
+  senior_coef_ctrl <- coef(senior_model_ctrl)["treatment"]
+  senior_se_ctrl <- senior_model_ctrl$cluster_se["treatment"]
+  senior_t_ctrl <- senior_coef_ctrl / senior_se_ctrl
+  senior_pval_ctrl <- 2 * pt(-abs(senior_t_ctrl), df = df.residual(senior_model_ctrl))
+  
+  # Format significance stars
+  format_sig <- function(p) {
+    ifelse(p < 0.001, "***", ifelse(p < 0.01, "**", ifelse(p < 0.05, "*", ifelse(p < 0.1, "+", ""))))
+  }
+  
+  cat(sprintf("Treatment & %.4f%s & %.4f%s & %.4f%s & %.4f%s \\\\\n",
+              junior_coef, format_sig(junior_pval),
+              junior_coef_ctrl, format_sig(junior_pval_ctrl),
+              senior_coef, format_sig(senior_pval),
+              senior_coef_ctrl, format_sig(senior_pval_ctrl)))
+  
+  cat(sprintf(" & (%.4f) & (%.4f) & (%.4f) & (%.4f) \\\\\n",
+              junior_se, junior_se_ctrl, senior_se, senior_se_ctrl))
+  
+  cat("\\midrule\n")
+  cat(sprintf("Observations & %d & %d & %d & %d \\\\\n",
+              nrow(junior_model$model), nrow(junior_model_ctrl$model),
+              nrow(senior_model$model), nrow(senior_model_ctrl$model)))
+  cat(sprintf("R-squared & %.3f & %.3f & %.3f & %.3f \\\\\n",
+              summary(junior_model)$r.squared, summary(junior_model_ctrl)$r.squared,
+              summary(senior_model)$r.squared, summary(senior_model_ctrl)$r.squared))
+  cat("Controls & No & Yes & No & Yes \\\\\n")
+  cat("\\bottomrule\n")
+  cat("\\end{tabular}\n")
+  cat("\\parbox{\\linewidth}{\\footnotesize Note: Clustered standard errors at department level in parentheses. Junior/Senior split at median of seminar-level mean years since PhD. Controls include department ranking, total faculty, and fraction URM faculty. Significance: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001.}\n")
+  cat("\\end{table}\n\n")
+  
+  # Test for difference between groups
+  cat("\\textbf{Test for Difference Between Groups:}\n\n")
+  
+  # Pooled model with triple interaction
+  pooled_data <- analysis_data_split %>%
+    mutate(is_senior = as.numeric(seniority_group == "Senior"))
+  
+  diff_model <- lm(as.formula(paste0(outcome_var, " ~ treatment * is_senior")),
+                   data = pooled_data)
+  diff_model$cluster_se <- get_clustered_se(diff_model, pooled_data$department_std)
+  
+  interaction_coef <- coef(diff_model)["treatment:is_senior"]
+  interaction_se <- diff_model$cluster_se["treatment:is_senior"]
+  interaction_t <- interaction_coef / interaction_se
+  interaction_pval <- 2 * pt(-abs(interaction_t), df = df.residual(diff_model))
+  
+  cat(sprintf("Difference in treatment effect (Senior - Junior): %.4f (SE = %.4f), p = %.4f%s\n\n",
+              interaction_coef, interaction_se, interaction_pval,
+              format_sig(interaction_pval)))
+}
+
+# Run subgroup analyses
+run_subgroup_analysis("pct_black", "Percentage Black Speakers")
+run_subgroup_analysis("has_any_black", "Any Black Speakers")
 ```
 
 ```{r final-significant-results, results='asis'}
