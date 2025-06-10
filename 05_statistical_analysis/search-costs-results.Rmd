@@ -374,6 +374,7 @@ escape_latex <- function(x) {
   x <- gsub("\\^", "\\\\textasciicircum{}", x)
   return(x)
 }
+write.csv(data, 'master-data.csv', row.names=F)
 ```
 
 
