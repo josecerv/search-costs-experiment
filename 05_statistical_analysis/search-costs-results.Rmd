@@ -46,7 +46,7 @@ library(car)  # For linearHypothesis
 # Set stargazer options
 options(width = 200)
 
-data <- read.csv("outputs/master_analysis_dataset.csv")
+data <- read.csv("outputs/master_analysis_dataset_final.csv")
 
 
 # Data validation
@@ -253,9 +253,11 @@ create_regression_table <- function(models, title, label, demographic_group = NU
     
     # Headers for different table types - try without multicolumn to diagnose
     if (n_models == 6) {
-      if (is_moderator) {
-        # Place headers above individual columns without multicolumn
-        cat(" & \\% URM & \\% URM & Count URM & Count URM & Any URM & Any URM \\\\\n")
+      if (is_moderator && !is.null(demographic_group)) {
+        # Use demographic_group for moderation tables too
+        cat(paste0(" & \\% ", demographic_group, " & \\% ", demographic_group, 
+                   " & Count ", demographic_group, " & Count ", demographic_group,
+                   " & Any ", demographic_group, " & Any ", demographic_group, " \\\\\n"))
       } else if (!is.null(demographic_group)) {
         cat(paste0(" & \\% ", demographic_group, " & \\% ", demographic_group, 
                    " & Count ", demographic_group, " & Count ", demographic_group,
@@ -360,6 +362,9 @@ data <- create_intersectional_vars(data, "hispanic", "male", "hispanic_male")
 
 # Initialize list to store all models for significant results extraction
 all_models_list <- list()
+
+# Source moderation functions
+source("moderation_analysis_fixed.R")
 
 # Function to escape LaTeX special characters
 escape_latex <- function(x) {
@@ -1508,7 +1513,7 @@ data_fall <- data %>% filter(has_fall_speakers == 1)
 pct_fall_urm_m1 <- run_regression(paste("fall_pct_urm ~ treatment +", paste(base_controls, collapse = " + ")), data_fall)
 count_fall_urm_m1 <- run_regression(paste("fall_num_urm ~ treatment +", paste(base_controls, collapse = " + ")), data_fall)
 binary_fall_urm_m1 <- run_regression(paste("fall_has_any_urm ~ treatment +", paste(base_controls, collapse = " + ")), data_fall)
-summary(pct_fall_urm_m1)
+
 
 pct_fall_urm_m2 <- run_regression(paste("fall_pct_urm ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_fall)
 count_fall_urm_m2 <- run_regression(paste("fall_num_urm ~ treatment +", paste(c(base_controls, extended_controls), collapse = " + ")), data_fall)
@@ -1680,467 +1685,305 @@ create_stargazer_table(
 
 ## Moderation by Department Ranking
 
-```{r mod-ranking}
-# Create centered moderator
-data$moderator <- data$dept_ranking - mean(data$dept_ranking, na.rm = TRUE)
-data_mod <- data %>% filter(!is.na(moderator))
-
-# cat(paste0("Department ranking moderation analysis (n = ", nrow(data_mod), ")\n\n"))
-
-# Run moderation models
-pct_mod_m1 <- run_regression(paste("pct_urm ~ treatment * moderator +", paste(base_controls, collapse = " + ")), data_mod)
-count_mod_m1 <- run_regression(paste("num_urm ~ treatment * moderator +", paste(base_controls, collapse = " + ")), data_mod)
-binary_mod_m1 <- run_regression(paste("has_any_urm ~ treatment * moderator +", paste(base_controls, collapse = " + ")), data_mod)
-
-pct_mod_m2 <- run_regression(paste("pct_urm ~ treatment * moderator +", 
-                                  paste(setdiff(c(base_controls, extended_controls), c("dept_ranking", "missing_dept_rank")), 
-                                        collapse = " + ")), data_mod)
-count_mod_m2 <- run_regression(paste("num_urm ~ treatment * moderator +", 
-                                    paste(setdiff(c(base_controls, extended_controls), c("dept_ranking", "missing_dept_rank")), 
-                                          collapse = " + ")), data_mod)
-binary_mod_m2 <- run_regression(paste("has_any_urm ~ treatment * moderator +", 
-                                     paste(setdiff(c(base_controls, extended_controls), c("dept_ranking", "missing_dept_rank")), 
-                                           collapse = " + ")), data_mod)
-
-# Add to models list
-all_models_list <- append(all_models_list, list(
-  list(model = pct_mod_m1, analysis = "Department Rank", outcome = "% URM", model_type = "Simple",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Dept Ranking (centered)", "Treatment $\\times$ Dept Ranking", "Constant")),
-  list(model = pct_mod_m2, analysis = "Department Rank", outcome = "% URM", model_type = "Extended",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Dept Ranking (centered)", "Treatment $\\times$ Dept Ranking", "Constant")),
-  list(model = count_mod_m1, analysis = "Department Rank", outcome = "Count URM", model_type = "Simple",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Dept Ranking (centered)", "Treatment $\\times$ Dept Ranking", "Constant")),
-  list(model = count_mod_m2, analysis = "Department Rank", outcome = "Count URM", model_type = "Extended",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Dept Ranking (centered)", "Treatment $\\times$ Dept Ranking", "Constant")),
-  list(model = binary_mod_m1, analysis = "Department Rank", outcome = "Any URM", model_type = "Simple",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Dept Ranking (centered)", "Treatment $\\times$ Dept Ranking", "Constant")),
-  list(model = binary_mod_m2, analysis = "Department Rank", outcome = "Any URM", model_type = "Extended",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Dept Ranking (centered)", "Treatment $\\times$ Dept Ranking", "Constant"))
-))
-
-create_moderator_table(
-  list(pct_mod_m1, pct_mod_m2, count_mod_m1, count_mod_m2, binary_mod_m1, binary_mod_m2),
-  c("\\\\% URM", "\\\\% URM", "Count URM", "Count URM", "Any URM", "Any URM"),
-  "Effect by Department Rank",
-  "tab:mod_ranking",
-  "Dept Ranking (centered)"
-)
+```{r mod-ranking, results='asis'}
+mod_results <- run_comprehensive_moderation_fixed("dept_ranking", "Department Ranking", 
+                                                exclude_controls = c("dept_ranking", "missing_dept_rank"))
+all_models_list <- append(all_models_list, mod_results)
 ```
 
 \newpage
 
 ## Moderation by Total Faculty Size
 
-```{r mod-faculty-size}
-# Create centered moderator  
-data$moderator <- data$total_faculty - mean(data$total_faculty, na.rm = TRUE)
-data_mod <- data %>% filter(!is.na(moderator))
-
-# cat(paste0("Department faculty size moderation analysis (n = ", nrow(data_mod), ")\n\n"))
-
-# Run moderation models
-pct_mod_m1 <- run_regression(paste("pct_urm ~ treatment * moderator +", paste(base_controls, collapse = " + ")), data_mod)
-count_mod_m1 <- run_regression(paste("num_urm ~ treatment * moderator +", paste(base_controls, collapse = " + ")), data_mod)
-binary_mod_m1 <- run_regression(paste("has_any_urm ~ treatment * moderator +", paste(base_controls, collapse = " + ")), data_mod)
-
-pct_mod_m2 <- run_regression(paste("pct_urm ~ treatment * moderator +", 
-                                  paste(setdiff(c(base_controls, extended_controls), "total_faculty"), 
-                                        collapse = " + ")), data_mod)
-count_mod_m2 <- run_regression(paste("num_urm ~ treatment * moderator +", 
-                                    paste(setdiff(c(base_controls, extended_controls), "total_faculty"), 
-                                          collapse = " + ")), data_mod)
-binary_mod_m2 <- run_regression(paste("has_any_urm ~ treatment * moderator +", 
-                                     paste(setdiff(c(base_controls, extended_controls), "total_faculty"), 
-                                           collapse = " + ")), data_mod)
-
-# Add to models list
-all_models_list <- append(all_models_list, list(
-  list(model = pct_mod_m1, analysis = "Faculty Size", outcome = "% URM", model_type = "Simple",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Total Faculty (centered)", "Treatment $\\times$ Faculty Size", "Constant")),
-  list(model = pct_mod_m2, analysis = "Faculty Size", outcome = "% URM", model_type = "Extended",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Total Faculty (centered)", "Treatment $\\times$ Faculty Size", "Constant")),
-  list(model = count_mod_m1, analysis = "Faculty Size", outcome = "Count URM", model_type = "Simple",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Total Faculty (centered)", "Treatment $\\times$ Faculty Size", "Constant")),
-  list(model = count_mod_m2, analysis = "Faculty Size", outcome = "Count URM", model_type = "Extended",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Total Faculty (centered)", "Treatment $\\times$ Faculty Size", "Constant")),
-  list(model = binary_mod_m1, analysis = "Faculty Size", outcome = "Any URM", model_type = "Simple",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Total Faculty (centered)", "Treatment $\\times$ Faculty Size", "Constant")),
-  list(model = binary_mod_m2, analysis = "Faculty Size", outcome = "Any URM", model_type = "Extended",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Total Faculty (centered)", "Treatment $\\times$ Faculty Size", "Constant"))
-))
-
-create_moderator_table(
-  list(pct_mod_m1, pct_mod_m2, count_mod_m1, count_mod_m2, binary_mod_m1, binary_mod_m2),
-  c("\\\\% URM", "\\\\% URM", "Count URM", "Count URM", "Any URM", "Any URM"),
-  "Effect by Faculty Size",
-  "tab:mod_faculty_size",
-  "Total Faculty (centered)"
-)
+```{r mod-faculty-size, results='asis'}
+mod_results <- run_comprehensive_moderation_fixed("total_faculty", "Total Faculty", 
+                                                exclude_controls = c("total_faculty"))
+all_models_list <- append(all_models_list, mod_results)
 ```
 
 \newpage
 
 ## Moderation by URM Faculty in Peer Departments
 
-```{r mod-peer-urm}
-# Create centered moderator
-data$moderator <- data$total_urm_peer_faculty - mean(data$total_urm_peer_faculty, na.rm = TRUE)
-data_mod <- data %>% filter(!is.na(moderator))
-
-# cat(paste0("Peer departments URM faculty moderation analysis (n = ", nrow(data_mod), ")\n\n"))
-
-# Run moderation models
-pct_mod_m1 <- run_regression(paste("pct_urm ~ treatment * moderator +", paste(base_controls, collapse = " + ")), data_mod)
-count_mod_m1 <- run_regression(paste("num_urm ~ treatment * moderator +", paste(base_controls, collapse = " + ")), data_mod)
-binary_mod_m1 <- run_regression(paste("has_any_urm ~ treatment * moderator +", paste(base_controls, collapse = " + ")), data_mod)
-
-pct_mod_m2 <- run_regression(paste("pct_urm ~ treatment * moderator +", 
-                                  paste(setdiff(c(base_controls, extended_controls), c("total_urm_peer_faculty", "total_peer_departments")), 
-                                        collapse = " + ")), data_mod)
-count_mod_m2 <- run_regression(paste("num_urm ~ treatment * moderator +", 
-                                    paste(setdiff(c(base_controls, extended_controls), c("total_urm_peer_faculty", "total_peer_departments")), 
-                                          collapse = " + ")), data_mod)
-binary_mod_m2 <- run_regression(paste("has_any_urm ~ treatment * moderator +", 
-                                     paste(setdiff(c(base_controls, extended_controls), c("total_urm_peer_faculty", "total_peer_departments")), 
-                                           collapse = " + ")), data_mod)
-
-# Add to models list
-all_models_list <- append(all_models_list, list(
-  list(model = pct_mod_m1, analysis = "Peer URM Faculty", outcome = "% URM", model_type = "Simple",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Peer URM Faculty (centered)", "Treatment $\\times$ Peer URM Faculty", "Constant")),
-  list(model = pct_mod_m2, analysis = "Peer URM Faculty", outcome = "% URM", model_type = "Extended",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Peer URM Faculty (centered)", "Treatment $\\times$ Peer URM Faculty", "Constant")),
-  list(model = count_mod_m1, analysis = "Peer URM Faculty", outcome = "Count URM", model_type = "Simple",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Peer URM Faculty (centered)", "Treatment $\\times$ Peer URM Faculty", "Constant")),
-  list(model = count_mod_m2, analysis = "Peer URM Faculty", outcome = "Count URM", model_type = "Extended",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Peer URM Faculty (centered)", "Treatment $\\times$ Peer URM Faculty", "Constant")),
-  list(model = binary_mod_m1, analysis = "Peer URM Faculty", outcome = "Any URM", model_type = "Simple",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Peer URM Faculty (centered)", "Treatment $\\times$ Peer URM Faculty", "Constant")),
-  list(model = binary_mod_m2, analysis = "Peer URM Faculty", outcome = "Any URM", model_type = "Extended",
-       var_names = c("treatment", "moderator", "treatment:moderator", "Constant"), 
-       var_labels = c("Treatment", "Peer URM Faculty (centered)", "Treatment $\\times$ Peer URM Faculty", "Constant"))
-))
-
-create_moderator_table(
-  list(pct_mod_m1, pct_mod_m2, count_mod_m1, count_mod_m2, binary_mod_m1, binary_mod_m2),
-  c("\\\\% URM", "\\\\% URM", "Count URM", "Count URM", "Any URM", "Any URM"),
-  "Effect by Peer URM Faculty",
-  "tab:mod_peer_urm",
-  "Peer URM Faculty (centered)"
-)
+```{r mod-peer-urm, results='asis'}
+mod_results <- run_comprehensive_moderation_fixed("total_urm_peer_faculty", "Peer URM Faculty", 
+                                                exclude_controls = c("total_urm_peer_faculty", "total_peer_departments"))
+all_models_list <- append(all_models_list, mod_results)
 ```
 
 \newpage
 
-## Exploratory Analysis: Seniority Moderation
+## Moderation by % Female Email Recipients
 
-### Analysis 1: Does speaker seniority moderate the treatment effect?
+```{r mod-female-recipients, results='asis'}
+mod_results <- run_comprehensive_moderation_fixed("pct_female_recipients", "\\% Female Recipients", 
+                                                exclude_controls = NULL, center = FALSE)
+all_models_list <- append(all_models_list, mod_results)
+```
 
-```{r seniority-moderation, warning=FALSE, message=FALSE}
-cat("\n\n\\clearpage\n")
-cat("\\section{Exploratory Analysis: Seniority Moderation}\n\n")
+\newpage
 
-# First, let's examine the distribution of years since PhD
-cat("\\subsection{Distribution of Years Since PhD}\n\n")
+## Moderation by % URM Email Recipients
 
-# Use the aggregated seniority data at the seminar level
-analysis_data_seniority <- data %>%
-  filter(!is.na(mean_years_from_phd) & mean_years_from_phd > 0)
+```{r mod-urm-recipients, results='asis'}
+mod_results <- run_comprehensive_moderation_fixed("pct_urm_recipients", "\\% URM Recipients", 
+                                                exclude_controls = NULL, center = FALSE)
+all_models_list <- append(all_models_list, mod_results)
+```
+
+\newpage
+
+## Moderation by % URM Faculty in Department
+
+```{r mod-urm-faculty, results='asis'}
+mod_results <- run_comprehensive_moderation_fixed("frac_urm_faculty", "\\% URM Faculty", 
+                                                exclude_controls = c("frac_urm_faculty"), center = FALSE)
+all_models_list <- append(all_models_list, mod_results)
+```
+
+\newpage
+
+## Moderation by % Women Faculty in Department
+
+```{r mod-women-faculty, results='asis'}
+mod_results <- run_comprehensive_moderation_fixed("frac_women_faculty", "\\% Women Faculty", 
+                                                exclude_controls = c("frac_women_faculty"), center = FALSE)
+all_models_list <- append(all_models_list, mod_results)
+```
+
+\newpage
+
+## Moderation by Number of Distinct Seminars
+
+```{r mod-num-seminars, results='asis'}
+mod_results <- run_comprehensive_moderation_fixed("num_distinct_seminars", "Number of Seminars", 
+                                                exclude_controls = NULL)
+all_models_list <- append(all_models_list, mod_results)
+```
+
+\newpage
+
+## Junior vs Senior Speaker Analysis
+
+### Analysis: Treatment effects on representation by speaker career stage
+
+This analysis examines whether the treatment differentially affects the representation of junior versus senior speakers.
+We define:
+- **Junior speakers**: Those below the median years since PhD completion
+- **Senior speakers**: Those above the median years since PhD completion
+
+We analyze treatment effects on three types of outcomes for each demographic group (URM, Black, Hispanic):
+1. **Percentage**: What percentage of speakers from a demographic group are junior (or senior)?
+2. **Count**: How many speakers from a demographic group are junior (or senior)?
+3. **Binary**: Does the seminar have any junior (or senior) speakers from this demographic group?
+
+```{r seniority-analysis, warning=FALSE, message=FALSE, results='asis'}
+# Create comprehensive seniority analysis table
+create_seniority_table <- function(demographic_label, demographic_var) {
+  cat("\n\n")
+  cat("\\begin{table}[H]\n")
+  cat(sprintf("\\caption{Treatment Effects on Junior and Senior %s Speakers}\n", demographic_label))
+  cat("\\centering\n")
+  cat("\\footnotesize\n")
+  cat("\\begin{tabular}{lccccccc}\n")
+  cat("\\toprule\n")
+  cat(" & \\multicolumn{3}{c}{Junior Speakers} & \\multicolumn{3}{c}{Senior Speakers} \\\\\n")
+  cat("Outcome & Model 1 & Model 2 & & Model 1 & Model 2 \\\\\n")
+  cat("\\midrule\n")
+  
+  # Junior speaker outcomes
+  junior_outcomes <- list(
+    list(dv = paste0("pct_", demographic_var, "_junior"), label = "\\% of speakers"),
+    list(dv = paste0("num_", demographic_var, "_junior"), label = "Count"),
+    list(dv = paste0("has_any_", demographic_var, "_junior"), label = "Any (0/1)")
+  )
+  
+  # Senior speaker outcomes
+  senior_outcomes <- list(
+    list(dv = paste0("pct_", demographic_var, "_senior"), label = "\\% of speakers"),
+    list(dv = paste0("num_", demographic_var, "_senior"), label = "Count"),
+    list(dv = paste0("has_any_", demographic_var, "_senior"), label = "Any (0/1)")
+  )
+  
+  # Store models for all_models_list
+  seniority_models <- list()
+  
+  # Run models for each outcome
+  for (i in 1:3) {
+    cat(sprintf("%s & ", junior_outcomes[[i]]$label))
+    
+    # Junior Model 1
+    formula_j1 <- as.formula(paste0(junior_outcomes[[i]]$dv, " ~ treatment + ", 
+                                   paste(base_controls, collapse = " + ")))
+    model_j1 <- run_regression(formula_j1, data)
+    
+    if (!is.null(model_j1)) {
+      coef_j1 <- coef(model_j1)["treatment"]
+      se_j1 <- model_j1$cluster_se["treatment"]
+      t_j1 <- coef_j1 / se_j1
+      p_j1 <- 2 * pt(-abs(t_j1), df = df.residual(model_j1))
+      sig_j1 <- ifelse(p_j1 < 0.001, "***", ifelse(p_j1 < 0.01, "**", 
+                      ifelse(p_j1 < 0.05, "*", ifelse(p_j1 < 0.1, "+", ""))))
+      cat(sprintf("%.4f%s", coef_j1, sig_j1))
+      
+      seniority_models <- append(seniority_models, list(
+        list(model = model_j1, 
+             analysis = paste("Junior/Senior", demographic_label, "Speakers"),
+             outcome = paste("Junior", junior_outcomes[[i]]$label), 
+             model_type = "Simple")
+      ))
+    } else {
+      cat("--")
+    }
+    
+    cat(" & ")
+    
+    # Junior Model 2
+    formula_j2 <- as.formula(paste0(junior_outcomes[[i]]$dv, " ~ treatment + ", 
+                                   paste(c(base_controls, extended_controls), collapse = " + ")))
+    model_j2 <- run_regression(formula_j2, data)
+    
+    if (!is.null(model_j2)) {
+      coef_j2 <- coef(model_j2)["treatment"]
+      se_j2 <- model_j2$cluster_se["treatment"]
+      t_j2 <- coef_j2 / se_j2
+      p_j2 <- 2 * pt(-abs(t_j2), df = df.residual(model_j2))
+      sig_j2 <- ifelse(p_j2 < 0.001, "***", ifelse(p_j2 < 0.01, "**", 
+                      ifelse(p_j2 < 0.05, "*", ifelse(p_j2 < 0.1, "+", ""))))
+      cat(sprintf("%.4f%s", coef_j2, sig_j2))
+      
+      seniority_models <- append(seniority_models, list(
+        list(model = model_j2, 
+             analysis = paste("Junior/Senior", demographic_label, "Speakers"),
+             outcome = paste("Junior", junior_outcomes[[i]]$label), 
+             model_type = "Extended")
+      ))
+    } else {
+      cat("--")
+    }
+    
+    cat(" & & ")
+    
+    # Senior Model 1
+    formula_s1 <- as.formula(paste0(senior_outcomes[[i]]$dv, " ~ treatment + ", 
+                                   paste(base_controls, collapse = " + ")))
+    model_s1 <- run_regression(formula_s1, data)
+    
+    if (!is.null(model_s1)) {
+      coef_s1 <- coef(model_s1)["treatment"]
+      se_s1 <- model_s1$cluster_se["treatment"]
+      t_s1 <- coef_s1 / se_s1
+      p_s1 <- 2 * pt(-abs(t_s1), df = df.residual(model_s1))
+      sig_s1 <- ifelse(p_s1 < 0.001, "***", ifelse(p_s1 < 0.01, "**", 
+                      ifelse(p_s1 < 0.05, "*", ifelse(p_s1 < 0.1, "+", ""))))
+      cat(sprintf("%.4f%s", coef_s1, sig_s1))
+      
+      seniority_models <- append(seniority_models, list(
+        list(model = model_s1, 
+             analysis = paste("Junior/Senior", demographic_label, "Speakers"),
+             outcome = paste("Senior", senior_outcomes[[i]]$label), 
+             model_type = "Simple")
+      ))
+    } else {
+      cat("--")
+    }
+    
+    cat(" & ")
+    
+    # Senior Model 2
+    formula_s2 <- as.formula(paste0(senior_outcomes[[i]]$dv, " ~ treatment + ", 
+                                   paste(c(base_controls, extended_controls), collapse = " + ")))
+    model_s2 <- run_regression(formula_s2, data)
+    
+    if (!is.null(model_s2)) {
+      coef_s2 <- coef(model_s2)["treatment"]
+      se_s2 <- model_s2$cluster_se["treatment"]
+      t_s2 <- coef_s2 / se_s2
+      p_s2 <- 2 * pt(-abs(t_s2), df = df.residual(model_s2))
+      sig_s2 <- ifelse(p_s2 < 0.001, "***", ifelse(p_s2 < 0.01, "**", 
+                      ifelse(p_s2 < 0.05, "*", ifelse(p_s2 < 0.1, "+", ""))))
+      cat(sprintf("%.4f%s", coef_s2, sig_s2))
+      
+      seniority_models <- append(seniority_models, list(
+        list(model = model_s2, 
+             analysis = paste("Junior/Senior", demographic_label, "Speakers"),
+             outcome = paste("Senior", senior_outcomes[[i]]$label), 
+             model_type = "Extended")
+      ))
+    } else {
+      cat("--")
+    }
+    
+    cat(" \\\\\n")
+  }
+  
+  cat("\\midrule\n")
+  
+  # Add sample statistics
+  cat("\\textit{Mean (Control)} & & & & & \\\\\n")
+  
+  for (i in 1:3) {
+    control_data <- data[data$treatment == 0, ]
+    
+    # Junior control mean
+    junior_mean <- mean(control_data[[junior_outcomes[[i]]$dv]], na.rm = TRUE)
+    # Senior control mean  
+    senior_mean <- mean(control_data[[senior_outcomes[[i]]$dv]], na.rm = TRUE)
+    
+    cat(sprintf("%s & %.3f & & & %.3f & \\\\\n", 
+                junior_outcomes[[i]]$label, junior_mean, senior_mean))
+  }
+  
+  cat("\\bottomrule\n")
+  cat("\\end{tabular}\n")
+  cat("\\parbox{\\linewidth}{\\footnotesize Note: + p$<$0.1; * p$<$0.05; ** p$<$0.01; *** p$<$0.001. ")
+  cat("Standard errors clustered at the department level. ")
+  cat("Junior speakers are defined as those below the median years since PhD; senior speakers are above the median. ")
+  cat("Model 1 includes baseline controls; Model 2 adds extended controls.}\n")
+  cat("\\end{table}\n\n")
+  
+  # Add to global all_models_list
+  all_models_list <<- append(all_models_list, seniority_models)
+  
+  return(invisible(seniority_models))
+}
 
 # Summary statistics
-seniority_summary <- analysis_data_seniority %>%
+cat("\\subsection{Seniority Data Coverage}\n\n")
+
+seniority_summary <- data %>%
   summarise(
     n_seminars = n(),
-    n_departments = n_distinct(department_std),
-    mean_of_means = mean(mean_years_from_phd, na.rm = TRUE),
-    median_of_means = median(mean_years_from_phd, na.rm = TRUE),
-    sd_of_means = sd(mean_years_from_phd, na.rm = TRUE),
-    min_mean = min(mean_years_from_phd, na.rm = TRUE),
-    max_mean = max(mean_years_from_phd, na.rm = TRUE),
-    q25_mean = quantile(mean_years_from_phd, 0.25, na.rm = TRUE),
-    q75_mean = quantile(mean_years_from_phd, 0.75, na.rm = TRUE)
+    n_with_junior = sum(num_junior_speakers > 0, na.rm = TRUE),
+    n_with_senior = sum(num_senior_speakers > 0, na.rm = TRUE),
+    mean_junior = mean(num_junior_speakers, na.rm = TRUE),
+    mean_senior = mean(num_senior_speakers, na.rm = TRUE),
+    median_phd_years = median(median_years_from_phd, na.rm = TRUE)
   )
 
-cat(sprintf("\\textbf{Seniority Data Coverage:}\n\n"))
-cat(sprintf("- Total seminars with seniority data: %d (%.1f\\%% of total)\n", 
-            seniority_summary$n_seminars, 
-            100 * seniority_summary$n_seminars / nrow(data)))
-cat(sprintf("- Number of departments: %d\n", seniority_summary$n_departments))
-cat(sprintf("- Mean of seminar-level mean years since PhD: %.1f (SD = %.1f)\n", 
-            seniority_summary$mean_of_means, seniority_summary$sd_of_means))
-cat(sprintf("- Median of seminar-level mean years since PhD: %.1f\n", seniority_summary$median_of_means))
-cat(sprintf("- Range of seminar means: %.1f to %.1f years\n", 
-            seniority_summary$min_mean, seniority_summary$max_mean))
-cat(sprintf("- IQR of seminar means: %.1f to %.1f years\n\n", 
-            seniority_summary$q25_mean, seniority_summary$q75_mean))
+cat(sprintf("Total seminars analyzed: %d\\\\[0.3em]\n", seniority_summary$n_seminars))
+cat(sprintf("Seminars with junior speakers: %d (%.1f\\%%)\\\\[0.3em]\n", 
+            seniority_summary$n_with_junior,
+            100 * seniority_summary$n_with_junior / seniority_summary$n_seminars))
+cat(sprintf("Seminars with senior speakers: %d (%.1f\\%%)\\\\[0.3em]\n",
+            seniority_summary$n_with_senior,
+            100 * seniority_summary$n_with_senior / seniority_summary$n_seminars))
+cat(sprintf("Mean junior speakers per seminar: %.2f\\\\[0.3em]\n", seniority_summary$mean_junior))
+cat(sprintf("Mean senior speakers per seminar: %.2f\\\\[0.3em]\n", seniority_summary$mean_senior))
+cat(sprintf("Median years since PhD (cutoff): %.1f\\\\[0.5em]\n\n", seniority_summary$median_phd_years))
+# Run analyses for each demographic group
+cat("\\subsection{URM Speakers by Career Stage}\n\n")
+create_seniority_table("URM", "urm")
 
-# Continuous moderation analysis
-cat("\\subsection{Continuous Moderation Analysis}\n\n")
-cat("We test whether the average seniority of speakers in a seminar moderates the treatment effect on Black speaker representation.\n\n")
-cat("Note: Seniority is measured as the mean years since PhD for speakers in each seminar.\n\n")
+cat("\\subsection{Black Speakers by Career Stage}\n\n")
+create_seniority_table("Black", "black")
 
-# Function to run seniority moderation analysis
-run_seniority_moderation <- function(outcome_var, outcome_label) {
-  cat(sprintf("\\subsubsection{Outcome: %s}\n\n", outcome_label))
-  
-  # Center years since PhD for interpretation
-  median_years <- median(analysis_data_seniority$mean_years_from_phd, na.rm = TRUE)
-  
-  model_data <- analysis_data_seniority %>%
-    filter(!is.na(mean_years_from_phd) & !is.na(!!sym(outcome_var))) %>%
-    mutate(years_since_phd_centered = mean_years_from_phd - median_years)
-  
-  # Model 1: Main effects only
-  formula1 <- as.formula(paste0(outcome_var, " ~ treatment + years_since_phd_centered"))
-  model1 <- lm(formula1, data = model_data)
-  model1$cluster_se <- get_clustered_se(model1, model_data$department_std)
-  
-  # Model 2: With interaction
-  formula2 <- as.formula(paste0(outcome_var, " ~ treatment * years_since_phd_centered"))
-  model2 <- lm(formula2, data = model_data)
-  model2$cluster_se <- get_clustered_se(model2, model_data$department_std)
-  
-  # Model 3: With controls
-  formula3 <- as.formula(paste0(outcome_var, " ~ treatment * years_since_phd_centered + ",
-                               "dept_ranking + total_faculty + frac_urm_faculty"))
-  model3 <- lm(formula3, data = model_data)
-  model3$cluster_se <- get_clustered_se(model3, model_data$department_std)
-  
-  # Display results
-  cat("\\begin{table}[H]\n")
-  cat(sprintf("\\caption{Seniority Moderation Analysis: %s}\n", outcome_label))
-  cat("\\centering\n")
-  cat("\\begin{tabular}{lccc}\n")
-  cat("\\toprule\n")
-  cat(" & (1) & (2) & (3) \\\\\n")
-  cat(" & Main Effects & Interaction & With Controls \\\\\n")
-  cat("\\midrule\n")
-  
-  # Extract coefficients
-  models <- list(model1, model2, model3)
-  coef_names <- c("Treatment", "Years Since PhD (centered)", "Treatment × Years Since PhD")
-  
-  for (coef_name in coef_names) {
-    if (coef_name == "Treatment") var_name <- "treatment"
-    else if (coef_name == "Years Since PhD (centered)") var_name <- "years_since_phd_centered"
-    else var_name <- "treatment:years_since_phd_centered"
-    
-    cat(sprintf("%s & ", coef_name))
-    
-    for (i in 1:3) {
-      if (var_name %in% names(coef(models[[i]]))) {
-        coef_val <- coef(models[[i]])[var_name]
-        se_val <- models[[i]]$cluster_se[var_name]
-        t_stat <- coef_val / se_val
-        pval <- 2 * pt(-abs(t_stat), df = df.residual(models[[i]]))
-        
-        sig_stars <- ifelse(pval < 0.001, "***",
-                          ifelse(pval < 0.01, "**",
-                                ifelse(pval < 0.05, "*",
-                                      ifelse(pval < 0.1, "+", ""))))
-        
-        cat(sprintf("%.4f%s", coef_val, sig_stars))
-        if (i < 3) cat(" & ") else cat(" \\\\\n")
-      } else {
-        cat(" ")
-        if (i < 3) cat(" & ") else cat(" \\\\\n")
-      }
-    }
-    
-    # Print standard errors on next line
-    cat(sprintf(" & "))
-    for (i in 1:3) {
-      if (var_name %in% names(coef(models[[i]]))) {
-        se_val <- models[[i]]$cluster_se[var_name]
-        cat(sprintf("(%.4f)", se_val))
-        if (i < 3) cat(" & ") else cat(" \\\\\n")
-      } else {
-        cat(" ")
-        if (i < 3) cat(" & ") else cat(" \\\\\n")
-      }
-    }
-  }
-  
-  cat("\\midrule\n")
-  cat(sprintf("Observations & %d & %d & %d \\\\\n", 
-              nrow(model1$model), nrow(model2$model), nrow(model3$model)))
-  cat(sprintf("R-squared & %.3f & %.3f & %.3f \\\\\n",
-              summary(model1)$r.squared, summary(model2)$r.squared, summary(model3)$r.squared))
-  cat("Controls & No & No & Yes \\\\\n")
-  cat("\\bottomrule\n")
-  cat("\\end{tabular}\n")
-  cat("\\parbox{\\linewidth}{\\footnotesize Note: Clustered standard errors at department level in parentheses. Years since PhD is the mean years since PhD for speakers in each seminar, centered at the median. Controls include department ranking, total faculty, and fraction URM faculty. Significance: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001.}\n")
-  cat("\\end{table}\n\n")
-  
-  # Return models for later use
-  return(list(main = model1, interaction = model2, controls = model3))
-}
-
-# Run for both outcomes
-black_seniority_models <- run_seniority_moderation("pct_black", "Percentage Black Speakers")
-any_black_seniority_models <- run_seniority_moderation("has_any_black", "Any Black Speakers")
-
-# Median split analysis
-cat("\\subsection{Subgroup Analysis: Seminars with Senior vs Junior Speakers}\n\n")
-
-# Create senior/junior split based on mean years since PhD
-analysis_data_split <- analysis_data_seniority %>%
-  filter(!is.na(mean_years_from_phd)) %>%
-  mutate(
-    seniority_group = if_else(mean_years_from_phd > median(mean_years_from_phd, na.rm = TRUE),
-                             "Senior", "Junior")
-  )
-
-# Summary by group
-split_summary <- analysis_data_split %>%
-  group_by(seniority_group) %>%
-  summarise(
-    n = n(),
-    mean_years = mean(mean_years_from_phd, na.rm = TRUE),
-    min_years = min(mean_years_from_phd, na.rm = TRUE),
-    max_years = max(mean_years_from_phd, na.rm = TRUE)
-  )
-
-cat("\\textbf{Median Split Groups:}\n\n")
-for (i in 1:nrow(split_summary)) {
-  cat(sprintf("- Seminars with %s speakers (n=%d): Mean = %.1f years, Range = %.1f-%.1f years\n",
-              tolower(split_summary$seniority_group[i]),
-              split_summary$n[i],
-              split_summary$mean_years[i],
-              split_summary$min_years[i],
-              split_summary$max_years[i]))
-}
-cat("\n")
-
-# Function for subgroup analysis
-run_subgroup_analysis <- function(outcome_var, outcome_label) {
-  cat(sprintf("\\subsubsection{Outcome: %s}\n\n", outcome_label))
-  
-  # Run models for each subgroup
-  junior_data <- filter(analysis_data_split, seniority_group == "Junior")
-  senior_data <- filter(analysis_data_split, seniority_group == "Senior")
-  
-  # Simple models
-  junior_model <- lm(as.formula(paste0(outcome_var, " ~ treatment")), data = junior_data)
-  junior_model$cluster_se <- get_clustered_se(junior_model, junior_data$department_std)
-  
-  senior_model <- lm(as.formula(paste0(outcome_var, " ~ treatment")), data = senior_data)
-  senior_model$cluster_se <- get_clustered_se(senior_model, senior_data$department_std)
-  
-  # With controls
-  control_formula <- paste0(outcome_var, " ~ treatment + dept_ranking + total_faculty + ",
-                           "frac_urm_faculty")
-  
-  junior_model_ctrl <- lm(as.formula(control_formula), data = junior_data)
-  junior_model_ctrl$cluster_se <- get_clustered_se(junior_model_ctrl, junior_data$department_std)
-  
-  senior_model_ctrl <- lm(as.formula(control_formula), data = senior_data)  
-  senior_model_ctrl$cluster_se <- get_clustered_se(senior_model_ctrl, senior_data$department_std)
-  
-  # Create comparison table
-  cat("\\begin{table}[H]\n")
-  cat(sprintf("\\caption{Subgroup Analysis by Seniority: %s}\n", outcome_label))
-  cat("\\centering\n")
-  cat("\\begin{tabular}{lcccc}\n")
-  cat("\\toprule\n")
-  cat(" & \\multicolumn{2}{c}{Seminars with Junior Speakers} & \\multicolumn{2}{c}{Seminars with Senior Speakers} \\\\\n")
-  cat(" & (1) & (2) & (3) & (4) \\\\\n")
-  cat(" & Simple & With Controls & Simple & With Controls \\\\\n")
-  cat("\\midrule\n")
-  
-  # Treatment coefficient
-  junior_coef <- coef(junior_model)["treatment"]
-  junior_se <- junior_model$cluster_se["treatment"]
-  junior_t <- junior_coef / junior_se
-  junior_pval <- 2 * pt(-abs(junior_t), df = df.residual(junior_model))
-  
-  junior_coef_ctrl <- coef(junior_model_ctrl)["treatment"]
-  junior_se_ctrl <- junior_model_ctrl$cluster_se["treatment"]
-  junior_t_ctrl <- junior_coef_ctrl / junior_se_ctrl
-  junior_pval_ctrl <- 2 * pt(-abs(junior_t_ctrl), df = df.residual(junior_model_ctrl))
-  
-  senior_coef <- coef(senior_model)["treatment"]
-  senior_se <- senior_model$cluster_se["treatment"]
-  senior_t <- senior_coef / senior_se
-  senior_pval <- 2 * pt(-abs(senior_t), df = df.residual(senior_model))
-  
-  senior_coef_ctrl <- coef(senior_model_ctrl)["treatment"]
-  senior_se_ctrl <- senior_model_ctrl$cluster_se["treatment"]
-  senior_t_ctrl <- senior_coef_ctrl / senior_se_ctrl
-  senior_pval_ctrl <- 2 * pt(-abs(senior_t_ctrl), df = df.residual(senior_model_ctrl))
-  
-  # Format significance stars
-  format_sig <- function(p) {
-    ifelse(p < 0.001, "***", ifelse(p < 0.01, "**", ifelse(p < 0.05, "*", ifelse(p < 0.1, "+", ""))))
-  }
-  
-  cat(sprintf("Treatment & %.4f%s & %.4f%s & %.4f%s & %.4f%s \\\\\n",
-              junior_coef, format_sig(junior_pval),
-              junior_coef_ctrl, format_sig(junior_pval_ctrl),
-              senior_coef, format_sig(senior_pval),
-              senior_coef_ctrl, format_sig(senior_pval_ctrl)))
-  
-  cat(sprintf(" & (%.4f) & (%.4f) & (%.4f) & (%.4f) \\\\\n",
-              junior_se, junior_se_ctrl, senior_se, senior_se_ctrl))
-  
-  cat("\\midrule\n")
-  cat(sprintf("Observations & %d & %d & %d & %d \\\\\n",
-              nrow(junior_model$model), nrow(junior_model_ctrl$model),
-              nrow(senior_model$model), nrow(senior_model_ctrl$model)))
-  cat(sprintf("R-squared & %.3f & %.3f & %.3f & %.3f \\\\\n",
-              summary(junior_model)$r.squared, summary(junior_model_ctrl)$r.squared,
-              summary(senior_model)$r.squared, summary(senior_model_ctrl)$r.squared))
-  cat("Controls & No & Yes & No & Yes \\\\\n")
-  cat("\\bottomrule\n")
-  cat("\\end{tabular}\n")
-  cat("\\parbox{\\linewidth}{\\footnotesize Note: Clustered standard errors at department level in parentheses. Junior/Senior split at median of seminar-level mean years since PhD. Controls include department ranking, total faculty, and fraction URM faculty. Significance: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001.}\n")
-  cat("\\end{table}\n\n")
-  
-  # Test for difference between groups
-  cat("\\textbf{Test for Difference Between Groups:}\n\n")
-  
-  # Pooled model with triple interaction
-  pooled_data <- analysis_data_split %>%
-    mutate(is_senior = as.numeric(seniority_group == "Senior"))
-  
-  diff_model <- lm(as.formula(paste0(outcome_var, " ~ treatment * is_senior")),
-                   data = pooled_data)
-  diff_model$cluster_se <- get_clustered_se(diff_model, pooled_data$department_std)
-  
-  interaction_coef <- coef(diff_model)["treatment:is_senior"]
-  interaction_se <- diff_model$cluster_se["treatment:is_senior"]
-  interaction_t <- interaction_coef / interaction_se
-  interaction_pval <- 2 * pt(-abs(interaction_t), df = df.residual(diff_model))
-  
-  cat(sprintf("Difference in treatment effect (Senior - Junior): %.4f (SE = %.4f), p = %.4f%s\n\n",
-              interaction_coef, interaction_se, interaction_pval,
-              format_sig(interaction_pval)))
-}
-
-# Run subgroup analyses
-run_subgroup_analysis("pct_black", "Percentage Black Speakers")
-run_subgroup_analysis("has_any_black", "Any Black Speakers")
+cat("\\subsection{Hispanic Speakers by Career Stage}\n\n")
+create_seniority_table("Hispanic", "hispanic")
 ```
 
 ```{r final-significant-results, results='asis'}
-# Comprehensive function to extract ALL significant results including interactions
+# Function to extract significant results, focusing on interactions for moderation analyses
 extract_all_significant_results <- function() {
   results <- data.frame(
     Analysis = character(),
@@ -2167,15 +2010,14 @@ extract_all_significant_results <- function() {
         var_name_in_formula <- var_names[i] 
         var_label_for_table <- var_labels[i] 
         
+        # Skip non-interaction terms in moderation analyses
+        if (grepl("Moderation", analysis) && !grepl("×|:", var_label_for_table)) {
+          next
+        }
+        
         actual_coef_name <- var_name_in_formula
         if (var_name_in_formula == "Constant" && "(Intercept)" %in% names(model_coefs)) {
             actual_coef_name <- "(Intercept)"
-        } else if (var_name_in_formula == "treatment:moderator") {
-            if ("treatment:moderator" %in% names(model_coefs)) {
-                actual_coef_name <- "treatment:moderator"
-            } else if ("moderator:treatment" %in% names(model_coefs)) {
-                actual_coef_name <- "moderator:treatment"
-            }
         } 
 
         if (actual_coef_name %in% names(model_coefs)) {
@@ -2187,21 +2029,21 @@ extract_all_significant_results <- function() {
             p_val <- 2 * pt(-abs(t_val), df = length(model$residuals) - length(model_coefs))
             
             if (p_val < 0.1) {
-              # MODIFICATION: Only include treatment effects or treatment interactions
+              # Only include treatment effects or treatment interactions
               if (var_label_for_table != "Constant" && 
                   (var_label_for_table == "Treatment" || 
-                   grepl("Treatment", var_label_for_table))) {
+                   grepl("Treatment|×", var_label_for_table))) {
                 sig <- ifelse(p_val < 0.001, "***", 
                              ifelse(p_val < 0.01, "**",
                                    ifelse(p_val < 0.05, "*", "+")))
                 
                 category <- case_when(
                   grepl("Main Effect|Main Question", analysis) ~ "Main Effects",
-                  grepl("Demographic|Black|Hispanic|Female", analysis) ~ "Identity Analysis",
-                  grepl("Intersectional", analysis) ~ "Identity Analysis", 
+                  grepl("Demographic|Black|Hispanic|Female", analysis) && !grepl("Junior/Senior", analysis) ~ "Demographic Subgroups",
+                  grepl("Junior/Senior", analysis) ~ "Career Stage Analysis",
                   grepl("Semester", analysis) ~ "Semester Analysis",
                   grepl("Chemistry|Mathematics|Physics|Computer Science|Mechanical Engineering", analysis) ~ "Discipline Analysis",
-                  grepl("Moderation|Department Rank|Faculty Size|Peer URM", analysis) ~ "Moderation Analysis",
+                  grepl("Moderation", analysis) ~ "Heterogeneity Analysis",
                   TRUE ~ "Other"
                 )
                 
@@ -2218,7 +2060,7 @@ extract_all_significant_results <- function() {
                   Category = category,
                   stringsAsFactors = FALSE
                 ))
-              } # End of treatment filter
+              }
             }
           }
         }
@@ -2286,48 +2128,81 @@ if (nrow(all_significant_results) > 0) {
   cat("\n\n\\clearpage\n")
   cat("\\section{Summary of All Significant Results}\n\n")
   
-  cat("\\begin{table}[H]\n")
-  cat("\\caption{All Significant Results (p < 0.1) from All Analyses (Excluding Constant Term)}\n") # Caption updated
-  cat("\\label{tab:all_significant_results}\n")
-  cat("\\centering\n")
-  cat("{\\scriptsize % Start group for scriptsize and tabcolsep\n") 
-  cat("\\setlength{\\tabcolsep}{2pt} % Reduce column separation further\n") 
-  # MODIFICATION: Remove adjustbox for landscape table to avoid spacing issues
-  cat("\\begin{tabular}{p{3.2cm} p{2.3cm} p{2.3cm} l r r r r l}\n") 
-  cat("\\toprule\n")
-  cat("Analysis & Outcome & Variable & Model & Coef. & SE & t-stat & p-value & Sig. \\\\\n")
-  cat("\\midrule\n")
+  # Split table if more than 45 rows
+  split_at <- 45
+  n_tables <- ceiling(nrow(all_significant_results) / split_at)
   
-  current_category <- ""
-  for (i in 1:nrow(all_significant_results)) {
-    if (all_significant_results$Category[i] != current_category) {
-      if (current_category != "") {
-        cat("\\addlinespace[0.5em]\n") 
-      }
-      current_category <- all_significant_results$Category[i]
-      cat(sprintf("\\multicolumn{9}{l}{\\textbf{%s}} \\\\\n", escape_latex(current_category)))
-      cat("\\midrule\n")
+  for (table_num in 1:n_tables) {
+    start_row <- (table_num - 1) * split_at + 1
+    end_row <- min(table_num * split_at, nrow(all_significant_results))
+    
+    # Use landscape mode for wide table
+    cat("\\begin{landscape}\n")
+    cat("\\begin{table}[H]\n")
+    
+    if (n_tables > 1) {
+      cat(sprintf("\\caption{All Significant Results (p < 0.1) from All Analyses - Part %d of %d}\n", table_num, n_tables))
+    } else {
+      cat("\\caption{All Significant Results (p < 0.1) from All Analyses}\n")
     }
     
-    cat(sprintf("%s & %s & %s & %s & %s & %s & %s & %s & %s \\\\\n",
-                escape_latex(all_significant_results$Analysis[i]),
-                escape_latex(all_significant_results$Outcome[i]),
-                escape_latex(all_significant_results$Variable[i]),
-                escape_latex(all_significant_results$Model[i]),
-                all_significant_results$Coefficient[i],
-                all_significant_results$SE[i],
-                all_significant_results$t_stat[i],
-                all_significant_results$p_value_formatted[i],
-                all_significant_results$Significance[i]))
+    cat(sprintf("\\label{tab:all_significant_results%s}\n", ifelse(table_num > 1, paste0("_", table_num), "")))
+    cat("\\centering\n")
+    cat("\\footnotesize\n") # Use footnotesize instead of tiny
+    cat("\\setlength{\\tabcolsep}{4pt}\n") # Slightly larger column separation
+    # Adjust column widths
+    cat("\\begin{tabular}{p{3.5cm} p{2.2cm} p{3.2cm} p{1.2cm} r r r r c}\n") 
+    cat("\\toprule\n")
+    cat("Analysis & Outcome & Variable & Model & Coef. & SE & t-stat & p-value & Sig. \\\\\n")
+    cat("\\midrule\n")
+    
+    current_category <- ""
+    for (i in start_row:end_row) {
+      if (all_significant_results$Category[i] != current_category) {
+        if (current_category != "") {
+          cat("\\addlinespace[0.5em]\n") 
+        }
+        current_category <- all_significant_results$Category[i]
+        cat(sprintf("\\multicolumn{9}{l}{\\textbf{%s}} \\\\\n", escape_latex(current_category)))
+        cat("\\midrule\n")
+      }
+      
+      # Shorten analysis names for moderation
+      analysis_text <- all_significant_results$Analysis[i]
+      if (grepl("Moderation by", analysis_text)) {
+        analysis_text <- gsub("Moderation by ", "", analysis_text)
+      }
+      
+      cat(sprintf("%s & %s & %s & %s & %s & %s & %s & %s & %s \\\\\n",
+                  escape_latex(analysis_text),
+                  escape_latex(all_significant_results$Outcome[i]),
+                  escape_latex(all_significant_results$Variable[i]),
+                  escape_latex(all_significant_results$Model[i]),
+                  all_significant_results$Coefficient[i],
+                  all_significant_results$SE[i],
+                  all_significant_results$t_stat[i],
+                  all_significant_results$p_value_formatted[i],
+                  all_significant_results$Significance[i]))
+    }
+    
+    cat("\\bottomrule\n")
+    cat("\\end{tabular}\n")
+    
+    if (table_num == n_tables) {
+      cat("\\parbox{\\linewidth}{\\footnotesize Note: Significance levels: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001. ")
+      cat("SE = Clustered standard errors at department level. ")
+      cat("For moderation analyses, only significant interaction terms are shown.}\n")
+    }
+    
+    cat("\\end{table}\n")
+    cat("\\end{landscape}\n")
+    
+    if (table_num < n_tables) {
+      cat("\\clearpage\n")
+    }
   }
   
-  cat("\\bottomrule\n")
-  cat("\\end{tabular}\n")
-  cat("} % End group for scriptsize and tabcolsep\n") 
-  cat("\\parbox{\\linewidth}{\\footnotesize Note: Significance levels: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001. SE = Clustered standard errors at department level. Constant terms are excluded from this summary.}\n") # Note updated
-  cat("\\end{table}\n")
-  
 } else {
-  cat("\n\\textit{No significant results (p < 0.1) for treatment or interaction effects found in any of the analyses.}\n\n") # Message updated
+  cat("\n\\textit{No significant results (p < 0.1) for treatment or interaction effects found in any of the analyses.}\n\n")
 }
 ```

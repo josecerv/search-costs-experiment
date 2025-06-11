@@ -1,0 +1,569 @@
+department,num_email_recipients,num_female_recipients,pct_female_recipients,num_urm_recipients,pct_urm_recipients,num_black_recipients,pct_black_recipients,num_hispanic_recipients,pct_hispanic_recipients,num_assistant_prof_recipients,pct_assistant_prof_recipients,department_clean
+Arizona State University-Chemistry,3,2,0.6667,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Arizona State University
+Arizona State University-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Arizona State University
+Arizona State University-Mathematics,8,1,0.125,1,0.125,0,0.0,1,0.125,0,0.0,Mathematics-Arizona State University
+Arizona State University-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Arizona State University
+Arizona State University-Physics,5,1,0.2,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Arizona State University
+Auburn University-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Auburn University
+Auburn University-Computer Science,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Computer Science-Auburn University
+Auburn University-Mathematics,10,1,0.1,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Auburn University
+Auburn University-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Auburn University
+Baylor University-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Baylor University
+Baylor University-Mathematics,4,2,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Baylor University
+Baylor University-Physics,2,2,1.0,1,0.5,1,0.5,0,0.0,0,0.0,Physics-Baylor University
+Binghamton University-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Binghamton University
+Binghamton University-Mathematics,12,0,0.0,2,0.1667,1,0.0833,1,0.0833,0,0.0,Mathematics-Binghamton University
+Binghamton University-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Binghamton University
+Boston College-Mathematics,4,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Boston College
+Boston College-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Boston College
+Boston University-Chemistry,3,3,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Boston University
+Boston University-Computer Science,8,4,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Boston University
+Boston University-Mathematics,8,1,0.125,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Boston University
+Boston University-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Boston University
+Boston University-Physics,3,2,0.6667,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Boston University
+Brandeis University-Computer Science,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Brandeis University
+Brandeis University-Mathematics,5,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Brandeis University
+Brandeis University-Physics,3,2,0.6667,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Brandeis University
+Brown University-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Brown University
+Brown University-Computer Science,3,1,0.3333,1,0.3333,0,0.0,1,0.3333,0,0.0,Computer Science-Brown University
+Brown University-Mathematics,10,1,0.1,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Brown University
+Brown University-Mechanical Engineering,3,2,0.6667,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Brown University
+Brown University-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Brown University
+California Institute of Technology-Chemistry,4,2,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-California Institute of Technology
+California Institute of Technology-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-California Institute of Technology
+California Institute of Technology-Mathematics,5,1,0.2,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-California Institute of Technology
+California Institute of Technology-Mechanical Engineering,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Mechanical Engineering-California Institute of Technology
+California Institute of Technology-Physics,4,2,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-California Institute of Technology
+Carnegie Mellon University-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Carnegie Mellon University
+Carnegie Mellon University-Computer Science,9,2,0.2222,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Carnegie Mellon University
+Carnegie Mellon University-Mathematics,5,1,0.2,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Carnegie Mellon University
+Carnegie Mellon University-Mechanical Engineering,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Mechanical Engineering-Carnegie Mellon University
+Case Western Reserve University-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Case Western Reserve University
+Case Western Reserve University-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Case Western Reserve University
+Case Western Reserve University-Mathematics,2,2,1.0,1,0.5,1,0.5,0,0.0,0,0.0,Mathematics-Case Western Reserve University
+Case Western Reserve University-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Case Western Reserve University
+Clemson University-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Clemson University
+Clemson University-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Clemson University
+Clemson University-Mathematics,3,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Clemson University
+Clemson University-Mechanical Engineering,3,1,0.3333,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Clemson University
+Clemson University-Physics,4,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Clemson University
+Colorado School of Mines-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Colorado School of Mines
+Colorado School of Mines-Computer Science,2,2,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Colorado School of Mines
+Colorado School of Mines-Mathematics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Colorado School of Mines
+Colorado School of Mines-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Colorado School of Mines
+Colorado School of Mines-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Colorado School of Mines
+Colorado State University-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Colorado State University
+Colorado State University-Computer Science,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Colorado State University
+Colorado State University-Mathematics,11,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Colorado State University
+Colorado State University-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Colorado State University
+Columbia University-Chemistry,4,1,0.25,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Columbia University
+Columbia University-Computer Science,3,1,0.3333,1,0.3333,1,0.3333,0,0.0,0,0.0,Computer Science-Columbia University
+Columbia University-Mathematics,27,2,0.0741,1,0.037,1,0.037,0,0.0,0,0.0,Mathematics-Columbia University
+Columbia University-Mechanical Engineering,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Mechanical Engineering-Columbia University
+Columbia University-Physics,8,1,0.125,1,0.125,0,0.0,1,0.125,0,0.0,Physics-Columbia University
+Cornell University-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Cornell University
+Cornell University-Computer Science,8,3,0.375,1,0.125,0,0.0,1,0.125,0,0.0,Computer Science-Cornell University
+Cornell University-Mathematics,13,1,0.0769,1,0.0769,0,0.0,1,0.0769,0,0.0,Mathematics-Cornell University
+Cornell University-Mechanical Engineering,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Mechanical Engineering-Cornell University
+Cornell University-Physics,5,3,0.6,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Cornell University
+Dartmouth College-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Dartmouth College
+Dartmouth College-Mathematics,8,2,0.25,1,0.125,0,0.0,1,0.125,0,0.0,Mathematics-Dartmouth College
+Dartmouth College-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Dartmouth College
+Drexel University-Mathematics,3,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Drexel University
+Drexel University-Mechanical Engineering,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Drexel University
+Duke University-Chemistry,3,2,0.6667,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Duke University
+Duke University-Computer Science,4,1,0.25,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Duke University
+Duke University-Mathematics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Duke University
+Duke University-Mechanical Engineering,2,2,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Duke University
+Emory University-Chemistry,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Chemistry-Emory University
+Emory University-Mathematics,11,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Emory University
+Emory University-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Emory University
+Florida International University-Chemistry,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Chemistry-Florida International University
+Florida International University-Mathematics,5,1,0.2,1,0.2,0,0.0,1,0.2,0,0.0,Mathematics-Florida International University
+Florida International University-Physics,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Physics-Florida International University
+Florida State University-Chemistry,3,1,0.3333,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Florida State University
+Florida State University-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Florida State University
+Florida State University-Mathematics,6,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Florida State University
+Florida State University-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Florida State University
+Florida State University-Physics,2,0,0.0,2,1.0,0,0.0,2,1.0,0,0.0,Physics-Florida State University
+George Mason University-Chemistry,4,0,0.0,1,0.25,1,0.25,0,0.0,0,0.0,Chemistry-George Mason University
+George Mason University-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-George Mason University
+George Mason University-Mathematics,11,2,0.1818,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-George Mason University
+George Mason University-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-George Mason University
+George Mason University-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-George Mason University
+George Washington University-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-George Washington University
+George Washington University-Mathematics,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Mathematics-George Washington University
+George Washington University-Physics,3,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-George Washington University
+Georgetown University-Chemistry,2,2,1.0,1,0.5,1,0.5,0,0.0,0,0.0,Chemistry-Georgetown University
+Georgetown University-Mathematics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Georgetown University
+Georgetown University-Physics,2,2,1.0,1,0.5,0,0.0,1,0.5,0,0.0,Physics-Georgetown University
+Georgia Institute of Technology-Chemistry,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Chemistry-Georgia Institute of Technology
+Georgia Institute of Technology-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Georgia Institute of Technology
+Georgia Institute of Technology-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Georgia Institute of Technology
+Georgia Institute of Technology-Physics,2,2,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Georgia Institute of Technology
+Georgia State University-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Georgia State University
+Georgia State University-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Georgia State University
+"Graduate Center, CUNY-Mathematics",32,1,0.0312,2,0.0625,0,0.0,2,0.0625,0,0.0,"Mathematics-Graduate Center, CUNY"
+"Graduate Center, CUNY-Mechanical Engineering",2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,"Mechanical Engineering-Graduate Center, CUNY"
+Harvard University-Chemistry,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Chemistry-Harvard University
+Harvard University-Computer Science,4,3,0.75,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Harvard University
+Harvard University-Mechanical Engineering,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Harvard University
+Harvard University-Physics,5,2,0.4,1,0.2,0,0.0,1,0.2,0,0.0,Physics-Harvard University
+Indiana University Bloomington-Chemistry,3,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Indiana University Bloomington
+Indiana University Bloomington-Mathematics,4,2,0.5,2,0.5,0,0.0,2,0.5,0,0.0,Mathematics-Indiana University Bloomington
+Indiana University Bloomington-Physics,4,1,0.25,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Indiana University Bloomington
+Iowa State University-Chemistry,2,2,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Iowa State University
+Iowa State University-Computer Science,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Computer Science-Iowa State University
+Iowa State University-Mathematics,9,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Iowa State University
+Iowa State University-Mechanical Engineering,2,2,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Iowa State University
+Iowa State University-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Iowa State University
+Johns Hopkins University-Chemistry,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Chemistry-Johns Hopkins University
+Johns Hopkins University-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Johns Hopkins University
+Johns Hopkins University-Mathematics,11,1,0.0909,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Johns Hopkins University
+Johns Hopkins University-Mechanical Engineering,3,1,0.3333,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Johns Hopkins University
+Johns Hopkins University-Physics,3,1,0.3333,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Johns Hopkins University
+Kansas State University-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Kansas State University
+Kansas State University-Mathematics,5,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Kansas State University
+Kansas State University-Physics,4,1,0.25,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Kansas State University
+Kent State University-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Kent State University
+Kent State University-Mathematics,4,1,0.25,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Kent State University
+Kent State University-Physics,3,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Kent State University
+Louisiana State University-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Louisiana State University
+Louisiana State University-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Louisiana State University
+Louisiana State University-Mathematics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Louisiana State University
+Louisiana State University-Physics,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Physics-Louisiana State University
+Massachusetts Institute of Technology-Chemistry,5,2,0.4,1,0.2,1,0.2,0,0.0,0,0.0,Chemistry-Massachusetts Institute of Technology
+Massachusetts Institute of Technology-Computer Science,8,2,0.25,1,0.125,0,0.0,1,0.125,0,0.0,Computer Science-Massachusetts Institute of Technology
+Massachusetts Institute of Technology-Mathematics,18,1,0.0556,1,0.0556,0,0.0,1,0.0556,0,0.0,Mathematics-Massachusetts Institute of Technology
+Massachusetts Institute of Technology-Mechanical Engineering,3,1,0.3333,1,0.3333,1,0.3333,0,0.0,0,0.0,Mechanical Engineering-Massachusetts Institute of Technology
+Massachusetts Institute of Technology-Physics,7,2,0.2857,2,0.2857,0,0.0,2,0.2857,0,0.0,Physics-Massachusetts Institute of Technology
+Michigan State University-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Michigan State University
+Michigan State University-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Michigan State University
+Michigan State University-Mathematics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Michigan State University
+Michigan State University-Physics,3,1,0.3333,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Michigan State University
+Mississippi State University-Chemistry,2,2,1.0,1,0.5,1,0.5,0,0.0,0,0.0,Chemistry-Mississippi State University
+Mississippi State University-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Mississippi State University
+Mississippi State University-Mathematics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Mississippi State University
+Mississippi State University-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Mississippi State University
+Montana State University-Chemistry,2,2,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Montana State University
+Montana State University-Computer Science,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Computer Science-Montana State University
+Montana State University-Mathematics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Montana State University
+Montana State University-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Montana State University
+New Jersey Institute of Technology-Computer Science,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Computer Science-New Jersey Institute of Technology
+New Jersey Institute of Technology-Mathematics,3,2,0.6667,1,0.3333,0,0.0,1,0.3333,0,0.0,Mathematics-New Jersey Institute of Technology
+New Jersey Institute of Technology-Physics,3,1,0.3333,1,0.3333,1,0.3333,0,0.0,0,0.0,Physics-New Jersey Institute of Technology
+New York University-Chemistry,3,2,0.6667,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-New York University
+New York University-Computer Science,6,1,0.1667,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-New York University
+New York University-Mathematics,10,2,0.2,2,0.2,1,0.1,1,0.1,0,0.0,Mathematics-New York University
+New York University-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-New York University
+North Carolina State University-Chemistry,7,1,0.1429,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-North Carolina State University
+North Carolina State University-Computer Science,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-North Carolina State University
+North Carolina State University-Mathematics,3,2,0.6667,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-North Carolina State University
+North Carolina State University-Mechanical Engineering,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-North Carolina State University
+North Carolina State University-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-North Carolina State University
+North Dakota State University-Computer Science,2,2,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-North Dakota State University
+North Dakota State University-Mathematics,5,0,0.0,1,0.2,0,0.0,1,0.2,0,0.0,Mathematics-North Dakota State University
+North Dakota State University-Physics,2,0,0.0,1,0.5,0,0.0,1,0.5,0,0.0,Physics-North Dakota State University
+Northeastern University-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Northeastern University
+Northeastern University-Computer Science,3,1,0.3333,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Northeastern University
+Northeastern University-Mathematics,6,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Northeastern University
+Northeastern University-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Northeastern University
+Northwestern University-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Northwestern University
+Northwestern University-Mathematics,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Northwestern University
+Ohio State University-Chemistry,48,1,0.0208,1,0.0208,0,0.0,1,0.0208,0,0.0,Chemistry-Ohio State University
+Ohio State University-Mathematics,20,0,0.0,2,0.1,0,0.0,2,0.1,0,0.0,Mathematics-Ohio State University
+Ohio State University-Physics,51,1,0.0196,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Ohio State University
+Ohio University-Chemistry,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Ohio University
+Ohio University-Mathematics,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Ohio University
+Ohio University-Physics,49,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Ohio University
+Oklahoma State University-Stillwater-Chemistry,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Stillwater-Chemistry-Oklahoma State University
+Oklahoma State University-Stillwater-Mathematics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Stillwater-Mathematics-Oklahoma State University
+Oklahoma State University-Stillwater-Physics,48,1,0.0208,0,0.0,0,0.0,0,0.0,0,0.0,Stillwater-Physics-Oklahoma State University
+Old Dominion University-Chemistry,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Old Dominion University
+Old Dominion University-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Old Dominion University
+Old Dominion University-Mathematics,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Mathematics-Old Dominion University
+Old Dominion University-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Old Dominion University
+Oregon State University-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Oregon State University
+Oregon State University-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Oregon State University
+Oregon State University-Mathematics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Oregon State University
+Oregon State University-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Oregon State University
+Oregon State University-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Oregon State University
+Pennsylvania State University-Chemistry,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Pennsylvania State University
+Pennsylvania State University-Mathematics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Pennsylvania State University
+Pennsylvania State University-Mechanical Engineering,1,1,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Pennsylvania State University
+Pennsylvania State University-Physics,1,0,0.0,1,1.0,0,0.0,1,1.0,0,0.0,Physics-Pennsylvania State University
+Princeton University-Chemistry,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Princeton University
+Princeton University-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Princeton University
+Princeton University-Mathematics,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Princeton University
+Princeton University-Mechanical Engineering,1,1,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Princeton University
+Princeton University-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Princeton University
+Purdue University-Chemistry,1,1,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Purdue University
+Purdue University-Computer Science,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Purdue University
+Purdue University-Mathematics,9,1,0.1111,1,0.1111,0,0.0,1,0.1111,0,0.0,Mathematics-Purdue University
+Purdue University-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Purdue University
+Purdue University-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Purdue University
+Rensselaer Polytechnic Institute-Chemistry,1,0,0.0,1,1.0,0,0.0,1,1.0,0,0.0,Chemistry-Rensselaer Polytechnic Institute
+Rensselaer Polytechnic Institute-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Rensselaer Polytechnic Institute
+Rensselaer Polytechnic Institute-Mathematics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Rensselaer Polytechnic Institute
+Rensselaer Polytechnic Institute-Mechanical Engineering,1,1,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Rensselaer Polytechnic Institute
+Rensselaer Polytechnic Institute-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Rensselaer Polytechnic Institute
+Rice University-Chemistry,2,0,0.0,1,0.5,0,0.0,1,0.5,0,0.0,Chemistry-Rice University
+Rice University-Computer Science,2,1,0.5,2,1.0,2,1.0,0,0.0,0,0.0,Computer Science-Rice University
+Rice University-Mathematics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Rice University
+Rice University-Mechanical Engineering,2,2,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Rice University
+Rice University-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Rice University
+Rutgers University-New Brunswick-Chemistry,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,New Brunswick-Chemistry-Rutgers University
+Rutgers University-New Brunswick-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,New Brunswick-Computer Science-Rutgers University
+Rutgers University-New Brunswick-Mathematics,21,1,0.0476,2,0.0952,1,0.0476,1,0.0476,0,0.0,New Brunswick-Mathematics-Rutgers University
+Rutgers University-New Brunswick-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,New Brunswick-Mechanical Engineering-Rutgers University
+Rutgers University-New Brunswick-Physics,13,1,0.0769,1,0.0769,1,0.0769,0,0.0,0,0.0,New Brunswick-Physics-Rutgers University
+Stanford University-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Stanford University
+Stanford University-Mathematics,14,0,0.0,1,0.0714,0,0.0,1,0.0714,0,0.0,Mathematics-Stanford University
+Stanford University-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Stanford University
+Stony Brook University-Chemistry,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Chemistry-Stony Brook University
+Stony Brook University-Computer Science,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Stony Brook University
+Stony Brook University-Mathematics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Stony Brook University
+Stony Brook University-Physics,10,3,0.3,1,0.1,0,0.0,1,0.1,0,0.0,Physics-Stony Brook University
+Syracuse University-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Syracuse University
+Syracuse University-Physics,2,2,1.0,1,0.5,0,0.0,1,0.5,0,0.0,Physics-Syracuse University
+Temple University-Chemistry,2,2,1.0,1,0.5,0,0.0,1,0.5,0,0.0,Chemistry-Temple University
+Temple University-Mathematics,8,1,0.125,1,0.125,1,0.125,0,0.0,0,0.0,Mathematics-Temple University
+Temple University-Physics,2,2,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Temple University
+Texas A&M University-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Texas A&M University
+Texas A&M University-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Texas A&M University
+Texas A&M University-Mathematics,14,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Texas A&M University
+Texas A&M University-Mechanical Engineering,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Mechanical Engineering-Texas A&M University
+Texas A&M University-Physics,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Physics-Texas A&M University
+Texas Tech University-Chemistry,2,0,0.0,1,0.5,1,0.5,0,0.0,0,0.0,Chemistry-Texas Tech University
+Texas Tech University-Computer Science,3,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Texas Tech University
+Texas Tech University-Mathematics,2,2,1.0,1,0.5,0,0.0,1,0.5,0,0.0,Mathematics-Texas Tech University
+Texas Tech University-Mechanical Engineering,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Texas Tech University
+Texas Tech University-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Texas Tech University
+Tufts University-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Tufts University
+Tufts University-Computer Science,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Tufts University
+Tufts University-Mathematics,7,2,0.2857,2,0.2857,1,0.1429,1,0.1429,0,0.0,Mathematics-Tufts University
+Tufts University-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Tufts University
+Tufts University-Physics,4,2,0.5,2,0.5,1,0.25,1,0.25,0,0.0,Physics-Tufts University
+Tulane University-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Tulane University
+Tulane University-Computer Science,2,2,1.0,1,0.5,0,0.0,1,0.5,0,0.0,Computer Science-Tulane University
+Tulane University-Mathematics,7,1,0.1429,1,0.1429,1,0.1429,0,0.0,0,0.0,Mathematics-Tulane University
+Tulane University-Physics,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Physics-Tulane University
+"University at Albany, SUNY-Chemistry",2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Chemistry-University at Albany, SUNY"
+"University at Albany, SUNY-Mathematics",5,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Mathematics-University at Albany, SUNY"
+"University at Albany, SUNY-Physics",2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Physics-University at Albany, SUNY"
+University at Buffalo-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University at Buffalo
+University at Buffalo-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University at Buffalo
+University at Buffalo-Mathematics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University at Buffalo
+University at Buffalo-Mechanical Engineering,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Mechanical Engineering-University at Buffalo
+University at Buffalo-Physics,7,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University at Buffalo
+University of Alabama at Birmingham-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Alabama at Birmingham
+University of Alabama at Birmingham-Mathematics,2,2,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Alabama at Birmingham
+University of Alabama in Huntsville-Mathematics,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Mathematics-University of Alabama in Huntsville
+University of Alabama in Huntsville-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Alabama in Huntsville
+University of Alabama-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Alabama
+University of Alabama-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Alabama
+University of Alabama-Mathematics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Alabama
+University of Alabama-Mechanical Engineering,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Mechanical Engineering-University of Alabama
+University of Alabama-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Alabama
+University of Arizona-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Arizona
+University of Arizona-Computer Science,2,2,1.0,1,0.5,0,0.0,1,0.5,0,0.0,Computer Science-University of Arizona
+University of Arizona-Mathematics,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Mathematics-University of Arizona
+University of Arizona-Mechanical Engineering,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Arizona
+University of Arizona-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Arizona
+University of Arkansas-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Arkansas
+University of Arkansas-Mathematics,7,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Arkansas
+University of Arkansas-Physics,3,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Arkansas
+"University of California, Berkeley-Chemistry",2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Chemistry-University of California, Berkeley"
+"University of California, Berkeley-Computer Science",2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,"Computer Science-University of California, Berkeley"
+"University of California, Berkeley-Mathematics",8,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Mathematics-University of California, Berkeley"
+"University of California, Berkeley-Mechanical Engineering",2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,"Mechanical Engineering-University of California, Berkeley"
+"University of California, Berkeley-Physics",2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Physics-University of California, Berkeley"
+"University of California, Davis-Chemistry",2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,"Chemistry-University of California, Davis"
+"University of California, Davis-Mathematics",12,1,0.0833,0,0.0,0,0.0,0,0.0,0,0.0,"Mathematics-University of California, Davis"
+"University of California, Davis-Physics",2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Physics-University of California, Davis"
+"University of California, Irvine-Chemistry",2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,"Chemistry-University of California, Irvine"
+"University of California, Irvine-Computer Science",3,1,0.3333,0,0.0,0,0.0,0,0.0,0,0.0,"Computer Science-University of California, Irvine"
+"University of California, Irvine-Mathematics",2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,"Mathematics-University of California, Irvine"
+"University of California, Irvine-Mechanical Engineering",2,0,0.0,1,0.5,0,0.0,1,0.5,0,0.0,"Mechanical Engineering-University of California, Irvine"
+"University of California, Irvine-Physics",3,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Physics-University of California, Irvine"
+"University of California, Los Angeles-Chemistry",2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,"Chemistry-University of California, Los Angeles"
+"University of California, Los Angeles-Computer Science",5,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Computer Science-University of California, Los Angeles"
+"University of California, Los Angeles-Mathematics",2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,"Mathematics-University of California, Los Angeles"
+"University of California, Los Angeles-Mechanical Engineering",2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Mechanical Engineering-University of California, Los Angeles"
+"University of California, Los Angeles-Physics",8,2,0.25,1,0.125,0,0.0,1,0.125,0,0.0,"Physics-University of California, Los Angeles"
+"University of California, Riverside-Chemistry",2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Chemistry-University of California, Riverside"
+"University of California, Riverside-Computer Science",2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,"Computer Science-University of California, Riverside"
+"University of California, Riverside-Mechanical Engineering",2,0,0.0,1,0.5,0,0.0,1,0.5,0,0.0,"Mechanical Engineering-University of California, Riverside"
+"University of California, Riverside-Physics",2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,"Physics-University of California, Riverside"
+"University of California, San Diego-Chemistry",2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,"Chemistry-University of California, San Diego"
+"University of California, San Diego-Mathematics",13,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Mathematics-University of California, San Diego"
+"University of California, San Diego-Mechanical Engineering",2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,"Mechanical Engineering-University of California, San Diego"
+"University of California, San Diego-Physics",2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Physics-University of California, San Diego"
+"University of California, Santa Barbara-Chemistry",2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,"Chemistry-University of California, Santa Barbara"
+"University of California, Santa Barbara-Computer Science",2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,"Computer Science-University of California, Santa Barbara"
+"University of California, Santa Barbara-Mathematics",6,0,0.0,1,0.1667,1,0.1667,0,0.0,0,0.0,"Mathematics-University of California, Santa Barbara"
+"University of California, Santa Barbara-Mechanical Engineering",2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,"Mechanical Engineering-University of California, Santa Barbara"
+"University of California, Santa Barbara-Physics",2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,"Physics-University of California, Santa Barbara"
+"University of California, Santa Cruz-Chemistry",2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Chemistry-University of California, Santa Cruz"
+"University of California, Santa Cruz-Mathematics",9,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Mathematics-University of California, Santa Cruz"
+"University of California, Santa Cruz-Physics",4,1,0.25,0,0.0,0,0.0,0,0.0,0,0.0,"Physics-University of California, Santa Cruz"
+University of Central Florida-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Central Florida
+University of Central Florida-Mathematics,4,0,0.0,1,0.25,0,0.0,1,0.25,0,0.0,Mathematics-University of Central Florida
+University of Central Florida-Physics,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Physics-University of Central Florida
+University of Chicago-Chemistry,3,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Chicago
+University of Chicago-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Chicago
+University of Chicago-Mathematics,14,3,0.2143,3,0.2143,0,0.0,3,0.2143,0,0.0,Mathematics-University of Chicago
+University of Chicago-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Chicago
+University of Cincinnati-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Cincinnati
+University of Cincinnati-Mathematics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Cincinnati
+University of Cincinnati-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Cincinnati
+University of Colorado Boulder-Chemistry,3,1,0.3333,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Colorado Boulder
+University of Colorado Boulder-Mathematics,11,1,0.0909,1,0.0909,0,0.0,1,0.0909,0,0.0,Mathematics-University of Colorado Boulder
+University of Colorado Boulder-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Colorado Boulder
+University of Colorado Boulder-Physics,5,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Colorado Boulder
+University of Colorado Denver-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Colorado Denver
+University of Colorado Denver-Mathematics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Colorado Denver
+University of Connecticut-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Connecticut
+University of Connecticut-Mathematics,6,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Connecticut
+University of Connecticut-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Connecticut
+University of Connecticut-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Connecticut
+University of Delaware-Computer Science,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Computer Science-University of Delaware
+University of Delaware-Mathematics,11,0,0.0,1,0.0909,0,0.0,1,0.0909,0,0.0,Mathematics-University of Delaware
+University of Delaware-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Delaware
+University of Delaware-Physics,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Physics-University of Delaware
+University of Denver-Chemistry,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Denver
+University of Denver-Mathematics,4,0,0.0,1,0.25,0,0.0,1,0.25,0,0.0,Mathematics-University of Denver
+University of Denver-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Denver
+University of Florida-Chemistry,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Florida
+University of Florida-Computer Science,1,0,0.0,1,1.0,1,1.0,0,0.0,0,0.0,Computer Science-University of Florida
+University of Florida-Mathematics,12,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Florida
+University of Florida-Mechanical Engineering,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Florida
+University of Florida-Physics,10,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Florida
+University of Georgia-Chemistry,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Georgia
+University of Georgia-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Georgia
+University of Georgia-Mathematics,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Georgia
+University of Georgia-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Georgia
+University of Hawaii at Manoa-Chemistry,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Hawaii at Manoa
+University of Hawaii at Manoa-Mathematics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Hawaii at Manoa
+University of Hawaii at Manoa-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Hawaii at Manoa
+University of Hawaii at Manoa-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Hawaii at Manoa
+University of Houston-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Houston
+University of Houston-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Houston
+University of Houston-Mathematics,7,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Houston
+University of Houston-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Houston
+University of Houston-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Houston
+University of Illinois Chicago-Chemistry,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Illinois Chicago
+University of Illinois Chicago-Computer Science,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Illinois Chicago
+University of Illinois Chicago-Mathematics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Illinois Chicago
+University of Illinois Chicago-Mechanical Engineering,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Illinois Chicago
+University of Illinois Chicago-Physics,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Illinois Chicago
+University of Illinois Urbana-Champaign-Chemistry,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Champaign-Chemistry-University of Illinois Urbana
+University of Illinois Urbana-Champaign-Computer Science,48,1,0.0208,0,0.0,0,0.0,0,0.0,0,0.0,Champaign-Computer Science-University of Illinois Urbana
+University of Illinois Urbana-Champaign-Mathematics,1,1,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Champaign-Mathematics-University of Illinois Urbana
+University of Illinois Urbana-Champaign-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Champaign-Mechanical Engineering-University of Illinois Urbana
+University of Illinois Urbana-Champaign-Physics,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Champaign-Physics-University of Illinois Urbana
+University of Iowa-Chemistry,1,1,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Iowa
+University of Iowa-Computer Science,48,0,0.0,1,0.0208,0,0.0,1,0.0208,0,0.0,Computer Science-University of Iowa
+University of Iowa-Mathematics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Iowa
+University of Iowa-Physics,48,1,0.0208,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Iowa
+University of Kansas-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Kansas
+University of Kansas-Mathematics,48,0,0.0,1,0.0208,1,0.0208,0,0.0,0,0.0,Mathematics-University of Kansas
+University of Kansas-Physics,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Kansas
+University of Kentucky-Chemistry,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Kentucky
+University of Kentucky-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Kentucky
+University of Kentucky-Mathematics,3,0,0.0,1,0.3333,0,0.0,1,0.3333,0,0.0,Mathematics-University of Kentucky
+University of Kentucky-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Kentucky
+University of Kentucky-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Kentucky
+University of Louisiana at Lafayette-Chemistry,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Louisiana at Lafayette
+University of Louisiana at Lafayette-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Louisiana at Lafayette
+University of Louisiana at Lafayette-Mathematics,6,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Louisiana at Lafayette
+University of Louisiana at Lafayette-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Louisiana at Lafayette
+University of Louisiana at Lafayette-Physics,48,1,0.0208,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Louisiana at Lafayette
+University of Louisville-Chemistry,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Louisville
+University of Louisville-Computer Science,3,1,0.3333,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Louisville
+University of Louisville-Mathematics,15,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Louisville
+University of Louisville-Mechanical Engineering,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Louisville
+University of Louisville-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Louisville
+University of Maine-Mathematics,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Maine
+University of Maine-Mechanical Engineering,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Maine
+University of Maine-Physics,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Maine
+"University of Maryland, Baltimore County-Mathematics",1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Mathematics-University of Maryland, Baltimore County"
+"University of Maryland, Baltimore County-Physics",48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Physics-University of Maryland, Baltimore County"
+"University of Maryland, College Park-Computer Science",5,1,0.2,0,0.0,0,0.0,0,0.0,0,0.0,"Computer Science-University of Maryland, College Park"
+"University of Maryland, College Park-Mathematics",24,0,0.0,1,0.0417,0,0.0,1,0.0417,0,0.0,"Mathematics-University of Maryland, College Park"
+"University of Maryland, College Park-Mechanical Engineering",1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Mechanical Engineering-University of Maryland, College Park"
+"University of Maryland, College Park-Physics",48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Physics-University of Maryland, College Park"
+University of Massachusetts Amherst-Chemistry,1,0,0.0,1,1.0,0,0.0,1,1.0,0,0.0,Chemistry-University of Massachusetts Amherst
+University of Massachusetts Amherst-Computer Science,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Massachusetts Amherst
+University of Massachusetts Amherst-Mathematics,4,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Massachusetts Amherst
+University of Memphis-Chemistry,2,0,0.0,1,0.5,0,0.0,1,0.5,0,0.0,Chemistry-University of Memphis
+University of Memphis-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Memphis
+University of Memphis-Mathematics,1,1,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Memphis
+University of Memphis-Physics,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Physics-University of Memphis
+University of Miami-Chemistry,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Miami
+University of Miami-Computer Science,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Miami
+University of Miami-Mathematics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Miami
+University of Miami-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Miami
+University of Michigan-Chemistry,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Michigan
+University of Michigan-Computer Science,14,3,0.2143,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Michigan
+University of Michigan-Mathematics,13,2,0.1538,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Michigan
+University of Michigan-Mechanical Engineering,2,2,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Michigan
+University of Michigan-Physics,4,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Michigan
+University of Minnesota-Chemistry,1,1,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Minnesota
+University of Minnesota-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Minnesota
+University of Minnesota-Mathematics,14,0,0.0,1,0.0714,0,0.0,1,0.0714,0,0.0,Mathematics-University of Minnesota
+University of Minnesota-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Minnesota
+University of Minnesota-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Minnesota
+University of Mississippi-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Mississippi
+University of Mississippi-Mathematics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Mississippi
+University of Mississippi-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Mississippi
+University of Missouri-Chemistry,3,1,0.3333,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Missouri
+University of Missouri-Mathematics,6,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Missouri
+University of Missouri-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Missouri
+University of Missouri-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Missouri
+University of Montana-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Montana
+University of Montana-Mathematics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Montana
+University of Nebraska-Lincoln-Chemistry,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Lincoln-Chemistry-University of Nebraska
+University of Nebraska-Lincoln-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Lincoln-Computer Science-University of Nebraska
+University of Nebraska-Lincoln-Mathematics,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Lincoln-Mathematics-University of Nebraska
+University of Nebraska-Lincoln-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Lincoln-Physics-University of Nebraska
+"University of Nevada, Las Vegas-Physics",1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Physics-University of Nevada, Las Vegas"
+"University of Nevada, Reno-Computer Science",1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Computer Science-University of Nevada, Reno"
+"University of Nevada, Reno-Mathematics",1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,"Mathematics-University of Nevada, Reno"
+University of New Hampshire-Chemistry,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of New Hampshire
+University of New Hampshire-Mathematics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of New Hampshire
+University of New Hampshire-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of New Hampshire
+University of New Mexico-Chemistry,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of New Mexico
+University of New Mexico-Computer Science,1,1,1.0,1,1.0,0,0.0,1,1.0,0,0.0,Computer Science-University of New Mexico
+University of New Mexico-Mathematics,5,1,0.2,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of New Mexico
+University of New Mexico-Physics,2,0,0.0,1,0.5,0,0.0,1,0.5,0,0.0,Physics-University of New Mexico
+University of North Carolina at Chapel Hill-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of North Carolina at Chapel Hill
+University of North Carolina at Chapel Hill-Computer Science,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of North Carolina at Chapel Hill
+University of North Carolina at Chapel Hill-Mathematics,7,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of North Carolina at Chapel Hill
+University of North Carolina at Chapel Hill-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of North Carolina at Chapel Hill
+University of North Texas-Chemistry,2,0,0.0,1,0.5,1,0.5,0,0.0,0,0.0,Chemistry-University of North Texas
+University of North Texas-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of North Texas
+University of North Texas-Mathematics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of North Texas
+University of North Texas-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of North Texas
+University of North Texas-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of North Texas
+University of Notre Dame-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Notre Dame
+University of Notre Dame-Mathematics,4,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Notre Dame
+University of Notre Dame-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Notre Dame
+University of Oklahoma-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Oklahoma
+University of Oklahoma-Mathematics,17,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Oklahoma
+University of Oklahoma-Physics,2,0,0.0,2,1.0,0,0.0,2,1.0,0,0.0,Physics-University of Oklahoma
+University of Oregon-Computer Science,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Oregon
+University of Oregon-Mathematics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Oregon
+University of Oregon-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Oregon
+University of Pennsylvania-Chemistry,4,1,0.25,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Pennsylvania
+University of Pennsylvania-Computer Science,3,2,0.6667,1,0.3333,0,0.0,1,0.3333,0,0.0,Computer Science-University of Pennsylvania
+University of Pennsylvania-Mathematics,3,2,0.6667,1,0.3333,1,0.3333,0,0.0,0,0.0,Mathematics-University of Pennsylvania
+University of Pennsylvania-Mechanical Engineering,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Pennsylvania
+University of Pittsburgh-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Pittsburgh
+University of Pittsburgh-Computer Science,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Pittsburgh
+University of Pittsburgh-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Pittsburgh
+University of Rochester-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Rochester
+University of Rochester-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Rochester
+University of Rochester-Mechanical Engineering,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Mechanical Engineering-University of Rochester
+University of Rochester-Physics,4,1,0.25,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Rochester
+University of South Carolina-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of South Carolina
+University of South Carolina-Mathematics,12,2,0.1667,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of South Carolina
+University of South Carolina-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of South Carolina
+University of South Florida-Chemistry,3,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of South Florida
+University of South Florida-Computer Science,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of South Florida
+University of South Florida-Mathematics,5,1,0.2,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of South Florida
+University of South Florida-Mechanical Engineering,2,2,1.0,1,0.5,0,0.0,1,0.5,0,0.0,Mechanical Engineering-University of South Florida
+University of Southern California-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Southern California
+University of Southern California-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Southern California
+University of Southern California-Mathematics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Southern California
+University of Southern California-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Southern California
+University of Southern California-Physics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Southern California
+University of Southern Mississippi-Chemistry,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Southern Mississippi
+University of Southern Mississippi-Mechanical Engineering,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Southern Mississippi
+University of Southern Mississippi-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Southern Mississippi
+University of Tennessee-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Tennessee
+University of Tennessee-Computer Science,48,0,0.0,1,0.0208,1,0.0208,0,0.0,0,0.0,Computer Science-University of Tennessee
+University of Tennessee-Mathematics,7,0,0.0,1,0.1429,0,0.0,1,0.1429,0,0.0,Mathematics-University of Tennessee
+University of Tennessee-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Tennessee
+University of Tennessee-Physics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Tennessee
+University of Texas at Arlington-Chemistry,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Texas at Arlington
+University of Texas at Arlington-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Texas at Arlington
+University of Texas at Arlington-Mathematics,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Mathematics-University of Texas at Arlington
+University of Texas at Arlington-Mechanical Engineering,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Texas at Arlington
+University of Texas at Arlington-Physics,2,1,0.5,1,0.5,1,0.5,0,0.0,0,0.0,Physics-University of Texas at Arlington
+University of Texas at Austin-Computer Science,3,2,0.6667,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Texas at Austin
+University of Texas at Austin-Mathematics,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Texas at Austin
+University of Texas at Austin-Physics,2,0,0.0,2,1.0,0,0.0,2,1.0,0,0.0,Physics-University of Texas at Austin
+University of Texas at Dallas-Chemistry,2,2,1.0,1,0.5,1,0.5,0,0.0,0,0.0,Chemistry-University of Texas at Dallas
+University of Texas at Dallas-Mathematics,8,0,0.0,1,0.125,0,0.0,1,0.125,0,0.0,Mathematics-University of Texas at Dallas
+University of Texas at Dallas-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Texas at Dallas
+University of Texas at Dallas-Physics,2,0,0.0,1,0.5,0,0.0,1,0.5,0,0.0,Physics-University of Texas at Dallas
+University of Texas at El Paso-Chemistry,1,0,0.0,1,1.0,0,0.0,1,1.0,0,0.0,Chemistry-University of Texas at El Paso
+University of Texas at El Paso-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Texas at El Paso
+University of Texas at El Paso-Mathematics,2,1,0.5,1,0.5,0,0.0,1,0.5,0,0.0,Mathematics-University of Texas at El Paso
+University of Texas at San Antonio-Chemistry,48,1,0.0208,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Texas at San Antonio
+University of Texas at San Antonio-Mathematics,2,0,0.0,1,0.5,0,0.0,1,0.5,0,0.0,Mathematics-University of Texas at San Antonio
+University of Texas at San Antonio-Physics,48,1,0.0208,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Texas at San Antonio
+University of Utah-Chemistry,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Utah
+University of Utah-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Utah
+University of Utah-Mathematics,7,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Utah
+University of Utah-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-University of Utah
+University of Utah-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Utah
+University of Virginia-Chemistry,48,1,0.0208,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Virginia
+University of Virginia-Mathematics,10,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Virginia
+University of Virginia-Physics,6,1,0.1667,1,0.1667,1,0.1667,0,0.0,0,0.0,Physics-University of Virginia
+University of Washington-Chemistry,48,1,0.0208,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-University of Washington
+University of Washington-Computer Science,1,1,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-University of Washington
+University of Washington-Mathematics,5,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-University of Washington
+University of Washington-Mechanical Engineering,1,0,0.0,1,1.0,0,0.0,1,1.0,0,0.0,Mechanical Engineering-University of Washington
+University of Washington-Physics,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-University of Washington
+University of Wisconsin-Madison-Chemistry,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Madison-Chemistry-University of Wisconsin
+University of Wisconsin-Madison-Mathematics,23,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Madison-Mathematics-University of Wisconsin
+University of Wisconsin-Madison-Mechanical Engineering,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Madison-Mechanical Engineering-University of Wisconsin
+University of Wisconsin-Madison-Physics,4,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Madison-Physics-University of Wisconsin
+University of Wisconsin-Milwaukee-Computer Science,1,1,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Milwaukee-Computer Science-University of Wisconsin
+University of Wisconsin-Milwaukee-Mathematics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Milwaukee-Mathematics-University of Wisconsin
+University of Wisconsin-Milwaukee-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Milwaukee-Mechanical Engineering-University of Wisconsin
+University of Wisconsin-Milwaukee-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Milwaukee-Physics-University of Wisconsin
+Utah State University-Chemistry,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Utah State University
+Utah State University-Mathematics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Utah State University
+Utah State University-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Utah State University
+Utah State University-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Utah State University
+Vanderbilt University-Chemistry,1,1,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Vanderbilt University
+Vanderbilt University-Mathematics,6,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Vanderbilt University
+Vanderbilt University-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Vanderbilt University
+Vanderbilt University-Physics,1,1,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Vanderbilt University
+Virginia Commonwealth University-Chemistry,48,1,0.0208,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Virginia Commonwealth University
+Virginia Commonwealth University-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Virginia Commonwealth University
+Virginia Commonwealth University-Mathematics,7,2,0.2857,1,0.1429,0,0.0,1,0.1429,0,0.0,Mathematics-Virginia Commonwealth University
+Virginia Commonwealth University-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Virginia Commonwealth University
+Virginia Commonwealth University-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Virginia Commonwealth University
+Virginia Tech-Chemistry,1,1,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Virginia Tech
+Virginia Tech-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Virginia Tech
+Virginia Tech-Mathematics,48,1,0.0208,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Virginia Tech
+Virginia Tech-Mechanical Engineering,1,1,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Virginia Tech
+Virginia Tech-Physics,9,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Virginia Tech
+Washington State University-Chemistry,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Washington State University
+Washington State University-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Washington State University
+Washington State University-Mathematics,13,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Washington State University
+Washington State University-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Washington State University
+Washington State University-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Washington State University
+Washington University in St. Louis-Chemistry,48,1,0.0208,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Washington University in St. Louis
+Washington University in St. Louis-Computer Science,2,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Washington University in St. Louis
+Washington University in St. Louis-Mathematics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Washington University in St. Louis
+Washington University in St. Louis-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Washington University in St. Louis
+Washington University in St. Louis-Physics,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Washington University in St. Louis
+Wayne State University-Chemistry,4,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Wayne State University
+Wayne State University-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Wayne State University
+Wayne State University-Mathematics,16,0,0.0,1,0.0625,0,0.0,1,0.0625,0,0.0,Mathematics-Wayne State University
+Wayne State University-Mechanical Engineering,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-Wayne State University
+Wayne State University-Physics,4,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Wayne State University
+West Virginia University-Chemistry,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-West Virginia University
+West Virginia University-Computer Science,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-West Virginia University
+West Virginia University-Mathematics,2,1,0.5,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-West Virginia University
+West Virginia University-Mechanical Engineering,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mechanical Engineering-West Virginia University
+West Virginia University-Physics,48,1,0.0208,0,0.0,0,0.0,0,0.0,0,0.0,Physics-West Virginia University
+Yale University-Chemistry,48,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Chemistry-Yale University
+Yale University-Computer Science,1,1,1.0,0,0.0,0,0.0,0,0.0,0,0.0,Computer Science-Yale University
+Yale University-Mathematics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Mathematics-Yale University
+Yale University-Physics,1,0,0.0,0,0.0,0,0.0,0,0.0,0,0.0,Physics-Yale University
