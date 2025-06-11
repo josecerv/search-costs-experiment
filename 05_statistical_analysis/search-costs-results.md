@@ -1,6 +1,6 @@
 ---
 title: "Search Costs Field Experiment"
-date: "2025-06-09"
+date: "2025-06-10"
 output:
   pdf_document:
     toc: true
@@ -874,6 +874,16 @@ This indicates that the diversity intervention has heterogeneous effects dependi
 \textbf{F-test for Treatment × Discipline Interactions (URM Speakers):}
 F-statistic: 0.649 
 p-value: 0.6276 
+Degrees of freedom: 4 
+
+\textbf{F-test for Treatment × Discipline Interactions (% Black Speakers):}
+F-statistic: 2.431 
+p-value: 0.0458 
+Degrees of freedom: 4 
+
+\textbf{F-test for Treatment × Discipline Interactions (Total Black Speakers):}
+F-statistic: 4.13 
+p-value: 0.0025 
 Degrees of freedom: 4 
 
 \textbf{Individual Interaction Effects (Black Speakers):}

@@ -1451,6 +1451,42 @@ cat("F-statistic:", round(f_test_urm$F[2], 3), "\n")
 cat("p-value:", round(f_test_urm$`Pr(>F)`[2], 4), "\n")
 cat("Degrees of freedom:", f_test_urm$Df[2], "\n\n")
 
+# Test for percentage of Black speakers
+full_model_pct_black <- lm(paste("pct_black ~ treatment * (disc_mathematics + disc_physics + 
+                                 disc_computer_science + disc_mechanical_engineering) +", 
+                                 paste(c(base_controls_no_disc, extended_controls), collapse = " + ")), 
+                          data = data)
+
+restricted_model_pct_black <- lm(paste("pct_black ~ treatment + disc_mathematics + disc_physics + 
+                                       disc_computer_science + disc_mechanical_engineering +",
+                                       paste(c(base_controls_no_disc, extended_controls), collapse = " + ")), 
+                                data = data)
+
+f_test_pct_black <- anova(restricted_model_pct_black, full_model_pct_black)
+
+cat("\\textbf{F-test for Treatment × Discipline Interactions (% Black Speakers):}\n")
+cat("F-statistic:", round(f_test_pct_black$F[2], 3), "\n")
+cat("p-value:", round(f_test_pct_black$`Pr(>F)`[2], 4), "\n")
+cat("Degrees of freedom:", f_test_pct_black$Df[2], "\n\n")
+
+# Test for total number of Black speakers
+full_model_num_black <- lm(paste("num_black ~ treatment * (disc_mathematics + disc_physics + 
+                                 disc_computer_science + disc_mechanical_engineering) +", 
+                                 paste(c(base_controls_no_disc, extended_controls), collapse = " + ")), 
+                          data = data)
+
+restricted_model_num_black <- lm(paste("num_black ~ treatment + disc_mathematics + disc_physics + 
+                                       disc_computer_science + disc_mechanical_engineering +",
+                                       paste(c(base_controls_no_disc, extended_controls), collapse = " + ")), 
+                                data = data)
+
+f_test_num_black <- anova(restricted_model_num_black, full_model_num_black)
+
+cat("\\textbf{F-test for Treatment × Discipline Interactions (Total Black Speakers):}\n")
+cat("F-statistic:", round(f_test_num_black$F[2], 3), "\n")
+cat("p-value:", round(f_test_num_black$`Pr(>F)`[2], 4), "\n")
+cat("Degrees of freedom:", f_test_num_black$Df[2], "\n\n")
+
 # Store the interaction effects for reporting
 interaction_effects_black <- summary(full_model_black)$coefficients[
   grep("treatment:disc", rownames(summary(full_model_black)$coefficients)), ]
