@@ -1,0 +1,7 @@
+Period,Condition,N,Clicked,Click_Rate_Pct,SE_Pct
+Email 1,Control,983,434,44.15,1.58
+Email 1,Treatment,968,415,42.87,1.59
+Email 2,Control,983,135,13.73,1.1
+Email 2,Treatment,968,196,20.25,1.29
+Overall,Control,983,537,54.63,1.59
+Overall,Treatment,968,538,55.58,1.6

@@ -1,10 +1,12 @@
 {
-  "creation_date": "2025-06-09T17:59:54.557987",
-  "n_seminars": 1655,
-  "n_treatment": 809,
+  "creation_date": "2025-06-16T13:14:48.190343",
+  "n_seminars": 1654,
+  "n_treatment": 808,
   "n_control": 846,
   "n_seminars_with_fall": 1448,
-  "n_seminars_with_spring": 1389,
+  "n_seminars_with_spring": 1388,
+  "n_seminars_with_junior": 1518,
+  "n_seminars_with_senior": 1535,
   "control_variable_coverage": {
     "bin_categories": 1.0,
     "batch_numbers": 1.0,
@@ -16,10 +18,17 @@
   },
   "phd_year_statistics": {
     "seminars_with_phd_data": 1644,
-    "coverage_rate": 0.9933534743202417,
-    "mean_years_from_phd": 15.558994814220648,
-    "mean_pct_with_phd": 87.53692249058156,
-    "mean_pct_current_students": 14.651107059581934
+    "coverage_rate": 0.9939540507859734,
+    "mean_years_from_phd": 15.558535821145314,
+    "mean_pct_with_phd": 87.55046530878612,
+    "mean_pct_current_students": 14.682236780133655,
+    "median_years_for_split": 15.0
+  },
+  "email_recipient_demographics": {
+    "seminars_with_recipient_data": 1654,
+    "mean_pct_female_recipients": 0.20298597339782343,
+    "mean_pct_urm_recipients": 0.07470846432889965,
+    "mean_pct_black_recipients": 0.026987243047158403
   },
   "columns": [
     "seminar_id",
@@ -50,6 +59,26 @@
     "has_any_hispanic",
     "has_any_native_american",
     "has_any_female",
+    "num_junior_speakers",
+    "num_senior_speakers",
+    "num_black_junior",
+    "num_black_senior",
+    "num_hispanic_junior",
+    "num_hispanic_senior",
+    "num_urm_junior",
+    "num_urm_senior",
+    "pct_black_junior",
+    "pct_black_senior",
+    "pct_hispanic_junior",
+    "pct_hispanic_senior",
+    "pct_urm_junior",
+    "pct_urm_senior",
+    "has_any_black_junior",
+    "has_any_black_senior",
+    "has_any_hispanic_junior",
+    "has_any_hispanic_senior",
+    "has_any_urm_junior",
+    "has_any_urm_senior",
     "has_fall_speakers",
     "has_spring_speakers",
     "fall_total_speakers",
@@ -95,6 +124,13 @@
     "num_recipients",
     "total_peer_departments",
     "total_urm_peer_faculty",
+    "pct_female_recipients",
+    "pct_urm_recipients",
+    "pct_black_recipients",
+    "pct_hispanic_recipients",
+    "pct_assistant_prof_recipients",
+    "num_email_recipients_analyzed",
+    "num_distinct_seminars",
     "bin_7_11",
     "bin_1_3",
     "bin_17_26",
@@ -114,5 +150,6 @@
     "disc_physics",
     "disc_computer_science",
     "disc_mechanical_engineering"
-  ]
+  ],
+  "total_columns": 119
 }

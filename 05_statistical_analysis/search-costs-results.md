@@ -1,6 +1,6 @@
 ---
 title: "Search Costs Field Experiment"
-date: "2025-06-11"
+date: "2025-06-16"
 output:
   pdf_document:
     toc: true
@@ -898,44 +898,6 @@ treatment:disc_mechanical_engineering   0.2797     0.1059  2.6419   0.0083
 # Semester-Specific Analysis
 
 ## Fall Semester
-
-
-Call:
-lm(formula = as.formula(formula_str), data = data_complete)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--12.605  -7.477  -4.980   3.554  95.007 
-
-Coefficients:
-                            Estimate Std. Error t value Pr(>|t|)   
-(Intercept)                  6.35696    2.14015   2.970  0.00302 **
-treatment                    0.94922    0.72180   1.315  0.18870   
-bin_0_1                      1.48922    1.89568   0.786  0.43224   
-bin_1_3                      1.14316    1.82433   0.627  0.53101   
-bin_3_5                      2.00801    1.74786   1.149  0.25081   
-bin_5_7                     -0.03272    1.74150  -0.019  0.98501   
-bin_7_11                     2.18899    1.68911   1.296  0.19520   
-bin_11_17                   -1.42973    1.67659  -0.853  0.39393   
-disc_mathematics             0.05245    1.19124   0.044  0.96489   
-disc_physics                 0.34638    1.21922   0.284  0.77637   
-disc_computer_science       -4.91430    1.54564  -3.179  0.00151 **
-disc_mechanical_engineering -2.70485    1.89142  -1.430  0.15292   
-batch_1                      0.87044    1.66325   0.523  0.60082   
-batch_2                      1.38845    1.96032   0.708  0.47889   
-batch_3                     -2.13347    1.55207  -1.375  0.16947   
-batch_4                      2.76342    1.55058   1.782  0.07493 . 
-batch_5                      0.89058    1.51030   0.590  0.55551   
-batch_6                     -0.14252    1.51698  -0.094  0.92516   
-batch_7                     -1.22984    1.50242  -0.819  0.41317   
-batch_8                      0.61867    1.60368   0.386  0.69972   
-batch_9                     -2.64601    1.53713  -1.721  0.08539 . 
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 13.5 on 1427 degrees of freedom
-Multiple R-squared:  0.03113,	Adjusted R-squared:  0.01755 
-F-statistic: 2.292 on 20 and 1427 DF,  p-value: 0.000971
 
 \begin{table}[H]
 \caption{Fall: Effect on URM Speakers}

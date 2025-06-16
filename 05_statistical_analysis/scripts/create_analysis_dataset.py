@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-Create Master Analysis Dataset with All Control Variables
+Create Master Analysis Dataset with All Variables (Integrated Version)
 This script generates the complete dataset needed for statistical analysis,
-including all pre-registered control variables.
+including all pre-registered control variables, email recipient demographics,
+and junior/senior speaker subgroups.
 """
 
 import pandas as pd
@@ -13,7 +14,11 @@ from datetime import datetime
 import warnings
 from collections import defaultdict
 import hashlib
+import logging
 warnings.filterwarnings('ignore')
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 class AnalysisDatasetCreator:
     def __init__(self):
@@ -21,7 +26,7 @@ class AnalysisDatasetCreator:
         self.data_dir = self.base_dir / "03_data_collection/processed"
         self.demographics_dir = self.base_dir / "04_demographic_analysis/outputs"
         self.output_dir = self.base_dir / "05_statistical_analysis/outputs"
-        self.archive_dir = self.base_dir / "06_archive"
+        self.archive_dir = self.base_dir / "07_archive"
         self.email_dir = self.base_dir / "02_intervention_materials/email_campaigns"
         self.databases_dir = self.base_dir / "02_intervention_materials/databases"
         self.output_dir.mkdir(exist_ok=True)
@@ -211,12 +216,52 @@ class AnalysisDatasetCreator:
         self.urm_faculty_by_discipline = self.load_urm_faculty_data()
         print(f"  Loaded URM faculty data for {len(self.urm_faculty_by_discipline)} disciplines")
         
+        # Load email recipient demographics if available
+        print("\nLoading email recipient demographics...")
+        recipient_file = self.output_dir / "email_recipient_demographics_by_dept.csv"
+        if recipient_file.exists():
+            self.recipient_df = pd.read_csv(recipient_file)
+            print(f"  Loaded recipient demographics for {len(self.recipient_df)} departments")
+        else:
+            self.recipient_df = None
+            print("  Warning: email_recipient_demographics_by_dept.csv not found")
+        
     def create_speaker_level_data(self):
         """Create speaker-level dataset with all demographics"""
         print("\n=== CREATING SPEAKER-LEVEL DATA ===")
         
         # Use speaker_appearances_analysis.csv which already has demographics matched by speaker_id
         print("Using speaker_appearances_analysis.csv which already has demographics...")
+        
+        # Calculate years since PhD for each speaker (for junior/senior classification)
+        self.appearances_df['years_since_phd'] = 2024 - pd.to_numeric(self.appearances_df['phd_graduation_year'], errors='coerce')
+        
+        # Calculate global median years since PhD for junior/senior split
+        valid_phd = self.appearances_df['years_since_phd'] > 0
+        self.median_years_since_phd = self.appearances_df.loc[valid_phd, 'years_since_phd'].median()
+        logger.info(f"Global median years since PhD: {self.median_years_since_phd:.1f}")
+        
+        # Classify speakers as junior or senior
+        self.appearances_df['is_junior'] = (self.appearances_df['years_since_phd'] <= self.median_years_since_phd) & valid_phd
+        self.appearances_df['is_senior'] = (self.appearances_df['years_since_phd'] > self.median_years_since_phd) & valid_phd
+        
+        # Create demographic flags for subgroup analysis
+        self.appearances_df['is_black'] = (self.appearances_df['combined_race'] == 'black').astype(int)
+        self.appearances_df['is_hispanic'] = (self.appearances_df['combined_race'] == 'latino').astype(int)
+        
+        # Create subgroup demographic variables
+        for race in ['black', 'hispanic', 'urm']:
+            # Junior subgroup
+            self.appearances_df[f'is_{race}_junior'] = (
+                (self.appearances_df[f'is_{race}'] == 1) & 
+                self.appearances_df['is_junior']
+            ).astype(int)
+            
+            # Senior subgroup  
+            self.appearances_df[f'is_{race}_senior'] = (
+                (self.appearances_df[f'is_{race}'] == 1) & 
+                self.appearances_df['is_senior']
+            ).astype(int)
         
         # Group appearances by seminar to calculate seminar-level statistics
         seminar_groups = self.appearances_df.groupby('seminar_id')
@@ -244,6 +289,16 @@ class AnalysisDatasetCreator:
             is_male = 0
             is_white = 0
             is_asian = 0
+            
+            # Junior/Senior counters
+            num_junior_speakers = 0
+            num_senior_speakers = 0
+            num_black_junior = 0
+            num_black_senior = 0
+            num_hispanic_junior = 0
+            num_hispanic_senior = 0
+            num_urm_junior = 0
+            num_urm_senior = 0
             
             # Semester-specific counters
             fall_total = 0
@@ -297,6 +352,12 @@ class AnalysisDatasetCreator:
                     except:
                         pass
                 
+                # Count junior/senior speakers
+                if speaker.get('is_junior', False):
+                    num_junior_speakers += 1
+                if speaker.get('is_senior', False):
+                    num_senior_speakers += 1
+                
                 # Check if speaker has demographics (already matched by speaker_id)
                 if speaker.get('has_demographics', False) or pd.notna(speaker.get('combined_race')):
                     speakers_with_demographics += 1
@@ -322,6 +383,20 @@ class AnalysisDatasetCreator:
                         is_female += 1
                     elif gender == 'man':
                         is_male += 1
+                    
+                    # Count subgroups
+                    if speaker.get('is_black_junior', False):
+                        num_black_junior += 1
+                    if speaker.get('is_black_senior', False):
+                        num_black_senior += 1
+                    if speaker.get('is_hispanic_junior', False):
+                        num_hispanic_junior += 1
+                    if speaker.get('is_hispanic_senior', False):
+                        num_hispanic_senior += 1
+                    if speaker.get('is_urm_junior', False):
+                        num_urm_junior += 1
+                    if speaker.get('is_urm_senior', False):
+                        num_urm_senior += 1
                     
                     # Update semester-specific counts
                     if semester == 'Fall':
@@ -365,6 +440,14 @@ class AnalysisDatasetCreator:
             spring_pct_black = (spring_black / spring_with_demographics * 100) if spring_with_demographics > 0 else 0
             spring_pct_hispanic = (spring_hispanic / spring_with_demographics * 100) if spring_with_demographics > 0 else 0
             spring_pct_female = (spring_female / spring_with_demographics * 100) if spring_with_demographics > 0 else 0
+            
+            # Calculate junior/senior percentages
+            pct_black_junior = (num_black_junior / num_junior_speakers * 100) if num_junior_speakers > 0 else 0
+            pct_black_senior = (num_black_senior / num_senior_speakers * 100) if num_senior_speakers > 0 else 0
+            pct_hispanic_junior = (num_hispanic_junior / num_junior_speakers * 100) if num_junior_speakers > 0 else 0
+            pct_hispanic_senior = (num_hispanic_senior / num_senior_speakers * 100) if num_senior_speakers > 0 else 0
+            pct_urm_junior = (num_urm_junior / num_junior_speakers * 100) if num_junior_speakers > 0 else 0
+            pct_urm_senior = (num_urm_senior / num_senior_speakers * 100) if num_senior_speakers > 0 else 0
             
             # Calculate PhD year statistics
             num_speakers_with_phd_year = len(phd_years)
@@ -436,6 +519,32 @@ class AnalysisDatasetCreator:
                 'has_any_native_american': int(is_native_american > 0),
                 'has_any_female': int(is_female > 0),
                 
+                # Junior/Senior counts
+                'num_junior_speakers': num_junior_speakers,
+                'num_senior_speakers': num_senior_speakers,
+                'num_black_junior': num_black_junior,
+                'num_black_senior': num_black_senior,
+                'num_hispanic_junior': num_hispanic_junior,
+                'num_hispanic_senior': num_hispanic_senior,
+                'num_urm_junior': num_urm_junior,
+                'num_urm_senior': num_urm_senior,
+                
+                # Junior/Senior percentages
+                'pct_black_junior': pct_black_junior,
+                'pct_black_senior': pct_black_senior,
+                'pct_hispanic_junior': pct_hispanic_junior,
+                'pct_hispanic_senior': pct_hispanic_senior,
+                'pct_urm_junior': pct_urm_junior,
+                'pct_urm_senior': pct_urm_senior,
+                
+                # Junior/Senior binary indicators
+                'has_any_black_junior': int(num_black_junior > 0),
+                'has_any_black_senior': int(num_black_senior > 0),
+                'has_any_hispanic_junior': int(num_hispanic_junior > 0),
+                'has_any_hispanic_senior': int(num_hispanic_senior > 0),
+                'has_any_urm_junior': int(num_urm_junior > 0),
+                'has_any_urm_senior': int(num_urm_senior > 0),
+                
                 # Semester indicators
                 'has_fall_speakers': int(fall_total > 0),
                 'has_spring_speakers': int(spring_total > 0),
@@ -484,6 +593,69 @@ class AnalysisDatasetCreator:
         print(f"  Total seminars: {len(self.seminar_df)}")
         print(f"  Treatment: {self.seminar_df['treatment'].sum()}")
         print(f"  Control: {len(self.seminar_df) - self.seminar_df['treatment'].sum()}")
+        
+    def add_email_recipient_demographics(self):
+        """Add email recipient demographic variables"""
+        if self.recipient_df is None:
+            print("\n=== SKIPPING EMAIL RECIPIENT DEMOGRAPHICS (file not found) ===")
+            return
+        
+        print("\n=== ADDING EMAIL RECIPIENT DEMOGRAPHICS ===")
+        
+        # Merge on department name
+        self.seminar_df['merge_key'] = self.seminar_df['department_std']
+        self.recipient_df['merge_key'] = self.recipient_df['department']
+        
+        # Select columns to merge
+        merge_cols = [
+            'merge_key',
+            'num_email_recipients',
+            'pct_female_recipients', 
+            'pct_urm_recipients',
+            'pct_black_recipients',
+            'pct_hispanic_recipients',
+            'pct_assistant_prof_recipients'
+        ]
+        
+        # Merge
+        self.seminar_df = self.seminar_df.merge(
+            self.recipient_df[merge_cols], 
+            on='merge_key', 
+            how='left',
+            suffixes=('', '_new')
+        )
+        
+        # Check merge quality
+        matched = self.seminar_df['num_email_recipients'].notna().sum()
+        print(f"  Matched {matched}/{len(self.seminar_df)} seminars ({matched/len(self.seminar_df)*100:.1f}%)")
+        
+        # Handle any conflicts with existing num_recipients column
+        if 'num_recipients' in self.seminar_df.columns:
+            print(f"  Original num_recipients range: {self.seminar_df['num_recipients'].min()}-{self.seminar_df['num_recipients'].max()}")
+            print(f"  New num_email_recipients range: {self.seminar_df['num_email_recipients'].min()}-{self.seminar_df['num_email_recipients'].max()}")
+            # Keep original num_recipients, add email-specific count as separate column
+            self.seminar_df['num_email_recipients_analyzed'] = self.seminar_df['num_email_recipients']
+            self.seminar_df.drop('num_email_recipients', axis=1, inplace=True)
+        
+        # Clean up
+        self.seminar_df.drop('merge_key', axis=1, inplace=True)
+        
+        # Calculate number of distinct seminars per department
+        seminars_per_dept = self.seminar_df.groupby('department_std')['seminar_id'].nunique().reset_index()
+        seminars_per_dept.columns = ['department_std', 'num_distinct_seminars']
+        
+        # Merge back
+        self.seminar_df = self.seminar_df.merge(seminars_per_dept, on='department_std', how='left')
+        
+        # Print summary of new variables
+        print("\n  Email recipient variables added:")
+        if 'pct_female_recipients' in self.seminar_df.columns:
+            print(f"    - pct_female_recipients: Mean = {self.seminar_df['pct_female_recipients'].mean():.3f}")
+            print(f"    - pct_urm_recipients: Mean = {self.seminar_df['pct_urm_recipients'].mean():.3f}")
+            print(f"    - pct_black_recipients: Mean = {self.seminar_df['pct_black_recipients'].mean():.3f}")
+            print(f"    - pct_hispanic_recipients: Mean = {self.seminar_df['pct_hispanic_recipients'].mean():.3f}")
+            print(f"    - pct_assistant_prof_recipients: Mean = {self.seminar_df['pct_assistant_prof_recipients'].mean():.3f}")
+            print(f"    - num_distinct_seminars: Mean = {self.seminar_df['num_distinct_seminars'].mean():.1f}")
         
     def add_all_controls(self):
         """Add all control variables"""
@@ -587,7 +759,7 @@ class AnalysisDatasetCreator:
                 if 'general_rank' in rank_data and pd.notna(rank_data['general_rank']):
                     self.seminar_df.loc[idx, 'general_ranking'] = rank_data['general_rank']
         
-        # 5. Email recipient counts
+        # 5. Email recipient counts (original from email-launch.csv)
         print("  Adding email recipient counts...")
         email_df = pd.read_csv(self.email_dir / "email-launch.csv")
         recipient_counts = email_df.groupby('department').size().reset_index(name='num_recipients')
@@ -731,6 +903,8 @@ class AnalysisDatasetCreator:
             'n_control': int(len(self.seminar_df) - self.seminar_df['treatment'].sum()),
             'n_seminars_with_fall': int(self.seminar_df['has_fall_speakers'].sum()),
             'n_seminars_with_spring': int(self.seminar_df['has_spring_speakers'].sum()),
+            'n_seminars_with_junior': int((self.seminar_df['num_junior_speakers'] > 0).sum()),
+            'n_seminars_with_senior': int((self.seminar_df['num_senior_speakers'] > 0).sum()),
             'control_variable_coverage': {
                 'bin_categories': float(self.seminar_df['bin_category'].notna().sum() / len(self.seminar_df)),
                 'batch_numbers': float(self.seminar_df['batch_number'].notna().sum() / len(self.seminar_df)),
@@ -745,9 +919,17 @@ class AnalysisDatasetCreator:
                 'coverage_rate': float((self.seminar_df['num_speakers_with_phd_year'] > 0).sum() / len(self.seminar_df)),
                 'mean_years_from_phd': float(self.seminar_df['mean_years_from_phd'].mean()) if not self.seminar_df['mean_years_from_phd'].isna().all() else None,
                 'mean_pct_with_phd': float(self.seminar_df['pct_speakers_with_phd_year'].mean()),
-                'mean_pct_current_students': float(self.seminar_df['pct_current_students'].mean())
+                'mean_pct_current_students': float(self.seminar_df['pct_current_students'].mean()),
+                'median_years_for_split': float(self.median_years_since_phd)
             },
-            'columns': list(self.seminar_df.columns)
+            'email_recipient_demographics': {
+                'seminars_with_recipient_data': int(self.seminar_df['pct_female_recipients'].notna().sum()) if 'pct_female_recipients' in self.seminar_df.columns else 0,
+                'mean_pct_female_recipients': float(self.seminar_df['pct_female_recipients'].mean()) if 'pct_female_recipients' in self.seminar_df.columns else None,
+                'mean_pct_urm_recipients': float(self.seminar_df['pct_urm_recipients'].mean()) if 'pct_urm_recipients' in self.seminar_df.columns else None,
+                'mean_pct_black_recipients': float(self.seminar_df['pct_black_recipients'].mean()) if 'pct_black_recipients' in self.seminar_df.columns else None
+            },
+            'columns': list(self.seminar_df.columns),
+            'total_columns': len(self.seminar_df.columns)
         }
         
         with open(self.output_dir / "master_analysis_dataset_metadata.json", 'w') as f:
@@ -760,6 +942,8 @@ class AnalysisDatasetCreator:
         print(f"    - Identifiers: seminar_id, university, discipline, department, etc.")
         print(f"    - Treatment: treatment (0/1)")
         print(f"    - Outcomes: pct_urm, pct_black, pct_hispanic, num_urm, etc.")
+        print(f"    - Junior/Senior breakdowns: num_black_junior, pct_urm_senior, etc.")
+        print(f"    - Email recipient demographics: pct_female_recipients, pct_black_recipients, etc.")
         print(f"    - Semester outcomes: fall_pct_urm, spring_pct_urm, etc.")
         print(f"    - Control variables: all pre-registered controls including peer variables")
         print(f"    - Indicator variables: bin_*, batch_*, disc_*")
@@ -767,24 +951,29 @@ class AnalysisDatasetCreator:
     def create_dataset(self):
         """Main method to create the complete analysis dataset"""
         print("\n" + "="*60)
-        print("CREATING MASTER ANALYSIS DATASET")
+        print("CREATING MASTER ANALYSIS DATASET (INTEGRATED VERSION)")
         print("="*60)
         
         # Check if dataset already exists
         output_file = self.output_dir / "master_analysis_dataset.csv"
         if output_file.exists():
             print(f"\nDataset already exists at: {output_file}")
-            print("Delete the file to regenerate it.")
-            return True
+            user_input = input("Overwrite existing dataset? (y/n): ")
+            if user_input.lower() != 'y':
+                print("Exiting without overwriting.")
+                return False
         
         # Load all data
         self.load_all_data()
         
-        # Create speaker-level data with demographics
+        # Create speaker-level data with demographics and junior/senior classifications
         self.create_speaker_level_data()
         
         # Add all control variables
         self.add_all_controls()
+        
+        # Add email recipient demographics
+        self.add_email_recipient_demographics()
         
         # Create indicator variables
         self.create_indicator_variables()
@@ -796,8 +985,16 @@ class AnalysisDatasetCreator:
         self.save_dataset()
         
         print("\n" + "="*60)
-        print("DATASET CREATION COMPLETE")
+        print("INTEGRATED DATASET CREATION COMPLETE")
         print("="*60)
+        
+        # Print subgroup analysis summary
+        print("\n=== SUBGROUP ANALYSIS SUMMARY ===")
+        print(f"  Junior/Senior split at median years since PhD: {self.median_years_since_phd:.1f}")
+        print(f"  Seminars with junior speakers: {(self.seminar_df['num_junior_speakers'] > 0).sum()}")
+        print(f"  Seminars with senior speakers: {(self.seminar_df['num_senior_speakers'] > 0).sum()}")
+        print(f"  Mean % Black among junior speakers: {self.seminar_df['pct_black_junior'].mean():.3f}")
+        print(f"  Mean % Black among senior speakers: {self.seminar_df['pct_black_senior'].mean():.3f}")
         
         return True
 
