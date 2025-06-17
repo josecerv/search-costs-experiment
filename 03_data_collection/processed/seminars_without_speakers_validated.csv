@@ -1,0 +1,227 @@
+seminar_id,seminar_name,department,university,discipline,condition
+95f835-0ffd71-af,Seminars,Arizona State University-Computer Science,Arizona State University,Computer Science,treatment
+1a6095-3dd388-72,Topology Seminar,Auburn University-Mathematics,Auburn University,Mathematics,control
+9f0f10-9218b6-47,Department Colloquium Series,Baylor University-Physics,Baylor University,Physics,control
+cf7b37-0d72c8-22,Colloquium,Binghamton University-Mathematics,Binghamton University,Mathematics,control
+09b6b2-b03245-76,Math & Machine Learning Seminar,Boston College-Mathematics,Boston College,Mathematics,control
+818b6a-a9ac5e-7c,BC-MIT Number Theory Seminar,Boston College-Mathematics,Boston College,Mathematics,control
+97048e-ee239f-fb,Colloquium Series,Boston University-Computer Science,Boston University,Computer Science,treatment
+cb2b2d-912256-62,High Energy Theory (HET) Seminars,Brown University-Physics,Brown University,Physics,treatment
+6e2d3d-f65eaa-4f,CaJAGWR Seminars,California Institute of Technology-Physics,California Institute of Technology,Physics,control
+b805ea-26b29f-15,Core Model Seminars,Carnegie Mellon University-Mathematics,Carnegie Mellon University,Mathematics,treatment
+ff8852-51bc58-f1,Crypto Seminar,Carnegie Mellon University-Computer Science,Carnegie Mellon University,Computer Science,control
+5f30ba-40b69c-e6,ECSE Collloquium Series,Case Western Reserve University-Computer Science,Case Western Reserve University,Computer Science,treatment
+7b0e63-d58ad7-8c,CDS Colloquium Series,Case Western Reserve University-Computer Science,Case Western Reserve University,Computer Science,treatment
+088e2b-7801ee-c0,Seminar Series,Clemson University-Mechanical Engineering,Clemson University,Mechanical Engineering,treatment
+5812ca-2c5bdd-ba,Biophysics Seminar,Clemson University-Physics,Clemson University,Physics,control
+936047-ffa5fb-ed,School of Computing Seminars,Clemson University-Computer Science,Clemson University,Computer Science,control
+982bbb-b3e980-34,Atmospheric and space physics seminar,Clemson University-Physics,Clemson University,Physics,control
+de3943-43921d-23,Algebra and Discrete Mathematics Seminar,Clemson University-Mathematics,Clemson University,Mathematics,treatment
+e01218-7c4ea7-78,Mechatronics Series,Clemson University-Mechanical Engineering,Clemson University,Mechanical Engineering,treatment
+8d3837-0ee3fa-79,Applied Category Theory,Colorado State University-Mathematics,Colorado State University,Mathematics,treatment
+a7a2be-4366d4-82,Topology Seminar,Colorado State University-Mathematics,Colorado State University,Mathematics,treatment
+150266-c746ca-a9,VIGR Seminar,Columbia University-Computer Science,Columbia University,Computer Science,treatment
+283111-027304-9a,Symplectic Geometry and Gauge Theory Seminar,Columbia University-Mathematics,Columbia University,Mathematics,treatment
+3afcd3-ba2836-d5,Enumerative Invariants and Birational Transformations,Columbia University-Mathematics,Columbia University,Mathematics,treatment
+4a4862-279a18-72,NLP Seminar,Columbia University-Computer Science,Columbia University,Computer Science,treatment
+cebadc-dbe099-4c,Decomposition of the Diagonal,Columbia University-Mathematics,Columbia University,Mathematics,treatment
+504cc0-16bec9-50,Joint Experimental and Theory Seminars in Particle Physics and Cosmology,Cornell University-Physics,Cornell University,Physics,control
+9dfc3d-e02114-c7,Graphics-Vision Seminar,Cornell University-Computer Science,Cornell University,Computer Science,control
+c58155-16d461-92,Quantum Theory Seminar,Cornell University-Physics,Cornell University,Physics,control
+02adab-fbecf1-62,Geometry Seminar,Dartmouth College-Mathematics,Dartmouth College,Mathematics,treatment
+98d306-642ad6-08,Seminar Series,Drexel University-Mechanical Engineering,Drexel University,Mechanical Engineering,treatment
+37dc5e-c3be8f-2f,Higher Energy Physics Seminar,Florida State University-Physics,Florida State University,Physics,control
+3fb6dd-7502fe-84,Logic Seminar,George Washington University-Mathematics,George Washington University,Mathematics,control
+c4386b-a15a82-1f,Colloquium,George Washington University-Physics,George Washington University,Physics,treatment
+afc242-173044-7a,Center for Computational Molecular Science and Technology (CCMST) Seminar,Georgia Institute of Technology-Chemistry,Georgia Institute of Technology,Chemistry,treatment
+755421-d45fdf-4e,Combinatorial and Additive Number Theory,"Graduate Center, CUNY-Mathematics","Graduate Center, CUNY",Mathematics,treatment
+a806c0-927eb0-c9,Analytical Chemistry Seminar,Indiana University Bloomington-Chemistry,Indiana University Bloomington,Chemistry,control
+e9ac3c-1f074a-37,Dynamical Systems Seminar,Indiana University Bloomington-Mathematics,Indiana University Bloomington,Mathematics,treatment
+fe30b3-5064d0-f8,Geometry Seminar,Indiana University Bloomington-Mathematics,Indiana University Bloomington,Mathematics,treatment
+0ced91-704999-5f,Combinatorics/Algebra Seminar,Iowa State University-Mathematics,Iowa State University,Mathematics,control
+4e0ddc-5a1282-e1,Colloquiua,Iowa State University-Mathematics,Iowa State University,Mathematics,control
+df5e71-67d4c9-ef,Logic and Computability Seminar,Iowa State University-Mathematics,Iowa State University,Mathematics,control
+195a10-8498ad-fc,Visiting Faculty Seminar,Johns Hopkins University-Chemistry,Johns Hopkins University,Chemistry,control
+a4714d-75c127-2e,Function Theory Study Seminar,Kansas State University-Mathematics,Kansas State University,Mathematics,treatment
+1aa59d-5a8f72-b6,Algebra Seminar,Kent State University-Mathematics,Kent State University,Mathematics,control
+96c414-37e233-ec,Computational and Applied Math Seminar,Kent State University-Mathematics,Kent State University,Mathematics,control
+80161b-5a3c6b-18,MechE Alliance Seminar,Massachusetts Institute of Technology-Mechanical Engineering,Massachusetts Institute of Technology,Mechanical Engineering,treatment
+785a27-678acf-83,Joint Number Theory Seminar (Columbia - CUNY - NYU),New York University-Mathematics,New York University,Mathematics,control
+a695c2-495355-e5,Symbolic Computation Seminar,North Carolina State University-Mathematics,North Carolina State University,Mathematics,treatment
+57f459-14eb89-28,Applied Mathematics Seminar,North Dakota State University-Mathematics,North Dakota State University,Mathematics,treatment
+d43aad-441877-87,Computer Science Seminar Series,North Dakota State University-Computer Science,North Dakota State University,Computer Science,control
+0440cb-2db6c1-41,Programming Language Seminar,Northeastern University-Computer Science,Northeastern University,Computer Science,treatment
+c3a842-4ef7f6-f3,Informal Geometric Analysis Seminar,Northwestern University-Mathematics,Northwestern University,Mathematics,treatment
+1b64f0-f5a9ad-6d,Math to Industry,Ohio State University-Mathematics,Ohio State University,Mathematics,treatment
+f25749-5e8965-25,Exploration of Novel Complex Materials,Ohio State University-Physics,Ohio State University,Physics,treatment
+700453-6be2ef-10,Colloquium and Seminar,Ohio University-Mathematics,Ohio University,Mathematics,treatment
+8fe7da-2930c6-1b,Richard F. Barry Jr Seminar Series,Old Dominion University-Mathematics,Old Dominion University,Mathematics,control
+013a53-eb8d4a-88,Materials and Devices Seminar,Oregon State University-Computer Science,Oregon State University,Computer Science,control
+930bcf-5d8cd3-b3,Materials and Devices Seminar,Oregon State University-Mechanical Engineering,Oregon State University,Mechanical Engineering,treatment
+202caa-2379f3-c4,Special Colloquium,Pennsylvania State University-Mathematics,Pennsylvania State University,Mathematics,control
+a49036-090587-5e,Teaching and Learning Seminar,Pennsylvania State University-Mathematics,Pennsylvania State University,Mathematics,control
+e9e5b5-0581cd-31,Noncommutative Geometry Seminar,Pennsylvania State University-Mathematics,Pennsylvania State University,Mathematics,control
+965cb6-82226f-71,Donald Ross Hamilton Colloquia,Princeton University-Physics,Princeton University,Physics,control
+dc8606-3e5f66-97,Materials Seminar,Princeton University-Chemistry,Princeton University,Chemistry,treatment
+486360-65bd85-02,Graphics Seminar,Purdue University-Computer Science,Purdue University,Computer Science,treatment
+a082c6-8a899c-90,Biochemistry Seminar,Purdue University-Chemistry,Purdue University,Chemistry,control
+b8c357-72f1c3-d6,Colloquium,Rice University-Mathematics,Rice University,Mathematics,treatment
+5c24ca-98952b-a3,Mathematical Finance and Probability Seminars,Rutgers University-New Brunswick-Mathematics,Rutgers University-New Brunswick,Mathematics,control
+6c0daf-86198b-d4,Physics and Astronomy Education Research,Rutgers University-New Brunswick-Physics,Rutgers University-New Brunswick,Physics,control
+755de0-b9a967-a0,Honors Seminar,Rutgers University-New Brunswick-Physics,Rutgers University-New Brunswick,Physics,control
+94dccd-adb6ce-92,Center for Quantitative Biology,Rutgers University-New Brunswick-Physics,Rutgers University-New Brunswick,Physics,control
+d2c7d2-9a80c2-3c,Machine Learning Group Meeting,Rutgers University-New Brunswick-Physics,Rutgers University-New Brunswick,Physics,control
+d56a7f-3834a1-6b,Diversity in Chemistry Seminars,Rutgers University-New Brunswick-Chemistry,Rutgers University-New Brunswick,Chemistry,treatment
+e99937-4b7861-69,Symposium,Rutgers University-New Brunswick-Computer Science,Rutgers University-New Brunswick,Computer Science,treatment
+f1ae63-1482df-32,CMT Symposium,Rutgers University-New Brunswick-Physics,Rutgers University-New Brunswick,Physics,control
+f9856d-6195a4-9e,Developing Educators and Leaders Among TAs in Physics,Rutgers University-New Brunswick-Physics,Rutgers University-New Brunswick,Physics,control
+ffb31a-aefbd2-6c,Physical Chemistry Seminar,Rutgers University-New Brunswick-Physics,Rutgers University-New Brunswick,Physics,control
+623420-d5d1fe-25,Mathematical Billiards Program Seminar,Stony Brook University-Mathematics,Stony Brook University,Mathematics,control
+760332-8ee2a2-41,Center for Accelerator Science and Education,Stony Brook University-Physics,Stony Brook University,Physics,treatment
+bd6503-c3c782-bd,Probability and Combinatorics Seminar,Stony Brook University-Mathematics,Stony Brook University,Mathematics,control
+c137dd-f6685f-cd,Fluctuations Program Seminar,Stony Brook University-Mathematics,Stony Brook University,Mathematics,control
+e5029e-18ce25-1a,Francis Johnson Lecture,Stony Brook University-Chemistry,Stony Brook University,Chemistry,control
+e9ba2d-ebc5f3-dd,Della Pietra Lecture Series,Stony Brook University-Mathematics,Stony Brook University,Mathematics,control
+296f16-abc6c8-be,Gravitational Waves Seminar,Syracuse University-Physics,Syracuse University,Physics,treatment
+6e3f25-d35359-18,Physics Department Colloquium,Temple University-Physics,Temple University,Physics,treatment
+92f339-e8dfcc-61,Seminars,Temple University-Physics,Temple University,Physics,treatment
+494171-68c9dc-85,Seminar on Banach and Metric Space Geometry,Texas A&M University-Mathematics,Texas A&M University,Mathematics,treatment
+dcf667-541e0b-cb,Colloquium,Texas A&M University-Physics,Texas A&M University,Physics,treatment
+f7f774-fcc47c-89,Several Complex Variables Seminar,Texas A&M University-Mathematics,Texas A&M University,Mathematics,treatment
+b108e7-4d62ab-cf,Geometry & Topology Seminar,Tulane University-Mathematics,Tulane University,Mathematics,treatment
+ea5f4f-5f2e0e-6b,Modular Forms Seminar,Tulane University-Mathematics,Tulane University,Mathematics,treatment
+6311fc-eb6ed6-6c,Seminar,"University at Albany, SUNY-Chemistry","University at Albany, SUNY",Chemistry,treatment
+b3ca7a-d3cc7d-4f,Physics Colloquia,"University at Albany, SUNY-Physics","University at Albany, SUNY",Physics,treatment
+a74ca3-1b760b-60,CSE Distinguished Speaker Series,University at Buffalo-Computer Science,University at Buffalo,Computer Science,control
+3f042b-edb130-a3,Quantitative Biology Colloquium,University of Arizona-Mathematics,University of Arizona,Mathematics,treatment
+f44e8e-66bf2a-bd,Steward Observatory/NSF NOIRLab Joint Colloquium Series,University of Arizona-Physics,University of Arizona,Physics,control
+34dd9d-8e97cf-3d,Robert D. Maurer Distinguished Lecture Series,University of Arkansas-Physics,University of Arkansas,Physics,control
+511b18-d892cb-6c,Applied Analysis Seminar,University of Arkansas-Mathematics,University of Arkansas,Mathematics,treatment
+eacfa3-71199d-c9,Colloquia,University of Arkansas-Physics,University of Arkansas,Physics,control
+1a7a33-ad8f63-ba,Merck-Banyu Seminar Lecture,"University of California, Berkeley-Chemistry","University of California, Berkeley",Chemistry,treatment
+2f6dff-5a4583-1e,Richard M. Karp Distinguished Lecture,"University of California, Berkeley-Mathematics","University of California, Berkeley",Mathematics,treatment
+47a370-167ac7-35,Nano Seminar Series,"University of California, Berkeley-Physics","University of California, Berkeley",Physics,control
+5f9ed9-74bac3-07,BLM Reading Group on Inclusive Math Teaching,"University of California, Berkeley-Mathematics","University of California, Berkeley",Mathematics,treatment
+9be8e9-d6e229-4f,Probability Seminar,"University of California, Berkeley-Mathematics","University of California, Berkeley",Mathematics,treatment
+bda41e-48efda-01,Nano Seminar Series,"University of California, Berkeley-Chemistry","University of California, Berkeley",Chemistry,treatment
+dd7334-458c7f-db,Pitzer Center for Theoretical Chemistry Seminar,"University of California, Berkeley-Chemistry","University of California, Berkeley",Chemistry,treatment
+ee0a31-db9a9c-6a,Arithmetic Geometry Seminar,"University of California, Berkeley-Mathematics","University of California, Berkeley",Mathematics,treatment
+fc2602-4ed799-0d,Andrew Braisted Award Lecture,"University of California, Berkeley-Chemistry","University of California, Berkeley",Chemistry,treatment
+f3d223-0a4f74-1b,Frederica Darema Lecture Series,"University of California, Davis-Physics","University of California, Davis",Physics,control
+3c2ff3-5bb333-57,Institute for Future Health Events,"University of California, Irvine-Computer Science","University of California, Irvine",Computer Science,treatment
+b99160-7991ca-b4,CS Distinguished Lecture Series,"University of California, Irvine-Computer Science","University of California, Irvine",Computer Science,treatment
+469d72-769329-27,SCSS Seminars,"University of California, Los Angeles-Physics","University of California, Los Angeles",Physics,treatment
+4d73b4-6ee15b-4a,Bhaumik Lectures,"University of California, Los Angeles-Physics","University of California, Los Angeles",Physics,treatment
+5b3ff4-5d1e2f-57,Participating Funct. Analysis Seminar,"University of California, Los Angeles-Mathematics","University of California, Los Angeles",Mathematics,control
+708963-5df9b4-11,Distinguished Women in Math Lecture Series,"University of California, Los Angeles-Mathematics","University of California, Los Angeles",Mathematics,control
+b787ec-5b16eb-cb,John D. & Edith Roberts Lecture,"University of California, Los Angeles-Chemistry","University of California, Los Angeles",Chemistry,treatment
+cec6f4-9bda2e-c2,Participating Probability Seminar,"University of California, Los Angeles-Mathematics","University of California, Los Angeles",Mathematics,control
+f44e62-abacc2-1b,Algebraic Topology Seminar,"University of California, Los Angeles-Mathematics","University of California, Los Angeles",Mathematics,control
+fc6b0d-49f81f-d6,Center for Biological Physics Seminars,"University of California, Los Angeles-Physics","University of California, Los Angeles",Physics,treatment
+206226-0f6984-8e,Condensed Matter Seminar,"University of California, Riverside-Physics","University of California, Riverside",Physics,control
+468cc8-636c59-23,ME Seminars,"University of California, Riverside-Mechanical Engineering","University of California, Riverside",Mechanical Engineering,control
+fd9fbc-8beea3-8a,High Energy Physics Seminar,"University of California, Riverside-Physics","University of California, Riverside",Physics,control
+6489a5-ef8500-35,Physical/Analytical Seminar,"University of California, San Diego-Chemistry","University of California, San Diego",Chemistry,control
+221186-a72a53-7f,Peale Lecture,"University of California, Santa Barbara-Physics","University of California, Santa Barbara",Physics,control
+76efc5-ca69e4-17,Biochemistry Seminar,"University of California, Santa Barbara-Chemistry","University of California, Santa Barbara",Chemistry,treatment
+818a84-d6b1c3-84,Theory Colloquium,"University of California, Santa Barbara-Computer Science","University of California, Santa Barbara",Computer Science,treatment
+894ef5-8a3df1-bc,B. R. Baker Lecture,"University of California, Santa Barbara-Chemistry","University of California, Santa Barbara",Chemistry,treatment
+9b5023-8bf5b0-ca,Seminar,"University of California, Santa Barbara-Mechanical Engineering","University of California, Santa Barbara",Mechanical Engineering,treatment
+c680be-ef3cb0-7d,Differential Geometry Seminar,"University of California, Santa Barbara-Mathematics","University of California, Santa Barbara",Mathematics,control
+68bab1-211a90-09,Seminar,University of Central Florida-Chemistry,University of Central Florida,Chemistry,treatment
+7b5c1c-7088de-a2,Mathematics and Applications Seminar,University of Central Florida-Mathematics,University of Central Florida,Mathematics,treatment
+e1eaa1-17ac8e-90,Numerical Analysis Seminar,University of Central Florida-Mathematics,University of Central Florida,Mathematics,treatment
+601eb6-cff4d3-b3,Maria Goeppert-Mayer Lectures,University of Chicago-Physics,University of Chicago,Physics,treatment
+bb5a98-72a0df-52,Zachariasen Memorial Lectures,University of Chicago-Physics,University of Chicago,Physics,treatment
+857e75-b59f28-40,Materials and Nanoscience Seminars,University of Colorado Boulder-Chemistry,University of Colorado Boulder,Chemistry,treatment
+bed028-cbf98e-26,Rocky Mountain Mechanics Seminar Series,University of Colorado Boulder-Mechanical Engineering,University of Colorado Boulder,Mechanical Engineering,control
+f71884-bcfcc2-9b,Noncommutative Geometry Seminar,University of Colorado Boulder-Mathematics,University of Colorado Boulder,Mathematics,control
+9ada1a-06a217-96,Analysis and Probability Seminar,University of Connecticut-Mathematics,University of Connecticut,Mathematics,treatment
+06f139-d14dcb-99,Teaching Seminar,University of Delaware-Mathematics,University of Delaware,Mathematics,treatment
+2e28be-1b0ca8-4b,Vernon Lecture,University of Delaware-Physics,University of Delaware,Physics,treatment
+663a3b-e32bf2-8d,Probability and Stochastic Processes Seminar,University of Delaware-Mathematics,University of Delaware,Mathematics,treatment
+85174c-8d65d3-35,Colloquium,University of Delaware-Physics,University of Delaware,Physics,treatment
+fb4e27-772966-da,Astronomy Seminar,University of Delaware-Physics,University of Delaware,Physics,treatment
+b08eb8-ad139d-c3,Applied and Numerical Analysis,University of Florida-Mathematics,University of Florida,Mathematics,control
+46b4a8-1ac3fa-e2,SMARTS,University of Georgia-Mathematics,University of Georgia,Mathematics,treatment
+8041e7-ad35b1-8c,Functional Analysis,University of Georgia-Mathematics,University of Georgia,Mathematics,treatment
+dd9c59-183eb9-29,Colloquia,University of Georgia-Computer Science,University of Georgia,Computer Science,control
+7181ff-c941d1-9c,Number Theory Seminar,University of Hawaii at Manoa-Mathematics,University of Hawaii at Manoa,Mathematics,control
+f55c64-d3428c-9d,Chemistry Seminars,University of Hawaii at Manoa-Chemistry,University of Hawaii at Manoa,Chemistry,control
+c7e74d-5996a7-3a,Complex Analysis and Complex Geometry Seminar,University of Houston-Mathematics,University of Houston,Mathematics,treatment
+5c795d-2da1e2-d7,Astro Seminar,University of Kentucky-Physics,University of Kentucky,Physics,control
+a34241-75b6e8-13,Teaching and Learning Mathematics Seminar,University of Kentucky-Mathematics,University of Kentucky,Mathematics,control
+ebd770-fc81bf-66,Nuclear Seminar,University of Kentucky-Physics,University of Kentucky,Physics,control
+2cf96e-806178-35,Chemistry Seminars,University of Louisiana at Lafayette-Chemistry,University of Louisiana at Lafayette,Chemistry,control
+ab345a-5a7183-77,MCHE Seminar Series,University of Louisiana at Lafayette-Mechanical Engineering,University of Louisiana at Lafayette,Mechanical Engineering,control
+001fae-92e882-7e,Differential Equations and Applied Math Seminar,University of Louisville-Mathematics,University of Louisville,Mathematics,control
+4de3df-ccf3a4-99,Probability and Statistics Seminar,University of Louisville-Mathematics,University of Louisville,Mathematics,control
+635129-552b86-d0,Mechanical Engineering Seminar Series,University of Louisville-Mechanical Engineering,University of Louisville,Mechanical Engineering,treatment
+78350e-e7e7a0-83,Algebra and Combinatorics Seminar,University of Louisville-Mathematics,University of Louisville,Mathematics,control
+825f72-79130d-d4,Analysis Seminar,University of Louisville-Mathematics,University of Louisville,Mathematics,control
+cf3e7b-86bc45-53,Colloquium,University of Louisville-Mathematics,University of Louisville,Mathematics,control
+cc942f-d4beac-a2,Conference,University of Maine-Mechanical Engineering,University of Maine,Mechanical Engineering,control
+f12570-55dc08-57,Machine Learning Seminars,"University of Maryland, Baltimore County-Mathematics","University of Maryland, Baltimore County",Mathematics,treatment
+0888cc-80dcd3-8c,Sayas Numerics Seminar,"University of Maryland, College Park-Mathematics","University of Maryland, College Park",Mathematics,control
+2f8b60-34047a-de,Mechanical Engineering Seminar Series,"University of Maryland, College Park-Mechanical Engineering","University of Maryland, College Park",Mechanical Engineering,treatment
+489228-992bf4-7a,Applied Dynamics Seminar,"University of Maryland, College Park-Mathematics","University of Maryland, College Park",Mathematics,control
+61c88f-9cd64c-bf,Maryland Metacognition Seminar Series,"University of Maryland, College Park-Computer Science","University of Maryland, College Park",Computer Science,treatment
+62f13b-ff2266-cd,Geometry/Physics,"University of Maryland, College Park-Physics","University of Maryland, College Park",Physics,control
+745e58-c2c775-66,Maryland Cybersecurity Center Seminar Series,"University of Maryland, College Park-Computer Science","University of Maryland, College Park",Computer Science,treatment
+d7aa7c-4c0fb0-c6,Nuclear Theory Seminar,"University of Maryland, College Park-Physics","University of Maryland, College Park",Physics,control
+e80f7d-e898a9-69,Five College Number Theory Seminar,University of Massachusetts Amherst-Mathematics,University of Massachusetts Amherst,Mathematics,control
+cf5d48-72ca4c-cc,Colloquium Series,University of Memphis-Computer Science,University of Memphis,Computer Science,treatment
+11b531-3a984b-04,Colloquia,University of Miami-Computer Science,University of Miami,Computer Science,treatment
+9f9034-b4d1c1-a2,Seminars,University of Miami-Physics,University of Miami,Physics,treatment
+39c822-9d751a-8a,Diversity in Computing Seminars,University of Michigan-Computer Science,University of Michigan,Computer Science,treatment
+6308aa-655400-ab,Chemical Education Events,University of Michigan-Chemistry,University of Michigan,Chemistry,treatment
+091eaa-98f544-e6,Special Events and Seminars,University of Minnesota-Mathematics,University of Minnesota,Mathematics,treatment
+884ea4-afe071-1c,Applied and Computational Math Seminar,University of Minnesota-Mathematics,University of Minnesota,Mathematics,treatment
+b43fa4-7426c0-25,Cosmology Lunch Seminar,University of Minnesota-Physics,University of Minnesota,Physics,treatment
+1474e0-69b9ac-1a,Seminars,University of Mississippi-Chemistry,University of Mississippi,Chemistry,treatment
+53333b-ae288d-09,Seminar Series - Mizzou Engineering,University of Missouri-Mechanical Engineering,University of Missouri,Mechanical Engineering,control
+7d1d53-53c92f-7c,Colloquia,"University of Nevada, Reno-Computer Science","University of Nevada, Reno",Computer Science,treatment
+fc8a9c-769b3a-6c,Matrix Seminar,"University of Nevada, Reno-Mathematics","University of Nevada, Reno",Mathematics,treatment
+a4f368-ab3bf5-a9,Algebra and Geometry Seminar,University of New Mexico-Mathematics,University of New Mexico,Mathematics,control
+8892b9-461dfa-52,Colloquia,University of North Texas-Physics,University of North Texas,Physics,treatment
+245cb9-f576b5-42,Early Career Math Colloquium,University of Oklahoma-Mathematics,University of Oklahoma,Mathematics,treatment
+753fa0-a45ee5-f7,Computational and Applied Mathematics Forum,University of Oklahoma-Mathematics,University of Oklahoma,Mathematics,treatment
+639755-a9f1f0-17,3D Mirror Symmetry Seminar,University of Pennsylvania-Mathematics,University of Pennsylvania,Mathematics,control
+e7c653-15527b-3a,Physical Chemistry Seminars,University of Pennsylvania-Chemistry,University of Pennsylvania,Chemistry,treatment
+296ed4-084f8b-df,Organic Seminars,University of Rochester-Chemistry,University of Rochester,Chemistry,treatment
+a810a5-44c11c-29,Chemistry Colloquium,University of Rochester-Chemistry,University of Rochester,Chemistry,treatment
+88622f-b6f237-31,Analysis and PDEs in Metric spaces,University of South Florida-Mathematics,University of South Florida,Mathematics,control
+a50758-ea56e4-c7,Departmental Seminars,University of South Florida-Chemistry,University of South Florida,Chemistry,control
+4ac23d-a6644e-92,Junior Colloquium,University of Tennessee-Mathematics,University of Tennessee,Mathematics,control
+bea12e-eb4601-d4,ASME Nuclear Codes and Standards Seminar,University of Tennessee-Mechanical Engineering,University of Tennessee,Mechanical Engineering,treatment
+e4fdc3-ab7b54-a9,Brown Bag Seminar Series,University of Texas at Arlington-Mechanical Engineering,University of Texas at Arlington,Mechanical Engineering,control
+dcd17c-62d94c-d8,Theory Group Seminar,University of Texas at Austin-Computer Science,University of Texas at Austin,Computer Science,treatment
+1ffdf4-89e520-16,Nonlinear Analysis and Dynamical Systems Seminar,University of Texas at Dallas-Mathematics,University of Texas at Dallas,Mathematics,treatment
+486ae8-5c50be-9b,The Jonsson School Distinguished Speaker Series,University of Texas at Dallas-Mechanical Engineering,University of Texas at Dallas,Mechanical Engineering,treatment
+9925a0-0b98ae-81,"Geometry, Topology, Dynamical Systems Seminar",University of Texas at Dallas-Mathematics,University of Texas at Dallas,Mathematics,treatment
+b54b5b-3d7b0e-eb,Seminars,University of Texas at El Paso-Chemistry,University of Texas at El Paso,Chemistry,treatment
+c1d96f-8429d1-10,Applied Math Seminar,University of Texas at San Antonio-Mathematics,University of Texas at San Antonio,Mathematics,treatment
+c98074-9e0d20-97,Statistics Seminar,University of Utah-Mathematics,University of Utah,Mathematics,treatment
+521df0-1fffe3-11,Condensed Matter Seminars,University of Virginia-Physics,University of Virginia,Physics,control
+ec30dc-12661c-ba,Colloquium,University of Virginia-Physics,University of Virginia,Physics,control
+5044c8-6b4bdd-47,Inverse Problems Seminar,University of Washington-Mathematics,University of Washington,Mathematics,treatment
+1da974-8a2dcf-81,Plasma Physics,University of Wisconsin-Madison-Physics,University of Wisconsin-Madison,Physics,control
+51d3e1-f535f8-94,Math Circles,University of Wisconsin-Madison-Mathematics,University of Wisconsin-Madison,Mathematics,control
+316283-f3973b-fe,Research Seminar,University of Wisconsin-Milwaukee-Computer Science,University of Wisconsin-Milwaukee,Computer Science,treatment
+6c3db4-285887-34,Biophysics Seminar,University of Wisconsin-Milwaukee-Physics,University of Wisconsin-Milwaukee,Physics,control
+735b0d-1169c0-90,Research Seminar,University of Wisconsin-Milwaukee-Mechanical Engineering,University of Wisconsin-Milwaukee,Mechanical Engineering,treatment
+66bc3d-9d5fe0-c9,Computational Analysis Seminar,Vanderbilt University-Mathematics,Vanderbilt University,Mathematics,control
+04e79f-5028b0-ac,Seminars,Virginia Commonwealth University-Computer Science,Virginia Commonwealth University,Computer Science,control
+b4d3e5-90d8f8-54,Math Tea,Virginia Commonwealth University-Mathematics,Virginia Commonwealth University,Mathematics,treatment
+d362d0-6ecbd6-35,Leadership Series,Virginia Tech-Mechanical Engineering,Virginia Tech,Mechanical Engineering,control
+59e366-1b0faf-79,Mathematics Education,Washington State University-Mathematics,Washington State University,Mathematics,treatment
+68c35d-46686d-ea,Analysis,Washington State University-Mathematics,Washington State University,Mathematics,treatment
+e79f7d-68f2a3-e2,Statistics,Washington State University-Mathematics,Washington State University,Mathematics,treatment
+58fa96-4dda6e-3b,Teaching and Learning,Wayne State University-Mathematics,Wayne State University,Mathematics,control
+6e9560-2eeb10-8f,Analysis Seminar,Wayne State University-Mathematics,Wayne State University,Mathematics,control
+8ca0e5-b8edeb-a4,Probability and Statistics,Wayne State University-Mathematics,Wayne State University,Mathematics,control
+e6a00f-c0bf9e-a7,Data Science,Wayne State University-Mathematics,Wayne State University,Mathematics,control
+39a1ab-432548-8f,Materials and Science Engineering Seminar,West Virginia University-Mechanical Engineering,West Virginia University,Mechanical Engineering,control
+5f7de8-5c27df-e6,Colloquia,West Virginia University-Mathematics,West Virginia University,Mathematics,treatment
+71ddb0-e286a3-98,Seminars,West Virginia University-Computer Science,West Virginia University,Computer Science,treatment
+3644e9-b99ec8-c3,Informal Number Theory Seminar,Yale University-Mathematics,Yale University,Mathematics,control
