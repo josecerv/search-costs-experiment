@@ -46,7 +46,7 @@ library(car)  # For linearHypothesis
 # Set stargazer options
 options(width = 200)
 
-data <- read.csv("outputs/master_analysis_dataset_final.csv")
+data <- read.csv("outputs/master_analysis_dataset.csv")
 
 
 # Data validation
@@ -1753,6 +1753,30 @@ all_models_list <- append(all_models_list, mod_results)
 
 \newpage
 
+## Moderation by % URM Faculty in Department - Black Speakers Only
+
+**Note**: Our dataset contains combined URM faculty percentages (Black, Latino, and Native American) but not Black-specific faculty percentages. This analysis examines whether the treatment effect on Black speaker representation is moderated by the overall URM faculty percentage in the department. While not a perfect measure, departments with higher URM faculty percentages likely have higher Black faculty representation as well.
+
+```{r mod-black-by-urm-faculty, results='asis'}
+# Run moderation analysis specifically for Black speakers by URM faculty percentage
+mod_results_black <- run_moderation_by_demographic(
+  demographic = "black",
+  moderator_var = "frac_urm_faculty",
+  moderator_label = "\\% URM Faculty",
+  base_controls = base_controls,
+  extended_controls = extended_controls,
+  exclude_controls = c("frac_urm_faculty"),
+  center = FALSE
+)
+
+# Add to all_models_list if results exist
+if (!is.null(mod_results_black$model_info_list)) {
+  all_models_list <- append(all_models_list, mod_results_black$model_info_list)
+}
+```
+
+\newpage
+
 ## Moderation by Number of Distinct Seminars
 
 ```{r mod-num-seminars, results='asis'}
@@ -2129,7 +2153,7 @@ if (nrow(all_significant_results) > 0) {
   cat("\\section{Summary of All Significant Results}\n\n")
   
   # Split table if more than 45 rows
-  split_at <- 45
+  split_at <- 60
   n_tables <- ceiling(nrow(all_significant_results) / split_at)
   
   for (table_num in 1:n_tables) {
