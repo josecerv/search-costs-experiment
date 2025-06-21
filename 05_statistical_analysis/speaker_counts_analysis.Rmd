@@ -1,0 +1,583 @@
+---
+title: "Speaker Counts by Race/Ethnicity"
+date: "`r Sys.Date()`"
+output:
+  pdf_document:
+    keep_tex: true
+header-includes:
+  - \usepackage{booktabs}
+  - \usepackage{xcolor}
+  - \definecolor{positive}{RGB}{0,100,0}
+  - \definecolor{negative}{RGB}{139,0,0}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+# Load required libraries
+library(tidyverse)
+library(kableExtra)
+
+# Load data
+data <- read.csv("outputs/master_analysis_dataset.csv")
+```
+
+```{r calculate-counts}
+# Define categories
+categories <- list(
+  "Total Speakers" = "total_speakers",
+  "White Speakers" = "num_white",
+  "Asian Speakers" = "num_asian",
+  "Black Speakers" = "num_black",
+  "Hispanic Speakers" = "num_hispanic",
+  "Native American Speakers" = "num_native_american"
+)
+
+# Calculate counts for each category
+results <- data.frame()
+
+for (i in seq_along(categories)) {
+  label <- names(categories)[i]
+  col <- categories[[i]]
+  
+  # Get totals
+  control_total <- sum(data[data$treatment == 0, col])
+  treatment_total <- sum(data[data$treatment == 1, col])
+  difference <- treatment_total - control_total
+  
+  results <- rbind(results, data.frame(
+    Category = label,
+    Control_Count = control_total,
+    Treatment_Count = treatment_total,
+    Difference = difference
+  ))
+}
+```
+
+```{r create-table, results='asis'}
+# Format the data for display with colored differences
+display_table <- results %>%
+  mutate(
+    Control_Count = format(Control_Count, big.mark = ","),
+    Treatment_Count = format(Treatment_Count, big.mark = ","),
+    Difference = case_when(
+      Difference > 0 ~ paste0("\\textcolor{positive}{+", format(Difference, big.mark = ","), "}"),
+      Difference < 0 ~ paste0("\\textcolor{negative}{", format(Difference, big.mark = ","), "}"),
+      TRUE ~ as.character(Difference)
+    )
+  )
+
+# Create the table using kableExtra
+library(kableExtra)
+
+kable(display_table, 
+      col.names = c("Speaker Category", "Control Count", "Treatment Count", "Difference"),
+      format = "latex",
+      booktabs = TRUE,
+      align = c("l", "r", "r", "r"),
+      escape = FALSE) %>%
+  kable_styling(latex_options = c("hold_position"))
+```
+
+\newpage
+
+# Speaker Counts by Field/Discipline
+
+```{r prepare-field-data}
+# Calculate overall Black representation in control group
+overall_black_pct <- round(sum(data[data$treatment == 0, "num_black"]) / 
+                          sum(data[data$treatment == 0, "total_speakers"]) * 100, 2)
+
+# Aggregate data by discipline and treatment
+field_summary <- data %>%
+  group_by(discipline, treatment) %>%
+  summarize(
+    total_speakers = sum(total_speakers),
+    num_black = sum(num_black),
+    num_hispanic = sum(num_hispanic),
+    num_asian = sum(num_asian),
+    num_white = sum(num_white),
+    num_native_american = sum(num_native_american),
+    .groups = 'drop'
+  ) %>%
+  mutate(
+    num_urm = num_black + num_hispanic + num_native_american,
+    pct_black = round(num_black / total_speakers * 100, 2),
+    pct_hispanic = round(num_hispanic / total_speakers * 100, 2),
+    pct_asian = round(num_asian / total_speakers * 100, 2),
+    pct_white = round(num_white / total_speakers * 100, 2),
+    pct_urm = round(num_urm / total_speakers * 100, 2)
+  )
+```
+
+## Baseline Demographic Percentages by Field (Control Condition)
+
+```{r baseline-field-percentages, results='asis'}
+# Create baseline percentage table for control condition
+baseline_table <- field_summary %>%
+  filter(treatment == 0) %>%
+  arrange(discipline) %>%
+  mutate(
+    `White` = paste0(format(num_white, big.mark = ","), " (", pct_white, "\\%)"),
+    `Asian` = paste0(format(num_asian, big.mark = ","), " (", pct_asian, "\\%)"),
+    `Black` = paste0(format(num_black, big.mark = ","), " (", pct_black, "\\%)"),
+    `Hispanic` = paste0(format(num_hispanic, big.mark = ","), " (", pct_hispanic, "\\%)"),
+    `Total` = format(total_speakers, big.mark = ",")
+  ) %>%
+  select(Field = discipline, Total, White, Asian, Black, Hispanic)
+
+# Calculate totals row
+totals <- field_summary %>%
+  filter(treatment == 0) %>%
+  summarize(
+    Field = "Total",
+    Total = format(sum(total_speakers), big.mark = ","),
+    White = paste0(format(sum(num_white), big.mark = ","), " (", 
+                   round(sum(num_white) / sum(total_speakers) * 100, 1), "\\%)"),
+    Asian = paste0(format(sum(num_asian), big.mark = ","), " (", 
+                   round(sum(num_asian) / sum(total_speakers) * 100, 1), "\\%)"),
+    Black = paste0(format(sum(num_black), big.mark = ","), " (", 
+                   round(sum(num_black) / sum(total_speakers) * 100, 1), "\\%)"),
+    Hispanic = paste0(format(sum(num_hispanic), big.mark = ","), " (", 
+                      round(sum(num_hispanic) / sum(total_speakers) * 100, 1), "\\%)")
+  )
+
+# Combine with totals row
+baseline_table_with_total <- bind_rows(baseline_table, totals)
+
+kable(baseline_table_with_total,
+      format = "latex",
+      booktabs = TRUE,
+      align = c("l", "r", "r", "r", "r", "r"),
+      escape = FALSE,
+      caption = "Baseline Speaker Demographics by Field (Control Condition)") %>%
+  kable_styling(latex_options = c("hold_position", "scale_down")) %>%
+  row_spec(nrow(baseline_table_with_total), hline_after = FALSE) %>%
+  row_spec(nrow(baseline_table_with_total) - 1, extra_latex_after = "\\midrule")
+```
+
+
+
+## Black Speaker Treatment Effects by Field
+
+```{r black-speakers-by-field, results='asis'}
+# Create comparison table for Black speakers
+black_comparison <- field_summary %>%
+  select(discipline, treatment, num_black, pct_black, total_speakers) %>%
+  pivot_wider(
+    names_from = treatment,
+    values_from = c(num_black, pct_black, total_speakers),
+    names_sep = "_"
+  ) %>%
+  mutate(
+    black_change = num_black_1 - num_black_0,
+    pct_point_change = pct_black_1 - pct_black_0,
+    is_underrep = pct_black_0 < overall_black_pct
+  ) %>%
+  arrange(desc(black_change))
+
+# Calculate totals
+total_row <- data.frame(
+  discipline = "Total",
+  num_black_0 = sum(black_comparison$num_black_0),
+  num_black_1 = sum(black_comparison$num_black_1),
+  total_speakers_0 = sum(black_comparison$total_speakers_0),
+  total_speakers_1 = sum(black_comparison$total_speakers_1)
+) %>%
+  mutate(
+    pct_black_0 = round(num_black_0 / total_speakers_0 * 100, 2),
+    pct_black_1 = round(num_black_1 / total_speakers_1 * 100, 2),
+    black_change = num_black_1 - num_black_0,
+    pct_point_change = pct_black_1 - pct_black_0,
+    is_underrep = NA
+  )
+
+# Combine with totals
+black_comparison_with_total <- bind_rows(black_comparison, total_row)
+
+# Format the table
+black_table <- black_comparison_with_total %>%
+  mutate(
+    `Control` = paste0(format(num_black_0, big.mark = ","), " (", pct_black_0, "\\%)"),
+    `Treatment` = paste0(format(num_black_1, big.mark = ","), " (", pct_black_1, "\\%)"),
+    `Change` = case_when(
+      black_change > 0 ~ paste0("\\textcolor{positive}{+", black_change, "}"),
+      black_change < 0 ~ paste0("\\textcolor{negative}{", black_change, "}"),
+      TRUE ~ as.character(black_change)
+    ),
+    `\\% Point Change` = case_when(
+      pct_point_change > 0 ~ paste0("\\textcolor{positive}{+", round(pct_point_change, 2), "}"),
+      pct_point_change < 0 ~ paste0("\\textcolor{negative}{", round(pct_point_change, 2), "}"),
+      TRUE ~ as.character(round(pct_point_change, 2))
+    )
+  ) %>%
+  select(Field = discipline, Control, Treatment, Change, `\\% Point Change`)
+
+kable(black_table,
+      format = "latex",
+      booktabs = TRUE,
+      align = c("l", "r", "r", "r", "r"),
+      escape = FALSE,
+      caption = paste0("Black Speaker Counts by Field (sorted by absolute change). Fields with baseline representation below ", overall_black_pct, "\\% are underrepresented.")) %>%
+  kable_styling(latex_options = c("hold_position")) %>%
+  row_spec(nrow(black_table), hline_after = FALSE) %>%
+  row_spec(nrow(black_table) - 1, extra_latex_after = "\\midrule")
+```
+
+## Full Treatment Effects by Field
+
+```{r treatment-effects-by-field, results='asis'}
+# For each field, show detailed breakdown
+for (field in sort(unique(data$discipline))) {
+  # Use a clear header format
+  cat("\n\\textbf{", field, "}\n\n", sep = "")
+  
+  control_data <- field_summary %>% filter(discipline == field, treatment == 0)
+  treatment_data <- field_summary %>% filter(discipline == field, treatment == 1)
+  
+  if (nrow(control_data) > 0 && nrow(treatment_data) > 0) {
+    # Create comparison table
+    comparison_df <- data.frame(
+      Category = c("White", "Asian", "Black", "Hispanic", "Native American", "Total"),
+      Control = c(control_data$num_white, control_data$num_asian, 
+                  control_data$num_black, control_data$num_hispanic, control_data$num_native_american,
+                  control_data$total_speakers),
+      `Control \\%` = c(control_data$pct_white, control_data$pct_asian, control_data$pct_black,
+                        control_data$pct_hispanic, 
+                        round(control_data$num_native_american/control_data$total_speakers*100, 2),
+                        100),
+      Treatment = c(treatment_data$num_white, treatment_data$num_asian,
+                    treatment_data$num_black, treatment_data$num_hispanic, treatment_data$num_native_american,
+                    treatment_data$total_speakers),
+      `Treatment \\%` = c(treatment_data$pct_white, treatment_data$pct_asian, treatment_data$pct_black,
+                          treatment_data$pct_hispanic,
+                          round(treatment_data$num_native_american/treatment_data$total_speakers*100, 2),
+                          100),
+      check.names = FALSE
+    )
+    
+    # Calculate differences
+    comparison_df$Difference <- comparison_df$Treatment - comparison_df$Control
+    
+    # Format numbers
+    comparison_df$Control <- format(comparison_df$Control, big.mark = ",")
+    comparison_df$Treatment <- format(comparison_df$Treatment, big.mark = ",")
+    comparison_df$Difference <- ifelse(comparison_df$Difference >= 0,
+                                      paste0("\\textcolor{positive}{+", format(comparison_df$Difference, big.mark = ","), "}"),
+                                      paste0("\\textcolor{negative}{", format(comparison_df$Difference, big.mark = ","), "}"))
+    
+    # Special formatting for URM categories
+    comparison_df$Difference[comparison_df$Category %in% c("Black", "Hispanic", "Native American")] <- 
+      gsub("negative", "positive", comparison_df$Difference[comparison_df$Category %in% c("Black", "Hispanic", "Native American")])
+    
+    kable(comparison_df,
+          format = "latex",
+          booktabs = TRUE,
+          align = c("l", "r", "r", "r", "r", "r"),
+          escape = FALSE,
+          caption = paste0("Treatment Effects for ", field)) %>%
+      kable_styling(latex_options = c("hold_position")) %>%
+      row_spec(nrow(comparison_df) - 1, extra_latex_after = "\\midrule") %>%
+      print()
+    
+  }
+  cat("\\vspace{0.5cm}\n\n")
+}
+```
+
+\newpage
+
+# Treatment-on-the-Treated Analysis: Email Click Effects
+
+```{r load-click-data}
+# Load the processed click data from Bit.ly cache
+click_data <- read.csv("outputs/email_clicks_from_bitly_cache.csv")
+
+# Get overall click statistics to report accurately
+overall_click_stats <- click_data %>%
+  filter(condition == "treatment") %>%
+  summarize(
+    total_emails = n(),
+    clicked_emails = sum(clicked),
+    click_rate = mean(clicked) * 100
+  )
+
+# For the analysis, aggregate by department since seminars are at department level
+# If any email to a department was clicked, that department engaged
+click_summary <- click_data %>%
+  group_by(department, condition) %>%
+  summarize(
+    any_clicked = max(clicked, na.rm = TRUE),
+    total_clicks = sum(total_clicks, na.rm = TRUE),
+    num_emails = n(),
+    .groups = 'drop'
+  ) %>%
+  filter(!is.na(department))
+
+# Create department mapping to match with master dataset
+click_summary <- click_summary %>%
+  mutate(
+    department_std = department
+  )
+```
+
+```{r merge-click-data}
+# Merge click data with master analysis dataset
+# Match on department_std (which combines university and discipline)
+data_with_clicks <- data %>%
+  left_join(
+    click_summary %>% select(department_std, any_clicked, total_clicks, num_emails),
+    by = "department_std"
+  ) %>%
+  mutate(
+    clicked = ifelse(is.na(any_clicked), 0, any_clicked)
+    # Note: We keep clicks for BOTH control and treatment groups
+    # Control clicked on peer department databases
+    # Treatment clicked on URM faculty databases
+  )
+
+# Calculate summary statistics for both groups
+control_stats <- data_with_clicks %>%
+  filter(treatment == 0) %>%
+  summarize(
+    n_total = n(),
+    n_clicked = sum(clicked)
+  ) %>%
+  mutate(
+    pct = round(n_clicked / n_total * 100, 1)
+  )
+
+treatment_stats <- data_with_clicks %>%
+  filter(treatment == 1) %>%
+  summarize(
+    n_total = n(),
+    n_clicked = sum(clicked)
+  ) %>%
+  mutate(
+    pct = round(n_clicked / n_total * 100, 1)
+  )
+```
+
+## Email Click Rates
+
+Control: `r control_stats$pct`%  
+Treatment: `r treatment_stats$pct`%
+
+```{r treatment-on-treated-table, results='asis'}
+# Calculate treatment effects by click status - now including all four groups
+tot_results <- data_with_clicks %>%
+  group_by(treatment, clicked) %>%
+  summarize(
+    n_seminars = n(),
+    total_speakers = sum(total_speakers),
+    num_black = sum(num_black),
+    num_hispanic = sum(num_hispanic),
+    num_white = sum(num_white),
+    num_asian = sum(num_asian),
+    pct_black = round(num_black / total_speakers * 100, 2),
+    pct_hispanic = round(num_hispanic / total_speakers * 100, 2),
+    pct_white = round(num_white / total_speakers * 100, 2),
+    pct_asian = round(num_asian / total_speakers * 100, 2),
+    .groups = 'drop'
+  )
+
+# Create comparison table for Black speakers - include all four groups
+tot_black <- tot_results %>%
+  mutate(
+    Group = case_when(
+      treatment == 0 & clicked == 0 ~ "Control (No Click)",
+      treatment == 0 & clicked == 1 ~ "Control (Clicked)",
+      treatment == 1 & clicked == 0 ~ "Treatment (No Click)",
+      treatment == 1 & clicked == 1 ~ "Treatment (Clicked)"
+    ),
+    Group = factor(Group, levels = c("Control (No Click)", "Control (Clicked)", 
+                                     "Treatment (No Click)", "Treatment (Clicked)"))
+  ) %>%
+  select(Group, n_seminars, total_speakers, num_black, pct_black) %>%
+  arrange(Group)
+
+# Use Control (No Click) as baseline for comparison
+baseline_black <- tot_black$num_black[tot_black$Group == "Control (No Click)"]
+baseline_total <- tot_black$total_speakers[tot_black$Group == "Control (No Click)"]
+baseline_pct <- tot_black$pct_black[tot_black$Group == "Control (No Click)"]
+
+tot_black <- tot_black %>%
+  mutate(
+    `Seminars` = n_seminars,
+    `Total Speakers` = format(total_speakers, big.mark = ","),
+    `Black Speakers` = paste0(format(num_black, big.mark = ","), " (", pct_black, "\\%)"),
+    `Change vs Baseline` = case_when(
+      Group == "Control (No Click)" ~ "---",
+      TRUE ~ paste0(
+        ifelse(num_black - baseline_black >= 0, 
+               paste0("\\textcolor{positive}{+", num_black - baseline_black, "}"),
+               paste0("\\textcolor{negative}{", num_black - baseline_black, "}")),
+        " (",
+        ifelse(pct_black - baseline_pct >= 0,
+               paste0("\\textcolor{positive}{+", round(pct_black - baseline_pct, 2), "}"),
+               paste0("\\textcolor{negative}{", round(pct_black - baseline_pct, 2), "}")),
+        " pp)"
+      )
+    )
+  ) %>%
+  select(Group, Seminars, `Total Speakers`, `Black Speakers`, `Change vs Baseline`)
+
+kable(tot_black,
+      format = "latex",
+      booktabs = TRUE,
+      align = c("l", "r", "r", "r", "r"),
+      escape = FALSE,
+      caption = "Black Speaker Outcomes by Treatment and Click Status") %>%
+  kable_styling(latex_options = c("hold_position"))
+```
+
+```{r treatment-on-treated-hispanic, results='asis'}
+# Create comparison table for Hispanic speakers - include all four groups
+tot_hispanic <- tot_results %>%
+  mutate(
+    Group = case_when(
+      treatment == 0 & clicked == 0 ~ "Control (No Click)",
+      treatment == 0 & clicked == 1 ~ "Control (Clicked)",
+      treatment == 1 & clicked == 0 ~ "Treatment (No Click)",
+      treatment == 1 & clicked == 1 ~ "Treatment (Clicked)"
+    ),
+    Group = factor(Group, levels = c("Control (No Click)", "Control (Clicked)", 
+                                     "Treatment (No Click)", "Treatment (Clicked)"))
+  ) %>%
+  select(Group, n_seminars, total_speakers, num_hispanic, pct_hispanic) %>%
+  arrange(Group)
+
+# Use Control (No Click) as baseline
+baseline_hispanic <- tot_hispanic$num_hispanic[tot_hispanic$Group == "Control (No Click)"]
+baseline_hispanic_pct <- tot_hispanic$pct_hispanic[tot_hispanic$Group == "Control (No Click)"]
+
+tot_hispanic <- tot_hispanic %>%
+  mutate(
+    `Seminars` = n_seminars,
+    `Total Speakers` = format(total_speakers, big.mark = ","),
+    `Hispanic Speakers` = paste0(format(num_hispanic, big.mark = ","), " (", pct_hispanic, "\\%)"),
+    `Change vs Baseline` = case_when(
+      Group == "Control (No Click)" ~ "---",
+      TRUE ~ paste0(
+        ifelse(num_hispanic - baseline_hispanic >= 0, 
+               paste0("\\textcolor{positive}{+", num_hispanic - baseline_hispanic, "}"),
+               paste0("\\textcolor{negative}{", num_hispanic - baseline_hispanic, "}")),
+        " (",
+        ifelse(pct_hispanic - baseline_hispanic_pct >= 0,
+               paste0("\\textcolor{positive}{+", round(pct_hispanic - baseline_hispanic_pct, 2), "}"),
+               paste0("\\textcolor{negative}{", round(pct_hispanic - baseline_hispanic_pct, 2), "}")),
+        " pp)"
+      )
+    )
+  ) %>%
+  select(Group, Seminars, `Total Speakers`, `Hispanic Speakers`, `Change vs Baseline`)
+
+kable(tot_hispanic,
+      format = "latex",
+      booktabs = TRUE,
+      align = c("l", "r", "r", "r", "r"),
+      escape = FALSE,
+      caption = "Hispanic Speaker Outcomes by Treatment and Click Status") %>%
+  kable_styling(latex_options = c("hold_position"))
+```
+
+```{r treatment-on-treated-white, results='asis'}
+# Create comparison table for White speakers - include all four groups
+tot_white <- tot_results %>%
+  mutate(
+    Group = case_when(
+      treatment == 0 & clicked == 0 ~ "Control (No Click)",
+      treatment == 0 & clicked == 1 ~ "Control (Clicked)",
+      treatment == 1 & clicked == 0 ~ "Treatment (No Click)",
+      treatment == 1 & clicked == 1 ~ "Treatment (Clicked)"
+    ),
+    Group = factor(Group, levels = c("Control (No Click)", "Control (Clicked)", 
+                                     "Treatment (No Click)", "Treatment (Clicked)"))
+  ) %>%
+  select(Group, n_seminars, total_speakers, num_white, pct_white) %>%
+  arrange(Group)
+
+# Use Control (No Click) as baseline
+baseline_white <- tot_white$num_white[tot_white$Group == "Control (No Click)"]
+baseline_white_pct <- tot_white$pct_white[tot_white$Group == "Control (No Click)"]
+
+tot_white <- tot_white %>%
+  mutate(
+    `Seminars` = n_seminars,
+    `Total Speakers` = format(total_speakers, big.mark = ","),
+    `White Speakers` = paste0(format(num_white, big.mark = ","), " (", pct_white, "\\%)"),
+    `Change vs Baseline` = case_when(
+      Group == "Control (No Click)" ~ "---",
+      TRUE ~ paste0(
+        ifelse(num_white - baseline_white >= 0, 
+               paste0("\\textcolor{positive}{+", num_white - baseline_white, "}"),
+               paste0("\\textcolor{negative}{", num_white - baseline_white, "}")),
+        " (",
+        ifelse(pct_white - baseline_white_pct >= 0,
+               paste0("\\textcolor{positive}{+", round(pct_white - baseline_white_pct, 2), "}"),
+               paste0("\\textcolor{negative}{", round(pct_white - baseline_white_pct, 2), "}")),
+        " pp)"
+      )
+    )
+  ) %>%
+  select(Group, Seminars, `Total Speakers`, `White Speakers`, `Change vs Baseline`)
+
+kable(tot_white,
+      format = "latex",
+      booktabs = TRUE,
+      align = c("l", "r", "r", "r", "r"),
+      escape = FALSE,
+      caption = "White Speaker Outcomes by Treatment and Click Status") %>%
+  kable_styling(latex_options = c("hold_position"))
+```
+
+```{r treatment-on-treated-asian, results='asis'}
+# Create comparison table for Asian speakers - include all four groups
+tot_asian <- tot_results %>%
+  mutate(
+    Group = case_when(
+      treatment == 0 & clicked == 0 ~ "Control (No Click)",
+      treatment == 0 & clicked == 1 ~ "Control (Clicked)",
+      treatment == 1 & clicked == 0 ~ "Treatment (No Click)",
+      treatment == 1 & clicked == 1 ~ "Treatment (Clicked)"
+    ),
+    Group = factor(Group, levels = c("Control (No Click)", "Control (Clicked)", 
+                                     "Treatment (No Click)", "Treatment (Clicked)"))
+  ) %>%
+  select(Group, n_seminars, total_speakers, num_asian, pct_asian) %>%
+  arrange(Group)
+
+# Use Control (No Click) as baseline
+baseline_asian <- tot_asian$num_asian[tot_asian$Group == "Control (No Click)"]
+baseline_asian_pct <- tot_asian$pct_asian[tot_asian$Group == "Control (No Click)"]
+
+tot_asian <- tot_asian %>%
+  mutate(
+    `Seminars` = n_seminars,
+    `Total Speakers` = format(total_speakers, big.mark = ","),
+    `Asian Speakers` = paste0(format(num_asian, big.mark = ","), " (", pct_asian, "\\%)"),
+    `Change vs Baseline` = case_when(
+      Group == "Control (No Click)" ~ "---",
+      TRUE ~ paste0(
+        ifelse(num_asian - baseline_asian >= 0, 
+               paste0("\\textcolor{positive}{+", num_asian - baseline_asian, "}"),
+               paste0("\\textcolor{negative}{", num_asian - baseline_asian, "}")),
+        " (",
+        ifelse(pct_asian - baseline_asian_pct >= 0,
+               paste0("\\textcolor{positive}{+", round(pct_asian - baseline_asian_pct, 2), "}"),
+               paste0("\\textcolor{negative}{", round(pct_asian - baseline_asian_pct, 2), "}")),
+        " pp)"
+      )
+    )
+  ) %>%
+  select(Group, Seminars, `Total Speakers`, `Asian Speakers`, `Change vs Baseline`)
+
+kable(tot_asian,
+      format = "latex",
+      booktabs = TRUE,
+      align = c("l", "r", "r", "r", "r"),
+      escape = FALSE,
+      caption = "Asian Speaker Outcomes by Treatment and Click Status") %>%
+  kable_styling(latex_options = c("hold_position"))
+```
+
