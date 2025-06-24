@@ -364,7 +364,7 @@ data <- create_intersectional_vars(data, "hispanic", "male", "hispanic_male")
 all_models_list <- list()
 
 # Source moderation functions
-source("moderation_analysis_fixed.R")
+# source("moderation_analysis_fixed.R")  # Commented out - file not found
 
 # Function to escape LaTeX special characters
 escape_latex <- function(x) {

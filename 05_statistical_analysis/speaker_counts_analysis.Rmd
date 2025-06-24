@@ -346,12 +346,9 @@ treatment_stats <- data_with_clicks %>%
 
 ## Seminar-Level Click Rates
 
-**These rates show the percentage of seminars that actually received clicks (not just seminars in departments with any click)**
-
 Control: `r control_stats$pct`% of seminars clicked  
 Treatment: `r treatment_stats$pct`% of seminars clicked
 
-*Note: Department-level engagement was `r round(email_click_stats$dept_click_rate[email_click_stats$condition == "control"], 1)`% (control) and `r round(email_click_stats$dept_click_rate[email_click_stats$condition == "treatment"], 1)`% (treatment)*
 
 ```{r treatment-on-treated-table, results='asis'}
 # Calculate treatment effects by click status - now including all four groups
