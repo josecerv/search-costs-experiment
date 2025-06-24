@@ -1,0 +1,23 @@
+{
+  "treatment": {
+    "total_emails": 792,
+    "emails_clicked": 272,
+    "total_clicks": 476,
+    "avg_clicks_all": 0.6,
+    "std_clicks_all": 1.19,
+    "avg_clicks_if_clicked": 1.75
+  },
+  "control": {
+    "total_emails": 807,
+    "emails_clicked": 259,
+    "total_clicks": 416,
+    "avg_clicks_all": 0.52,
+    "std_clicks_all": 1.34,
+    "avg_clicks_if_clicked": 1.61
+  },
+  "comparison": {
+    "difference_in_means": 0.09,
+    "t_statistic": 1.348,
+    "p_value": 0.1779
+  }
+}

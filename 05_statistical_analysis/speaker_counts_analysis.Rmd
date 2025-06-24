@@ -290,49 +290,35 @@ for (field in sort(unique(data$discipline))) {
 # Treatment-on-the-Treated Analysis: Email Click Effects
 
 ```{r load-click-data}
-# Load the processed click data from Bit.ly cache
-click_data <- read.csv("outputs/email_clicks_from_bitly_cache.csv")
+# Load the CORRECTED seminar-level click data
+seminar_click_data <- read.csv("click_analysis/seminar_click_details.csv")
 
-# Get overall click statistics to report accurately
-overall_click_stats <- click_data %>%
-  filter(condition == "treatment") %>%
-  summarize(
-    total_emails = n(),
-    clicked_emails = sum(clicked),
-    click_rate = mean(clicked) * 100
-  )
+# Also load department-level data for email statistics
+dept_click_data <- read.csv("outputs/email_clicks_from_bitly_cache.csv")
 
-# For the analysis, aggregate by department since seminars are at department level
-# If any email to a department was clicked, that department engaged
-click_summary <- click_data %>%
-  group_by(department, condition) %>%
+# Get email-level statistics for reporting
+email_click_stats <- dept_click_data %>%
+  group_by(condition) %>%
   summarize(
-    any_clicked = max(clicked, na.rm = TRUE),
-    total_clicks = sum(total_clicks, na.rm = TRUE),
-    num_emails = n(),
+    total_departments = n(),
+    departments_clicked = sum(clicked),
+    dept_click_rate = mean(clicked) * 100,
+    total_emails = sum(num_emails),
     .groups = 'drop'
-  ) %>%
-  filter(!is.na(department))
-
-# Create department mapping to match with master dataset
-click_summary <- click_summary %>%
-  mutate(
-    department_std = department
   )
 ```
 
 ```{r merge-click-data}
-# Merge click data with master analysis dataset
-# Match on department_std (which combines university and discipline)
+# Merge SEMINAR-LEVEL click data with master analysis dataset
 data_with_clicks <- data %>%
   left_join(
-    click_summary %>% select(department_std, any_clicked, total_clicks, num_emails),
-    by = "department_std"
+    seminar_click_data %>% select(seminar_id, clicked),
+    by = "seminar_id"
   ) %>%
   mutate(
-    clicked = ifelse(is.na(any_clicked), 0, any_clicked)
+    clicked = ifelse(is.na(clicked), 0, clicked)
     # Note: We keep clicks for BOTH control and treatment groups
-    # Control clicked on peer department databases
+    # Control clicked on peer department databases  
     # Treatment clicked on URM faculty databases
   )
 
@@ -358,10 +344,14 @@ treatment_stats <- data_with_clicks %>%
   )
 ```
 
-## Email Click Rates
+## Seminar-Level Click Rates
 
-Control: `r control_stats$pct`%  
-Treatment: `r treatment_stats$pct`%
+**These rates show the percentage of seminars that actually received clicks (not just seminars in departments with any click)**
+
+Control: `r control_stats$pct`% of seminars clicked  
+Treatment: `r treatment_stats$pct`% of seminars clicked
+
+*Note: Department-level engagement was `r round(email_click_stats$dept_click_rate[email_click_stats$condition == "control"], 1)`% (control) and `r round(email_click_stats$dept_click_rate[email_click_stats$condition == "treatment"], 1)`% (treatment)*
 
 ```{r treatment-on-treated-table, results='asis'}
 # Calculate treatment effects by click status - now including all four groups

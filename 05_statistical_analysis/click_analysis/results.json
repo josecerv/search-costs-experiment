@@ -1,0 +1,19 @@
+{
+  "summary": {
+    "total_seminars": 1654,
+    "seminars_clicked": 899,
+    "click_rate": 54.4,
+    "total_clicks": 892
+  },
+  "treatment": {
+    "total_seminars": 808,
+    "seminars_clicked": 428,
+    "click_rate": 53.0
+  },
+  "control": {
+    "total_seminars": 846,
+    "seminars_clicked": 471,
+    "click_rate": 55.7
+  },
+  "timestamp": "2025-06-23T19:41:47.622576"
+}
