@@ -366,6 +366,131 @@ all_models_list <- list()
 # Source moderation functions
 # source("moderation_analysis_fixed.R")  # Commented out - file not found
 
+# Implement the missing moderation function
+run_comprehensive_moderation_fixed <- function(moderator_var, moderator_label, 
+                                             exclude_controls = NULL, center = TRUE) {
+  
+  # Ensure moderator variable exists and has variation
+  if (!moderator_var %in% names(data)) {
+    cat(sprintf("\n\n### Error: Moderator variable '%s' not found in data\n\n", moderator_var))
+    return(list())
+  }
+  
+  # Center the moderator if requested (default)
+  if (center) {
+    data[[paste0(moderator_var, "_c")]] <- data[[moderator_var]] - mean(data[[moderator_var]], na.rm = TRUE)
+    mod_var_to_use <- paste0(moderator_var, "_c")
+  } else {
+    mod_var_to_use <- moderator_var
+  }
+  
+  # Define outcomes
+  outcomes <- list(
+    list(var = "pct_urm", label = "% URM"),
+    list(var = "num_urm", label = "Count URM"),
+    list(var = "has_any_urm", label = "Any URM"),
+    list(var = "pct_black", label = "% Black"),
+    list(var = "num_black", label = "Count Black"),
+    list(var = "has_any_black", label = "Any Black"),
+    list(var = "pct_hispanic", label = "% Hispanic"),
+    list(var = "num_hispanic", label = "Count Hispanic"),
+    list(var = "has_any_hispanic", label = "Any Hispanic"),
+    list(var = "pct_female", label = "% Female"),
+    list(var = "num_female", label = "Count Female"),
+    list(var = "has_any_female", label = "Any Female")
+  )
+  
+  models_list <- list()
+  
+  # Run moderation analysis for each outcome
+  for (outcome_info in outcomes) {
+    outcome <- outcome_info$var
+    outcome_label <- outcome_info$label
+    
+    # Prepare controls
+    controls_to_use <- base_controls
+    if (!is.null(exclude_controls)) {
+      controls_to_use <- setdiff(controls_to_use, exclude_controls)
+    }
+    
+    # Model 1: Base controls
+    formula1 <- paste0(outcome, " ~ treatment * ", mod_var_to_use, " + ", 
+                      paste(controls_to_use, collapse = " + "))
+    m1 <- run_regression(formula1, data)
+    
+    # Model 2: Extended controls
+    extended_controls_to_use <- c(controls_to_use, setdiff(extended_controls, exclude_controls))
+    formula2 <- paste0(outcome, " ~ treatment * ", mod_var_to_use, " + ", 
+                      paste(extended_controls_to_use, collapse = " + "))
+    m2 <- run_regression(formula2, data)
+    
+    # Store models with metadata
+    if (!is.null(m1)) {
+      models_list <- append(models_list, list(list(
+        model = m1,
+        analysis = paste0("Moderation by ", moderator_label),
+        outcome = outcome_label,
+        model_type = "Simple",
+        var_names = c("treatment", mod_var_to_use, paste0("treatment:", mod_var_to_use)),
+        var_labels = c("Treatment", moderator_label, paste0("Treatment × ", moderator_label))
+      )))
+    }
+    
+    if (!is.null(m2)) {
+      models_list <- append(models_list, list(list(
+        model = m2,
+        analysis = paste0("Moderation by ", moderator_label),
+        outcome = outcome_label,
+        model_type = "Extended",
+        var_names = c("treatment", mod_var_to_use, paste0("treatment:", mod_var_to_use)),
+        var_labels = c("Treatment", moderator_label, paste0("Treatment × ", moderator_label))
+      )))
+    }
+  }
+  
+  # Create tables for display
+  if (length(models_list) > 0) {
+    # Group by outcome type
+    for (group in c("URM", "Black", "Hispanic", "Female")) {
+      group_models <- list()
+      
+      # Collect models for this group
+      for (model_info in models_list) {
+        if (grepl(group, model_info$outcome)) {
+          group_models <- append(group_models, list(model_info$model))
+        }
+      }
+      
+      if (length(group_models) >= 6) {
+        # Extract first 6 models for the table
+        table_models <- group_models[1:6]
+        dep_labels <- character(6)
+        
+        # Get labels
+        j <- 1
+        for (model_info in models_list) {
+          if (grepl(group, model_info$outcome) && j <= 6) {
+            dep_labels[j] <- model_info$outcome
+            j <- j + 1
+          }
+        }
+        
+        create_moderator_table(
+          table_models,
+          dep_labels,
+          sprintf("Moderation by %s: %s Speakers", gsub("\\\\%", "%", moderator_label), group),
+          sprintf("tab:mod_%s_%s", gsub("\\\\%|%| ", "_", tolower(moderator_label)), tolower(group)),
+          moderator_label
+        )
+        
+        cat("\n\n")
+      }
+    }
+  }
+  
+  return(models_list)
+}
+
 # Function to escape LaTeX special characters
 escape_latex <- function(x) {
   if (is.null(x) || is.na(x)) return(x)
@@ -379,7 +504,8 @@ escape_latex <- function(x) {
   x <- gsub("\\^", "\\\\textasciicircum{}", x)
   return(x)
 }
-write.csv(data, 'master-data.csv', row.names=F)
+# Remove this line - we should use outputs/master_analysis_dataset.csv
+# write.csv(data, 'master-data.csv', row.names=F)
 ```
 
 
@@ -2129,7 +2255,7 @@ if (nrow(all_significant_results) > 0) {
   cat("\\section{Summary of All Significant Results}\n\n")
   
   # Split table if more than 45 rows
-  split_at <- 60
+  split_at <- 40
   n_tables <- ceiling(nrow(all_significant_results) / split_at)
   
   for (table_num in 1:n_tables) {
@@ -2148,12 +2274,12 @@ if (nrow(all_significant_results) > 0) {
     
     cat(sprintf("\\label{tab:all_significant_results%s}\n", ifelse(table_num > 1, paste0("_", table_num), "")))
     cat("\\centering\n")
-    cat("\\footnotesize\n") # Use footnotesize instead of tiny
-    cat("\\setlength{\\tabcolsep}{4pt}\n") # Slightly larger column separation
-    # Adjust column widths
-    cat("\\begin{tabular}{p{3.5cm} p{2.2cm} p{3.2cm} p{1.2cm} r r r r c}\n") 
+    cat("\\tiny\n") # Use tiny font for maximum space
+    cat("\\setlength{\\tabcolsep}{2pt}\n") # Minimal column separation
+    # Use regular tabular with specific column widths optimized for landscape
+    cat("\\begin{tabular}{p{2.8cm}p{1.8cm}p{2.5cm}p{0.8cm}p{1.2cm}p{1.2cm}p{1.0cm}p{1.0cm}c}\n") 
     cat("\\toprule\n")
-    cat("Analysis & Outcome & Variable & Model & Coef. & SE & t-stat & p-value & Sig. \\\\\n")
+    cat("Analysis & Outcome & Variable & Model & Coef & SE & t-stat & p-val & Sig \\\\\n")
     cat("\\midrule\n")
     
     current_category <- ""
@@ -2189,7 +2315,8 @@ if (nrow(all_significant_results) > 0) {
     cat("\\end{tabular}\n")
     
     if (table_num == n_tables) {
-      cat("\\parbox{\\linewidth}{\\footnotesize Note: Significance levels: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001. ")
+      cat("\\vspace{0.5em}\n")
+      cat("\\parbox{\\linewidth}{\\tiny Note: Significance levels: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001. ")
       cat("SE = Clustered standard errors at department level. ")
       cat("For moderation analyses, only significant interaction terms are shown.}\n")
     }

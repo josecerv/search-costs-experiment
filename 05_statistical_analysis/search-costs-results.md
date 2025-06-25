@@ -1047,16 +1047,14 @@ Adjusted $R^2$ &  -0.004 & -0.002 & 0.006 & 0.007 & 0.014 & 0.016  \\
 
 ## Moderation by Department Ranking
 
-\subsection{ URM  Speakers}
-
 \begin{table}[H]
-\caption{Effect on URM Speakers: Moderation by Department Ranking}
-\label{tab:mod_urm_dept_ranking}
+\caption{Moderation by Department Ranking: URM Speakers}
+\label{tab:mod_department_ranking_urm}
 \centering
 \scriptsize
 \begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
 \toprule
- & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
 Treatment  &  0.757$^{}$ & 0.770$^{}$ & 0.104$^{}$ & 0.075$^{}$ & 0.022$^{}$ & 0.013$^{}$  \\
@@ -1077,16 +1075,15 @@ Adjusted $R^2$ &  0.013 & 0.016 & 0.035 & 0.044 & 0.033 & 0.043  \\
 \end{tabularx}
 \end{table}
 
-\subsection{ BLACK  Speakers}
 
 \begin{table}[H]
-\caption{Effect on Black Speakers: Moderation by Department Ranking}
-\label{tab:mod_black_dept_ranking}
+\caption{Moderation by Department Ranking: Black Speakers}
+\label{tab:mod_department_ranking_black}
 \centering
 \scriptsize
 \begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
 \toprule
- & \% Black & \% Black & Count Black & Count Black & Any Black & Any Black \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
 Treatment  &  0.655$^{*}$ & 0.652$^{*}$ & 0.083$^{*}$ & 0.081$^{*}$ & 0.058$^{*}$ & 0.055$^{*}$  \\
@@ -1107,16 +1104,15 @@ Adjusted $R^2$ &  0.027 & 0.032 & 0.052 & 0.060 & 0.038 & 0.046  \\
 \end{tabularx}
 \end{table}
 
-\subsection{ HISPANIC  Speakers}
 
 \begin{table}[H]
-\caption{Effect on Hispanic Speakers: Moderation by Department Ranking}
-\label{tab:mod_hispanic_dept_ranking}
+\caption{Moderation by Department Ranking: Hispanic Speakers}
+\label{tab:mod_department_ranking_hispanic}
 \centering
 \scriptsize
 \begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
 \toprule
- & \% Hispanic & \% Hispanic & Count Hispanic & Count Hispanic & Any Hispanic & Any Hispanic \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
 Treatment  &  0.118$^{}$ & 0.124$^{}$ & 0.021$^{}$ & -0.008$^{}$ & -0.013$^{}$ & -0.025$^{}$  \\
@@ -1137,20 +1133,47 @@ Adjusted $R^2$ &  0.005 & 0.005 & 0.017 & 0.022 & 0.021 & 0.025  \\
 \end{tabularx}
 \end{table}
 
-\newpage
-
-## Moderation by Total Faculty Size
-
-\subsection{ URM  Speakers}
 
 \begin{table}[H]
-\caption{Effect on URM Speakers: Moderation by Total Faculty}
-\label{tab:mod_urm_total_faculty}
+\caption{Moderation by Department Ranking: Female Speakers}
+\label{tab:mod_department_ranking_female}
 \centering
 \scriptsize
 \begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
 \toprule
- & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
+ &  (1) & (2) & (3) & (4) & (5) & (6)  \\
+\midrule
+Treatment  &  -0.024$^{}$ & -0.547$^{}$ & -0.056$^{}$ & -0.146$^{}$ & 0.004$^{}$ & -0.004$^{}$  \\
+ &  (0.835) & (0.812) & (0.128) & (0.125) & (0.022) & (0.022)  \\
+Constant  &  21.094$^{***}$ & 13.475$^{***}$ & 3.127$^{***}$ & 1.823$^{***}$ & 0.806$^{***}$ & 0.667$^{***}$  \\
+ &  (2.243) & (3.710) & (0.373) & (0.551) & (0.071) & (0.096)  \\
+Department Ranking  &  -0.018$^{}$ & -0.009$^{}$ & -0.011$^{***}$ & -0.010$^{***}$ & -0.002$^{***}$ & -0.001$^{**}$  \\
+ &  (0.018) & (0.019) & (0.003) & (0.003) & (0.000) & (0.000)  \\
+Treatment $\times$ Department Ranking  &  0.019$^{}$ & 0.024$^{}$ & 0.007$^{*}$ & 0.007$^{*}$ & 0.001$^{+}$ & 0.001$^{*}$  \\
+ &  (0.023) & (0.023) & (0.003) & (0.003) & (0.001) & (0.001)  \\
+\midrule
+Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.053 & 0.061 & 0.094 & 0.101 & 0.023 & 0.026  \\
+\bottomrule
+\multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
+\multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
+\end{tabularx}
+\end{table}
+
+\newpage
+
+## Moderation by Total Faculty Size
+
+\begin{table}[H]
+\caption{Moderation by Total Faculty: URM Speakers}
+\label{tab:mod_total_faculty_urm}
+\centering
+\scriptsize
+\begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
+\toprule
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
 Treatment  &  1.043$^{+}$ & 0.816$^{}$ & 0.088$^{}$ & 0.080$^{}$ & 0.015$^{}$ & 0.016$^{}$  \\
@@ -1171,16 +1194,15 @@ Adjusted $R^2$ &  0.011 & 0.016 & 0.030 & 0.038 & 0.030 & 0.042  \\
 \end{tabularx}
 \end{table}
 
-\subsection{ BLACK  Speakers}
 
 \begin{table}[H]
-\caption{Effect on Black Speakers: Moderation by Total Faculty}
-\label{tab:mod_black_total_faculty}
+\caption{Moderation by Total Faculty: Black Speakers}
+\label{tab:mod_total_faculty_black}
 \centering
 \scriptsize
 \begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
 \toprule
- & \% Black & \% Black & Count Black & Count Black & Any Black & Any Black \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
 Treatment  &  0.767$^{*}$ & 0.652$^{*}$ & 0.092$^{*}$ & 0.080$^{*}$ & 0.057$^{*}$ & 0.054$^{*}$  \\
@@ -1201,16 +1223,15 @@ Adjusted $R^2$ &  0.027 & 0.032 & 0.048 & 0.057 & 0.036 & 0.046  \\
 \end{tabularx}
 \end{table}
 
-\subsection{ HISPANIC  Speakers}
 
 \begin{table}[H]
-\caption{Effect on Hispanic Speakers: Moderation by Total Faculty}
-\label{tab:mod_hispanic_total_faculty}
+\caption{Moderation by Total Faculty: Hispanic Speakers}
+\label{tab:mod_total_faculty_hispanic}
 \centering
 \scriptsize
 \begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
 \toprule
- & \% Hispanic & \% Hispanic & Count Hispanic & Count Hispanic & Any Hispanic & Any Hispanic \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
 Treatment  &  0.281$^{}$ & 0.168$^{}$ & -0.006$^{}$ & -0.002$^{}$ & -0.023$^{}$ & -0.021$^{}$  \\
@@ -1231,20 +1252,47 @@ Adjusted $R^2$ &  0.004 & 0.006 & 0.017 & 0.020 & 0.023 & 0.025  \\
 \end{tabularx}
 \end{table}
 
-\newpage
-
-## Moderation by URM Faculty in Peer Departments
-
-\subsection{ URM  Speakers}
 
 \begin{table}[H]
-\caption{Effect on URM Speakers: Moderation by Peer URM Faculty}
-\label{tab:mod_urm_total_urm_peer_faculty}
+\caption{Moderation by Total Faculty: Female Speakers}
+\label{tab:mod_total_faculty_female}
 \centering
 \scriptsize
 \begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
 \toprule
- & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
+ &  (1) & (2) & (3) & (4) & (5) & (6)  \\
+\midrule
+Treatment  &  -0.107$^{}$ & -0.490$^{}$ & -0.127$^{}$ & -0.145$^{}$ & -0.009$^{}$ & -0.004$^{}$  \\
+ &  (0.819) & (0.809) & (0.129) & (0.125) & (0.022) & (0.022)  \\
+Constant  &  21.280$^{***}$ & 13.612$^{***}$ & 3.633$^{***}$ & 2.251$^{***}$ & 0.874$^{***}$ & 0.733$^{***}$  \\
+ &  (2.361) & (3.713) & (0.349) & (0.595) & (0.060) & (0.103)  \\
+Total Faculty  &  0.003$^{}$ & -0.005$^{}$ & 0.012$^{*}$ & 0.005$^{}$ & 0.002$^{+}$ & 0.001$^{}$  \\
+ &  (0.042) & (0.042) & (0.006) & (0.005) & (0.001) & (0.001)  \\
+Treatment $\times$ Total Faculty  &  0.014$^{}$ & 0.015$^{}$ & -0.009$^{}$ & -0.008$^{}$ & -0.001$^{}$ & -0.001$^{}$  \\
+ &  (0.062) & (0.063) & (0.006) & (0.006) & (0.001) & (0.001)  \\
+\midrule
+Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.053 & 0.061 & 0.085 & 0.099 & 0.018 & 0.024  \\
+\bottomrule
+\multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
+\multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
+\end{tabularx}
+\end{table}
+
+\newpage
+
+## Moderation by URM Faculty in Peer Departments
+
+\begin{table}[H]
+\caption{Moderation by Peer URM Faculty: URM Speakers}
+\label{tab:mod_peer_urm_faculty_urm}
+\centering
+\scriptsize
+\begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
+\toprule
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
 Treatment  &  0.808$^{}$ & 0.759$^{}$ & 0.108$^{+}$ & 0.080$^{}$ & 0.022$^{}$ & 0.014$^{}$  \\
@@ -1265,16 +1313,15 @@ Adjusted $R^2$ &  0.009 & 0.016 & 0.036 & 0.039 & 0.037 & 0.041  \\
 \end{tabularx}
 \end{table}
 
-\subsection{ BLACK  Speakers}
 
 \begin{table}[H]
-\caption{Effect on Black Speakers: Moderation by Peer URM Faculty}
-\label{tab:mod_black_total_urm_peer_faculty}
+\caption{Moderation by Peer URM Faculty: Black Speakers}
+\label{tab:mod_peer_urm_faculty_black}
 \centering
 \scriptsize
 \begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
 \toprule
- & \% Black & \% Black & Count Black & Count Black & Any Black & Any Black \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
 Treatment  &  0.674$^{*}$ & 0.659$^{*}$ & 0.086$^{*}$ & 0.085$^{*}$ & 0.058$^{**}$ & 0.058$^{*}$  \\
@@ -1295,16 +1342,15 @@ Adjusted $R^2$ &  0.026 & 0.032 & 0.048 & 0.056 & 0.041 & 0.045  \\
 \end{tabularx}
 \end{table}
 
-\subsection{ HISPANIC  Speakers}
 
 \begin{table}[H]
-\caption{Effect on Hispanic Speakers: Moderation by Peer URM Faculty}
-\label{tab:mod_hispanic_total_urm_peer_faculty}
+\caption{Moderation by Peer URM Faculty: Hispanic Speakers}
+\label{tab:mod_peer_urm_faculty_hispanic}
 \centering
 \scriptsize
 \begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
 \toprule
- & \% Hispanic & \% Hispanic & Count Hispanic & Count Hispanic & Any Hispanic & Any Hispanic \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
 Treatment  &  0.149$^{}$ & 0.105$^{}$ & 0.021$^{}$ & -0.007$^{}$ & -0.012$^{}$ & -0.024$^{}$  \\
@@ -1325,48 +1371,61 @@ Adjusted $R^2$ &  0.003 & 0.005 & 0.021 & 0.020 & 0.024 & 0.024  \\
 \end{tabularx}
 \end{table}
 
+
+\begin{table}[H]
+\caption{Moderation by Peer URM Faculty: Female Speakers}
+\label{tab:mod_peer_urm_faculty_female}
+\centering
+\scriptsize
+\begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
+\toprule
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
+ &  (1) & (2) & (3) & (4) & (5) & (6)  \\
+\midrule
+Treatment  &  -0.034$^{}$ & -0.602$^{}$ & -0.063$^{}$ & -0.133$^{}$ & 0.003$^{}$ & -0.003$^{}$  \\
+ &  (0.824) & (0.812) & (0.127) & (0.126) & (0.022) & (0.022)  \\
+Constant  &  21.205$^{***}$ & 15.397$^{***}$ & 3.534$^{***}$ & 2.558$^{***}$ & 0.860$^{***}$ & 0.779$^{***}$  \\
+ &  (2.069) & (3.419) & (0.332) & (0.417) & (0.060) & (0.076)  \\
+Peer URM Faculty  &  0.162$^{*}$ & 0.174$^{*}$ & 0.021$^{+}$ & 0.009$^{}$ & 0.005$^{**}$ & 0.003$^{+}$  \\
+ &  (0.075) & (0.082) & (0.011) & (0.013) & (0.002) & (0.002)  \\
+Treatment $\times$ Peer URM Faculty  &  -0.184$^{+}$ & -0.199$^{*}$ & 0.006$^{}$ & 0.003$^{}$ & -0.002$^{}$ & -0.002$^{}$  \\
+ &  (0.095) & (0.099) & (0.014) & (0.014) & (0.002) & (0.002)  \\
+\midrule
+Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.056 & 0.063 & 0.088 & 0.098 & 0.020 & 0.024  \\
+\bottomrule
+\multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
+\multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
+\end{tabularx}
+\end{table}
+
 \newpage
 
 ## Moderation by % Female Email Recipients
 
-\subsection{ URM  Speakers}
 
-\textbf{Error}: Moderator variable 'pct_female_recipients' not found in dataset.\\\\
-\subsection{ BLACK  Speakers}
-
-\textbf{Error}: Moderator variable 'pct_female_recipients' not found in dataset.\\\\
-\subsection{ HISPANIC  Speakers}
-
-\textbf{Error}: Moderator variable 'pct_female_recipients' not found in dataset.\\\\
+### Error: Moderator variable 'pct_female_recipients' not found in data
 
 \newpage
 
 ## Moderation by % URM Email Recipients
 
-\subsection{ URM  Speakers}
 
-\textbf{Error}: Moderator variable 'pct_urm_recipients' not found in dataset.\\\\
-\subsection{ BLACK  Speakers}
-
-\textbf{Error}: Moderator variable 'pct_urm_recipients' not found in dataset.\\\\
-\subsection{ HISPANIC  Speakers}
-
-\textbf{Error}: Moderator variable 'pct_urm_recipients' not found in dataset.\\\\
+### Error: Moderator variable 'pct_urm_recipients' not found in data
 
 \newpage
 
 ## Moderation by % URM Faculty in Department
 
-\subsection{ URM  Speakers}
-
 \begin{table}[H]
-\caption{Effect on URM Speakers: Moderation by \% URM Faculty}
-\label{tab:mod_urm_frac_urm_faculty}
+\caption{Moderation by % URM Faculty: URM Speakers}
+\label{tab:mod___urm_faculty_urm}
 \centering
 \scriptsize
 \begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
 \toprule
- & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
 Treatment  &  -0.425$^{}$ & -0.255$^{}$ & -0.025$^{}$ & -0.040$^{}$ & 0.009$^{}$ & 0.001$^{}$  \\
@@ -1387,16 +1446,15 @@ Adjusted $R^2$ &  0.012 & 0.018 & 0.032 & 0.041 & 0.028 & 0.042  \\
 \end{tabularx}
 \end{table}
 
-\subsection{ BLACK  Speakers}
 
 \begin{table}[H]
-\caption{Effect on Black Speakers: Moderation by \% URM Faculty}
-\label{tab:mod_black_frac_urm_faculty}
+\caption{Moderation by % URM Faculty: Black Speakers}
+\label{tab:mod___urm_faculty_black}
 \centering
 \scriptsize
 \begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
 \toprule
- & \% Black & \% Black & Count Black & Count Black & Any Black & Any Black \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
 Treatment  &  0.013$^{}$ & 0.074$^{}$ & -0.001$^{}$ & 0.005$^{}$ & 0.020$^{}$ & 0.021$^{}$  \\
@@ -1417,16 +1475,15 @@ Adjusted $R^2$ &  0.031 & 0.034 & 0.051 & 0.059 & 0.037 & 0.046  \\
 \end{tabularx}
 \end{table}
 
-\subsection{ HISPANIC  Speakers}
 
 \begin{table}[H]
-\caption{Effect on Hispanic Speakers: Moderation by \% URM Faculty}
-\label{tab:mod_hispanic_frac_urm_faculty}
+\caption{Moderation by % URM Faculty: Hispanic Speakers}
+\label{tab:mod___urm_faculty_hispanic}
 \centering
 \scriptsize
 \begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
 \toprule
- & \% Hispanic & \% Hispanic & Count Hispanic & Count Hispanic & Any Hispanic & Any Hispanic \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
 Treatment  &  -0.447$^{}$ & -0.342$^{}$ & -0.032$^{}$ & -0.054$^{}$ & 0.007$^{}$ & -0.004$^{}$  \\
@@ -1447,20 +1504,47 @@ Adjusted $R^2$ &  0.003 & 0.005 & 0.014 & 0.020 & 0.020 & 0.025  \\
 \end{tabularx}
 \end{table}
 
-\newpage
-
-## Moderation by % Women Faculty in Department
-
-\subsection{ URM  Speakers}
 
 \begin{table}[H]
-\caption{Effect on URM Speakers: Moderation by \% Women Faculty}
-\label{tab:mod_urm_frac_women_faculty}
+\caption{Moderation by % URM Faculty: Female Speakers}
+\label{tab:mod___urm_faculty_female}
 \centering
 \scriptsize
 \begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
 \toprule
- & \% URM & \% URM & Count URM & Count URM & Any URM & Any URM \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
+ &  (1) & (2) & (3) & (4) & (5) & (6)  \\
+\midrule
+Treatment  &  1.003$^{}$ & 0.904$^{}$ & 0.061$^{}$ & 0.014$^{}$ & 0.015$^{}$ & 0.005$^{}$  \\
+ &  (1.139) & (1.132) & (0.164) & (0.164) & (0.029) & (0.029)  \\
+Constant  &  20.810$^{***}$ & 12.972$^{***}$ & 3.512$^{***}$ & 2.142$^{***}$ & 0.873$^{***}$ & 0.711$^{***}$  \\
+ &  (2.165) & (3.821) & (0.332) & (0.584) & (0.062) & (0.101)  \\
+\% URM Faculty  &  39.914$^{**}$ & 38.323$^{*}$ & 4.792$^{*}$ & 3.671$^{+}$ & 0.072$^{}$ & -0.080$^{}$  \\
+ &  (15.116) & (16.526) & (2.364) & (2.122) & (0.396) & (0.394)  \\
+Treatment $\times$ \% URM Faculty  &  -31.800$^{}$ & -39.227$^{}$ & -3.969$^{}$ & -4.107$^{}$ & -0.326$^{}$ & -0.192$^{}$  \\
+ &  (23.029) & (24.034) & (3.115) & (2.970) & (0.557) & (0.559)  \\
+\midrule
+Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.056 & 0.062 & 0.085 & 0.099 & 0.015 & 0.024  \\
+\bottomrule
+\multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
+\multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
+\end{tabularx}
+\end{table}
+
+\newpage
+
+## Moderation by % Women Faculty in Department
+
+\begin{table}[H]
+\caption{Moderation by % Women Faculty: URM Speakers}
+\label{tab:mod___women_faculty_urm}
+\centering
+\scriptsize
+\begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
+\toprule
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
 Treatment  &  1.495$^{}$ & 1.844$^{}$ & 0.184$^{}$ & 0.145$^{}$ & 0.106$^{}$ & 0.081$^{}$  \\
@@ -1481,16 +1565,15 @@ Adjusted $R^2$ &  0.010 & 0.016 & 0.030 & 0.038 & 0.030 & 0.042  \\
 \end{tabularx}
 \end{table}
 
-\subsection{ BLACK  Speakers}
 
 \begin{table}[H]
-\caption{Effect on Black Speakers: Moderation by \% Women Faculty}
-\label{tab:mod_black_frac_women_faculty}
+\caption{Moderation by % Women Faculty: Black Speakers}
+\label{tab:mod___women_faculty_black}
 \centering
 \scriptsize
 \begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
 \toprule
- & \% Black & \% Black & Count Black & Count Black & Any Black & Any Black \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
 Treatment  &  0.228$^{}$ & 0.442$^{}$ & 0.050$^{}$ & 0.058$^{}$ & 0.040$^{}$ & 0.042$^{}$  \\
@@ -1511,16 +1594,15 @@ Adjusted $R^2$ &  0.026 & 0.032 & 0.047 & 0.056 & 0.036 & 0.045  \\
 \end{tabularx}
 \end{table}
 
-\subsection{ HISPANIC  Speakers}
 
 \begin{table}[H]
-\caption{Effect on Hispanic Speakers: Moderation by \% Women Faculty}
-\label{tab:mod_hispanic_frac_women_faculty}
+\caption{Moderation by % Women Faculty: Hispanic Speakers}
+\label{tab:mod___women_faculty_hispanic}
 \centering
 \scriptsize
 \begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
 \toprule
- & \% Hispanic & \% Hispanic & Count Hispanic & Count Hispanic & Any Hispanic & Any Hispanic \\
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
  &  (1) & (2) & (3) & (4) & (5) & (6)  \\
 \midrule
 Treatment  &  1.228$^{}$ & 1.372$^{}$ & 0.130$^{}$ & 0.082$^{}$ & 0.099$^{}$ & 0.063$^{}$  \\
@@ -1541,19 +1623,41 @@ Adjusted $R^2$ &  0.004 & 0.005 & 0.014 & 0.020 & 0.021 & 0.025  \\
 \end{tabularx}
 \end{table}
 
+
+\begin{table}[H]
+\caption{Moderation by % Women Faculty: Female Speakers}
+\label{tab:mod___women_faculty_female}
+\centering
+\scriptsize
+\begin{tabularx}{\textwidth}{l*{6}{>{\centering\arraybackslash}X}}
+\toprule
+ & Model 1 & Model 2 & Model 3 & Model 4 & Model 5 & Model 6 \\
+ &  (1) & (2) & (3) & (4) & (5) & (6)  \\
+\midrule
+Treatment  &  -2.092$^{}$ & -1.824$^{}$ & 0.345$^{}$ & 0.352$^{}$ & 0.105$^{+}$ & 0.084$^{}$  \\
+ &  (2.777) & (2.892) & (0.337) & (0.340) & (0.063) & (0.064)  \\
+Constant  &  17.105$^{***}$ & 13.865$^{***}$ & 2.788$^{***}$ & 2.073$^{***}$ & 0.840$^{***}$ & 0.691$^{***}$  \\
+ &  (2.868) & (3.844) & (0.405) & (0.590) & (0.076) & (0.101)  \\
+\% Women Faculty  &  18.143$^{+}$ & 18.129$^{+}$ & 4.005$^{**}$ & 4.221$^{***}$ & 0.240$^{}$ & 0.261$^{}$  \\
+ &  (9.695) & (9.651) & (1.229) & (1.173) & (0.233) & (0.233)  \\
+Treatment $\times$ \% Women Faculty  &  8.530$^{}$ & 6.664$^{}$ & -2.368$^{}$ & -2.470$^{}$ & -0.522$^{+}$ & -0.437$^{}$  \\
+ &  (13.976) & (14.248) & (1.698) & (1.697) & (0.312) & (0.324)  \\
+\midrule
+Controls &  Simple & Extended & Simple & Extended & Simple & Extended  \\
+N &  1,654 & 1,654 & 1,654 & 1,654 & 1,654 & 1,654  \\
+Adjusted $R^2$ &  0.061 & 0.061 & 0.089 & 0.099 & 0.017 & 0.025  \\
+\bottomrule
+\multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize \vspace{2pt}Clustered standard errors at department level in parentheses.}}\\
+\multicolumn{7}{l}{\parbox{\linewidth}{\footnotesize $^{+}p<0.1$; $^{*}p<0.05$; $^{**}p<0.01$; $^{***}p<0.001$\vspace{2pt}}}\\
+\end{tabularx}
+\end{table}
+
 \newpage
 
 ## Moderation by Number of Distinct Seminars
 
-\subsection{ URM  Speakers}
 
-\textbf{Error}: Moderator variable 'num_distinct_seminars' not found in dataset.\\\\
-\subsection{ BLACK  Speakers}
-
-\textbf{Error}: Moderator variable 'num_distinct_seminars' not found in dataset.\\\\
-\subsection{ HISPANIC  Speakers}
-
-\textbf{Error}: Moderator variable 'num_distinct_seminars' not found in dataset.\\\\
+### Error: Moderator variable 'num_distinct_seminars' not found in data
 
 \newpage
 
@@ -1664,14 +1768,14 @@ Any (0/1) & 0.233 & & & 0.224 & \\
 
 \begin{landscape}
 \begin{table}[H]
-\caption{All Significant Results (p < 0.1) from All Analyses}
+\caption{All Significant Results (p < 0.1) from All Analyses - Part 1 of 2}
 \label{tab:all_significant_results}
 \centering
-\footnotesize
-\setlength{\tabcolsep}{4pt}
-\begin{tabular}{p{3.5cm} p{2.2cm} p{3.2cm} p{1.2cm} r r r r c}
+\tiny
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{2.8cm}p{1.8cm}p{2.5cm}p{0.8cm}p{1.2cm}p{1.2cm}p{1.0cm}p{1.0cm}c}
 \toprule
-Analysis & Outcome & Variable & Model & Coef. & SE & t-stat & p-value & Sig. \\
+Analysis & Outcome & Variable & Model & Coef & SE & t-stat & p-val & Sig \\
 \midrule
 \multicolumn{9}{l}{\textbf{Career Stage Analysis}} \\
 \midrule
@@ -1709,18 +1813,37 @@ Physics & Count Black & Treatment & Extended & 0.1840 & 0.0695 & 2.646 & 0.0085 
 \multicolumn{9}{l}{\textbf{Heterogeneity Analysis}} \\
 \midrule
 Department Ranking & Any Black & Treatment × Department Ranking & Simple & 0.0010 & 0.0006 & 1.733 & 0.0833 & + \\
+Department Ranking & Any Female & Treatment × Department Ranking & Extended & 0.0011 & 0.0006 & 1.989 & 0.0469 & * \\
 Department Ranking & Any URM & Treatment × Department Ranking & Extended & 0.0012 & 0.0006 & 1.876 & 0.0608 & + \\
 Department Ranking & Count Black & Treatment × Department Ranking & Simple & 0.0025 & 0.0012 & 2.184 & 0.0291 & * \\
+Department Ranking & Count Female & Treatment × Department Ranking & Extended & 0.0075 & 0.0031 & 2.381 & 0.0174 & * \\
 Department Ranking & Count Hispanic & Treatment × Department Ranking & Extended & 0.0027 & 0.0012 & 2.245 & 0.0249 & * \\
 Department Ranking & Count URM & Treatment × Department Ranking & Extended & 0.0053 & 0.0018 & 2.975 & 0.0030 & ** \\
+Peer URM Faculty & \% Female & Treatment × Peer URM Faculty & Extended & -0.1988 & 0.0995 & -1.999 & 0.0457 & * \\
 Total Faculty & Count Black & Treatment × Total Faculty & Extended & -0.0031 & 0.0018 & -1.692 & 0.0908 & + \\
 \\% URM Faculty & \% Black & Treatment × \\% URM Faculty & Simple & 16.7675 & 8.3415 & 2.010 & 0.0446 & * \\
 \\% URM Faculty & \% URM & Treatment × \\% URM Faculty & Simple & 32.3011 & 15.5565 & 2.076 & 0.0380 & * \\
 \\% URM Faculty & Any Black & Treatment × \\% URM Faculty & Extended & 0.9937 & 0.5647 & 1.760 & 0.0786 & + \\
 \\% URM Faculty & Count Black & Treatment × \\% URM Faculty & Extended & 2.2082 & 1.0243 & 2.156 & 0.0312 & * \\
 \\% URM Faculty & Count URM & Treatment × \\% URM Faculty & Extended & 3.4060 & 1.9384 & 1.757 & 0.0791 & + \\
+\\% Women Faculty & Any Female & Treatment × \\% Women Faculty & Simple & -0.5224 & 0.3118 & -1.676 & 0.0940 & + \\
 \\% Women Faculty & Any Hispanic & Treatment × \\% Women Faculty & Simple & -0.5888 & 0.3367 & -1.749 & 0.0805 & + \\
-\addlinespace[0.5em]
+\bottomrule
+\end{tabular}
+\end{table}
+\end{landscape}
+\clearpage
+\begin{landscape}
+\begin{table}[H]
+\caption{All Significant Results (p < 0.1) from All Analyses - Part 2 of 2}
+\label{tab:all_significant_results_2}
+\centering
+\tiny
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{2.8cm}p{1.8cm}p{2.5cm}p{0.8cm}p{1.2cm}p{1.2cm}p{1.0cm}p{1.0cm}c}
+\toprule
+Analysis & Outcome & Variable & Model & Coef & SE & t-stat & p-val & Sig \\
+\midrule
 \multicolumn{9}{l}{\textbf{Semester Analysis}} \\
 \midrule
 Fall Semester & Any Black & Treatment & Simple & 0.0434 & 0.0167 & 2.603 & 0.0093 & ** \\
@@ -1729,6 +1852,7 @@ Fall Semester & Count URM & Treatment & Simple & 0.0778 & 0.0456 & 1.707 & 0.088
 Spring Semester & \% Black & Treatment & Extended & 0.9177 & 0.4280 & 2.144 & 0.0322 & * \\
 \bottomrule
 \end{tabular}
-\parbox{\linewidth}{\footnotesize Note: Significance levels: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001. SE = Clustered standard errors at department level. For moderation analyses, only significant interaction terms are shown.}
+\vspace{0.5em}
+\parbox{\linewidth}{\tiny Note: Significance levels: + p<0.1; * p<0.05; ** p<0.01; *** p<0.001. SE = Clustered standard errors at department level. For moderation analyses, only significant interaction terms are shown.}
 \end{table}
 \end{landscape}
