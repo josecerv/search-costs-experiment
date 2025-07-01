@@ -1,6 +1,6 @@
 ---
 title: "Search Costs Field Experiment"
-date: "2025-06-24"
+date: "2025-07-01"
 output:
   pdf_document:
     toc: true
